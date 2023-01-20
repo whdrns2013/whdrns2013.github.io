@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About
+layout: single
+title: Jongya
 permalink: /about/
 ---
 
