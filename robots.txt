@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: http://jinyongjeong.github.io/sitemap.xml
+
+#DaumWebMasterTool:2fdeb3a275a978c2e343641fff5808af4bb83e19eabdae9f424081825b6a0444:kQO1Hso9Anm1yWKLBS2jjw==
