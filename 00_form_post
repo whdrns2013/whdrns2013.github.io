@@ -79,6 +79,10 @@ author: # 주인 외 작성자 표기 필요시
 {: .notice--danger}
 
 
+## 동영상 넣기
+<iframe width="560" height="315" src="동영상 url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ## list
 ### Ordered list
 1. Firstly
