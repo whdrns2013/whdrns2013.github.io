@@ -15,7 +15,7 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "kor"
 title                    : "Jongya's blog"
 title_separator          : "-"
 subtitle                 : "새내기 프로그래머 Jongya의 블로그입니다." # site tagline that appears below site title in masthead
