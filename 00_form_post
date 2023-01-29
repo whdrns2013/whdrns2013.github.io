@@ -54,8 +54,11 @@ author: # 주인 외 작성자 표기 필요시
 ## 텍스트 강조
 강조할 텍스트  
 **강조할 텍스트**  
-형광펜 밑줄  
+형광펜 밑줄 : 노란색  
 <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'> 노란색 형광펜 밑줄</span>   
+형광펜 밑줄 : 형광색
+<span style='background:linear-gradient(to top, e8ff94 50%, transparent 50%)'> 형광색 형광펜 밑줄</span>  
+
 
 ## 이미지 align 디폴트 : left
 ![](/assets/images/20221126_003_004.png){: .align-left}
