@@ -269,6 +269,7 @@ df.to_csv(file_name)
 * 최근 500개 뿐만 아니라, 모든 리뷰를 수집하는 방법 연구  
 (참고)API를 이용해 정식으로 정보를 받으러면 Apple Developer Program에 가입해야 하는 듯  
 * 개발자의 답변을 스크랩 하는 방법 연구  
+* 구글 플레이스토어 리뷰 스크랩  
 * 다른 코드 연구  
 https://pypi.org/project/app-store-scraper/  
 https://python.plainenglish.io/scraping-app-store-reviews-with-python-90e4117ccdfb  
