@@ -1,0 +1,81 @@
+---
+title: YOLO 에서 이미지와 log 추출하기 # 제목
+excerpt: # 서브 타이틀
+date: 2023-03-02 11:33:00 +0900      # 작성일
+lastmod: 2023-03-02 11:33:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
+categories: depp_learning         # 다수 카테고리에 포함 가능
+tags: yolo yolov5 extract image images log logs detect.py     # 태그 복수개 가능
+classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+toc: true        # 목차 표시 여부
+toc_label:       # toc 제목
+toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image:             # 헤더 이미지 (제목과 겹치게)
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
+sitemap :                    # 구글 크롤링
+  changefreq : daily         # 구글 크롤링
+  priority : 1.0             # 구글 크롤링
+author: # 주인 외 작성자 표기 필요시
+---
+<!--postNo: 20230302_003-->
+
+# detect.py 뜯어보기  
+
+detect.py는 학습된 weight값(.pt파일)을 기반으로 객체를 탐지하는 코드이다.  
+실시간으로 웹캠을 통해 객체 탐지도 가능하고, 이미지 혹은 이미 촬영된 영상 등도 detect의 대상으로 삼을 수 있다.  
+  
+기본적으로 detect.py를 구동하는 방법은 아래와 같다.  
+터미널을 켜준 뒤  
+
+```terminal
+
+python detect.py경로명/detect.py
+
+```
+
+detect를 할 때에는 여러 가지 옵션값을 줄 수 있다.  
+
+```terminal
+
+python detect.py경로명/detect.py --옵션1 옵션1입력값 --옵션2 옵션2입력값 ...
+
+```
+
+|옵션명|설명|입력값|
+|---|---|---|
+|--weights|미리 학습된 weight값(.pt)을 줄 수 있다.|--weights ./runs/train/exp3/weight/best.pt|
+|--source|detect 할 대상 데이터. 영상 혹은 이미지 등|--source 0 : 웹캠 <br>--source img.jpg : 이미지<br>--source vid.mp4 : 영상<br>--source screen: 스크린샷(???)<br>--source path/ : 디텍토리(???)<br>--source list.txt : 이미지 리스트(경로)<br>--source list.streams : 스트림(???)<br>--source 유튜브경로 : 유튜브 영상<br>--source rtsp://~~ : rtsp, rtmp, http 스트림|
+|--data|객체 idx와 객체명을 정의한 yaml 파일 지정 가능|--data ./data/test_yaml.yaml|
+|--imgsz|이미지 사이즈. 기본 640. --img 혹은 --img-size 로도 설정 가능(???)|--imgsz 300|
+|--conf-thres|신뢰 임계값. 특정 percentage 이상 신뢰도를 보여야 해당 객체로 인지하도록 한다.|--conf-thres 0.8|
+|--iou-thres|근접 혹은 겹치게 검출된 두 객체가 동일한 객체인지를 판단하는 임계값. 값이 낮아지면 동일한 객체로 인식할 확률이 높다.|--iou-thres 0.5|
+|--max-det|대상 자료에서 검출할 객체의 최대 갯수|--max-det 1 : 한 프레임에서 최대 1개만 검출|
+|--device|어떤 처리장치로 inference를 진행할지 지정|--device 0 : 0번 처리장치(아마 CPU)로 검출|
+|--view-img|||
+|--save-txt|검출된 로그값(객체idx와 bounding-box 좌표)를 txt 파일로 저장|--save-txt|
+|--save-conf|신뢰도를 추출하여 저장. 위 로그값 txt 파일에 함께 저장된다.|--save-conf|
+|--save-crop|검출된 객체 부분을 잘라서 이미지로 저장|--save-crop|
+|--nosave|검출 결과를 영상 혹은 이미지로 저장하지 않음(save-txt 와 별개)|--nosave|
+|--classes|검출할 객체를 지정함|--classes 0 : 0번 객체만 검출함<br>--classes 1 : 1번 객체만 검출함<br>--classes 0 1 2 : 0, 1, 2번 객체를 검출함|
+|--agnostic-nms|||
+|--augment|||
+|--visualize|(이미지source에만 가능) 감지된 객체와 함께 출력 이미지를 저장함||
+|--update|기존 pre-trained weight에 새로운 객체를 학습시키는 옵션. 즉 '미세조정'|--update|
+|--project|||
+|--name|run의 이름을 지정|--name test_first|
+|--exist-ok|||
+|--line-thickness|bounding-box 테두리 두께 조정 (픽셀 단위)|--line-thickness 50|
+|--hide-labels|bounding-box의 제목(객체명)을 출력하지 않음|--hide-labels|
+|--hide-conf|객체 검출 신뢰도율을 출력하지 않음|--hide-conf|
+|--half|||
+|--dnn|||
+|--vid-stride|video frame-rate stride||
+
+옵션값에 대한 내용은 detect.py의 parse_opt 메서드 정의 부분에서도 볼 수 있다.  
+
+![](/assets/images/20230302_003_001.png)
