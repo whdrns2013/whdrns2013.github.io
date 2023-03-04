@@ -1,0 +1,72 @@
+---
+title: AWS 2003 오류. AWS와 로컬 python 연결 불가 오류 # 제목
+excerpt: OperationalError: (2003, "Can't connect to MySQL server on 'RDS 엔드포인트 경로' (timed out)") # 서브 타이틀
+date: 2023-03-05 00:23:00 +0900      # 작성일
+lastmod: 2023-03-05 00:23:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
+categories: TroubleShooting         # 다수 카테고리에 포함 가능
+tags: AWS RDS Python connect 연결 파이썬 2003 MySQL           # 태그 복수개 가능
+classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+toc: true        # 목차 표시 여부
+toc_label:       # toc 제목
+toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image:             # 헤더 이미지 (제목과 겹치게)
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
+sitemap :                    # 구글 크롤링
+  changefreq : daily         # 구글 크롤링
+  priority : 1.0             # 구글 크롤링
+author: # 주인 외 작성자 표기 필요시
+---
+<!--postNo: 20230305_001-->
+
+# 에러 메세지
+
+```python
+
+OperationalError: (2003, "Can't connect to MySQL server on 'RDS 엔드포인트 경로. 가명처리' (timed out)")
+
+```
+
+
+# 문제 상황
+
+로컬의 파이썬 코드와 AWS의 RDS를 연결하려 하고 있다.  
+host, port 등등.. 모두 문제 없이 입력하였지만  
+위와 같은 오류를 보인다.  
+
+# 오류코드 분석
+
+오류코드 2003.  
+
+
+# 원인
+
+RDS **<u>퍼블릭 엑세스</u>** 설정이 안 되어있었다.  
+이에 따라 EC2를 통하지 않고 외부에서 직접 접속이 불가능 했던 것.  
+
+이 외에도 2003 에러는 보안이슈로 인한 접속 불가를 뜻하기도 한다고 함.  
+이 때에는 접속 가능 IP를 수정하는 등의 보안그룹 설정을 바꿔주면 될 것이다.  
+
+
+# 해결
+
+AWS RDS의 <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'> 퍼블릭 엑세스 설정을 사용함으로</spam> 바꿔준다.  
+AWS 접속 후, RDS 메뉴에서 DB를 선택한 뒤, 수정버튼을 눌러준다.  
+
+![](/assets/images/20230305_001_001.png)  
+
+중간 부분의 연결 섹션의 "추가 구성" 부분에서 "퍼블릭 엑세스 가능"을 체크해준 뒤, 저장한다.  
+
+![](/assets/images/20230305_001_002.png)  
+
+변경사항을 바로 적용하고 싶다면 "즉시 적용"을 선택한다.  
+
+![](/assets/images/20230305_001_003.png)  
+
+
+
