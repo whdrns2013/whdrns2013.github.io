@@ -9,7 +9,6 @@ author_profile: true
 새내기 AI 프로그래머 Jongya 입니다.
 
 <br>
-<br>
 
 ## 📮 Contact  
 
@@ -17,34 +16,32 @@ author_profile: true
 <a href="https://whdrns2013.github.io/"><img src="https://img.shields.io/badge/Jongya's Blog-181717?style=flat-square&logo=Github&logoColor=white&link=https://whdrns2013.github.io/"/></a> 
 
 <br>
-<br>
  
 ## 🧑‍💻 Skills  
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"/>
 <img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=R&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/>
+<img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=R&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
 
-<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Pynecone-000000?style=for-the-badge&logo=&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Dot_ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=white"/></a>
-
-
-<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/AWS EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/AWS RDS-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/AWS S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"/></a>
-
-<img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse IDE&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=GIT&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pynecone-000000?style=for-the-badge&logo=&logoColor=white"/>
+<img src="https://img.shields.io/badge/Dot_ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=white"/>
 
 
-<br>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white"/>
+<img src="https://img.shields.io/badge/AWS EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"/>
+<img src="https://img.shields.io/badge/AWS RDS-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white"/>
+<img src="https://img.shields.io/badge/AWS S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"/>
+<img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white"/>
+<img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse IDE&logoColor=white"/>
+<img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=GIT&logoColor=white"/>
+
+
 <br>
 
 ## 👉 Recently  
@@ -54,7 +51,6 @@ author_profile: true
 <a href="https://github.com/whdrns2013/lab/tree/main/20230210_sesac_final">프로젝트 link</a>
 
 
-<br>
 <br>
 
 ## 🚀 Projects  
@@ -79,7 +75,6 @@ author_profile: true
 
 
 <br>
-<br>
 
 ## 💳 Licenses  
 
@@ -89,7 +84,6 @@ author_profile: true
 - 정보처리기사 (필기만!)  
 
 
-<br>
 <br>
 
 ## Also I Am..  
@@ -102,11 +96,6 @@ author_profile: true
 
 
 <br>
-<br>
-
-
-#### &emsp; [![Jongya's github stats](https://github-readme-stats.vercel.app/api?username=whdrns2013)](https://github.com/anuraghazra/github-readme-stats)
-
 
 <!--
 아이콘 : https://simpleicons.org/
