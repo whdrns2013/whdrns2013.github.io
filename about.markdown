@@ -5,7 +5,7 @@ permalink: /about/
 author_profile: true
 ---
 
-# Ai there 👋
+# Ai there! 👋
 새내기 AI 프로그래머 Jongya 입니다.
 
 <br>
