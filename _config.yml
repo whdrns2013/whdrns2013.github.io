@@ -93,8 +93,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-instagram:
-  username               : "jongya_chalkak"
 
 # Analytics
 analytics:
@@ -129,7 +127,7 @@ author:
       url: "https://github.com/whdrns2013"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/jongya_chalkak"
 
 # Site Footer
 footer:
