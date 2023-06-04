@@ -1,0 +1,15 @@
+https://javacpro.tistory.com/11
+https://psychoria.tistory.com/765
+https://crazykim2.tistory.com/558
+https://ssungkang.tistory.com/entry/java%EC%82%AC%EC%9A%A9%EC%9E%90%EB%A1%9C-%EB%B6%80%ED%84%B0-%EA%B0%92-%EC%9E%85%EB%A0%A5%EB%B0%9B%EA%B8%B0-Scanner
+https://www.freecodecamp.org/korean/news/java-string-to-int-how-to-convert-a-string-to-an-integer/
+https://www.delftstack.com/ko/howto/java/one-line-if-statement-java/
+https://java119.tistory.com/106
+
+
+(자바 String 곱하기)
+https://www.google.com/search?q=java+string+%EA%B3%B1%ED%95%98%EA%B8%B0&sxsrf=APwXEdcRhoxHKHhVX-43K8hfPwmTdv55gg%3A1685594503606&ei=hyF4ZOTXJNe0oAS4iZawCw&ved=0ahUKEwikt_3soKH_AhVXGogKHbiEBbYQ4dUDCA8&uact=5&oq=java+string+%EA%B3%B1%ED%95%98%EA%B8%B0&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQ6CggAEEcQ1gQQsAM6BwgjEIoFECc6BggAEAgQHjoECCMQJzoKCAAQgAQQFBCHAjoLCAAQgAQQsQMQgwFKBAhBGABQ2QRY5BBgkxFoAnAAeACAAX2IAbcIkgEDMC45mAEAoAEBwAEByAEJ&sclient=gws-wiz-serp
+
+
+(자바 import alias가 가능한가)
+https://www.google.com/search?q=java+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+alias&sxsrf=APwXEdfPC3iGmSjcbIsPa7qTni-SXR32fA%3A1685592598631&ei=Fhp4ZIiXJpu9wAPSkp-YDA&ved=0ahUKEwiI-s7gmaH_AhWbHnAKHVLJB8MQ4dUDCA8&uact=5&oq=java+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+alias&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICCEQoAEQwwQ6CggAEEcQ1gQQsAM6DAghEKABEMMEEAoQKkoECEEYAFCEC1i6EmCzE2gFcAF4BIABkwGIAbMKkgEEMC4xMJgBAKABAcABAcgBCg&sclient=gws-wiz-serp

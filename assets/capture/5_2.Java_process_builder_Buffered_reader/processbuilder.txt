@@ -1,0 +1,44 @@
+https://yangyag.tistory.com/55
+https://chb2005.tistory.com/57
+
+
+https://happygrammer.github.io/java/processbuilder/
+
+#### intro
+프로세스빌더는 받는 파라미터의 데이터타입으로 두 가지로 구분할 수 있다.
+(1) String 타입 : 프로세스 실행시킬 인자들을 하나씩 String 으로 받는 경우
+(2) List 타입 : 프로세스 실행시킬 인자들을 하나의 List로 받는 경우
+
+뭐가 더 좋다가 아니라 상황에 맞게 사용하면 된다.
+
+선언 : String 타입의 경우
+ProcessBuilder 변수명 = new ProcessBuilder(인자1, 인자2, ... 인자n);
+선언 : List 타입의 경우
+ProcessBuilder 변수명 = new ProcessBuilder(리스트);
+
+
+
+#### 실행될 커맨드
+변수명.command();
+즉, 출력해 확인해보려면 System.out.println(변수명.command())
+
+
+#### 이건 뭐지? 음.. 어딘 쓰고 어딘 안씀
+builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+builder.redirectError(ProcessBuilder.Redirect.INHERIT);
+builder.redirectInput(ProcessBuilder.Redirect.INHERIT);
+
+
+#### 프로세스 빌더 실행
+우선 프로세스를 선언한다.
+Process p = builder.start();
+프로세스가 종료될 때까지 블록 처리
+p.waitFor()
+
+
+#### throws 로 예외처리를 해야함
+왜지? throws IOException, InterruptedException
+
+
+
+

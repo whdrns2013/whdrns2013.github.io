@@ -1,0 +1,71 @@
+먼저
+
+우분투 설치
+https://mainia.tistory.com/2379
+http://ba.releases.ubuntu.com/18.04.6/?_ga=2.47341348.2035986236.1685512902-93954961.1685512902
+
+https://ca.ramel.be/74
+https://www.bearpooh.com/95
+https://jhnyang.tistory.com/54
+
+(1) 우분투 SSH 서버 설치 및 포트 설정
+https://ca.ramel.be/74
+- ssh 를 이용할 수 있게 해주는 라이브러리를 설치하고
+- ssh_config를 vi 편집기를 이용해 수정한다.
+- ssh_config에는 Port XXXX (4~5자리 숫자 입력) 를 입력한다.
+
+(2) ssh service를 시작해준다.
+- 시작 : sudo service ssh start
+- 종료 : sudo service ssh stop
+- 상태 : sudo service ssh status
+
+(3) 방화벽 설정
+- 방화벽 설정 : sudo ufw enable
+- 방화벽에서 허용할 포트 : sudo ufw allow 포트번호
+
+(4) 접속할 IP는 ifconfig 를 통해 알 수 있다.
+
+(5) Virtual Box 설정 - 네트워크 설정에서
+CentOS 처럼 포트 포워딩 설정을 해주고
+
+(6) ssh 연결을 하면 된다.
+
+cmd에서
+ssh -p 포트번호 계정@ip
+ssh -p 22 jonghyuk2013@127.0.0.1
+
+(7) 기본적으로 파이썬 3.6 버전이 설치되어있다.
+
+https://jjeongil.tistory.com/1806
+
+(8) apt update
+apt는 우분투의 라이브러리 관리 툴
+apt를 업데이트 해준다.
+
+(9) sudo apt install software-properties-common
+필수 구성 요소 설치
+
+https://sanghaklee.tistory.com/73
+
+(10) sudo apt install python3.8
+파이썬 설치
+
+(11) which python3.8
+-> 위치 찾고
+
+(12) 파이썬 환경변수 우선순위 변경
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+
+https://asung123456.tistory.com/2
+
+(13) pip 설치
+sudo apt install python3.8 -pip
+그냥 python-pip를 받으면 python2.7 의 버전에 해당하는 pip가 설치된다.
+이게 아니라
+python3.8 -m pip install pip
+를 통해 3.8에 해당하는 pip를 설치한다.
+
+(14) 이후 사용
+python3.8 pip install ~~ 와 같이 사용해야 할 듯 하다.
+
+

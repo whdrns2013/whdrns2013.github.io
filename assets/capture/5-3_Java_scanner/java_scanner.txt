@@ -1,0 +1,43 @@
+https://st-lab.tistory.com/92
+
+
+**import
+import java.util.Scanner;
+
+
+**declare
+Scanner sc = new Scanner(System.in)
+
+
+**System.in
+이것은 사용자로부터 입력을 받기 위한 입력 스트림
+
+
+**내용 받기
+sc.nextByte()		// byte 형 입력 및 리턴
+sc.nextShort()		// short 형 입력 및 리턴
+sc.nextInt()		// int 형 입력 및 리턴
+sc.nextLong()		// long 형 입력 및 리턴
+ 
+sc.nextFloat()		// float 형 입력 및 리턴
+sc.nextDouble()		// double 형 입력 및 리턴
+ 
+sc.nextBoolean()	// boolean 형 입력 및 리턴
+ 
+sc.next()			// String 형 입력 및 리턴	(공백을 기준으로 한 단어를 읽음)
+sc.nextLine()		// String 형 입력 및 리턴 (개행을 기준으로 한 줄을 읽음)
+
+
+** 입력값 받기 예시
+System.out.println("신규 프로젝트 여부를 입력해주세요. (new / existed)");
+startType += sc.next();
+System.out.println("프로젝트 이름을 입력해주세요. (알파벳, 숫자, 하이픈, 언더스코어)");
+projectName += sc.next();
+System.out.println("원본 이미지가 있는 경로를 입력해주세요.");
+imageDir += sc.next();
+System.out.println("(1) CALIB 알고리즘을 추가하겠습니까? (Y/N)");
+calib = sc.next().charAt(0) == ('Y' | 'y') ? calib : "";
+System.out.println("(2) DENSE 알고리즘을 추가하겠습니까? (Y/N)");
+dense = sc.next().charAt(0) == ('Y' | 'y') ? dense : "";
+System.out.println("(3) ORTHO 알고리즘을 추가하겠습니까? (Y/N)");
+ortho = sc.next().charAt(0) == ('Y' | 'y') ? ortho : "";

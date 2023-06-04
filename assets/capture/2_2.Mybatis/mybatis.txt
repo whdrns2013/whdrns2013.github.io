@@ -1,0 +1,62 @@
+Mybatis 개념과 구조
+https://khj93.tistory.com/entry/MyBatis-MyBatis%EB%9E%80-%EA%B0%9C%EB%85%90-%EB%B0%8F-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC
+
+Mybatis 문법
+https://kimvampa.tistory.com/177
+https://java119.tistory.com/42
+https://kimvampa.tistory.com/178
+https://kimvampa.tistory.com/179
+https://kimvampa.tistory.com/180
+https://sas-study.tistory.com/451
+
+■■ <if test>
+https://kimvampa.tistory.com/177
+조건식 참인 경우 쿼리 실행. 파라미터를 동적으로 받을 수 있고
+연산자 사용 가능. 조건식이 true 일 경우 실행.
+
+<select id="아이덴티" resultType="결과타입">
+	select * from tbl_board
+	where title = '%'||#{title}||'%'
+	<if test="content != null">
+		OR content = '%'||#{content}||'%'
+	</if>
+</select>
+
+조건식에는 관계연산자 (AND, OR, !)도 사용할 수 있다. 
+
+<select id="findActiveBlogLike" resultType="Blog">
+	SELECT * FROM BLOG WHERE state = 'ACTIVE'
+	<if test="title != null">
+		AND title like #{title}
+	</if>
+	<if test="author != null and author.name != null">
+		AND author_name like #{author.name}
+	</if>
+</select>
+
+
+■■ <choose>, <when>, <otherwise>
+https://kimvampa.tistory.com/178
+스위치문과 동일
+<choose>
+	<when test="조건식1"> 쿼리문1 </when>
+    	<when test="조건식2"> 쿼리문2 </when>
+    	<when test="조건식3"> 쿼리문3 </when>
+    	<when test="조건식4"> 쿼리문4 </when>
+	<otherwise> 쿼리문5 </otherwise>
+</choose>
+
+
+■■ ＆nbsp; ＆amp; ＆lt; ＆gt; ＆quot의 의미
+https://ly.lv/65
+&nbsp; ” ” : 공백(스페이스 한 칸)을 의미 
+&lt; 부등호(<)
+&gt; 부등호(>)
+&amp; 앰퍼샌드(&) 기호
+&quot; 쌍따옴표(“)
+&#035; sharp(#)
+&#039; 따옴표(‘)
+
+
+■■ foreach
+https://kimvampa.tistory.com/180

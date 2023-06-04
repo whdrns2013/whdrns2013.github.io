@@ -1,0 +1,18 @@
+가상머신을 삭제했다가 다시 설치했다.
+ssh를 통해 원격 접속하려 하니
+
+가상 OS가 삭제됐다가 다시 설치된, 결국은 다른 OS이므로
+WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+라는 오류가 발생한다.
+
+https://visu4l.tistory.com/entry/ssh-%EC%9B%90%EA%B2%A9-%EC%A0%91%EC%86%8D-%EC%97%90%EB%9F%ACWARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED
+
+동일한 IP지만 다른 OS이기 때문에
+인증키가 달라 ssh 사용이 불가한 것
+
+해결책은 단순하다.
+keygen으로 기존 key를 삭제한 후
+다시 ssh 연결을 시도하면 된다.
+
+
+`ssh-keygen -R [ IP or DomainName]`

@@ -1,0 +1,258 @@
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ jonghyuk2013@jonghyuk2013-VirtualBox:~$ clear
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ dir
+examples.desktop  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ cd ..
+jonghyuk2013@jonghyuk2013-VirtualBox:/home$ dir
+jonghyuk2013
+jonghyuk2013@jonghyuk2013-VirtualBox:/home$ cd jonghyuk2013
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ mkdir marineGarbage
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ dir
+examples.desktop  공개      문서      비디오  음악
+marineGarbage     다운로드  바탕화면  사진    템플릿
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ dir
+examples.desktop  공개      문서      비디오  음악
+marineGarbage     다운로드  바탕화면  사진    템플릿
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ cd marineGarbage
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ dir
+python3-pix4dengine_1.4.3_amd64.deb
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install python3-pix4dengine_1.4.3_amd64.deb
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement python3-pix4dengine_1.4.3_amd64.deb (from versions: none)
+ERROR: No matching distribution found for python3-pix4dengine_1.4.3_amd64.deb
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ dir
+python3-pix4dengine_1.4.3_amd64.deb  requirements.txt
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install -r requirements.txt
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: pix4dengine-1.4.3-cp38-cp38-win_amd64.whl is not a supported wheel on this platform.
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install numpy==1.24.3
+Defaulting to user installation because normal site-packages is not writeable
+Collecting numpy==1.24.3
+  Downloading numpy-1.24.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 8.8 MB/s eta 0:00:00
+Installing collected packages: numpy
+  WARNING: The scripts f2py, f2py3 and f2py3.8 are installed in '/home/jonghyuk2013/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-1.24.3
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install python3-pix4dengine_1.4.3_amd64.deb
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement python3-pix4dengine_1.4.3_amd64.deb (from versions: none)
+ERROR: No matching distribution found for python3-pix4dengine_1.4.3_amd64.deb
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8
+Python 3.8.0 (default, Dec  9 2021, 17:53:27)
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> os.getcwd()
+'/home/jonghyuk2013/marineGarbage'
+>>> pip install python3-pix4dengine_1.4.3_amd64.deb
+  File "<stdin>", line 1
+    pip install python3-pix4dengine_1.4.3_amd64.deb
+        ^
+SyntaxError: invalid syntax
+>>> -m pip install python3-pix4dengine_1.4.3_amd64.deb
+  File "<stdin>", line 1
+    -m pip install python3-pix4dengine_1.4.3_amd64.deb
+       ^
+SyntaxError: invalid syntax
+>>> exit()
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 pip install python3-pix4dengine_1.4.3_amd64.deb
+python3.8: can't open file 'pip': [Errno 2] No such file or directory
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install python3-pix4dengine_1.4.3_amd64.deb
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement python3-pix4dengine_1.4.3_amd64.deb (from versions: none)
+ERROR: No matching distribution found for python3-pix4dengine_1.4.3_amd64.deb
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3 -m pip install python3-pix4dengine_1.4.3_amd64.deb
+Collecting python3-pix4dengine_1.4.3_amd64.deb
+  Could not find a version that satisfies the requirement python3-pix4dengine_1.4.3_amd64.deb (from versions: )
+No matching distribution found for python3-pix4dengine_1.4.3_amd64.deb
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip list
+Package                Version
+---------------------- -------------------
+apturl                 0.5.2
+asn1crypto             0.24.0
+Brlapi                 0.6.6
+certifi                2018.1.18
+chardet                3.0.4
+click                  6.7
+colorama               0.3.7
+command-not-found      0.3
+cryptography           2.1.4
+cupshelpers            1.0
+defer                  1.0.6
+distro-info            0.18ubuntu0.18.04.1
+httplib2               0.9.2
+idna                   2.6
+keyring                10.6.0
+keyrings.alt           3.0
+language-selector      0.1
+launchpadlib           1.10.6
+lazr.restfulclient     0.13.5
+lazr.uri               1.0.3
+louis                  3.5.0
+macaroonbakery         1.1.3
+Mako                   1.0.7
+MarkupSafe             1.0
+netifaces              0.10.4
+numpy                  1.24.3
+oauth                  1.0.1
+olefile                0.45.1
+pexpect                4.2.1
+Pillow                 5.1.0
+pip                    23.1.2
+protobuf               3.0.0
+pycairo                1.16.2
+pycrypto               2.6.1
+pycups                 1.9.73
+PyGObject              3.26.1
+pymacaroons            0.13.0
+PyNaCl                 1.1.2
+pyRFC3339              1.0
+python-apt             1.6.5+ubuntu0.7
+python-dateutil        2.6.1
+python-debian          0.1.32
+pytz                   2018.3
+pyxdg                  0.25
+PyYAML                 3.12
+reportlab              3.4.0
+requests               2.18.4
+requests-unixsocket    0.1.5
+SecretStorage          2.3.1
+setuptools             39.0.1
+simplejson             3.13.2
+six                    1.11.0
+ssh-import-id          5.7
+system-service         0.3
+systemd-python         234
+ubuntu-advantage-tools 8001
+ubuntu-drivers-common  0.0.0
+ufw                    0.36
+unattended-upgrades    0.1
+urllib3                1.22
+usb-creator            0.3.3
+wadllib                1.3.2
+wheel                  0.30.0
+xkit                   0.0.0
+zope.interface         4.3.2
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ sudo apt-get install ./python3-pix4dengine_1.4.3_amd64.deb
+[sudo] jonghyuk2013의 암호:
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다
+상태 정보를 읽는 중입니다... 완료
+주의, './python3-pix4dengine_1.4.3_amd64.deb' 대신에 'python3-pix4dengine' 패키지를 선택합니다
+다음 패키지가 자동으로 설치되었지만 더 이상 필요하지 않습니다:
+  gir1.2-goa-1.0 gir1.2-snapd-1
+Use 'sudo apt autoremove' to remove them.
+다음의 추가 패키지가 설치될 것입니다 :
+  libblas3 libgfortran4 liblapack3 python3-numpy
+제안하는 패키지:
+  gfortran python-numpy-doc python3-nose python3-numpy-dbg
+다음 새 패키지를 설치할 것입니다:
+  libblas3 libgfortran4 liblapack3 python3-numpy python3-pix4dengine
+0개 업그레이드, 5개 새로 설치, 0개 제거 및 297개 업그레이드 안 함.
+4,687 k바이트/520 M바이트 아카이브를 받아야 합니다.
+이 작업 후 1,438 M바이트의 디스크 공간을 더 사용하게 됩니다.
+계속 하시겠습니까? [Y/n] y
+받기:1 http://kr.archive.ubuntu.com/ubuntu bionic/main amd64 libblas3 amd64 3.7.1-4ubuntu1 [140 kB]
+받기:2 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgfortran4 amd64 7.5.0-3ubuntu1~18.04 [492 kB]
+받기:3 http://kr.archive.ubuntu.com/ubuntu bionic/main amd64 liblapack3 amd64 3.7.1-4ubuntu1 [2,112 kB]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic/main amd64 python3-numpy amd64 1:1.13.3-2ubuntu1 [1,943 kB]
+받기:5 /home/jonghyuk2013/marineGarbage/python3-pix4dengine_1.4.3_amd64.deb python3-pix4dengine amd64 1.4.3 [515 MB]
+내려받기 4,687 k바이트, 소요시간 10초 (447 k바이트/초)
+Selecting previously unselected package libblas3:amd64.
+(데이터베이스 읽는중 ...현재 137894개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../libblas3_3.7.1-4ubuntu1_amd64.deb ...
+Unpacking libblas3:amd64 (3.7.1-4ubuntu1) ...
+Selecting previously unselected package libgfortran4:amd64.
+Preparing to unpack .../libgfortran4_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libgfortran4:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package liblapack3:amd64.
+Preparing to unpack .../liblapack3_3.7.1-4ubuntu1_amd64.deb ...
+Unpacking liblapack3:amd64 (3.7.1-4ubuntu1) ...
+Selecting previously unselected package python3-numpy.
+Preparing to unpack .../python3-numpy_1%3a1.13.3-2ubuntu1_amd64.deb ...
+Unpacking python3-numpy (1:1.13.3-2ubuntu1) ...
+Selecting previously unselected package python3-pix4dengine.
+Preparing to unpack .../python3-pix4dengine_1.4.3_amd64.deb ...
+Unpacking python3-pix4dengine (1.4.3) ...
+libgfortran4:amd64 (7.5.0-3ubuntu1~18.04) 설정하는 중입니다 ...
+libblas3:amd64 (3.7.1-4ubuntu1) 설정하는 중입니다 ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+liblapack3:amd64 (3.7.1-4ubuntu1) 설정하는 중입니다 ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+python3-numpy (1:1.13.3-2ubuntu1) 설정하는 중입니다 ...
+python3-pix4dengine (1.4.3) 설정하는 중입니다 ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ dir
+main.py  python3-pix4dengine_1.4.3_amd64.deb  requirements.txt
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
+D:\Project\marineGarbage\pix4D\origins>ssh -p 22 jonghyuk2013@127.0.0.1
+jonghyuk2013@127.0.0.1's password:
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+293 updates can be applied immediately.
+268 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2023.
+Last login: Wed May 31 16:13:00 2023 from 10.0.2.2
+jonghyuk2013@jonghyuk2013-VirtualBox:~$ cd marineGarbage
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 pip install -r requirements.txt
+python3.8: can't open file 'pip': [Errno 2] No such file or directory
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ dir
+main.py  python3-pix4dengine_1.4.3_amd64.deb  requirements.txt
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8
+Python 3.8.0 (default, Dec  9 2021, 17:53:27)
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 pip3 install -r requirements.txt
+python3.8: can't open file 'pip3': [Errno 2] No such file or directory
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python 3.8 -m pip install -r requirements.txt
+python: can't open file '3.8': [Errno 2] No such file or directory
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install -r
+ requirements.txt
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: pix4dengine-1.4.3-cp38-cp38-win_amd64.whl is not a supported wheel on this platform.
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ python3.8 -m pip install -r requirements.txt
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: numpy==1.24.3 in /home/jonghyuk2013/.local/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (1.24.3)
+Collecting python-dotenv==1.0.0 (from -r requirements.txt (line 2))
+  Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Collecting Flask==2.3.2 (from -r requirements.txt (line 3))
+  Downloading Flask-2.3.2-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.9/96.9 kB 10.0 MB/s eta 0:00:00
+Collecting Werkzeug>=2.3.3 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading Werkzeug-2.3.4-py3-none-any.whl (242 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.5/242.5 kB 18.2 MB/s eta 0:00:00
+Collecting Jinja2>=3.1.2 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 13.2 MB/s eta 0:00:00
+Collecting itsdangerous>=2.1.2 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting click>=8.1.3 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 18.9 MB/s eta 0:00:00
+Collecting blinker>=1.6.2 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
+Collecting importlib-metadata>=3.6.0 (from Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
+Collecting zipp>=0.5 (from importlib-metadata>=3.6.0->Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading zipp-3.15.0-py3-none-any.whl (6.8 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->Flask==2.3.2->-r requirements.txt (line 3))
+  Downloading MarkupSafe-2.1.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: zipp, python-dotenv, MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, importlib-metadata, Flask
+Successfully installed Flask-2.3.2 Jinja2-3.1.2 MarkupSafe-2.1.2 Werkzeug-2.3.4 blinker-1.6.2 click-8.1.3 importlib-metadata-6.6.0 itsdangerous-2.1.2 python-dotenv-1.0.0 zipp-3.15.0
+jonghyuk2013@jonghyuk2013-VirtualBox:~/marineGarbage$ Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
+D:\Project\marineGarbage\pix4D\origins>

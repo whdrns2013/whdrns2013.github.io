@@ -1,0 +1,37 @@
+CentOS와 Ubuntu 차이
+https://www.itmaya.co.kr/wboard/view.php?wb=tech&idx=22
+패키지 이름 등.. 들이 다르겠구나.
+
+명령어
+https://coding-factory.tistory.com/500
+https://www.manualfactory.net/10803
+https://brownbears.tistory.com/161
+http://www.dreamy.pe.kr/zbxe/CodeClip/3770251
+
+################## 리눅스 공통 ################
+pwd : 현재 디렉토리 경로
+clear : 화면 정리
+dir : 현재 디렉토리 내 폴더 및 파일
+mkdir 폴더명 : 폴더 만들기
+rm 파일명 : 파일 삭제
+rm -r 폴더명 : 폴더 삭제 
+cd 경로 : change directory
+vi 파일명 : vi 편집기
+vi /root/.bashrc : bash 파일 수정
+source /root/.bashrc : bash 파일 적용
+which 파일명 : 파일 찾기
+ifconfig : ip주소 확인
+unzip 파일명.zip : zip 파일 압축 풀기
+dpkg -l : 설치된 패키지 확인
+dpkg -l | grep 패키지명(일부도 가능) : 특정 패키지 설치되었는지 확인
+apt_get install 패키지이름 : 패키지 설치
+apt-get remove 패키지이름 : 패키지 삭제
+
+################## Cent OS ##################
+https://coding-factory.tistory.com/500
+패키지 관리 툴 : yum
+
+################## UBUNTU ##################
+https://dongle94.github.io/ubuntu/ubuntu-check-ip/
+패키지 관리 툴 : apt
+sudo apt install net-tools : net tool 설치. ifconfig가 안된다면 진행.

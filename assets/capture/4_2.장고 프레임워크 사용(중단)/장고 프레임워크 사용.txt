@@ -1,0 +1,72 @@
+https://docs.djangoproject.com/ko/4.2/intro/install/
+https://blog.nerdfactory.ai/2021/02/24/creating-an-api-&-collecting-html-elements-with-django-rest-framework.html
+https://kangbk0120.github.io/articles/2022-02/cgi-wcgi-asgi
+
+=== 장고 설치
+pip install Django
+
+
+=== 장고 프로젝트 만들기
+cmd로 부모폴더에서 장고 프로젝트를 만듭니다.
+`django-admin startproject 프로젝트명`
+
+
+=== 이렇게 만들어진 장고의 구조
+|--프로젝트명 폴더(1차)
+|--|--manage.py
+|--|--프로젝트명 폴더(2차)
+|--|--|--__init__.py
+|--|--|--asgi.py
+|--|--|--settings.py
+|--|--|--urls.py
+|--|--|--wsgi.py
+
+*manage.py			: 커맨드라인 유틸
+*프로젝트명 폴더(1차)		: 프로젝트의 모든 파일을 담는 폴더
+*프로젝트명 폴더(2차)		: 프로젝트에서 사용되는 패키지를 담는 폴더
+*프로젝트명 폴더(2차)/__init__.py	: 패키지를 읽을 수 있게 하는 단순한 빈 파일
+*프로젝트명 폴더(2차)/settings.py	: 현재 장고 프로젝트의 환경과 구성을 저장 (환경 설정 저장 파일)
+*프로젝트명 폴더(2차)/urls.py		: 현재 장고 프로젝트의 URL 선언을 저장. 사이트의 목차라고 보면 됨.
+*프로젝트명 폴더(2차)/asgi.py	: 서비스를 위한 ASGI-호환 웹 서버의 진입점
+*프로젝트명 폴더(2차)/wsgi.py	: 서비스를 위한 WSGI 호환 웹 서버의 진입점
+-- ASGI, WSGI : https://kangbk0120.github.io/articles/2022-02/cgi-wcgi-asgi
+
+
+=== 서버 실행
+서버 실행은 manage 파일을 실행시킴으로써 할 수 있습니다.
+`python manage.py runserver`
+기본 사이트가 나오면 성공
+
+- 기본 포트는 localhost:8000 (127.0.0.1:8000)
+- 특정 포트를 원할 경우 `python manage.py runserver 포트번호`
+- 사용가능한 모든 공용 IP 청취하려면 `python manage.py runserver 0.0.0.0:8000`
+
+
+
+=== 프로젝트와 앱의 개념
+프로젝트와 앱은 무엇이 다를까요? 앱은 블로그 시스템, 공개 기록 데이터베이스 또는 소규모 의견조사 앱과 같은 작업을 수행하는 웹 애플리케이션입니다. 프로젝트는 특정 웹 사이트에 대한 구성 및 앱의 모음입니다. 한 프로젝트에 여러 개의 앱이 포함될 수 있습니다. 앱은 여러 프로젝트에 있을 수 있습니다.
+
+
+
+=== 앱 만들기
+커맨드라인에서 아래 명령어를 통해 앱을 만들 수 있습니다.
+django-admin startapp 앱이름
+앱을 생성한 장고 폴더의 생김새는 아래와 같습니다.
+|--프로젝트명 폴더(1차)
+|--|--manage.py
+|--|--프로젝트명 폴더(2차)
+|--|--|--__init__.py
+|--|--|--asgi.py
+|--|--|--settings.py
+|--|--|--urls.py
+|--|--|--wsgi.py
+|--|--앱이름 폴더
+|--|--|--__init__.py
+|--|--|--admin.py
+|--|--|--apps.py
+|--|--|--models.py
+|--|--|--tests.py
+|--|--|--urls.py
+|--|--|--views.py
+|--|--|--migrations
+|--|--|--|--__init__.py
