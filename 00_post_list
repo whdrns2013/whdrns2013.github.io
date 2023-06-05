@@ -160,9 +160,10 @@
 ■ network
 |포스트 코드|포스트 제목|게시일|완료여부|
 |---|---|---|---|
-|20230602_001|리눅스 SSH 연결하기|완료|
-|20230602_002|SCP로 파일 주고받기|완료|
-|20230604_001|SSH 연결 툴|완료|
+|20230602_001|리눅스 SSH 연결하기|2023-06-02|완료|
+|20230602_002|SCP로 파일 주고받기|2023-06-02|완료|
+|20230604_001|SSH 연결 툴|2023-06-04|완료|
+|20230604_002|WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!|2023-06-04|완료|
 
 
 ■ Trend_and_Thesis
@@ -184,3 +185,4 @@
 |20230306_001|boto3 사용시 AWS EC2 인스턴스 자동 생성 문제|진행중|
 |20230307_001|No module named 'yaml'|완료|
 |20230307_002|module 'numpy' has no attribute 'float'|완료|
+|20230604_002|WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!|2023-06-04|완료|
