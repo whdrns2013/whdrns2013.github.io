@@ -47,9 +47,7 @@ Ubuntu에서는 그 설치 과정이 CentOS와 살짝 다릅니다.
 * Python 3.8.0  
 {: .notice--warning}
 
-**가상 리눅스 설치하기**
-[](https://whdrns2013.github.io/linux/20230530_001_centosinstall/)
-{: .notice--warning}
+참고 : 가상 리눅스 설치하기 [포스트 링크](https://whdrns2013.github.io/linux/20230530_001_centosinstall/)   
 
 <br>
 <br>
