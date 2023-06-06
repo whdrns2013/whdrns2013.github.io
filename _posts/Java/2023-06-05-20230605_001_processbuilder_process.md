@@ -233,7 +233,7 @@ directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포
 
 <br>
 
-## 2-4. method와 attribute 예시
+## 2-4. ProcessBuilder method와 attribute 예시
 
 ```java
 public class example{
@@ -351,7 +351,7 @@ Process p = ProcessBuilder.start();
 
 <br>
 
-## 3-4. method와 attribute 예시
+## 3-4. Process method와 attribute 예시
 
 ```java
 public class example{
