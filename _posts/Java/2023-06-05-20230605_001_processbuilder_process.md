@@ -24,10 +24,42 @@ author: # 주인 외 작성자 표기 필요시
 ---
 <!--postNo: 20230605_001-->
 
-##############################################
 > 표준적인 ProcessBuilder 사용법은 아래 펼치기를 참고
-> 펼치기
-##############################################
+<details>
+<summary> 펼치기/접기 </summary>
+<div markdown='1'>
+
+```java
+// Process 관련 설정
+File path = new File("프로세스가/실행될/디렉토리/경로");
+ArrayList<String> commandList = new ArrayList<>();
+
+// 명령어 설정
+commandList.add("명령어1");
+commandList.add("명령어2");
+commandList.add("명령어3");
+
+// ProcessBuilder 생성
+ProcessBuilder pb = new ProcessBuilder();
+
+// ProcessBuilder 설정
+pb.directory(path);
+pb.command(commandList);
+
+// Process 실행
+Process p = pb.start();
+
+// Buffered Reader로 실행 내용 읽어오기
+BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
+String line;
+while ((line = br.readLine()) != null){
+    System.out.println(">>> " + line);
+}
+```
+</div>
+</details>
+
+<br>
 
 # Process Builder, Process
 
@@ -38,6 +70,8 @@ Process Builder 클래스는 자바에서 외부 프로세스를 생성하고 �
 Process Builder를 통해 생성된 프로세스의 상태 제어, 입출력 등의 관리가 가능합니다.  
 
 아래에 간단한 예시를 들겠습니다.
+
+<br>
 
 ## 예시
 
@@ -58,7 +92,7 @@ java에서 ProcessBuilder를 통해 python 파일을 실행시키는 Process를 
 // ** 파일명 : example_processbuilder.java
 
 // 파이썬 경로를 path 변수에 저장
-String path = "./python_ex.py"
+String path = "User/Desktop/python_ex.py"
 
 // Process Builder로 실행될 프로세스 선언
 ProcessBuilder pb = new ProcessBuilder("python", path);
@@ -86,6 +120,8 @@ System.out.println("process 실행이 완료되었습니다.")
 >>> process 실행이 완료되었습니다.
 ```
 
+<br>
+
 ## Process Builder 와 Process 의 관계
 
 위 예시에서 사용된 Process Builder와 Process의 관계를 추가로 설명해보도록 하겠습니다.  
@@ -96,35 +132,33 @@ ProcessBuilder 클래스는 Java 파일이 실행되는 것 외적으로 프로�
 그리니까.. "터미널에서 입력할 내용을 담고 있는 그릇" 이라고 생각하면 편할 것입니다.  
 다르게 말해보자면 "실행할 프로세스 명령어를 담고있는 그릇"으로도 말할 수 있겠습니다.    
 
-예를 들어 `ProcessBuilder("cd", "c:/User/Document")` 라는 ProcessBuilder 객체는  
-`c -> User -> Document 폴더로 이동`하는 명령어를 담고 있는 것이죠.  
+예를 들어 `ProcessBuilder("python", "/User/Desktop/python_ex.py")` 라는 ProcessBuilder 객체는  
+`Desktop에 있는 python_ex.py 파이썬 파일을 실행`하는 명령어를 담고 있는 것이죠.  
 
-###############################################
---- 프로세스 빌더 개념도, 주요 attribute, method ---
-###############################################
+![](/assets/images/20230605_001_001.png)
 
 Process 클래스는 ProcessBuilder 클래스를 시작(.start()) 하는 것으로 만들어지게 됩니다.  
 이 클래스 객체는 현재 Java 파일이 실행되는 외부에 만들어진 Process를 가리키고(=추상화하고) 있습니다.  
 
-위에서 예를 든 ProcessBuilder("cd", "c:/User/Document") 객체를 `.start()하여 만들어진 Process 객체`는  
-c -> User -> Document 폴더로 `이동하는 작업 자체`를 의미합니다.  
+위에서 예를 든 ProcessBuilder("python", "/User/Desktop/python_ex.py") 객체를 `.start()하여 만들어진 Process 객체`는  
+`python_ex.py 파일이 실행되는 작업 자체`를 의미합니다.  
 
-###############################################
---### 프로세스 개념도, 주요 attribute, method ###---
-###############################################
+![](/assets/images/20230605_001_002.png)
 
-정리해보자면 ProcessBuilder 객체는 "앞으로 실행할 작업의 정보를 담고 있는" 객체이고,  
+<span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>
+정리해보자면 ProcessBuilder 객체는 "앞으로 실행할 작업의 정보를 담고 있는" 객체이고,<br>
 Process 객체는 "실행되고 있는 작업을 추상화한" 객체입니다.  
+</span>
 
-###############################################
---### 둘 간의 관계를 나타낼 수 있는 개념도 ###---
-###############################################
-
+<br>
+<br>
 
 # ProcessBuilder 클래스 설명  
 
 앞서 설명했듯 "앞으로 실행할 작업(Process)의 정보를 담고 있는" 객체입니다.  
 그리고, .start() 메서드를 통해 그 작업을 실행시킬 수도 있습니다.  
+
+<br>
 
 ## ProcessBuilder 클래스 선언
 
@@ -156,6 +190,8 @@ pb3.command("명령어1", "명령어2" ...);
 두 방법 중 무엇이 좋고 나쁜 것은 없어 보입니다. 단지 상황에 맞춰 사용하면 되겠습니다.  
 명령어가 짧고 적을 경우 String 형태를, 명령어가 길거나 많을 경우 ArrayList 형태를 사용하면 좋겠습니다.  
 
+<br>
+
 ## ProcessBuilder 클래스의 메서드
 
 다음은 ProcessBuilder 클래스의 메서드(method)들입니다.  
@@ -175,6 +211,8 @@ pb3.command("명령어1", "명령어2" ...);
 directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포스트를 참고해주세요.  
 [포스트 링크 : Java file class](https://whdrns2013.github.io/Java/20230601_002_file_class)
 
+<br>
+
 ## ProcessBuilder 클래스의 속성
 
 다음은 ProcessBuilder 클래스의 속성(attribute)들입니다.  
@@ -182,54 +220,182 @@ directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포
 
 |Attribute|설명|타입|
 |---|---|---|
-|command|외부 Process의 명령어와 인수를 저장한 리스트|List|
-|directory|외부 Process가 실행될 작업 디렉토리|File|
-|environment|외부 Process가 실행될 때 사용되는 환경 변수|Map<String, String>|
-|redirectErrorStream|표준 에러 스트림을 표준 출력 스트림으로 리디렉션할지 여부|Boolean|
+|command()|외부 Process의 명령어와 인수를 저장한 리스트|List|
+|directory()|외부 Process가 실행될 작업 디렉토리|File|
+|environment()|외부 Process가 실행될 때 사용되는 환경 변수|Map<String, String>|
+|redirectErrorStream()|표준 에러 스트림을 표준 출력 스트림으로 리디렉션할지 여부|Boolean|
+
+<br>
 
 ## method와 attribute 예시
 
 ```java
+public class example{
+  public static void main(String[] args) throws IOException{
 
+    ProcessBuilder pb = new ProcessBuilder(); // ProcessBuilder 생성
+
+    File path = new File("/User/Desktop/");   // Process 실행될 경로
+    String fileName = "./example.py";         // 실행시킬 파일명
+
+    pb.directory(path);                       // Process 가 실행되는 경로 지정
+    pb.command("python", fileName);           // Process command 지정
+
+    Process p = pb.start();                   // Process 실행
+
+    System.out.println("커맨드 : " + pb.command());
+    // >>> 커맨드 : [python, ./example.py]
+    System.out.println("디렉토리 : " + pb.directory());
+    // >>> 디렉토리 : /User/Desktop
+    System.out.println("환경변수 : " + pb.environment());
+    // >>> 환경변수 : {LOCAL_GIT_DIRECTORY:/APPLICATION .... 생략}
+    System.out.println("에러스트림 리디렉션 : " + pb.redirectErrorStream());
+    // >>> 에러스트림 리디렉션 : false (지정하지 않음)
+  }
+}
 ```
 
+<br>
 
 ## Exception이 필요한 이유
 
 ProcessBuilder 클래스를 사용할 때에는 꼭 예외처리를 사용해야 합니다.  
 예외처리가 되지 않는 경우엔 syntax error가 발생하게 되며, 실행이 불가합니다.  
 
-예외처리는 ProcessBuilder 의 실행부(.start()) 에서 try-catch 문을 사용하거나  
-ProcessBuilder를 사용하는 클래스의 main 메서드에서 throws IOException을 사용하면 됩니다.  
+![](/assets/images/20230605_001_003.png)
+
+예외처리는 (1) ProcessBuilder 의 실행부(.start()) 에서 try-catch 문을 사용하거나  
+(2) ProcessBuilder를 사용하는 클래스의 main 메서드에서 throws Exception을 사용하면 됩니다.  
+
+두 가지 방법 중 하나를 상황에 맞게 사용하면 되겠습니다.  
 
 ```java
 // try-catch 문 사용
 public class example_processbuilder{
+  public static void main(Stinrg[] args){
 
-  ProcessBuilder pb = new ProcessBuilder("cd", "./example.py");
+    ProcessBuilder pb = new ProcessBuilder("cd", "User/Desktop");
 
-  try {
-    Process p = pb.start();
-
+    // try-catch
+    try {
+      Process p = pb.start();
+    } catch (IOException | InterruptedException e){
+      e.printStackTrace();
+    }
   }
-
-
 }
-
-
 ```
 
+```java
+// throws Exception 사용
+public class example_processbuilder{
+  // throws Exception
+  public static void main(String[] args) throws IOException{
+    
+    ProcessBuilder pb = new ProcessBuilder("cd", "User/Desktop");
+
+    Process p = pb.start();
+  }
+}
+```
+
+<br>
+<br>
 
 # Process 클래스 설명  
 
+Process 클래스는 현재 Java가 실행되는 프로세스와 다른, 외부의 Process를 바라보는 추상 클래스입니다.  
+이 클래스로 외부 Process의 상태를 제어하고, 입출력, 에러 스트림 관리를 할 수 있습니다.  
+
+<br>
+
 ## Process 클래스 선언  
 
-## Process 의 작동
+Process 클래스는 일반적으로 ProcessBuilder.start() 메서드 혹은 Runtime.exec() 메서드를 통해 생성됩니다.  
+ProcessBuilder는 위에서 설명했는데, Runtime은 뭐냐.  
+Runtime.exec()은 Java 1.7 미만의 버전에서 사용된 외부 프로세스 실행 메서드입니다.  
+
+```java
+ProcessBuilder pb = new ProcessBuilder("명령어1","명령어2"...);
+Process p = ProcessBuilder.start();
+```
+
+<br>
 
 ## Process 클래스의 속성
 
+|Attribute|설명|타입|
+|---|---|---|
+|Process.getInputStream()|외부 Process의 표준 출력에 대한 입력 스트림|InputStream|
+|Process.getOutputStream()|외부 Process의 표준 입력에 대한 출력 스트림|OutputStream|
+|Process.getErrorStream()|외부 Process의 표준 에러에 대한 입력 스트림|InputStream|
+
+<br>
+
 ## Process 클래스의 메서드
 
+|Method|파라미터타입|설명|반환값|
+|---|---|---|---|
+|.waitFor()||외부 Process의 종료를 기다리고, 종료 코드를 반환|int|
+|.destory()||외부 Process를 강제 종료시킨다.|void|
+|.isAlive()||외부 Process가 실행중인지 여부 반환|boolean|
+|.exitValue()||외부 Process의 종료 코드를 반환<br>이 메서드 전에 .waitFor()메서드를 사용해<br>Process가 종료되기를 기다려야 한다.|int|
+
+<br>
+
+## method와 attribute 예시
+
+```java
+public class example{
+  public static void main(String[] args) throws IOException{
+
+    ProcessBuilder pb = new ProcessBuilder("명령어1", "명령어2"); // ProcessBuilder 생성
+    Process p = pb.start(); // Process 실행, 생성
+
+    System.out.println(p.getInputStream());
+    // >>> java.lang.ProcessImpl$ProcessPipeInputStream@27c170f0
+    System.out.println(p.getOutputStream());
+    // >>> java.lang.ProcessImpl$ProcessPipeOutputStream@5451c3a8
+    System.out.println(p.getErrorStream());
+    // >>> java.lang.ProcessImpl$ProcessPipeInputStream@2626b418
+    System.out.println(p.isAlive());
+    // >>> false : 프로세스가 종료됨
+
+    p.destroy();            // 프로세스를 강제 종료
+  }
+}
+```
+
+```java
+public class example{
+  public static void main(String[] args) throws IOException, InterruptedException{
+
+    // 계속 켜져있는 블로그 프로세스를 외부 프로세스로 바라보도록 하고
+    Process p = Runtime.getRuntime().exec(file);
+
+    // While : 프로세스가 살아있다면(true) 그리고 i 가 5 이하라면
+    while (p.isAlive()){
+      System.out.println("External process is running..."); // 정해진 문구 출력
+      Thread.sleep(1000);                                   // 1000ms (1초) 대기
+    }
+
+    // 프로세스가 종료되었을 때 종료코드 출력
+    System.out.println("External process exited with code: " + p.exitValue());
+
+  }
+}
+
+// 출력 내용
+// >>> External process is running...
+// >>> External process is running...
+// >>> External process is running...
+// >>> ...
+// >>> External process exited with code : 0 (프로세스 종료되었을 때)
+```
+
+
+<br>
+<br>
 
 
 
@@ -240,3 +406,4 @@ Java의 정석 (남궁성)
 자바로 외부 프로그램 실행시키기 : https://yangyag.tistory.com/55  
 Java 파일 입출력, 파일 경로 : https://chb2005.tistory.com/57  
 ProcessBuilder 클래스 : https://happygrammer.github.io/java/processbuilder/  
+chatGPT (교차검증)  
