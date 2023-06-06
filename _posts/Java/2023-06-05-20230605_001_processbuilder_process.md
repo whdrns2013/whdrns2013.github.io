@@ -24,7 +24,8 @@ author: # 주인 외 작성자 표기 필요시
 ---
 <!--postNo: 20230605_001-->
 
-> 표준적인 ProcessBuilder 사용법은 아래 펼치기를 참고
+<blockquote>
+표준적인 ProcessBuilder 사용법은 아래 펼치기를 참고
 <details>
 <summary> 펼치기/접기 </summary>
 <div markdown='1'>
@@ -58,22 +59,24 @@ while ((line = br.readLine()) != null){
 ```
 </div>
 </details>
+</blockquote>
+
 
 <br>
 
-# Process Builder, Process
+# 1. Process Builder, Process
 
-Process Builder 클래스는 자바에서 외부 프로세스를 생성하고 제어할 수 있는 도구입니다.  
+<span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Process Builder 클래스</span>는 자바에서 외부 프로세스를 생성하고 제어할 수 있는 도구입니다.  
 쉽게 말해 자바로 외부 프로그램을 실행시킬 수 있는 방법 중 하나입니다.    
 
-그리고 Process 클래스는 Process Builder 를 통해 생성된 프로세스를 나타내는 추상 클래스입니다.  
+<span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>그리고 Process 클래스</span>는 Process Builder 를 통해 생성된 프로세스를 나타내는 추상 클래스입니다.  
 Process Builder를 통해 생성된 프로세스의 상태 제어, 입출력 등의 관리가 가능합니다.  
 
 아래에 간단한 예시를 들겠습니다.
 
 <br>
 
-## 예시
+## 1-1. 예시
 
 먼저, 자바를 통해 실행시킬 간단한 python 파일을 만듭니다.  
 이 파일은 두 개의 문장을 출력합니다.  
@@ -84,7 +87,8 @@ print("test 입니다.")
 print("process builder가 정상적으로 실행되었습니다.")
 ```
 
-java에서 ProcessBuilder를 통해 python 파일을 실행시키는 Process를 생성하고, 이 프로세스를 실행 시킵니다.  
+java에서 ProcessBuilder를 통해 python 파일을 실행시키는 Process를 생성하고,  
+이 프로세스를 실행 시킵니다.  
 그리고 BufferReader로 실행 결과를 받도록 합니다.  
 자세한 내용은 아래에서 다룰테니, 지금은 작동과 결과만 보도록 합니다.  
 
@@ -122,7 +126,7 @@ System.out.println("process 실행이 완료되었습니다.")
 
 <br>
 
-## Process Builder 와 Process 의 관계
+## 1-2. Process Builder 와 Process 의 관계
 
 위 예시에서 사용된 Process Builder와 Process의 관계를 추가로 설명해보도록 하겠습니다.  
 
@@ -153,14 +157,14 @@ Process 객체는 "실행되고 있는 작업을 추상화한" 객체입니다.
 <br>
 <br>
 
-# ProcessBuilder 클래스 설명  
+# 2. ProcessBuilder 클래스 설명  
 
-앞서 설명했듯 "앞으로 실행할 작업(Process)의 정보를 담고 있는" 객체입니다.  
+앞서 설명했듯 <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>"앞으로 실행할 작업(Process)의 정보를 담고 있는"</sapn> 객체입니다.  
 그리고, .start() 메서드를 통해 그 작업을 실행시킬 수도 있습니다.  
 
 <br>
 
-## ProcessBuilder 클래스 선언
+## 2-1. ProcessBuilder 클래스 선언
 
 ProcessBuilder 클래스의 선언은 일반적인 객체 선언과 동일한 형태로 진행됩니다.  
 그리고 선언될 때의 파라미터는 String 형태와 List 형태 두 가지를 사용할 수 있습니다.  
@@ -192,7 +196,7 @@ pb3.command("명령어1", "명령어2" ...);
 
 <br>
 
-## ProcessBuilder 클래스의 메서드
+## 2-2. ProcessBuilder 클래스의 메서드
 
 다음은 ProcessBuilder 클래스의 메서드(method)들입니다.  
 여기서 '외부 Process'란 ProcessBuilder.start()를 통해 만들어진 Process를 의미합니다.  
@@ -208,12 +212,14 @@ pb3.command("명령어1", "명령어2" ...);
 |redirectOutput()|ProcessBuilder.Redirect<br>destination|외부 Process의 표준 출력을 지정된 대상으로 리디렉션||
 |redirectError()|ProcessBuilder.Redirect<br>destination|외부 Process의 표준 에러를 지정된 대상으로 리디렉션||
 
+<br>
+
 directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포스트를 참고해주세요.  
 [포스트 링크 : Java file class](https://whdrns2013.github.io/Java/20230601_002_file_class)
 
 <br>
 
-## ProcessBuilder 클래스의 속성
+## 2-3. ProcessBuilder 클래스의 속성
 
 다음은 ProcessBuilder 클래스의 속성(attribute)들입니다.  
 여기서 '외부 Process'란 ProcessBuilder.start()를 통해 만들어진 Process를 의미합니다.  
@@ -227,7 +233,7 @@ directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포
 
 <br>
 
-## method와 attribute 예시
+## 2-4. method와 attribute 예시
 
 ```java
 public class example{
@@ -257,12 +263,14 @@ public class example{
 
 <br>
 
-## Exception이 필요한 이유
+## 2-5. Exception이 필요한 이유
 
-ProcessBuilder 클래스를 사용할 때에는 꼭 예외처리를 사용해야 합니다.  
-예외처리가 되지 않는 경우엔 syntax error가 발생하게 되며, 실행이 불가합니다.  
+ProcessBuilder 클래스를 사용할 때에는 <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>꼭 예외처리를 사용해야</span> 합니다.  
+예외처리가 되지 않는 경우엔 unhandeled exception이 발생하게 되며, 실행이 불가합니다.  
 
-![](/assets/images/20230605_001_003.png)
+![](/assets/images/20230605_001_003.png)  
+
+예외처리를 하는 이유는, 실행시키려는 프로세스가 어떤 오류를 발생했을 경우에 Java 프로세스의 향방을 정해야 하기 때문이죠.
 
 예외처리는 (1) ProcessBuilder 의 실행부(.start()) 에서 try-catch 문을 사용하거나  
 (2) ProcessBuilder를 사용하는 클래스의 main 메서드에서 throws Exception을 사용하면 됩니다.  
@@ -302,14 +310,14 @@ public class example_processbuilder{
 <br>
 <br>
 
-# Process 클래스 설명  
+# 3. Process 클래스 설명  
 
 Process 클래스는 현재 Java가 실행되는 프로세스와 다른, 외부의 Process를 바라보는 추상 클래스입니다.  
 이 클래스로 외부 Process의 상태를 제어하고, 입출력, 에러 스트림 관리를 할 수 있습니다.  
 
 <br>
 
-## Process 클래스 선언  
+## 3-1. Process 클래스 선언  
 
 Process 클래스는 일반적으로 ProcessBuilder.start() 메서드 혹은 Runtime.exec() 메서드를 통해 생성됩니다.  
 ProcessBuilder는 위에서 설명했는데, Runtime은 뭐냐.  
@@ -322,7 +330,7 @@ Process p = ProcessBuilder.start();
 
 <br>
 
-## Process 클래스의 속성
+## 3-2. Process 클래스의 속성
 
 |Attribute|설명|타입|
 |---|---|---|
@@ -332,7 +340,7 @@ Process p = ProcessBuilder.start();
 
 <br>
 
-## Process 클래스의 메서드
+## 3-3. Process 클래스의 메서드
 
 |Method|파라미터타입|설명|반환값|
 |---|---|---|---|
@@ -343,7 +351,7 @@ Process p = ProcessBuilder.start();
 
 <br>
 
-## method와 attribute 예시
+## 3-4. method와 attribute 예시
 
 ```java
 public class example{
@@ -399,7 +407,7 @@ public class example{
 
 
 
-# Reference
+# 4. Reference
 
 개인 실험  
 Java의 정석 (남궁성)  
