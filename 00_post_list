@@ -188,3 +188,9 @@
 |20230307_001|No module named 'yaml'|완료|
 |20230307_002|module 'numpy' has no attribute 'float'|완료|
 |20230604_002|WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!|2023-06-04|완료|
+|20230607_001|JSON 파일 내용에 escape 문자가 여러번 생기는 문제|2023-06-07|완료|
+
+■ CSS
+|포스트 코드|포스트 제목|게시일|완료여부|
+|---|---|---|---|
+|20230607_002|CSS table|2023-06-07|작성중|
