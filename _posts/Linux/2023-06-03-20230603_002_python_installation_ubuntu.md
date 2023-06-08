@@ -147,7 +147,7 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 파이썬의 패키지 관리 툴인 pip를 설치해줍니다.  
 
 ```terminal
-sudo apt install python3.8 -pip
+sudo apt install python3.8-pip
 ```
 
 혹은
