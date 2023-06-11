@@ -74,8 +74,6 @@ Process Builder를 통해 생성된 프로세스의 상태 제어, 입출력 등
 
 아래에 간단한 예시를 들겠습니다.
 
-<br>
-
 ## 1-1. 예시
 
 먼저, 자바를 통해 실행시킬 간단한 python 파일을 만듭니다.  
@@ -124,8 +122,6 @@ System.out.println("process 실행이 완료되었습니다.")
 >>> process 실행이 완료되었습니다.
 ```
 
-<br>
-
 ## 1-2. Process Builder 와 Process 의 관계
 
 위 예시에서 사용된 Process Builder와 Process의 관계를 추가로 설명해보도록 하겠습니다.  
@@ -159,10 +155,8 @@ Process 객체는 "실행되고 있는 작업을 추상화한" 객체입니다.
 
 # 2. ProcessBuilder 클래스 설명  
 
-앞서 설명했듯 <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>"앞으로 실행할 작업(Process)의 정보를 담고 있는"</sapn> 객체입니다.  
+앞서 설명했듯 **"앞으로 실행할 작업(Process)의 정보를 담고 있는"** 객체입니다.  
 그리고, .start() 메서드를 통해 그 작업을 실행시킬 수도 있습니다.  
-
-<br>
 
 ## 2-1. ProcessBuilder 클래스 선언
 
@@ -194,8 +188,6 @@ pb3.command("명령어1", "명령어2" ...);
 두 방법 중 무엇이 좋고 나쁜 것은 없어 보입니다. 단지 상황에 맞춰 사용하면 되겠습니다.  
 명령어가 짧고 적을 경우 String 형태를, 명령어가 길거나 많을 경우 ArrayList 형태를 사용하면 좋겠습니다.  
 
-<br>
-
 ## 2-2. ProcessBuilder 클래스의 메서드
 
 다음은 ProcessBuilder 클래스의 메서드(method)들입니다.  
@@ -212,12 +204,8 @@ pb3.command("명령어1", "명령어2" ...);
 |redirectOutput()|ProcessBuilder.Redirect<br>destination|외부 Process의 표준 출력을 지정된 대상으로 리디렉션||
 |redirectError()|ProcessBuilder.Redirect<br>destination|외부 Process의 표준 에러를 지정된 대상으로 리디렉션||
 
-<br>
-
 directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포스트를 참고해주세요.  
 [포스트 링크 : Java file class](https://whdrns2013.github.io/Java/20230601_002_file_class)
-
-<br>
 
 ## 2-3. ProcessBuilder 클래스의 속성
 
@@ -230,8 +218,6 @@ directory 클래스에서 사용되는 file 클래스에 대해서는 아래 포
 |directory()|외부 Process가 실행될 작업 디렉토리|File|
 |environment()|외부 Process가 실행될 때 사용되는 환경 변수|Map<String, String>|
 |redirectErrorStream()|표준 에러 스트림을 표준 출력 스트림으로 리디렉션할지 여부|Boolean|
-
-<br>
 
 ## 2-4. ProcessBuilder method와 attribute 예시
 
@@ -260,8 +246,6 @@ public class example{
   }
 }
 ```
-
-<br>
 
 ## 2-5. Exception이 필요한 이유
 
@@ -315,8 +299,6 @@ public class example_processbuilder{
 Process 클래스는 현재 Java가 실행되는 프로세스와 다른, 외부의 Process를 바라보는 추상 클래스입니다.  
 이 클래스로 외부 Process의 상태를 제어하고, 입출력, 에러 스트림 관리를 할 수 있습니다.  
 
-<br>
-
 ## 3-1. Process 클래스 선언  
 
 Process 클래스는 일반적으로 ProcessBuilder.start() 메서드 혹은 Runtime.exec() 메서드를 통해 생성됩니다.  
@@ -328,8 +310,6 @@ ProcessBuilder pb = new ProcessBuilder("명령어1","명령어2"...);
 Process p = ProcessBuilder.start();
 ```
 
-<br>
-
 ## 3-2. Process 클래스의 속성
 
 |Attribute|설명|타입|
@@ -337,8 +317,6 @@ Process p = ProcessBuilder.start();
 |Process.getInputStream()|외부 Process의 표준 출력에 대한 입력 스트림|InputStream|
 |Process.getOutputStream()|외부 Process의 표준 입력에 대한 출력 스트림|OutputStream|
 |Process.getErrorStream()|외부 Process의 표준 에러에 대한 입력 스트림|InputStream|
-
-<br>
 
 ## 3-3. Process 클래스의 메서드
 
@@ -348,8 +326,6 @@ Process p = ProcessBuilder.start();
 |.destory()||외부 Process를 강제 종료시킨다.|void|
 |.isAlive()||외부 Process가 실행중인지 여부 반환|boolean|
 |.exitValue()||외부 Process의 종료 코드를 반환<br>이 메서드 전에 .waitFor()메서드를 사용해<br>Process가 종료되기를 기다려야 한다.|int|
-
-<br>
 
 ## 3-4. Process method와 attribute 예시
 
