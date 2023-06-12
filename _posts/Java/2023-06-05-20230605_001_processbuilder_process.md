@@ -1,8 +1,9 @@
 ---
 title: Java ProcessBuilder, Process - 자바로 외부 프로세스 제어하기 # 제목
 excerpt: # 서브 타이틀
+meta_name: Java ProcessBuilder, Process - 자바로 외부 프로세스 제어하기
 date: 2023-06-05 11:33:00 +0900      # 작성일
-lastmod: 2023-06-05 11:33:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
+lastmod: 2023-06-12 17:33:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
 categories: Java         # 다수 카테고리에 포함 가능
 tags: Java java processbuilder process builder 프로세스 콘솔 커맨드 command 다른 언어 # 태그 복수개 가능
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
