@@ -324,6 +324,8 @@ Process p = ProcessBuilder.start();
 |Method|파라미터타입|설명|반환값|
 |---|---|---|---|
 |.waitFor()||외부 Process의 종료를 기다리고, 종료 코드를 반환|int|
+|||waitFor() 사용시 해당 프로세스 종료까지 타작업 불가||
+|||waitFor() 미사용시 프로세스 실행만 시키고 손뗌||
 |.destory()||외부 Process를 강제 종료시킨다.|void|
 |.isAlive()||외부 Process가 실행중인지 여부 반환|boolean|
 |.exitValue()||외부 Process의 종료 코드를 반환<br>이 메서드 전에 .waitFor()메서드를 사용해<br>Process가 종료되기를 기다려야 한다.|int|
