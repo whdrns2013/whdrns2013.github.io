@@ -1,0 +1,158 @@
+---
+title: VirtualBox 의 네트워크 종류 (NAT, 어댑터에 브리지, 내부 네트워크, 호스트 전용 어댑터 .. ) # 제목 (필수)
+excerpt: Virtial Machine 의 모든 네트워크 종류를 알아보자 # 서브 타이틀이자 meta description (필수)
+date: 2023-06-25 20:33:00 +0900      # 작성일 (필수)
+lastmod: 2023-06-25 20:33:00 +0900   # 최종 수정일 (필수)
+categories: network         # 다수 카테고리에 포함 가능 (필수)
+tags: VirtualBox NAT 어댑터에 브리지 내부 네트워크 호스트 전용 어댑터 일반 드라이버                    # 태그 복수개 가능 (필수)
+classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+toc: true        # 목차 표시 여부
+toc_label:       # toc 제목
+toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image:             # 헤더 이미지 (제목과 겹치게)
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
+sitemap :                    # 구글 크롤링
+  changefreq : daily         # 구글 크롤링
+  priority : 1.0             # 구글 크롤링
+author: # 주인 외 작성자 표기 필요시
+---
+<!--postNo: 20230625_001-->
+
+
+# Intro  
+
+## 용어 및 상식  
+
+* 랜카드 = 어댑터 = NIC = 네트워크 인터페이스  
+* 랜카드 하나 당 IP가 하나 생긴다.  
+* 랜카드는 하나의 머신(컴퓨터 등)에 여러 개가 있을 수 있다.  
+* 단말 : 랜카드 1개 당 단말 1개로 부른다.  
+
+
+## Virtual Box의 네트워크 종류  
+
+* NAT : BOX 내에서의 통신까지 가능
+* 호스트 전용 어댑터 : HOST OS 와 통신 가능  
+* 어댑터 브릿지 : HOST OS와 같은 네트워크에 있는 단말과 통신 가능  
+
+
+# 네트워크 종류  
+
+![](/assets/images/20230625_001_001.png)
+
+Virtual Box에는 네트워크의 종류(모드) 가 총 8가지가 있다.  
+
+* NAT  
+* 어댑터에 브릿지  
+* 내부 네트워크  
+* 호스트 전용 어댑터  
+* 일반 드라이버  
+* NAT 네트워크  
+* Cloud Network `[expermental]`  
+* 연결되지 않음  
+
+처음에는 이 버츄얼박스의 설명이 어렵게만 느껴졌는데,  
+공부하고 보니 이 표가 정말 정확한 설명임을 알았다.  
+
+## NAT  
+
+위키피디아
+
+버츄얼박스에서 생성된 가상 머신끼리 통신 가능 -> 어 이거 어디는 불가능하다는데  
+가상 머신에서 호스트 호출 가능 (+인터넷 가능)  
+호스트에서 가상 머신에 접속 불가능 (ssh 불가)  
+
+## NAT 네트워크  
+
+NAT + 
+버츄얼박스에 생성된 가상 머신끼리 통신 가능
+
+
+
+
+## 호스트 전용 어댑터  
+
+NAT + OS와 주고받기 가능  
+그러니까 호스트에서 가상 머신에 접속 가능 (ssh 가능)  
+왜 호스트 전용이냐?  
+
+
+## 어댑터 브릿지  
+
+호스트 전용 어댑터 + 호스트와 동일 네트워크에 있는 머신과의 통신까지 가능
+
+
+
+# 어댑터1 어댑터2 어댑터3 ...  
+
+하나의 머신은 다수의 랜카드를 가지고 있다.  
+앞서 용어 및 상식에서 언급한 것 처럼 랜카드 = 어댑터 인 점 참고  
+그리고 하나의 어댑터(랜카드) 는 하나의 IP를 가지게 된다는 점 참고  
+
+어댑터는 총 8개까지 설정 가능하다
+그런데 보이는 건 어댑터4까지
+
+8개를 설정하려면 명령어를 통해 설정해줘야 한다.  
+(자세한 내용 패스)
+
+## 어댑터 종류
+
+![](/assets/images/20230625_001_002.png)
+
+|어댑터 종류|설명|
+|---|---|
+|PCnet-PCI II |(AMD 칩 기반) 윈도우 2000에 해당시 사용| 
+|Pcnet-FAST III | (AMD 칩 기반) 대부분의 운영체제와 호환|
+|Intel PRO/1000 MT Desktop|윈도우 Vista ~ 최근 버전까지, 웬만한 것 호환. 특정한 게 없으면 이것 사용.|
+|Intel PRO/1000 T Server|윈도우 XP와 호환|
+|Intel PRO/1000 MT Server||
+|반가상 네트워크 (virtio-net)|| 
+
+
+[인텔 이더넷 제품 호환성 확인](https://www.intel.co.kr/content/www/kr/ko/support/products/36773/ethernet-products.html#81296)  
+
+
+## 무작위 모드
+
+어디어디에서만 켜진다.  
+이집 만나고 저집 만나는데  
+나랑 상관이 없는 패킷들도 열어볼 수 있는지에 대한 여부
+무작위모드 -> 패킷 스니핑이 일어날 수 있음
+
+모두 허용 : 나와 상관 없는 패킷들도 열어볼 수 있다.  
+
+
+## MAC 주소
+
+하드웨어 주소
+모든 하드웨어들은 MAC 주소를 가지고 있다. 48비트.  
+28비트 - 28비트
+(제조회사) - (시리얼넘버)
+
+
+## 포트포워딩
+
+NAT
+NAT 네트워크
+두 가지에서 설정 가능
+정책을 이용해 포트 포워딩을 해주는 것
+
+
+# 포트 포워딩
+
+
+# Reference  
+
+VirtualBox NAT, 호스트 전용 어댑터, 어댑터 브릿지 차이 : https://www.youtube.com/watch?v=14tBGziujJY  
+VurtualBox 네트워크 설정 (어댑터 설정) : https://www.youtube.com/watch?v=e6x6DTGWAyY  
+
+
+VirtualBox 네트워크 설정 - NAT 네트워크 : https://www.youtube.com/watch?v=ZkWKtdVCAGU  
+
+인텔 이더넷 제품 호환성 확인 : https://www.intel.co.kr/content/www/kr/ko/support/products/36773/ethernet-products.html#81296  
