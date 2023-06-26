@@ -58,3 +58,8 @@ git remote add [alias] [새로운URL]
 
 **alias**  
 remote repository를 지칭하는 별칭
+
+# Reference
+
+https://2vup.com/git-push-error/  
+https://cheershennah.tistory.com/217  
