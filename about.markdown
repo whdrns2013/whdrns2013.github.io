@@ -1,3 +1,11 @@
+---
+layout: single
+title: Jongya
+permalink: /about/
+author_profile: true
+---
+
+
 # Ai there! 👋
 새내기 Web BE 개발자 Jongya 입니다.  
 세상의 다양한 문제들을 해결하는 개발자가 되고 싶습니다.
