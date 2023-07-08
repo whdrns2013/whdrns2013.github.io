@@ -109,7 +109,7 @@ author:
   bio              : "Jonghyuk Park"
   location         : "Seoul, Korea"
   email            : whdrns2013@naver.com
-  visitor          : 
+  visitor          : visitor
   links:
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
@@ -129,9 +129,6 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/jongya_chalkak"
-    - label: " "
-      icon: "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwhdrns2013.github.io&count_bg=%23000000&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Vistors&edge_flat=false"
-      url: "https://whdrns2013.github.io"
 
 
 # Site Footer
