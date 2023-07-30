@@ -18,6 +18,7 @@ $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 $nanum-gothic: "Nanum Gothic", sans-serif;
+$custom-font: "consolas";
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
@@ -30,16 +31,16 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $nanum-gothic !default;
-$header-font-family: $nanum-gothic !default;
-$caption-font-family: $nanum-gothic !default;
+$global-font-family: $custom-font !default;
+$header-font-family: $custom-font !default;
+$caption-font-family: $custom-font !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
 $type-size-2: 1.953em !default; // ~31.248px
 $type-size-3: 1.563em !default; // ~25.008px
 $type-size-4: 1.25em !default; // ~20px
-$type-size-5: 0.85em !default; // ~16px
+$type-size-5: 0.8em !default; // ~16px -> 14.4px
 $type-size-6: 0.75em !default; // ~12px
 $type-size-7: 0.6875em !default; // ~11px
 $type-size-8: 0.625em !default; // ~10px
