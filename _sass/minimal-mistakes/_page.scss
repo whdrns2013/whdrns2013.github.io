@@ -110,12 +110,12 @@ body {
 		}
 	}
 
-  p,
-  dl {
+  p {
     font-size: $page-font-size;
   }
 
-  li {
+  li,
+  dl {
     font-size: 1em;
   }
 
