@@ -111,9 +111,12 @@ body {
 	}
 
   p,
-  li,
   dl {
     font-size: $page-font-size;
+  }
+
+  li {
+    font-size: 1em;
   }
 
   /* paragraph indents */
