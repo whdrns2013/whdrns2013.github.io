@@ -110,11 +110,15 @@ body {
 		}
 	}
 
+  li{
+    font-size: $page-font-size;
+    background-color: #FFFFCC;
+  }
+
   p {
     font-size: $page-font-size;
   }
 
-  li,
   dl {
     font-size: 1em;
   }
