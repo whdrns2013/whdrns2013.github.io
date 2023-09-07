@@ -21,7 +21,7 @@ docs:
   - title: Getting Started
     children:
       - title: "Quick-Start Guide"
-        url: /_docs/01-quick-start-guide.md/
+        url: /ddoc/qs/
   #     - title: "Structure"
   #       url: /docs/structure/
   #     - title: "Installation"
