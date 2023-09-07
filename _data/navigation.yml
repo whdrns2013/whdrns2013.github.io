@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Docs"
-    url: /docs/quick-start-guide/
+    url: /_docs/01-quick-start-guide.md/
   - title: "Categories"
     url: /categories/
   - title: "Archive"
@@ -21,7 +21,7 @@ docs:
   - title: Getting Started
     children:
       - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
+        url: /_docs/01-quick-start-guide.md/
   #     - title: "Structure"
   #       url: /docs/structure/
   #     - title: "Installation"
