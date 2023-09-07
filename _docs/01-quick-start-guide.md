@@ -3,8 +3,6 @@ title: "Quick-Start Guide"
 excerpt: "How to quickly install and setup Minimal Mistakes for use with GitHub Pages."
 last_modified_at: 2021-06-07T08:48:05-04:00
 permal_link: /ddoc/qs/
-redirect_from:
-  - /theme-setup/
 toc: true
 ---
 
