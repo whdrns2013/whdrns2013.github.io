@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Docs"
-    url: /docs/01-quick-start-guide.md/
+    url: /docs/doc1/
   - title: "Categories"
     url: /categories/
   - title: "Archive"
