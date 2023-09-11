@@ -18,12 +18,12 @@ main:
 
 # documentation links
 docs:
-  - title: Getting Started
+  - title: Doc Frame1
     children:
-      - title: "Quick-Start Guide"
-        url: /docs/01-quick-start-guide.md/
-      - title: "Structure"
-        url: /docs/structure.md/
+      - title: "Doc1"
+        url: /docs/doc1/
+      - title: "Doc2"
+        url: /docs/doc2/
   #     - title: "Installation"
   #       url: /docs/installation/
   #     - title: "Upgrading"
