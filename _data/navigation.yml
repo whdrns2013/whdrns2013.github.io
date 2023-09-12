@@ -24,6 +24,12 @@ docs:
         url: /docs/doc1/
       - title: "Doc2"
         url: /docs/doc2/
+  - title: Docker
+    children:
+      - title: "1. 도커 설치하기"
+        url: /docs/docker_installation/
+      - title: "2. 도커 이미지 다운받기"
+        url: /docs/docker_pull/
   #     - title: "Installation"
   #       url: /docs/installation/
   #     - title: "Upgrading"
