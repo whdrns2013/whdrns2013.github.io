@@ -168,6 +168,8 @@ https://www.44bits.io/ko/keyword/linux-container
 |20221106_001|MySQL 자료형|2022-11-06|작성중|
 |20230702_001|MySQL 외부 접속 거부 설정 ERROR 1130 not allowed to connect to this MySQL server|완료|
 |20230920_002|MySQL merge 중복값 처리|2023-09-20|완료|
+|20230920_003|MYSQL 최대 최소값 max min|2023-09-20|완료|
+|20230920_004|MYSQL 형변환 cast|2023-09-20|완료|
 
 
 ■ Linux
