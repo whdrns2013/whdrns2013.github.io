@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Docs"
-    url: /ddocs/01-quick-start-guide.md/
+    url: /docs/doc1/
   - title: "Categories"
     url: /categories/
   - title: "Archive"
@@ -18,12 +18,18 @@ main:
 
 # documentation links
 docs:
-  - title: Getting Started
+  - title: Doc Frame1
     children:
-      - title: "Quick-Start Guide"
-        url: /ddocs/01-quick-start-guide.md/
-  #     - title: "Structure"
-  #       url: /docs/structure/
+      - title: "Doc1"
+        url: /docs/doc1/
+      - title: "Doc2"
+        url: /docs/doc2/
+  - title: Docker
+    children:
+      - title: "1. 도커 설치하기"
+        url: /docs/docker_installation/
+      - title: "2. 도커 이미지 다운받기"
+        url: /docs/docker_pull/
   #     - title: "Installation"
   #       url: /docs/installation/
   #     - title: "Upgrading"
