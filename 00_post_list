@@ -167,6 +167,7 @@ https://www.44bits.io/ko/keyword/linux-container
 |20221105_001|MySQL export, import 백업 및 복구 (dump)|2022-11-05|완료|
 |20221106_001|MySQL 자료형|2022-11-06|작성중|
 |20230702_001|MySQL 외부 접속 거부 설정 ERROR 1130 not allowed to connect to this MySQL server|완료|
+|20230920_002|MySQL merge 중복값 처리|2023-09-20|완료|
 
 
 ■ Linux
@@ -193,7 +194,7 @@ https://www.44bits.io/ko/keyword/linux-container
 |20230602_002|SCP로 파일 주고받기|2023-06-02|완료|
 |20230604_001|SSH 연결 툴|2023-06-04|완료|
 |20230604_002|WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!|2023-06-04|완료|
-|20230625_001|Virtual Machine 의 네트워크 종류 (NAT, 어댑터에 브리지, 내부 네트워크, 호스트 전용 어댑터 .. )|2023-06-25|완료|
+|20230625_001|Virtual Machine 의 네트워크 종류 (NAT, 어댑터에 브리지, 내부 네트워크, 호스트 전용 어댑터 .. )|2023-06-25|작성중|
 |20230712_002|HTTP|2023-07-12|완료|
 |20230721_001|HTTP 메세지|2023-07-21|작성중|
 |20230723_003|HTTP 에러의 종류|2023-07-24|완료|
