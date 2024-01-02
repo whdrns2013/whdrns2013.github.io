@@ -5,7 +5,7 @@ date: 2024-01-02 21:55:00 +0900      # 작성일 (필수)
 lastmod: 2024-01-02 21:55:00 +0900   # 최종 수정일 (필수)
 categories: ComputerScience         # 다수 카테고리에 포함 가능 (필수)
 tags: static dynamic content web was 정적컨텐츠 동적컨텐츠 정적 동적 컨텐츠                     # 태그 복수개 가능 (필수)
-classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+classes:        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
 toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가

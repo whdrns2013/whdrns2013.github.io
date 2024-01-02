@@ -111,10 +111,12 @@ body {
 	}
 
   li{
-    font-size: 1em;
+    // font-size: 1em;
+    font-size: $page-font-size;
   }
 
   p {
+    // font-size: 1em;
     font-size: $page-font-size;
   }
 
