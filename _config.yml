@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Jongya"
-  avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Jonghyuk Park"
   location         : "Seoul, Korea"
   email            : whdrns2013@naver.com
