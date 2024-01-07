@@ -23,28 +23,34 @@ docs:
   - title: Contents
     children:
       - title: "Docker"
-        url: /docs/docker_installation/
+        url: /docs/docker/intro/
       - title: "Python"
-        url: /docs/python_intro/
+        url: /docs/python/intro/
 
 
-doc_docker:
+docs_docker:
   - title: "Doc으로 돌아가기"
     url: /docs/intro
   - title: docker
     children:
+    - title: "도커란?"
+      url: /docs/docker/intro
     - title: "1. 도커 설치하기"
-      url: /docs/docker_installation/
+      url: /docs/docker/installation/
     - title: "2. 도커 이미지 다운받기"
-      url: /docs/docker_pull/
+      url: /docs/docker/pull/
+    - title: "3. 컨테이너 실행하기"
+    - title: "4. 도커 이미지 만들기"
+    - title: "5. 도커 컴포즈"
+    - title: "6. 개인용 도커 이미지 저장소 만들기"
 
 
-doc_python:
+docs_python:
   - title: "Doc으로 돌아가기"
     url: /docs/intro
   - title: python
     children:
     - title: "Python 소개"
-      url: /docs/python_intro/
+      url: /docs/python/intro/
     - title: "Python 자료구조"
-      url: /docs/python_data_type/
+      url: /docs/python/data_type/

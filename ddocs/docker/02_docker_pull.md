@@ -3,13 +3,13 @@ title: 도커 이미지 다운받기 docker pull # 제목 (필수)
 excerpt: 만들어져있는 다양한 도커 이미지를 사용해보자 # 서브 타이틀이자 meta description (필수)
 date: 2023-09-12 23:50:00 +0900      # 작성일 (필수)
 lastmod: 2023-09-12 23:50:00 +0900   # 최종 수정일 (필수)
-permalink: /docs/docker_pull/
+permalink: /docs/docker/pull/
 toc: true
 toc_sticky: true
 toc_icon: "columns"
 layout: single
 sidebar:
-  nav: "docs"
+  nav: "docs_docker"
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??

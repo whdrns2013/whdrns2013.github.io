@@ -1,7 +1,7 @@
 ---
 title: "1. 도커 설치하기" # 제목 (필수)
 excerpt: 알면 편해진다. 도커를 써보자. # 서브 타이틀이자 meta description (필수)
-permalink: /docs/docker_installation/
+permalink: /docs/docker/installation/
 date: 2023-09-12 23:50:00 +0900      # 작성일 (필수)
 lastmod: 2024-01-07 15:50:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2024-01-07 15:50:00 +0900   # 최종 수정일 (필수)
@@ -11,7 +11,7 @@ toc_icon: "columns"
 layout: single
 sidebar:
   # nav: "docs"
-  nav: "doc_docker"
+  nav: "docs_docker"
 classes: wide
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
