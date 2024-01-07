@@ -9,7 +9,8 @@ toc_sticky: true
 toc_icon: "columns"
 layout: single
 sidebar:
-  nav: "docs"
+  # nav: "docs"
+  nav: "doc_docker"
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??
