@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "kor"
 title                    : "Jongya's blog"
 title_separator          : "-"
-subtitle                 : "새내기 프로그래머 Jongya의 블로그입니다." # site tagline that appears below site title in masthead
+subtitle                 : "Jongya의 블로그입니다." # site tagline that appears below site title in masthead
 name                     : "Jongya"
-description              : "새내기 프로그래머 Jongya의 블로그입니다."
+description              : "Jongya의 블로그입니다."
 url                      : "https://whdrns2013.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
