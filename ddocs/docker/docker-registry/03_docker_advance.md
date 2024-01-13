@@ -8,7 +8,7 @@ toc_sticky: true
 toc_icon: "columns"
 layout: single
 sidebar:
-  nav: "docs"
+  nav: "docs_docker"
 ---
 
 ## 고도화 방향 고민하기  
