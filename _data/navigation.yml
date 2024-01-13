@@ -44,7 +44,18 @@ docs_docker:
     - title: "3. 컨테이너 실행하기"
     - title: "4. 도커 이미지 만들기"
     - title: "5. 도커 컴포즈"
-    - title: "6. 개인용 도커 이미지 저장소 만들기"
+  - title: "개인용 도커 이미지 저장소 만들기"
+    children:
+    - title: "1. docker registry"
+      url: /docs/docker/registry/01_registry
+    - title: "2. docker registry 설정 파일"
+      url: /docs/docker/registry/02_registry_config
+    - title: "3. docker registry 고도화 하기"
+      url: /docs/docker/registry/03_registry_advance
+    - title: "4-1. 보안 강화 - 인증 절차 구현하기"
+      url: /docs/docker/registry/04_authentication
+    - title: "4-2. 보안 강화 - https 적용"
+      url: /docs/docker/registry/05_ssl_tls
 
 
 docs_python:

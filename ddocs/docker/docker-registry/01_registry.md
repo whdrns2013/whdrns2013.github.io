@@ -1,28 +1,15 @@
 ---
-title: 개인용 도커 이미지 저장소 만들기 docker registry (1) # 제목 (필수)
-excerpt: 개인용 도커 허브를 만들어보자! # 서브 타이틀이자 meta description (필수)
-date: 2024-01-04 11:30:00 +0900      # 작성일 (필수)
-lastmod: 2024-01-07 16:30:00 +0900   # 최종 수정일 (필수)
-categories: docker         # 다수 카테고리에 포함 가능 (필수)
-tags: docker registry image repository 도커 저장소 이미지 이미지저장소 레지스트리 개인용 private   # 태그 복수개 가능 (필수)
-classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
-toc: true        # 목차 표시 여부
-toc_label:       # toc 제목
-toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
-header: 
-  image:         # 헤더 이미지 (asset내 혹은 url)
-  teaser:        # 티저 이미지??
-  overlay_image:             # 헤더 이미지 (제목과 겹치게)
-  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
-  video:
-    id:                      # 영상 ID (URL 뒷부분)
-    provider:                # youtube, vimeo 등
-sitemap :                    # 구글 크롤링
-  changefreq : daily         # 구글 크롤링
-  priority : 1.0             # 구글 크롤링
-author: # 주인 외 작성자 표기 필요시
+title: "1. docker registry"
+excerpt: "도커 저장소 역할을 하는 도커, registry"
+last_modified_at: 2024-01-13 16:25:00 +0900
+permalink: /docs/docker/registry/01_registry
+toc: false
+toc_sticky: true
+toc_icon: "columns"
+layout: single
+sidebar:
+  nav: "docs_docker"
 ---
-<!--postNo: 20240104_001-->
 
 
 ## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>1. Intro</span>
@@ -52,7 +39,7 @@ Docker Registry의 특징은 아래와 같습니다.
 Docker Registry는 Docker 이미지를 저장하는 저장소입니다. 이미지는 여러 레이어로 구성되며, 각 레이어는 이전 레이어의 변경 사항을 기반으로 구성됩니다.  
 
 <b><font color="FF82B2">접근 권한 관리:</font></b>  
-Docker 이미지에 대한 접근 권한을 관리할 수 있습니다. 비공개 레지스트리를 설정하여 인증된 사용자만이 이미지에 접근하고 푸시할 수 있도록 할 수 있습니다.  
+Docker 이미지에 대한 접근 권한을 관리할 수 있습니다. 비공개 레지스트리를 설정하여 인증된 사용자만이 이미지에 접근하고 푸시할 수 있도록 할 수 있습니다.  
 
 <b><font color="FF82B2">이미지 버전 관리:</font></b>  
 이미지를 버전 별로 저장하고 관리할 수 있습니다. 이미지 버전은 태그로 구분합니다.  
