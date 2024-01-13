@@ -5,6 +5,7 @@ last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker/registry/03_registry_advance
 toc: false
 toc_sticky: true
+classes: wide
 toc_icon: "columns"
 layout: single
 sidebar:
