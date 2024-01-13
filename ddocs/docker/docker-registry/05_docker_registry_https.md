@@ -105,7 +105,7 @@ $ vi .env
 
 환경변수 파일에는 SSL 인증서 파일 경로, htpasswd 파일 경로, Registry 설정 파일 경로 등을 기록합니다. 이 때에는 <b><font color="FF82B2">"컨테이너 환경 안쪽"의 경로를 적어줘야</font></b> 한다는 점을 주의해주세요.  
 
-```env
+```terminal
 HOST_PATH=./
 SSL_PATH=/container/path/to/ssl                  # ssl인증서 경로
 REGISTRY_CONF_PATH=/etc/docker/registry/conf.yml # registry config 파일 경로

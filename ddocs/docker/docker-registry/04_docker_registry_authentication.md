@@ -123,12 +123,16 @@ $ docker restart <registry 컨테이너 이름 혹은 id>
 
 docker registry에 접근해보겠습니다.  
 
+<b><font color="FF82B2">브라우저로 접근하기</font></b>   
+
 먼저 브라우저로 접근해보면 아래와 같이 로그인을 요구하고, 로그인을 성공하면 컨텐츠를 보여줍니다.  
 
 ![](/assets/images/20240113_001_001.png)  
 
 ![](/assets/images/20240113_001_002.png)  
 
+
+<b><font color="FF82B2">curl을 통해 접근하기</font></b>   
 
 curl 을 통해 접근시에는 아래와 같이 유저명과 패스워드를 명시해줘야 접근이 가능합니다.  
 
@@ -146,6 +150,9 @@ $ curl http://서버IP:5000/v2/_catalog
 >>> {"errors":[{"code":"UNAUTHORIZED","message":"authentication required","detail":[{"Type":"registry","Class":"","Name":"catalog","Action":"*"}]}]}
 
 ```
+
+
+<b><font color="FF82B2">PUSH, PULL</font></b>   
 
 이미지 push, pull을 할 때에는 docker login을 한 뒤에 진행해야 합니다.  
 아래를 참고해주세요.  
