@@ -27,13 +27,13 @@ sidebar:
 
 구축한 Docker Registry 컨테이너에 대해 자세히 살펴보겠습니다. Docker Registry는 기본적으로 Alpine Linux 기반의 경량한 이미지를 사용하며, sh 셸을 활용합니다.  
 
-```terminal
+```bash
 $ docker exec -it <registry 컨테이너 이름> sh
 ```
 
 가장 먼저 컨테이너 내 운영체제를 살펴보겠습니다.  
 
-```terminal
+```bash
 $ vi /etc/issue
 >>> Welcome to Alpine Linux 3.18
 >>> Kernel \r on an \m (\l)
@@ -49,7 +49,7 @@ Alpine Linux는 경량화된 설치와 최소한의 서비스만 실행되도록
 
 Alpine Linux는 패키지 매니저로 'apk'를 사용합니다.  
 
-```terminal
+```bash
 # 알파인 리눅스는 apk 패키지 매니저를 사용합니다.
 
 $ apk update

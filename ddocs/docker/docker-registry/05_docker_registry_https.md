@@ -28,7 +28,7 @@ ssl 인증서를 발급받은 폴더 안쪽에는 아래와 같이 인증서 및
 
 > [ssl 인증서 발급받기](https://whdrns2013.github.io/etc/20240113_002_ssl_tls/)  
 
-```terminal
+```bash
 $ cd /host/some/path/ssl   # ssl 인증서를 저장할 폴더로 이동
 $ ls -al
 >>> server.crt
@@ -44,7 +44,7 @@ $ ls -al
 
 https 적용하기 전, 지금까지 작업한 registry 컨테이너를 이미지로 만들어주겠습니다. 이는 지금까지 만들어놓은 registry 컨테이너 안의 환경과 자료를 안전하게 보관한 상태에서 재기동하기 위함입니다. <b><font color="FF82B2">이 작업은 호스트 서버에서 진행해줘야 합니다.</font></b>  
 
-```terminal
+```bash
 $ docker ps
 >>> CONTAINER ID   IMAGE    COMMAND     CREATED     ...
 >>> a7659e5daa4f   registry:latest   "/entrypoint.sh /etc…"   15 hours ago ...
@@ -59,7 +59,7 @@ $ docker commit a7659e5daa4f docker-registry:0.0.1
 
 이렇게 해두면 registry 컨테이너에 들어가지 않더라도 호스트 서버에서 편리하게 registry 컨테이너의 설정을 변경하여 재구동 할 수 있습니다.  
 
-```terminal
+```bash
 $ cd /host/some/path   # 도커 컴포즈 파일 저장할 경로로 이동
 $ vi ./config.yml
 ```
@@ -98,14 +98,14 @@ auth: # htpasswd configure
 
 Registry 컨테이너의 구동 옵션을 편리하게 기록하고, 간편하게 컨테이너를 시작하거나 중지하기 위해 Docker Compose를 활용할 것입니다. 먼저, Docker Compose에 사용할 환경변수 파일을 작성합니다.  
 
-```terminal
+```bash
 $ cd /host/some/path   # 도커 컴포즈 파일 저장할 경로로 이동
 $ vi .env
 ```
 
 환경변수 파일에는 SSL 인증서 파일 경로, htpasswd 파일 경로, Registry 설정 파일 경로 등을 기록합니다. 이 때에는 <b><font color="FF82B2">"컨테이너 환경 안쪽"의 경로를 적어줘야</font></b> 한다는 점을 주의해주세요.  
 
-```terminal
+```bash
 HOST_PATH=./
 SSL_PATH=/container/path/to/ssl                  # ssl인증서 경로
 REGISTRY_CONF_PATH=/etc/docker/registry/conf.yml # registry config 파일 경로
@@ -113,7 +113,7 @@ REGISTRY_CONF_PATH=/etc/docker/registry/conf.yml # registry config 파일 경로
 
 다음으로 docker compose yaml 파일을 작성해줍니다.  
 
-```terminal
+```bash
 $ vi docker-compose.yml
 ```
 
@@ -142,7 +142,7 @@ services:
 
 호스트 서버에서 진행해주세요.  
 
-```terminal
+```bash
 $ update-ca-trust
 
 $ systemctl restart docker

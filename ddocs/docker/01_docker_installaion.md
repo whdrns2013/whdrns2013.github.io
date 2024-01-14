@@ -38,26 +38,26 @@ header:
 
 **(1) 패키지 도구 이용**
 
-```terminal
+```bash
 ## Ubuntu의 경우
-$ apt-get update                # 패키지 업데이트가 있는지 확인
-$ apt-get install docker-ce     # 도커 엔진 설치
-$ apt-get install docker-cli    # 도커 클라이언트 설치
-$ apt-get install containerd.io # 컨테이너 런타임 설치
+apt-get update                # 패키지 업데이트가 있는지 확인
+apt-get install docker-ce     # 도커 엔진 설치
+apt-get install docker-cli    # 도커 클라이언트 설치
+apt-get install containerd.io # 컨테이너 런타임 설치
 
 ## CentOS의 경우
-$ yum update
-$ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-$ yum-config-manager --enable docker-ce-nightly
-$ sudo yum install docker-ce
-$ sudo yum install docker-ce-cli
-$ sudo yum install containerd.io
+yum update
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager --enable docker-ce-nightly
+sudo yum install docker-ce
+sudo yum install docker-ce-cli
+sudo yum install containerd.io
 ```
 
 **(2) curl 방법**
 
-```terminal
-$ curl -s https://get.docker.com | sudo sh
+```bash
+curl -s https://get.docker.com | sudo sh
 
 # 정상적으로 설치되면 아래와 같은 출력을 볼 수 있습니다.
 >>> # Executing docker install ...
@@ -74,14 +74,14 @@ $ curl -s https://get.docker.com | sudo sh
 
 도커를 설치했다면 서비스를 시작해줍니다.  
 
-```terminal
+```bash
 ## 도커 실행
-$ sudo systemctl start docker.service
-$ sudo systemctl start docker.socket
+sudo systemctl start docker.service
+sudo systemctl start docker.socket
 
 ## 부팅시 도커 자동 실행
-$ sudo systemctl enable docker.service
-$ sudo systemctl enable docker.socket
+sudo systemctl enable docker.service
+sudo systemctl enable docker.socket
 ```
 
 enable을 하면, 재부팅시 도커 서비스가 자동으로 시작됩니다.  
@@ -91,11 +91,11 @@ enable을 하면, 재부팅시 도커 서비스가 자동으로 시작됩니다.
 설치가 잘 되었는지 확인해봅시다.  
 아래와 같이 출력된다면, 정상적으로 설치된 것입니다.  
 
-```terminal
-$ docker -v
+```bash
+docker -v
 >>> Docker version 24.0.2, build cb74dfc
 
-$ docker
+docker
 >>> Usage:  docker [OPTIONS] COMMAND
 >>> 
 >>> A self-sufficient runtime for containers
@@ -108,7 +108,7 @@ $ docker
 >>>   pull        Download an image from a registry
 >>>   push        Upload an image to a registry
 
-$ docker ps
+docker ps
 >>> CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
@@ -120,8 +120,8 @@ $ docker ps
 
 별도 설정하지 않는다면 도커 패키지는 보통 아래 경로에 설치됩니다.  
 
-```terminal
-$ which docer
+```bash
+which docer
 >>> /usr/bin/docker
 ```
 

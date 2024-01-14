@@ -20,7 +20,7 @@ header:
     provider:                # youtube, vimeo 등
 ---
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1️⃣ 도커 이미지 pull  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1️. 도커 이미지 pull  </span>
 
 내가 원하는 운영 환경을 만들기 위해서는, 우선 하드웨어를 제어해 줄 운영체제가 있어야 합니다.
 
@@ -32,23 +32,23 @@ header:
 pull 이라는 명령어로요!  
 docker pull 명령어를 통해 도커 이미지를 받아올 수 있습니다.  
 
-```terminal
-$ docker pull 이미지명:태그
+```bash
+docker pull 이미지명:태그
 
 # 예시 : CentOS
-$ docker pull centos         # Cent OS :latest 도커 (최신버전)
-$ docker pull centos:7       # Cent OS 7 도커 
+docker pull centos         # Cent OS :latest 도커 (최신버전)
+docker pull centos:7       # Cent OS 7 도커 
 
 # 예시 : 우분투
-$ docker pull ubuntu         # Ubuntu:latest 도커 (최신버전)
-$ docker pull ubuntu:18.04   # Ubuntu:18.04 도커
+docker pull ubuntu         # Ubuntu:latest 도커 (최신버전)
+docker pull ubuntu:18.04   # Ubuntu:18.04 도커
 ```
 
 도커 pull이 성공적으로 진행되면 아래와 같이  
 pull 받는 도커의 정보 및 complete 구문을 볼 수 있습니다.  
 
-```terminal
-$ docker pull ubuntu:18.04
+```bash
+docker pull ubuntu:18.04
 >>> 18.04: Pulling from library/ubuntu
 >>> ...
 >>> ... Pull complete
@@ -57,15 +57,15 @@ $ docker pull ubuntu:18.04
 이미지를 성공적으로 설치한 게 맞는지 확인하려면  
 docker images 를 통해 run 할 수 있는 docker 리스트를 뽑아보면 됩니다.  
 
-```terminal
-$ docker images
+```bash
+docker images
 >>> REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 >>> ubuntu       18.04     f9a80a55f492   2 months ago   63.2MB
 ```
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2️⃣ 도커 이미지란?  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2️. 도커 이미지란?  </span>
 
 이해를 돕기 위해 정확하지는 않지만, 쉽게 설명을 해보겠습니다.  
 
@@ -90,17 +90,17 @@ Windows 등의 운영체제에서는 "특정 시점"으로 복구할 수 있는 
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3️⃣ 컨테이너 실행하기</span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3️. 컨테이너 실행하기</span>
 
 도커 이미지를 받았다면, 그 이미지를 기반으로 컨테이너 환경(격리된 환경)을 실행합니다.  
 앞서 살펴본 도커 이미지가 설치파일이라면, 컨테이너는 설치가 완료되어 사용자가 사용할 수 있는 상태가 된 환경입니다.  
 
-```terminal
-$ docker images # 컨테이너 실행할 수 있는 도커 이미지 확인
+```bash
+docker images # 컨테이너 실행할 수 있는 도커 이미지 확인
 >>> REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 >>> ubuntu       18.04     f9a80a55f492   2 months ago   63.2MB
 
-$ docker run -p 10022:22 -dit ubuntu:18.04 /bin/bash 
+docker run -p 10022:22 -dit ubuntu:18.04 /bin/bash 
 # -> ubuntu:18.04 도커 이미지를 run 한다. -it 터미널 환경은 bash로.
 # -> d : 백그라운드에서 실행
 
@@ -112,7 +112,7 @@ $ docker run -p 10022:22 -dit ubuntu:18.04 /bin/bash
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4️⃣ 추가 : 다운로드 받을 수 있는 도커 이미지 확인하기  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4️. 추가 : 다운로드 받을 수 있는 도커 이미지 확인하기  </span>
 
 다운로드 받을 수 있는 도커 이미지들이 뭐가 있을지 궁금하다면!  
 도커 허브에서 확인 가능합니다.  
@@ -121,13 +121,13 @@ $ docker run -p 10022:22 -dit ubuntu:18.04 /bin/bash
 
 혹은 docker search 명령어를 통해서도 가능합니다.
 
-```terminal
-$ docker search 검색할키워드
+```bash
+docker search 검색할키워드
 ```
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 5️⃣ Reference  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 5️. Reference  </span>
 
 도커 이미지 확인 : https://hub.docker.com  
 ununtu docker 설치하기 : https://joshwon.tistory.com/61#google_vignette  

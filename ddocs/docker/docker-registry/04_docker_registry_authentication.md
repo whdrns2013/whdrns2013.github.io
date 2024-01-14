@@ -70,7 +70,7 @@ auth:
 
 registry 컨테이너 안쪽에서 htpasswd 이용을 위해 apache2-utils 를 설치합니다.  
 
-```terminal
+```bash
 $ apk add apache2-utils
 ```
 
@@ -80,7 +80,7 @@ $ apk add apache2-utils
 -B 옵션은 bcrypt 알고리즘을 이용해 비밀번호를 해싱하는 옵션입니다.  
 -c 옵션은 파일을 새로 생성하는 옵션입니다. (기존 파일이 있는 경우엔 이 옵션을 사용할지 말지 살펴야 합니다.)  
 
-```terminal
+```bash
 $ htpasswd -Bc /path/to/htpasswd user-name
 
 >>> New password : user-name 계정에 대한 비밀번호 입력
@@ -92,7 +92,7 @@ $ htpasswd -Bc /path/to/htpasswd user-name
 
 docker registry 설정에 htpasswd 를 이용한 인증을 추가해줍니다.  
 
-```terminal
+```bash
 $ vi /etc/docker/registry/config.yml
 ```
 
@@ -113,7 +113,7 @@ auth:
 설정 적용을 위해 docker registry 컨테이너를 재실행합니다.  
 이 작업은 registry 컨테이너 바깥, host 머신에서 진행해주세요.  
 
-```terminal
+```bash
 $ docker restart <registry 컨테이너 이름 혹은 id>
 ```
 
@@ -136,14 +136,14 @@ docker registry에 접근해보겠습니다.
 
 curl 을 통해 접근시에는 아래와 같이 유저명과 패스워드를 명시해줘야 접근이 가능합니다.  
 
-```terminal
+```bash
 # 유저명과 패스워드 명시하여 접근
 
 $ curl http://유저명:패스워드@서버IP:포트/v2/_catalog
 >>> {"repositories":["my_docker",ubuntu"]}
 ```
 
-```terminal
+```bash
 # 유저명과 패스워드 명시 없이 접근
 
 $ curl http://서버IP:5000/v2/_catalog
@@ -157,7 +157,7 @@ $ curl http://서버IP:5000/v2/_catalog
 이미지 push, pull을 할 때에는 docker login을 한 뒤에 진행해야 합니다.  
 아래를 참고해주세요.  
 
-```terminal
+```bash
 $ docker login 서버ip:포트번호
 >>> Username:
 >>> Password
@@ -165,7 +165,7 @@ $ docker login 서버ip:포트번호
 # Username과 Password를 순차적으로 입력해주시면 됩니다.
 ```
 
-```terminal
+```bash
 >>> docker push 서버ip:포트번호/repository명:버전
 ```
 

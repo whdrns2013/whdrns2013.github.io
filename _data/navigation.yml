@@ -43,7 +43,11 @@ docs_docker:
       url: /docs/docker/pull/
     - title: "3. 컨테이너 실행하기"
     - title: "4. 도커 이미지 만들기"
-    - title: "5. 도커 컴포즈"
+    - title: "5. Volume Mount"
+  - title: docker compose
+    - title: "도커 컴포즈란?"
+    - title: "1. 도커 컴포즈 설치하기"
+    - title: "2. docker-compose.yml 둘러보기"
   - title: "개인용 도커 이미지 저장소 만들기"
     children:
     - title: "1. docker registry"

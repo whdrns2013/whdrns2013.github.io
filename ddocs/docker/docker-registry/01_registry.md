@@ -11,7 +11,6 @@ sidebar:
   nav: "docs_docker"
 ---
 
-
 ## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>1. Intro</span>
 
 도커를 사용하면 도커허브(Docker Hub)에서 다양한 이미지를 손쉽게 받아올 수 있습니다. `docker pull` 명령어를 이용하면 원하는 도커 이미지를 쉽게 다운로드할 수 있죠.  
@@ -39,7 +38,7 @@ Docker Registry의 특징은 아래와 같습니다.
 Docker Registry는 Docker 이미지를 저장하는 저장소입니다. 이미지는 여러 레이어로 구성되며, 각 레이어는 이전 레이어의 변경 사항을 기반으로 구성됩니다.  
 
 <b><font color="FF82B2">접근 권한 관리:</font></b>  
-Docker 이미지에 대한 접근 권한을 관리할 수 있습니다. 비공개 레지스트리를 설정하여 인증된 사용자만이 이미지에 접근하고 푸시할 수 있도록 할 수 있습니다.  
+Docker 이미지에 대한 접근 권한을 관리할 수 있습니다. 비공개 레지스트리를 설정하여 인증된 사용자만이 이미지에 접근하고 푸시할 수 있도록 할 수 있습니다.  
 
 <b><font color="FF82B2">이미지 버전 관리:</font></b>  
 이미지를 버전 별로 저장하고 관리할 수 있습니다. 이미지 버전은 태그로 구분합니다.  
@@ -60,31 +59,31 @@ Docker Registry의 데이터를 백업하고 복원하여 이미지와 메타데
 
 먼저, 개인용 docker 조정소를 만들 호스트 서버에 docker 를 설치합니다.  
 
-```terminal
+```bash
 # ubuntu
-$ sudo apt update
-$ sudo apt install docker-ce
-$ sudo apt install docker-ce-cli
-$ sudo apt install containerd.io
+sudo apt update
+sudo apt install docker-ce
+sudo apt install docker-ce-cli
+sudo apt install containerd.io
 
 # CentOS
-$ sudo yum install yum-utils
-$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-$ sudo yum install docker-ce
-$ sudo yum install docker-ce-cli
-$ sudo yum install containerd.io
+sudo yum install yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+sudo yum install docker-ce-cli
+sudo yum install containerd.io
 ```
 
 설치 후에는 docker service를 실행해주세요. 서버가 시작될 때 자동으로 docker 서비스도 시작되도록 enable 하는 것도 추천합니다.  
 
-```terminal
+```bash
 ## 도커 실행
-$ sudo systemctl start docker.service
-$ sudo systemctl start docker.socket
+sudo systemctl start docker.service
+sudo systemctl start docker.socket
 
 ## 부팅시 도커 자동 실행
-$ sudo systemctl enable docker.service
-$ sudo systemctl enable docker.socket
+sudo systemctl enable docker.service
+sudo systemctl enable docker.socket
 ```
 
 ### 3-2. Docker 이미지 저장소 만들기
@@ -92,10 +91,10 @@ $ sudo systemctl enable docker.socket
 앞서 설명한 docker registry 이미지를 통해 저장소 컨테이너를 만들 것입니다.  
 우선은 dockerhub에서 제공하는 docker registry 이미지를 pull 합니다.  
 
-```terminal
-$ docker pull registry:latest
+```bash
+docker pull registry:latest
 
-$ docker images
+docker images
 >>> REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 >>> registry     latest    909c3ff012b7   4 weeks ago   25.4MB
 ```
@@ -104,16 +103,16 @@ pull 한 registry 이미지를 이용해 저장소로 활용할 컨테이너를 
 이 때 포트 포워딩을 설정하여 호스트와 컨테이너 내부 간 통신 포트를 하나 추가합니다.  
 이번 예시에서는 5000 번 포트를 이용하겠습니다.  
 
-```terminal
-$ docker run -dit -p 5000:5000 --restart=always --name docker_repository registry:latest
+```bash
+docker run -dit -p 5000:5000 --restart=always --name docker_repository registry:latest
 ```
 
 참고로 registry:latest 도커 이미지의 경우 OS가 Alpine Linux 3.18 입니다. (2024-01-04 기준)  
 
-```terminal
-$ docker exec -it docker_repository sh
+```bash
+docker exec -it docker_repository sh
 
-$ cat /etc/issue
+cat /etc/issue
 >> Welcome to Alpine Linux 3.18
 >> Kernel \r on an \m (\l)
 ```
@@ -129,9 +128,9 @@ $ cat /etc/issue
 먼저, 신뢰할 수 있는 registry로 등록합니다. docker daemon 파일에서 등록이 가능합니다.  
 https가 아닌 http 통신도 가능케 하기 위함입니다.  
 
-```terminal
+```bash
 # docker daemon 파일 작성
-$ vi /etc/docker/daemon.json
+vi /etc/docker/daemon.json
 
 # 아래 내용을 추가하고 편집 종료
 {
@@ -139,19 +138,19 @@ $ vi /etc/docker/daemon.json
 }
 
 # docker service restart
-$ systemctl restart docker.service
-$ systemctl restart docker.socket
+systemctl restart docker.service
+systemctl restart docker.socket
 ```
 
 ### 4-2. 이용하기 : docker push
 
 docker registry 에는 아직 아무런 이미지도 등록되어있지 않습니다. 실습을 위해 ubuntu 도커 이미지를 pull 해보겠습니다.  
 
-```terminal
-$ docker pull ubuntu:20.04
+```bash
+docker pull ubuntu:20.04
 
 === 결과 ===
-$ docker images
+docker images
 >> REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 >> ubuntu       20.04     f78909c2b360   3 weeks ago   72.8MB
 >> registry     latest    909c3ff012b7   4 weeks ago   25.4MB
@@ -160,8 +159,8 @@ $ docker images
 이렇게 받은 도커 이미지를 개인용 docker registry 에 push 해보도록 하겠습니다.  
 먼저, push할 docker image에 registry 서버를 명시한 태그를 붙여야 합니다.  
 
-```terminal
-$ docker tag ubuntu:20.04 서버ip:5000/mydocker:0.1
+```bash
+docker tag ubuntu:20.04 서버ip:5000/mydocker:0.1
 
 === 결과 ===
 $docker images
@@ -173,8 +172,8 @@ $docker images
 
 이제 docker push 명령어를 통해 이미지를 push할 수 있습니다.  
 
-```terminal
-$ docker push 서버ip:5000/mydocker:0.1
+```bash
+docker push 서버ip:5000/mydocker:0.1
 ```
 
 ### 4-3. push 한 docker image 확인
@@ -182,23 +181,23 @@ $ docker push 서버ip:5000/mydocker:0.1
 제대로 push가 되었는지 docker registry에 등록된 이미지를 확인해보겠습니다.  
 명령어는 아래와 같습니다.
 
-```terminal
+```bash
 # docker image 목록(리포지토리) 확인
-$ curl http://서버ip:5000/v2/_catalog
+curl http://서버ip:5000/v2/_catalog
 
 # 특정 리포지토리(ubntu 등)의 버전 목록 확인
-$ curl http://서버ip:5000/v2/<리포지토리이름>/tags/list
+curl http://서버ip:5000/v2/<리포지토리이름>/tags/list
 ```
 
 예시에 적용해보면 아래와 같이 출력될 것입니다.  
 
-```terminal
+```bash
 # docker image 목록 확인
-$ curl http://서버ip:5000/v2/_catalog
+curl http://서버ip:5000/v2/_catalog
 >>> {"repositories":["mydocker"]}
 
 # 특정 리포지토리(ubntu 등)의 이미지 목록 확인
-$ curl http://서버ip:5000/v2/mydocker/tags/list
+curl http://서버ip:5000/v2/mydocker/tags/list
 >>> {"name":"mydocker","tags":["0.1"]}
 ```
 
@@ -209,17 +208,17 @@ registry 서버에 mydocker:0.1 이미지가 업로드되어있는 것을 확인
 이제 또 다른 서버에서 개인 docker registry에 등록된 이미지를 pull 해보겠습니다.  
 이제 막 docker를 설치한 따끈따끈한 서버입니다.  
 
-```terminal
-$ docker images
+```bash
+docker images
 >>> REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 ```
 
 pull을 한 번 해보겠습니다.  
 
-```terminal
-$ docker pull 서버ip:5000/mydocker:0.1
+```bash
+docker pull 서버ip:5000/mydocker:0.1
 
-$ docker images
+docker images
 >>> REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 >>> ip주소:5000/my_docker  0.0.1 f78909c2b360 3 weeks ago 72.8MB
 ```
