@@ -45,6 +45,7 @@ docs_docker:
     - title: "4. 도커 이미지 만들기"
     - title: "5. Volume Mount"
   - title: docker compose
+    children:
     - title: "도커 컴포즈란?"
     - title: "1. 도커 컴포즈 설치하기"
     - title: "2. docker-compose.yml 둘러보기"

@@ -1,6 +1,6 @@
 ---
 title: python string 모듈 - 난수로 비밀번호 생성하기 # 제목 (필수)
-excerpt: # 서브 타이틀이자 meta description (필수)
+excerpt: 난수로 비밀번호를 생성해보자  # 서브 타이틀이자 meta description (필수)
 date: 2024-01-07 17:30:00 +0900      # 작성일 (필수)
 lastmod: 2024-01-07 17:30:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2024-01-07 17:30:00 +0900   # 최종 수정일 (필수)
