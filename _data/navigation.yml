@@ -34,7 +34,7 @@ docs:
 
 # docker docs
 docs_docker:
-  - title: "Doc으로 돌아가기"
+  - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: docker
     children:
@@ -67,7 +67,7 @@ docs_docker:
 
 # python docs
 docs_python:
-  - title: "Doc으로 돌아가기"
+  - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: python
     children:
@@ -78,7 +78,7 @@ docs_python:
 
 # dart and flutter docs
 docs_dart_and_flutter:
-  - title: "Doc으로 돌아가기"
+  - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: dart
     children:
