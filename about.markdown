@@ -104,11 +104,11 @@ Jongya 입니다.
 |`2023.01 - Stop`|**이커머스 소상공인을 위한 마진계산 서비스 및 커뮤니티**<br>`Margin calculation service for e-commerce businesses`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>||
 |`2023.02 - 2023.04`|**컴퓨터 비전 기술을 이용한 유해동물 탐지, 퇴치 및 경로추적 솔루션**<br>`Harmful animal detection, extermination and path tracking solution`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>|<a href="https://github.com/whdrns2013/lab/tree/main/20230210_sesac_final">link</a>|
 |`2023.02`|**딥러닝 음성 및 자연어 기술을 이용한 TTS 서비스**<br>`TTS service using deep learning voice technology`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/pythonDir/project_nlp_sound_20230202">link</a>|
-|`2023.01`|**애플 앱스토어 리뷰 스크래퍼**<br>`Apple App Store Review Scraper`|`solo`|<a href="https://github.com/whdrns2013/lab/tree/main/20230129_apple_app_review_scrapper">link</a>|
+|`2023.01`|**애플 앱스토어 리뷰 스크래퍼**<br>`Apple App Store Review Scraper`|`personal`|<a href="https://github.com/whdrns2013/lab/tree/main/20230129_apple_app_review_scrapper">link</a>|
 |`2022.12`|**딥러닝 영상기술을 이용한 과채류 종류 및 신선도 판별**<br>`Classification of type and freshness of fruits and vegetables`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/pythonDir/project_vegetable_20221219">link</a>|
 |`2022.12`|**머신러닝 기반 서울시 통신 데이터를 통한 생활습관 도출**<br>`Analyzing lifestyle habits through Seoul city communication data`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/pythonDir/project_machinelearning_20221202">link</a>|
 |`2022.11`|**대기질 및 암 발생률 관계 분석 및 시각화**<br>`Air quality and cancer incidence relationship visualization`|<img src="https://img.shields.io/badge/team-E2001A?style=style=flat-square&logo=&logoColor=white"/>|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/pythonDir/project_visualization_project_20221121">link</a>|
-|`2022.11`|**온라인 설문조사 웹페이지 구축**<br>`Online survey webpage`|`solo`|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/java/project_survey_web_20221028">link</a>|
+|`2022.11`|**온라인 설문조사 웹페이지 구축**<br>`Online survey webpage`|`personal`|<a href="https://github.com/whdrns2013/Workspace_SeSAC/tree/main/java/project_survey_web_20221028">link</a>|
 
 
 <br>
