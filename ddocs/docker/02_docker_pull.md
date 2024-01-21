@@ -20,7 +20,7 @@ header:
     provider:                # youtube, vimeo 등
 ---
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1️. 도커 이미지 pull  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1. 도커 이미지 pull  </span>
 
 내가 원하는 운영 환경을 만들기 위해서는, 우선 하드웨어를 제어해 줄 운영체제가 있어야 합니다.
 
@@ -65,7 +65,7 @@ docker images
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2️. 도커 이미지란?  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2. 도커 이미지란?  </span>
 
 이해를 돕기 위해 정확하지는 않지만, 쉽게 설명을 해보겠습니다.  
 
@@ -90,7 +90,7 @@ Windows 등의 운영체제에서는 "특정 시점"으로 복구할 수 있는 
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3️. 컨테이너 실행하기</span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3. 컨테이너 실행하기</span>
 
 도커 이미지를 받았다면, 그 이미지를 기반으로 컨테이너 환경(격리된 환경)을 실행합니다.  
 앞서 살펴본 도커 이미지가 설치파일이라면, 컨테이너는 설치가 완료되어 사용자가 사용할 수 있는 상태가 된 환경입니다.  
@@ -112,7 +112,7 @@ docker run -p 10022:22 -dit ubuntu:18.04 /bin/bash
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4️. 추가 : 다운로드 받을 수 있는 도커 이미지 확인하기  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4. 추가 : 다운로드 받을 수 있는 도커 이미지 확인하기  </span>
 
 다운로드 받을 수 있는 도커 이미지들이 뭐가 있을지 궁금하다면!  
 도커 허브에서 확인 가능합니다.  
@@ -127,7 +127,7 @@ docker search 검색할키워드
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 5️. Reference  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 5. Reference  </span>
 
 도커 이미지 확인 : https://hub.docker.com  
 ununtu docker 설치하기 : https://joshwon.tistory.com/61#google_vignette  
