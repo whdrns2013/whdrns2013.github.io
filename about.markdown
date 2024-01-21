@@ -6,6 +6,26 @@ author_profile: true
 classes: wide
 ---
 
+<style>
+    body
+    .page__content {
+    :not(pre) > code {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 0.85em;
+    background: #ebebeb;
+    color: #6d6d6d;
+    border-radius: $border-radius;
+
+    &::before,
+    &::after {
+      letter-spacing: -0.2em;
+      content: "\00a0";
+    }
+  }
+    }
+</style>
+
 
 # Ai there! 👋
 Jongya 입니다.  
