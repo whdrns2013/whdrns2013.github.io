@@ -24,13 +24,13 @@ header:
 ---
 
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1️. 실습 환경 설명</span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1. 실습 환경 설명</span>
 
 - 리눅스 Ubuntu 18.04.6
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2️. 도커 설치  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2. 도커 설치  </span>
 
 ### 설치
 
@@ -114,7 +114,7 @@ docker ps
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3️. 그 외 참고  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3. 그 외 참고  </span>
 
 ### 도커 패키지 설치 경로
 
@@ -132,7 +132,7 @@ which docer
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4️. Reference  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4. Reference  </span>
 
 도커 설치(공식) : https://docs.docker.com/engine/install/ubuntu/  
 도커 설치 : https://www.44bits.io/ko/post/easy-deploy-with-docker  
