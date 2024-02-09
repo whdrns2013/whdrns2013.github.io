@@ -1,8 +1,9 @@
 ---
-title: 코딩테스트 제목 풀이 (문제출제 사이트) # 제목
+title: 코딩테스트 제목 풀이 (문제출제 사이트) 언어 # 제목
 excerpt: # 서브 타이틀
 date: 2023-01-18 20:33:00 +0900      # 작성일
 lastmod: 2023-01-18 20:33:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
+last_modified_at: 2024-02-08 11:30:00 +0900   # 최종 수정일 (필수)
 categories: coding_test         # 다수 카테고리에 포함 가능
 tags: 프로그래머스 코딩테스트 파이썬                     # 태그 복수개 가능
 classes:  wide       # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -27,37 +28,35 @@ author: # 주인 외 작성자 표기 필요시
 코딩테스트 연습에 공개된 문제는 (주)그렙이 저작권을 가지고 있습니다.  
 (지문 하단에 별도 저작권 표시 문제 제외)  
 코딩테스트 연습 문제의 지문, 테스트케이스, 풀이 등과 같은 정보는 비상업적, 비영리적 용도로 게시할 수 있습니다.  
-{: .notice--info}
+{: .notice--info}  
 
-# <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>코딩테스트 정보</span>
+## 문제 정보  
 
-- 프로그래머스
-- python
-- level 1
-- 점수 : 캡쳐 못함
-- [문제 링크](링크)
-
-<br>
+- 프로그래머스  
+- python  
+- level 1  
+- 점수 : 캡쳐 못함  
+- [문제 링크](링크)  
 
 
-# <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>문제</span>
+
+## 문제  
 
 문제 내용
 
-## 제한사항
+### 제한사항
 
 - 제한 사항 1
 
-## 입출력 예
+### 입출력 예
 
 입출력 예
 
-<br>
  
 
-# <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>풀이 코드</span>
+## 풀이 코드  
 
-## 풀이 코드 1
+### 풀이 코드 1
 
 
 ```python
@@ -65,10 +64,9 @@ author: # 주인 외 작성자 표기 필요시
 ```
 
 
-<br>
 
 
-# <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>풀이 방식</span>
+## 풀이 방식  
 
 ### ■■■■ 문제 요약 ■■■■
 > 
@@ -79,7 +77,7 @@ author: # 주인 외 작성자 표기 필요시
 ### ■■■■ 접근 방식 ■■■■
 > 
 
-### <span style='background:linear-gradient(to top, #FFE400 1%, transparent 20%)'> ■■■■ 핵심 계산식 서술 ■■■■ (1번 풀이 기준) </span>
+### ■■■■ 핵심 계산식 서술 ■■■■ (1번 풀이 기준)  
 > (1)   
 ```python
 
@@ -96,7 +94,6 @@ author: # 주인 외 작성자 표기 필요시
 ```
 
 
-<br>
 
 
-# <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>리뷰</span>
+## 리뷰  
