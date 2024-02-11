@@ -59,6 +59,8 @@ GEM
       listen (~> 3.0)
     kramdown (2.4.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.4)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -86,16 +88,20 @@ GEM
     sawyer (0.9.2)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
+    webrick (1.8.1)
 
 PLATFORMS
   arm64-darwin-22
   arm64-darwin-23
+  x86_64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
   bundler
+  kramdown-parser-gfm
   minimal-mistakes-jekyll!
   rake (>= 12.3.3)
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.4.4
