@@ -7,11 +7,14 @@ figure.highlight {
   position: relative;
   margin-bottom: 1em;
   background: $base00;
+  // background: #1a1a1a;
   color: $base05;
   font-family: $monospace;
   font-size: $type-size-6;
   line-height: 1.8;
   border-radius: $border-radius;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+  border: 1px solid #575b0b; /* 테두리 추가 */
 
   > pre,
   pre.highlight {
@@ -35,9 +38,17 @@ figure.highlight {
     &.rouge-gutter {
       padding-right: 1em;
       width: 1em;
-      color: $base04;
-      border-right: 1px solid $base04;
+      // color: $base04;
+      color: $base03;
+      // border-right: 1px solid $base04;
+      border-right: 1px dashed $base03;
       text-align: right;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     /* code */
@@ -62,7 +73,8 @@ figure.highlight {
 .highlight {
   .c {
     /* Comment */
-    color: $base04;
+    // color: $base04;
+    color: $base0g;
   }
   .err {
     /* Error */
@@ -90,23 +102,27 @@ figure.highlight {
   }
   .cm {
     /* Comment.Multiline */
-    color: $base04;
+    // color: $base04;
+    color: $base0g;
   }
   .cp {
     /* Comment.Preproc */
-    color: $base04;
+    // color: $base04;
+    color: $base0g;
   }
   .c1 {
     /* Comment.Single */
-    color: $base04;
+    // color: $base04;
+    color: $base0g;
   }
   .cs {
     /* Comment.Special */
-    color: $base04;
+    // color: $base04;
+    color: $base0g;
   }
   .gd {
     /* Generic.Deleted */
-    color: $base08;
+    color: $base0g;
   }
   .ge {
     /* Generic.Emph */
