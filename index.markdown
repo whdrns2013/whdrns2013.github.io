@@ -6,5 +6,5 @@ layout: home
 author_profile: true
 
 header:
-    overlay_image: assets/images/banners/banner_003.png
+    overlay_image: assets/images/banners/banner.png
 ---
