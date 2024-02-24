@@ -17,6 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "kor"
 title                    : "Jongya's blog"
+# title                    : ""
 title_separator          : "-"
 subtitle                 : "Jongya의 블로그입니다." # site tagline that appears below site title in masthead
 name                     : "Jongya"
