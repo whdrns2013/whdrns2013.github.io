@@ -46,6 +46,48 @@ author: # 주인 외 작성자 표기 필요시
 
 ![](/assets/images/20240225_001_001.png)
 
+<details>
+<summary> 샘플 데이터 sql (열기/접기) </summary>
+<div markdown='1'>
+```sql
+DROP TABLE IF EXISTS `math_sample`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+
+CREATE TABLE `math_sample` (
+  `sell_id` varchar(100) DEFAULT NULL,
+  `product` varchar(20) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `amount` int(11) DEFAULT NULL,
+  `sell_date` date DEFAULT NULL,
+  `sell_datetime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `math_sample`
+--
+
+LOCK TABLES `math_sample` WRITE;
+/*!40000 ALTER TABLE `math_sample` DISABLE KEYS */;
+INSERT INTO `math_sample` VALUES
+('0001','APPLE',1500,20,'2024-01-02','2024-01-02 15:30:00'),
+('0002','APPLE',1300,50,'2024-01-05','2024-01-05 11:29:30'),
+('0003','APPLE',1100,250,'2024-01-08','2024-01-08 10:25:47'),
+('0004','BANANA',2100,23,'2024-01-15','2024-01-15 15:30:40'),
+('0005','BANANA',2000,20,'2024-01-18','2024-01-18 09:42:53'),
+('0006','BANANA',1900,2000,'2024-01-22','2024-01-22 21:53:22'),
+('0007','ORANGE',3100,200,'2024-01-29','2024-01-29 11:53:22'),
+('0008','ORANGE',2800,400,'2024-02-01','2024-02-01 17:23:55'),
+('0009','ORANGE',3600,40,'2024-02-05','2024-02-05 10:54:22'),
+('0010','GRAPE',NULL,NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `math_sample` ENABLE KEYS */;
+UNLOCK TABLES;
+```
+</div>
+</details>
+
 
 ## 집계 함수  
 
