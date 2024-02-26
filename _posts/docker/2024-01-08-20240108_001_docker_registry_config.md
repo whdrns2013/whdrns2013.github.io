@@ -1,5 +1,5 @@
 ---
-title: Docker Registry 살펴보기 및 Configuration # 제목 (필수)
+title: Docker Registry (2) docker registry 살펴보기 및 Configuration # 제목 (필수)
 excerpt: Docker Registry Config # 서브 타이틀이자 meta description (필수)
 date: 2024-01-08 01:30:00 +0900      # 작성일 (필수)
 lastmod: 2024-01-08 01:30:00 +0900   # 최종 수정일 (필수)
