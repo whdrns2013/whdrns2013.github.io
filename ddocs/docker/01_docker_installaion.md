@@ -24,13 +24,13 @@ header:
 ---
 
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1. 실습 환경 설명</span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 1️. 실습 환경 설명</span>
 
 - 리눅스 Ubuntu 18.04.6
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2. 도커 설치  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 2️. 도커 설치  </span>
 
 ### 설치
 
@@ -40,18 +40,26 @@ header:
 
 ```bash
 ## Ubuntu의 경우
-apt-get update                # 패키지 업데이트가 있는지 확인
+apt-get update                # 시스템 패키지 업데이트
+apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # gpg 키 추가
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # 저장소 추가. 아키텍처가 arm64일 경우 [arch=arm64]로 변경
+apt-get update                # 시스템 패키지 업데이트
 apt-get install docker-ce     # 도커 엔진 설치
 apt-get install docker-cli    # 도커 클라이언트 설치
 apt-get install containerd.io # 컨테이너 런타임 설치
 
 ## CentOS의 경우
-yum update
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum-config-manager --enable docker-ce-nightly
 sudo yum install docker-ce
 sudo yum install docker-ce-cli
 sudo yum install containerd.io
+
+## Rocky Linux의 경우
+dnf install dnf-utils         # 유틸 패키지 설치
+dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo                # 패키지 저장소 추가
+dnf install docker-ce         # 도커 설치
 ```
 
 **(2) curl 방법**
@@ -114,7 +122,7 @@ docker ps
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3. 그 외 참고  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 3️. 그 외 참고  </span>
 
 ### 도커 패키지 설치 경로
 
@@ -132,9 +140,10 @@ which docer
 
 <br>
 
-## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4. Reference  </span>
+## <span style='background:linear-gradient(to top, #e8ff94 50%, transparent 50%)'> 4️. Reference  </span>
 
-도커 설치(공식) : https://docs.docker.com/engine/install/ubuntu/  
-도커 설치 : https://www.44bits.io/ko/post/easy-deploy-with-docker  
-서비스 활성화와 등록 : https://www.kernelpanic.kr/20  
+도커 설치(공식) : [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)  
+도커 설치 : [https://www.44bits.io/ko/post/easy-deploy-with-docker](https://www.44bits.io/ko/post/easy-deploy-with-docker)  
+서비스 활성화와 등록 : [https://www.kernelpanic.kr/20](https://www.kernelpanic.kr/20)  
 containerd에 대한 설명 : [kr.linkedin.com](https://kr.linkedin.com/pulse/containerd는-무엇이고-왜-중요할까-sean-lee)  
+rocky linux 도커 설치 : [https://hahahax5.tistory.com/10](https://hahahax5.tistory.com/10)  
