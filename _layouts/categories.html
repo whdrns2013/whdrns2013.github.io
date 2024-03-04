@@ -2,6 +2,16 @@
 layout: archive
 ---
 
+{% assign total_posts = 0 %}
+{% for category in site.categories %}
+  {% assign total_posts = total_posts | plus: category[1].size %}
+{% endfor %}
+
+
+<p style="text-align: right; font-size:0.7em;">
+  total posts : {{total_posts}}
+</p>
+
 {{ content }}
 
 {% assign categories_max = 0 %}
