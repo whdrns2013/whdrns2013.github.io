@@ -120,6 +120,7 @@ docs_data_analysis:
     - title: "오피니언 마이닝"
     - title: "웹 마이닝"
   - title: 평가 지표
+    children:
     - title: 분류모델 평가 지표
     - title: 회귀모델 평가 지표
     - title: 군집분석 평가 지표
