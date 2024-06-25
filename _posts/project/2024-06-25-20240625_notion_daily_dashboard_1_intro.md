@@ -50,4 +50,4 @@ author:
 
 개발 완료 코드는 아래 깃허브에서 확인할 수 있다.  
 
-![https://github.com/whdrns2013/small_projects/tree/2199b7c22d06ee2d90ecef3f8c6aa41d63b50440/scriptable/notion_daily_dashboard](https://github.com/whdrns2013/small_projects/tree/2199b7c22d06ee2d90ecef3f8c6aa41d63b50440/scriptable/notion_daily_dashboard)
+[https://github.com/whdrns2013/small_projects/tree/2199b7c22d06ee2d90ecef3f8c6aa41d63b50440/scriptable/notion_daily_dashboard](https://github.com/whdrns2013/small_projects/tree/2199b7c22d06ee2d90ecef3f8c6aa41d63b50440/scriptable/notion_daily_dashboard)
