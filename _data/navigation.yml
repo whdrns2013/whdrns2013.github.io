@@ -86,8 +86,10 @@ docs_dart_and_flutter:
       url: /docs/dart_and_flutter/01_dart_installation
     - title: "Dart 개발 환경 준비"
       url: /docs/dart_and_flutter/02_dart_develope_env_setting
-    - title: "main function과 Dart 파일 만들어보기"
+    - title: "Main Function"
+      url: /docs/dart_and_flutter/03_dart_main_function
     - title: "변수의 선언"
+      url: /docs/dart_and_flutter/04_dart_variables
     - title: "자료형 (data type)"
     - title: "함수의 선언"
   - title: flutter
