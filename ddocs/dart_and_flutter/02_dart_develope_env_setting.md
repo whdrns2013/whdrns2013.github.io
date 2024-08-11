@@ -12,9 +12,7 @@ sidebar:
 ---
 
 
-## Dart SDK 설치하기  
-
-Dart SDK 설치는 이전 포스트를 참고해주세요.    
+## VScode 에서 Dart 개발환경 세팅하기  
 
 VSCode 를 이용한다면 Dart Extenstion 과 Flutter Extension 을 설치하는 것을 추천합니다.  
 
