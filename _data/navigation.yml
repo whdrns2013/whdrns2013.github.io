@@ -83,6 +83,7 @@ docs_dart_and_flutter:
   - title: dart
     children:
     - title: "Dart 설치하기"
+      url: /docs/dart_and_flutter/dart/intro
     - title: "main function과 Dart 파일 만들어보기"
     - title: "변수의 선언"
     - title: "자료형 (data type)"
