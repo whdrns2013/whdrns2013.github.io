@@ -114,10 +114,13 @@ swapon /dev/nvme0n1p3
 
 ```bash
 free -h
->>
+>>       total  used   free   shared  buff/cache  available
+>> Mem:  123Gi  1.8Gi  120Gi  9Mi     1.6Gi       121Gi
+>> Swap: 15Gi   0B     15Gi
 
 swapon --show
->>
+>> NAME           TYPE       SIZE  USED PRIO
+>> /dev/nvme0n1p3 partition  16G   0B   -2
 ```
 
 재부팅 결과, 정상적으로 부팅됨을 확인했다.  
