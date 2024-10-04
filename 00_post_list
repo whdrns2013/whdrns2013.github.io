@@ -263,7 +263,7 @@ https://www.44bits.io/ko/keyword/linux-container
 |20240705_001|리눅스에 ssh key 발급하기 (feat ssh 폴더가 없을 때)|2024-07-05|완료|
 |20240709_001|Linux 디스크 확인 및 마운트 하기|2024-07-09|완료|
 |20240914_002|리눅스에서 가상 머신 다루기 (1) xcp-ng 설치|2024-09-14|완료|
-
+|20241002_001|리눅스 swap 오류 Dependency failed for swap.mount|2024-10-02|완료|
 
 
 ■ network
@@ -316,6 +316,7 @@ https://www.44bits.io/ko/keyword/linux-container
 |20230629_001|ssh 연결 거부|2023-06-29|완료|
 |20230727_001|SVN E180001 오류|2023-07-27|완료|
 |20240212_001|ruby 설치 오류|2024-02-12|완료|
+|20241002_001|리눅스 swap 오류 Dependency failed for swap.mount|2024-10-02|완료|
 
 
 ■ CSS
