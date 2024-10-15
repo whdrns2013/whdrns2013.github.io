@@ -6,7 +6,7 @@ lastmod: 2024-10-15 17:30:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2024-10-15 17:30:00 +0900   # 최종 수정일 (필수)
 categories: docker         # 다수 카테고리에 포함 가능 (필수)
 tags:  docker dockercompose compose 도커 컴포즈 도커 컴포즈 gpu CUDA                   # 태그 복수개 가능 (필수)
-classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+classes:  wide       # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
 toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
