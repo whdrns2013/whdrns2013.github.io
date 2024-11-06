@@ -1,11 +1,11 @@
 ---
 title: 리눅스 저장 장치 명명 규칙 - 디스크 및 파티션 # 제목 (필수)
 excerpt: sda sdb1 sdb2 .. 이름의 규칙은? # 서브 타이틀이자 meta description (필수)
-date: 2024-03-08 11:30:00 +0900      # 작성일 (필수)
-lastmod: 2024-03-08 11:30:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2024-03-08 11:30:00 +0900   # 최종 수정일 (필수)
-categories: [Blogging, Demo]         # 다수 카테고리에 포함 가능 (필수)
-tags: typography                     # 태그 복수개 가능 (필수)
+date: 2024-11-05 18:30:00 +0900      # 작성일 (필수)
+lastmod: 2024-11-05 18:30:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2024-11-05 18:30:00 +0900   # 최종 수정일 (필수)
+categories: Linux         # 다수 카테고리에 포함 가능 (필수)
+tags: linux 리눅스 sda sdb sda1 sdb1 hda1 디스크 파티션 저장 장치 하드 드라이브 ssd            # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
