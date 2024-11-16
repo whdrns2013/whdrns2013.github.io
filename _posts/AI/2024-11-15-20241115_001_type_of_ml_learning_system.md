@@ -1,12 +1,12 @@
 ---
-title: 머신러닝 학습 시스템의 유형 # 제목 (필수)
+title: 머신러닝 학습 시스템의 유형 - 지도학습과 비지도학습 등 # 제목 (필수)
 excerpt: 지도학습 비지도학습 준지도학습 강화학습  # 서브 타이틀이자 meta description (필수)
 date: 2024-11-15 00:30:00 +0900      # 작성일 (필수)
 lastmod: 2024-11-15 00:30:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2024-11-15 00:30:00 +0900   # 최종 수정일 (필수)
 categories: AI        # 다수 카테고리에 포함 가능 (필수)
 tags: 지도학습 비지도학습 준지도학습 강화학습 ai artificial intelligence machine learning deep 인공지능 머신러닝 기계학습 딥러닝       # 태그 복수개 가능 (필수)
-classes:        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
+classes: wide       # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
 toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
