@@ -1,0 +1,48 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="azU13jdOOpKz6osX0oLa">
+    <mxGraphModel dx="1064" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry y="380" width="710" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#000000;curved=1;" edge="1" parent="1" source="7Dr2A5j-mw3Uys9otgh3-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="465.875" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="525" y="466" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#000000;curved=1;" edge="1" parent="1" source="7Dr2A5j-mw3Uys9otgh3-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="597.625" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="525" y="598" />
+              <mxPoint x="473" y="598" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-6" value="x" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="510" y="516.75" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-14" value="&lt;font style=&quot;font-size: 19px;&quot; color=&quot;#000000&quot;&gt;P(C1 | x)&lt;/font&gt;" style="text;strokeColor=#FF0080;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-16" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;데이터 x가 C1에 속할 확률&lt;/font&gt;" style="text;strokeColor=#A50040;align=center;fillColor=#d80073;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-17" value="&lt;font style=&quot;font-size: 19px;&quot; color=&quot;#000000&quot;&gt;P(C2 | x)&lt;/font&gt;" style="text;strokeColor=#7EA6E0;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="605" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-18" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;데이터 x가 C2에 속할 확률&lt;/font&gt;" style="text;strokeColor=#006EAF;align=center;fillColor=#1ba1e2;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="530" y="585" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7Dr2A5j-mw3Uys9otgh3-19" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://files.oaiusercontent.com/file-deOHeHvknId6HK6QnwvoacgG?se=2024-11-16T15%3A24%3A50Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscc=max-age%3D299%2C%20immutable%2C%20private&amp;rscd=attachment%3B%20filename%3D31c4cefa-c15c-42d6-9acc-d64059e493b2&amp;sig=p0EmGgPrbSTg8TcPWmx2pL0G%2B7o1t7sCJ05d4XBYwcY%3D;" vertex="1" parent="1">
+          <mxGeometry y="404.72" width="436.37" height="270.55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

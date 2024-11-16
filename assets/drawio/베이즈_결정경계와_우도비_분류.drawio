@@ -1,0 +1,109 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="MGtq8YuRdw83FWxYJPE1">
+    <mxGraphModel dx="532" dy="388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="735" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-12" value="결정경계" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="110" y="715" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-13" value="=" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="775" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-32" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="185" y="760" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-14" value="p(x | C1)" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="190" y="760" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" edge="1" parent="1" source="T20H7wBX7D5jWRBCWj0v-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="880" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="840" />
+              <mxPoint x="160" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-15" value="p(x | C2)" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="190" y="790" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-16" value="" style="endArrow=none;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="790" as="sourcePoint" />
+            <mxPoint x="240" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-17" value="" style="endArrow=none;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="790" as="sourcePoint" />
+            <mxPoint x="260" y="790" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-34" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="265" y="760" width="45" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-18" value="p(C2)" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="270" y="760" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;" edge="1" parent="1" source="T20H7wBX7D5jWRBCWj0v-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="880" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="308" y="840" />
+              <mxPoint x="360" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-19" value="p(C1)" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="270" y="790" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-20" value="" style="endArrow=none;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="790" as="sourcePoint" />
+            <mxPoint x="300" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-23" value="gLRT(x)" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="180" y="710" width="45" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-30" value="0" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="775" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-37" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;전체 데이터에서 C2가 차지하는 비율&amp;nbsp;&lt;/font&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="339" y="887.5" width="150" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-38" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;전체 데이터에서 C1이 차지하는 비율&amp;nbsp;&lt;/font&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="340" y="904" width="150" height="11" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-39" value="" style="endArrow=none;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#000000;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="T20H7wBX7D5jWRBCWj0v-38" target="T20H7wBX7D5jWRBCWj0v-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="339" y="909" as="sourcePoint" />
+            <mxPoint x="389" y="909" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-40" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;-&amp;gt; 계산 가능한 선험 확률&lt;/b&gt;&lt;/span&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="920" width="150" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-41" value="&lt;font color=&quot;#4d9900&quot; size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;우도비&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="110" y="880" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-42" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;font color=&quot;#67ab9f&quot;&gt;각 클래스에서 x가 관찰될 확률밀도의 비율&lt;/font&gt;&lt;/span&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="110" y="905" width="175" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-43" value="&lt;font color=&quot;#4d9900&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;b style=&quot;&quot;&gt;-&amp;gt; 계산해야 하는 값&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="110" y="920" width="150" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="T20H7wBX7D5jWRBCWj0v-44" value="&lt;font color=&quot;#4d9900&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;b style=&quot;&quot;&gt;-&amp;gt; 즉, 베이즈 분류는 우도비 분류&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="110" y="934" width="150" height="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
