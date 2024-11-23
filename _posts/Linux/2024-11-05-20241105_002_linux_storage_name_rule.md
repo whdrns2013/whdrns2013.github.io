@@ -1,9 +1,9 @@
 ---
 title: 리눅스 저장 장치 명명 규칙 - 디스크 및 파티션 # 제목 (필수)
 excerpt: sda sdb1 sdb2 .. 이름의 규칙은? # 서브 타이틀이자 meta description (필수)
-date: 2024-11-05 18:30:00 +0900      # 작성일 (필수)
-lastmod: 2024-11-05 18:30:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2024-11-05 18:30:00 +0900   # 최종 수정일 (필수)
+date: 2024-11-24 01:03:00 +0900      # 작성일 (필수)
+lastmod: 2024-11-24 01:03:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2024-11-24 01:03:00 +0900   # 최종 수정일 (필수)
 categories: Linux         # 다수 카테고리에 포함 가능 (필수)
 tags: linux 리눅스 sda sdb sda1 sdb1 hda1 디스크 파티션 저장 장치 하드 드라이브 ssd            # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -29,26 +29,31 @@ author: # 주인 외 작성자 표기 필요시
 
 ![](/assets/images/20241105_002_001.png)  
 
+|/dev|저장 장치 종류|물리적 저장장치 순번|파티션 순번|
+|---|---|---|---|
+|디바이스 디렉터리|hd, sh, sr ..|a, b, c ..|1, 2, 3 ..|
+
 ### (1) Device Files  
 
-- 디바이스 디렉터리  
-- 장치 및 드라이버와 관련된 파일을 저장하는 디렉터리  
+- <b><font color="008080">장치 및 드라이버와 관련된 파일을 저장</font></b>하는 디렉터리  
 - 장치를 접근하는 데 사용되는 디바이스파일이 위치함  
+- 리눅스는 주변 장치를 파일로 취급함  
 
 ### (2) 저장 인터페이스의 종류  
 
 |명칭|인터페이스 이름|설명|
 |---|---|---|
-|hd*|IDE|- IDE 규격의 이름 패턴<br>- hard drive 라는 이름의 첫 글자들을 땄다.<br>- 메인보드는 2개의 커넥터를 가지며, 각 커넥터는 2개 디스크 부착 가능<br>- hda:첫 번째 커넥터 마스터 / hdb:첫 번째 커넥터 슬레이브<br>- hdc:두 번째 커넥터 마스터 / hdd:두 번쨰 커넥터 슬레이브|
-|sd*|SCSI|- SCSI 규격의 이름 패턴<br>- SCSI disk 라는 이름의 첫 글자들을 땄다.<br>- PATA, SATA, 하드디스크, 플래스메모리, USB 등<br>- 마스터, 슬레이브 개념이 없으며 연결 순서에 따라 알파벳 부여|
-|sr*|CD/DVD|- 읽기 전용의 광학 드라이브 장치(CD/DVD)<br>- 알파벳 없이 뒤에 숫자 1, 2, 3... 을 붙인다.|
-|sg*|CD/DVD|- 읽기와 쓰기가 가능한 광학 드라이브 장치(CD/DVD)<br>- 알파벳 없이 뒤에 숫자 1, 2, 3... 을 붙인다.|
-|tty*|teletypewriter|- 가상 콘솔|
-|pts|pseudo terminal slave|- 가상 터미널 장치|
+|&nbsp;&nbsp;&nbsp; hd* &nbsp;&nbsp;&nbsp;|IDE|- IDE 규격의 이름 패턴<br>- hard drive 라는 이름의 첫 글자들을 땄다.<br>- 메인보드는 2개의 커넥터를 가지며, 각 커넥터는 2개 디스크 부착 가능<br>- hda:첫 번째 커넥터 마스터 / hdb:첫 번째 커넥터 슬레이브<br>- hdc:두 번째 커넥터 마스터 / hdd:두 번쨰 커넥터 슬레이브|
+|&nbsp;&nbsp;&nbsp; sd* &nbsp;&nbsp;&nbsp;|SCSI|- SCSI 규격의 이름 패턴<br>- SCSI disk 라는 이름의 첫 글자들을 땄다.<br>- PATA, SATA, 하드디스크, 플래스메모리, USB 등<br>- 마스터, 슬레이브 개념이 없으며 연결 순서에 따라 알파벳 부여|
+|&nbsp;&nbsp;&nbsp; sr* &nbsp;&nbsp;&nbsp;|CD/DVD|- 읽기 전용의 광학 드라이브 장치(CD/DVD)<br>- 알파벳 없이 뒤에 숫자 1, 2, 3... 을 붙인다.|
+|&nbsp;&nbsp;&nbsp; sg* &nbsp;&nbsp;&nbsp;|CD/DVD|- 읽기와 쓰기가 가능한 광학 드라이브 장치(CD/DVD)<br>- 알파벳 없이 뒤에 숫자 1, 2, 3... 을 붙인다.|
+|&nbsp;&nbsp;&nbsp; tty* &nbsp;&nbsp;&nbsp;|teletypewriter|- 가상 콘솔|
+|&nbsp;&nbsp;&nbsp; pts &nbsp;&nbsp;&nbsp;|pseudo terminal slave|- 가상 터미널 장치|
 
 ### (3) 물리적 저장장치 순번  
 
 **저장 장치의 종류가 hd / sd 인 경우**  
+a, b, c .. 와 같이 알파벳 순서대로 명명된다.  
 
 |명칭|설명|
 |---|---|
@@ -61,6 +66,8 @@ author: # 주인 외 작성자 표기 필요시
 |...|...|
 
 ### (4) 파티션 순번  
+
+1, 2, 3 .. 과 같이 숫자로 명명된다.  
 
 |명칭|설명|
 |---|---|
