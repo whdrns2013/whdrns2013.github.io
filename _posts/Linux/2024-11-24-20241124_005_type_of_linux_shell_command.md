@@ -45,16 +45,12 @@ author: # 주인 외 작성자 표기 필요시
 -`echo $PATH` 로 저장된 경로 확인 가능.  
 
 ![](/assetc/images/20241124_005_001.png)  
-
 <i>~/.bashrc에 등록된 환경변수 PATH</i>
-
-<br>
 
 ```bash
 $ echo $PATH
 >> /config/miniconda3/bin:/config/miniconda3/condabin:/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
-
 <i>echo $PATH</i>
 
 ## Reference  
