@@ -1,0 +1,68 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="uedg14WzfbFFs09XHhL9">
+    <mxGraphModel dx="2261" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="175" width="860" height="465" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="200" width="770" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-1" value="뷰1&lt;div&gt;외부 스키마1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-2" value="뷰2&lt;div&gt;외부 스키마2&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-3" value="뷰n&lt;div&gt;외부 스키마n&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classicThin;startFill=1;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-4" target="Y86V5lwGxTAb-NSaJ--f-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-4" target="Y86V5lwGxTAb-NSaJ--f-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-4" target="Y86V5lwGxTAb-NSaJ--f-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-4" value="개념 스키마" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="520" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-5" target="Y86V5lwGxTAb-NSaJ--f-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-5" value="내부 스키마" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="520" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-7" value="개념-내부 사상&lt;div&gt;conceptual-internal mapping&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="370" y="450" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="Y86V5lwGxTAb-NSaJ--f-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-12" value="외부-개념 사상&lt;div&gt;external-conceptual mapping&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="320" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-14" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;외부 단계&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;external level&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="227.5" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-15" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;개념 단계&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;conceptual level&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="367.5" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="Y86V5lwGxTAb-NSaJ--f-16" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;내부 단계&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;internal level&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="507.5" width="180" height="65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
