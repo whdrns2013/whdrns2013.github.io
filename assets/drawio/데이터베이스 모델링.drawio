@@ -1,0 +1,120 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="wBRAkAH4kPzW-hUMtnTK">
+    <mxGraphModel dx="2363" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="90" width="1040" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="120" width="990" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="jjsbNyU3iJhc-dpEqwfx-1" target="jjsbNyU3iJhc-dpEqwfx-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-1" value="사용자 요구사항&lt;div style=&quot;font-size: 15px;&quot;&gt;분석&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="jjsbNyU3iJhc-dpEqwfx-3" target="jjsbNyU3iJhc-dpEqwfx-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-3" value="개념적&lt;div&gt;데이터 모델링&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="200" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="jjsbNyU3iJhc-dpEqwfx-4" target="jjsbNyU3iJhc-dpEqwfx-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-4" value="논리적&lt;div&gt;데이터 모델링&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="400" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-5" value="물리적&lt;div&gt;데이터 모델링&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="600" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-10" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;내부 스키마&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="800" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="jjsbNyU3iJhc-dpEqwfx-5" target="jjsbNyU3iJhc-dpEqwfx-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" parent="1" source="jjsbNyU3iJhc-dpEqwfx-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-12" value="현실 세계의&lt;div style=&quot;font-size: 14px;&quot;&gt;데이터, 업무에 대한&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;이해&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="80" y="360" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-14" value="ER 모델" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="280" y="360" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-15" value="관계형 모델" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="480" y="360" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-16" value="물리적 세부사항" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="680" y="360" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="359.5" y="260" as="targetPoint" />
+            <mxPoint x="359.5" y="360" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="559.5" y="260" as="targetPoint" />
+            <mxPoint x="559.5" y="360" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="759.5" y="260" as="targetPoint" />
+            <mxPoint x="759.5" y="360" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-23" value="데이터베이스 모델링" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-30" y="120" width="990" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-24" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="10" y="210" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-26" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="210" y="210" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-27" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="414" y="210" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jjsbNyU3iJhc-dpEqwfx-28" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="610" y="210" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="500" width="1040" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-25" y="525" width="990" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-3" value="&lt;font style=&quot;font-size: 83px;&quot;&gt;Database Modeling&lt;br style=&quot;font-size: 83px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=83;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="605" width="880" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-4" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;체계적으로 저장, 관리되는&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;구조화된 데이터의 모음&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="705" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-5" value="현실 세계의 객체와 관계를&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;추상화 하고&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;설계하는 과정&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="705" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-6" value="" style="endArrow=none;html=1;rounded=0;entryX=0.48;entryY=0.516;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119.8" y="689.5" as="sourcePoint" />
+            <mxPoint x="459.99999999999983" y="689.6199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rhVW7v7NhXSlGVJLKUqK-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0.48;entryY=0.516;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="689.5" as="sourcePoint" />
+            <mxPoint x="830.1999999999998" y="689.6199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
