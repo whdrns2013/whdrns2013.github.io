@@ -1,0 +1,113 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="_Uv9DmeogQQXTS0t-fRU">
+    <mxGraphModel dx="2363" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="160" width="1040" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="190" width="990" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-4" target="ZaTLLZMN6JliR8JrsGxa-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-4" value="요구사항&lt;div&gt;도출&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="306" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-13" value="제안 요청서&lt;div&gt;(RFP)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-120.81" y="410" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-20" value="사용자 요구사항 분석 과정" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-150" y="190" width="990" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-21" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="70" y="292" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-175" y="585" width="1040" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="610" width="990" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-27" value="&lt;font style=&quot;font-size: 83px;&quot;&gt;Requirements Analysis&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=83;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-114.5" y="690" width="880" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-28" value="시스템이 충족시켜야 할&lt;div&gt;요구자의 필요와 기대&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-39.5" y="790" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-29" value="요구사항을 이해, 구조화,&lt;div&gt;검증, 정제하는 과정&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="394.5" y="790" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-30" value="" style="endArrow=none;html=1;rounded=0;entryX=0.576;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-99.5" y="769.47" as="sourcePoint" />
+            <mxPoint x="400.74000000000024" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-31" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440.5" y="769.47" as="sourcePoint" />
+            <mxPoint x="750.5" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-32" target="ZaTLLZMN6JliR8JrsGxa-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-32" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.document;" vertex="1" parent="1">
+          <mxGeometry x="-111.62" y="292" width="71.62" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-35" target="ZaTLLZMN6JliR8JrsGxa-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-35" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.document;" vertex="1" parent="1">
+          <mxGeometry x="209.19" y="292" width="71.62" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-36" value="요구사항&lt;div&gt;명세서&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="200" y="410" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-38" target="ZaTLLZMN6JliR8JrsGxa-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-38" target="ZaTLLZMN6JliR8JrsGxa-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="250" />
+              <mxPoint x="80" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-38" value="요구사항&lt;div&gt;분석&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="350" y="306" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-22" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="292" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-41" target="ZaTLLZMN6JliR8JrsGxa-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-41" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.document;" vertex="1" parent="1">
+          <mxGeometry x="539.19" y="292" width="71.62" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-42" value="요구사항&lt;div&gt;정의서&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#666666;fontColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="530" y="410" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZaTLLZMN6JliR8JrsGxa-43" target="ZaTLLZMN6JliR8JrsGxa-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="480" />
+              <mxPoint x="410" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-43" value="요구사항&lt;div&gt;기록&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="670" y="306" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaTLLZMN6JliR8JrsGxa-23" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="720" y="300" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
