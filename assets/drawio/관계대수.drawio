@@ -1,0 +1,325 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="페이지-1" id="4a-CytGkyeVhbrRedJdI">
+    <mxGraphModel dx="3592" dy="1619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="237.5" width="1180" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="290" width="570" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-2" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&#xa;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&#xa;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:138.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&#xa;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&#xa;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&#xa;language:el;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&#xa;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;σ&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="260" width="130" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-3" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&#xa;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&#xa;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:80.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&#xa;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&#xa;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&#xa;language:en-US;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&#xa;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;(R)&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="310" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-4" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&#xa;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&#xa;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:36.0pt;font-family:&amp;quot;맑은 고딕&amp;quot;;mso-ascii-font-family:&amp;quot;맑은 고딕&amp;quot;;&#xa;mso-fareast-font-family:&amp;quot;맑은 고딕&amp;quot;;mso-bidi-font-family:+mn-cs;mso-fareast-theme-font:&#xa;major-fareast;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&#xa;language:ko;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&#xa;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;조건&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="460" width="570" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-8" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 72px;&quot;&gt;&lt;span style=&quot;font-size: 72px; font-family: Calibri; color: black; font-weight: normal;&quot;&gt;σ&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="450" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-9" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 시그마. SELECT 연산 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="465" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-11" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 55px;&quot;&gt;&lt;font face=&quot;Calibri&quot; style=&quot;font-size: 55px;&quot;&gt;&lt;span style=&quot;font-size: 55px;&quot;&gt;R&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=55;" vertex="1" parent="1">
+          <mxGeometry x="-75" y="530" width="40" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-13" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: Relation. 대상 릴레이션&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="530" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-15" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 45px;&quot;&gt;&lt;font style=&quot;font-size: 45px;&quot; face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 45px;&quot;&gt;조건&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="597" width="95" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-16" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 조회 조건&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry y="595" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-18" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;조회 조건&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="510" y="340" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-19" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;font style=&quot;color: black; font-size: 40px;&quot; face=&quot;Calibri&quot;&gt;- a&lt;/font&gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;Θ&lt;/font&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 40px; font-family: Calibri; background-color: initial;&quot;&gt;b : &lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;컬럼 a와 b 간 비교&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="510" y="397.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-20" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;font style=&quot;color: black; font-size: 40px;&quot; face=&quot;Calibri&quot;&gt;- a&lt;/font&gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;Θ&lt;/font&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 40px; font-family: Calibri; background-color: initial;&quot;&gt;v : &lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;컬럼 a와 상수값 v 간 비교&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="510" y="450" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-21" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;Θ&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 40px; font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;: &lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;비교연산자 =, !=, &amp;lt;, &amp;gt;, &amp;lt;=, &amp;gt;=&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="510" y="507.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-22" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-size: 40px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;∧&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;text-indent: 0in; background-color: initial; font-size: 40px; font-family: Calibri;&quot;&gt;&amp;nbsp;: &lt;/span&gt;&lt;span style=&quot;text-indent: 0in; background-color: initial; font-family: Calibri; font-size: 30px;&quot;&gt;조회 조건 간 AND 결합&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="510" y="565" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-23" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 40px;&quot;&gt;∨&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;text-indent: 0in; background-color: initial; font-size: 40px; font-family: Calibri;&quot;&gt;&amp;nbsp;: &lt;/span&gt;&lt;span style=&quot;text-indent: 0in; background-color: initial; font-family: Calibri; font-size: 30px;&quot;&gt;조회 조건 간 OR 결합&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="510" y="625" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="742.5" width="1180" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-25" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&lt;br/&gt;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:138.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&lt;br/&gt;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&lt;br/&gt;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&lt;br/&gt;language:el;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&lt;br/&gt;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;σ&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;소속=&#39;영업부&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="742.5" width="870" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-26" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&lt;br/&gt;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:138.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&lt;br/&gt;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&lt;br/&gt;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&lt;br/&gt;language:el;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&lt;br/&gt;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;σ&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;소속=&#39;영업부&#39;^연봉&amp;gt;7000&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="940" width="1140" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-46" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="237.5" width="1180" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-47" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="290" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-48" value="π&amp;nbsp;&lt;font style=&quot;font-size: 70px;&quot;&gt;컬럼리스트 &lt;/font&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(R)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="237.5" width="650" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-51" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="460" width="690" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-52" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 70px;&quot;&gt;π&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1100" y="450" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-53" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 프로젝션 연산 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="472" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-55" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;컬럼리스트: 반환할(포함시킬) 컬럼리스트&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="533" width="670" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-56" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 45px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;R&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="598" width="95" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-57" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 대상 릴레이션&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="597" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-58" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;컬럼리스트&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1790" y="500" width="350" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-59" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;C1, C2 ... Cn 과 같이&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;컬럼을 &quot;,&quot; 로 구분&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1790" y="557.5" width="350" height="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-64" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="742.5" width="1180" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-67" value="π&amp;nbsp;&lt;font style=&quot;font-size: 70px;&quot;&gt;사원번호,이름,직급&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(사원정보)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="750" width="1170" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-68" value="π&amp;nbsp;&lt;font style=&quot;font-size: 70px;&quot;&gt;이름&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-size: 138pt; font-family: Calibri;&quot;&gt;σ&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;직급=&#39;대리&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 90px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="990" width="1100" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-69" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="237.5" width="1180" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-70" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2430" y="290" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-71" value="&lt;font style=&quot;font-size: 110px;&quot;&gt;A X B&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2615" y="237.5" width="315" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2430" y="460" width="690" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-73" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;X&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="2450" y="450" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-74" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 카티시언 프로덕트 연산 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="2510" y="472" width="560" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-75" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 대상 릴레이션 1&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="2510" y="537" width="670" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-77" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 대상 릴레이션 2&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="2510" y="598" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-80" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="742.5" width="1180" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-83" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;A&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="2450" y="517" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-84" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;B&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="2450" y="578.75" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-85" value="&lt;font style=&quot;font-size: 110px;&quot;&gt;사원정보 X 부서정보&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2340" y="760" width="922.5" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-87" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="1580" width="1940" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-88" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="1632.5" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-89" value="&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;R&lt;/font&gt;&lt;/span&gt;&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; font-size: 130px;&quot;&gt;⋈&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;A&lt;/span&gt;&lt;font style=&quot;font-size: 70px;&quot;&gt;Θ&lt;/font&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;B&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;S&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="1580" width="440" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-90" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="1802.5" width="690" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-91" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-size: 70px; white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;⋈&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-80" y="1792.5" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-92" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 조인 연산 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1810.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-93" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 50px;&quot;&gt;&lt;span style=&quot;&quot;&gt;A&lt;/span&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Θ&lt;/font&gt;&lt;span style=&quot;&quot;&gt;B&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="1875.5" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-95" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 조인 할 두 대상 릴레이션&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1939.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-96" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-size: 50px; font-weight: 400;&quot;&gt;A&lt;/span&gt;&lt;font style=&quot;font-size: 50px; font-weight: 400;&quot;&gt;Θ&lt;/font&gt;&lt;span style=&quot;font-size: 50px; font-weight: 400;&quot;&gt;B&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="580" y="1792.5" width="350" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-97" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;조건식이며,&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;A는 R 릴레이션 소속,&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;font-size: 40px;&quot;&gt;B는 S 릴레이션 소속이다.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="580" y="1850" width="410" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-98" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="2085" width="1940" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-101" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 조합 레코드 조건&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1874.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-102" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 50px;&quot;&gt;R, S&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="-105" y="1939.5" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-103" value="&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;사원정보&lt;/font&gt;&lt;/span&gt;&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; font-size: 130px;&quot;&gt;⋈&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;사원정보.소속&lt;/span&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;=부서정보.부서명&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;부서정보&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-165" y="2098" width="1845" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-105" value="&lt;span style=&quot;font-family: Calibri; font-size: 184px;&quot;&gt;σ&lt;/span&gt;&lt;font style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;사원정보.소속&lt;/span&gt;&lt;span style=&quot;font-size: 70px;&quot;&gt;=부서정보.부서명&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(사원정보X부서정보)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-165" y="2300" width="1925" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-106" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="1580" width="1820" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-107" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="1630" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-108" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 130px;&quot;&gt;ρ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 50px;&quot;&gt;X&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(R)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="1577.5" width="300" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-109" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="1800" width="690" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-110" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 70px;&quot;&gt;&lt;span style=&quot;white-space: pre; background-color: initial;&quot;&gt;ρ&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1790" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-111" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 리네임 연산 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1867.5" y="1810.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-113" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 45px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;X&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1817.5" y="1885" width="95" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-114" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 부여할 이름&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1868" y="1883.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-117" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="2085" width="1820" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-120" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2480" y="1630" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-121" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 130px;&quot;&gt;ρ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 50px;&quot;&gt;X&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;(&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 60px;&quot;&gt;A1, A2, ... An&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;)&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(R)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2492.5" y="1570.5" width="770" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-122" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2480" y="1800" width="690" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-126" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 45px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;(A1, A2, ... An) : 새로운 컬럼 이름들&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="2492.5" y="1809.5" width="647.5" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-129" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all; font-size: 45px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;R&lt;/font&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1817.5" y="1940.5" width="95" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-130" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 대상 릴레이션&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1867.5" y="1948.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-131" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 의 결과 릴레이션의&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp; 컬럼들에 A1, A2 .. 라는 이름을 부여한다.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="2492.5" y="1882.5" width="697.5" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-132" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 50px; white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 50px;&quot;&gt;ρ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 25px;&quot;&gt;X&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 45px;&quot;&gt;(R)&lt;/font&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2530" y="1748.5" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-133" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 130px;&quot;&gt;ρ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 50px;&quot;&gt;총무부직원정보&lt;/font&gt;&lt;font style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 160px;&quot;&gt;σ&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;소속=&#39;영업부&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 90px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="2130" width="1200" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-134" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 130px;&quot;&gt;ρ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 50px;&quot;&gt;총무부직원정보(col1, col2 .. col6)&lt;/font&gt;&lt;font style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 160px;&quot;&gt;σ&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;소속=&#39;영업부&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;font style=&quot;font-size: 90px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 110px;&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="2383.75" width="1640" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-135" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="2923" width="1180" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-136" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="2975.5" width="690" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-137" value="&lt;span style=&quot;font-size: 70px;&quot;&gt;B&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Brush Script MT&amp;quot;;&quot;&gt;&lt;font style=&quot;font-size: 130px;&quot;&gt;G&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;x(A)&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(R)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="222.5" y="2923" width="445" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-138" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="3145.5" width="690" height="254.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-139" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Brush Script MT&amp;quot;;&quot;&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;G&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=72;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="115" y="3130" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-140" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;: 집계 함수 기호&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="170" y="3157.5" width="470" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-141" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;B&amp;nbsp; : 그룹의 기준이 되는 컬럼&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3218.5" width="670" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-146" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="3428" width="1180" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-149" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;X() : 집계 함수&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3271.75" width="670" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-150" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;R&amp;nbsp; : 대상 릴레이션&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3320" width="670" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-151" value="&lt;span style=&quot;font-size: 70px;&quot;&gt;소속&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Brush Script MT&amp;quot;;&quot;&gt;&lt;font style=&quot;font-size: 130px;&quot;&gt;G&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;소속, COUNT(*)&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(직원정보)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="3450" width="1190" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-152" value="&lt;span style=&quot;font-family: &amp;quot;Brush Script MT&amp;quot;;&quot;&gt;&lt;font style=&quot;font-size: 130px;&quot;&gt;G&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;SUM(연봉)&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(직원정보)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="3710" width="950" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-154" value="&lt;span style=&quot;font-size: 70px;&quot;&gt;직급&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Brush Script MT&amp;quot;;&quot;&gt;&lt;font style=&quot;font-size: 130px;&quot;&gt;G&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;background-color: initial; font-size: 70px;&quot;&gt;직급, AVG(연봉)&lt;/font&gt;&lt;font style=&quot;background-color: initial; font-size: 110px;&quot;&gt;(직원정보)&lt;/font&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="3980" width="1190" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-169" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="2922.5" width="1940" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-170" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="2975" width="880" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-171" value="&lt;font style=&quot;font-size: 70px;&quot; face=&quot;Calibri&quot;&gt;변수&lt;/font&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;&lt;font style=&quot;font-size: 100px;&quot;&gt;←&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 70px; font-family: Calibri; background-color: initial;&quot;&gt;관계대수식&lt;/span&gt;" style="text;whiteSpace=wrap;fontSize=181;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="2917.5" width="655" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-172" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="3145" width="880" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-174" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;관계대수식 : 새로운 릴레이션을 생성하는&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 40px; font-family: Calibri; text-indent: 0in; background-color: initial;&quot;&gt;관계대수식&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="3290" width="855" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-179" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="3427.5" width="1940" height="837.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-184" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;변수 : 관계대수로 인해 생성되는&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 40px; font-family: Calibri; text-indent: 0in; background-color: initial;&quot;&gt;&amp;nbsp;릴레이션을 담을 변수&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="3218.5" width="875" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-185" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="o_gXg20LOFhqp8Cx53dW-184" target="o_gXg20LOFhqp8Cx53dW-184">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-186" value="&lt;p style=&quot;line-height: normal; margin: 0pt 0in; text-indent: 0in; word-break: keep-all;&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 60px;&quot;&gt;←&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp;: 할당 연산자&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;fontSize=45;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="3151.5" width="875" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-187" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&lt;br/&gt;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Calibri&quot; style=&quot;font-size: 110px;&quot;&gt;영업사원정보&lt;/font&gt;&lt;font style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; font-size: 150px;&quot;&gt;←&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size:138.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&lt;br/&gt;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&lt;br/&gt;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&lt;br/&gt;language:el;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&lt;br/&gt;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;σ&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;소속=&#39;영업부&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(사원정보)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="3507" width="1550" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="o_gXg20LOFhqp8Cx53dW-188" value="&lt;p style=&quot;language:ko;line-height:normal;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:0in;margin-right:0in;text-indent:0in;mso-vertical-align-alt:auto;&lt;br/&gt;mso-line-break-override:none;word-break:keep-all;punctuation-wrap:hanging&quot;&gt;&lt;span style=&quot;font-size:138.0pt;font-family:Calibri;mso-ascii-font-family:Calibri;&lt;br/&gt;mso-fareast-font-family:Gungsuh;mso-bidi-font-family:+mn-cs;mso-ascii-theme-font:&lt;br/&gt;minor-latin;mso-bidi-theme-font:minor-bidi;color:black;mso-color-index:13;&lt;br/&gt;language:el;font-weight:normal;mso-style-textfill-type:solid;mso-style-textfill-fill-themecolor:&lt;br/&gt;dark1;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%&quot;&gt;σ&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 55px;&quot;&gt;직급=&#39;과장&#39;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; color: black; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 110px;&quot;&gt;(영업사원정보)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1361" y="3700" width="1120" height="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
