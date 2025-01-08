@@ -3,6 +3,7 @@ title: "Dart 설치하기"
 excerpt: "Dart 프로그래밍의 첫 걸음. 설치."
 last_modified_at: 2024-08-11 23:00:00 +0900
 permalink: /docs/dart_and_flutter/01_dart_installation
+classes: wide
 toc: false
 toc_sticky: true
 toc_icon: "columns"

@@ -26,7 +26,6 @@ sidebar:
 |List|iterable 데이터타입의 하나이다.<br>리스트의 모든 원소는 동일한 데이터타입이어야 한다.|
 |Map<key,value>|iterable 데이터타입의 하나이다.<br>key와 value는 다른 데이터타입일 수 있으나<br>하나의 Map 안의 모든 key는 동일한 데이터타입이어야 하고<br>하나의 Map 안의 모든 value 또한 동일한 데이터타입이어야 한다.|
 
-<br>
 
 ## Dart 의 자료형의 특징 : 모두 class 이다.  
 
@@ -37,7 +36,6 @@ int는 데이터타입이고, Integer는 wrapper class인데, 이에 Integer는 
 
 Dart는 모든 데이터타입이 모두 class 이고, 이러한 특징 때문에 다양한 Attribute와 Method를 가질 수 있습니다.  
 
-<br>
 
 
 ## String
@@ -100,7 +98,6 @@ void main(){
 ```
 
 
-<br>
 
 ## List 데이터타입  
 

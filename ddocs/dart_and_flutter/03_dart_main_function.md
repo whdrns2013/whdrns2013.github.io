@@ -3,6 +3,7 @@ title: "Dart Main Function"
 excerpt: "Dart 프로그램의 시작 Main Function"
 last_modified_at: 2024-08-11 23:15:00 +0900
 permalink: /docs/dart_and_flutter/03_dart_main_function
+classes: wide
 toc: false
 toc_sticky: true
 toc_icon: "columns"

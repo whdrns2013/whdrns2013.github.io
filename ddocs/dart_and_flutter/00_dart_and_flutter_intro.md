@@ -3,6 +3,7 @@ title: "Flutter와 Dart 소개"
 excerpt: "Flutter와 Dart 소개"
 last_modified_at: 2024-01-21 04:00:00 +0900
 permalink: /docs/dart_and_flutter/intro
+classes: wide
 toc: false
 toc_sticky: true
 toc_icon: "columns"

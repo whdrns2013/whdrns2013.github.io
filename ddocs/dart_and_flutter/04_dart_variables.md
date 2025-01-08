@@ -3,6 +3,7 @@ title: "Dart 변수의 선언"
 excerpt: "Dart 변수 선언 방법"
 last_modified_at: 2024-08-11 23:25:00 +0900
 permalink: /docs/dart_and_flutter/04_dart_variables
+classes: wide
 toc: false
 toc_sticky: true
 toc_icon: "columns"

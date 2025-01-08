@@ -3,6 +3,7 @@ title: "Dart 개발 환경 준비"
 excerpt: "VScode로 첫 Dart 파일을 만들어보자."
 last_modified_at: 2024-08-11 23:05:00 +0900
 permalink: /docs/dart_and_flutter/02_dart_develope_env_setting
+classes: wide
 toc: false
 toc_sticky: true
 toc_icon: "columns"
