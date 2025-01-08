@@ -91,8 +91,12 @@ docs_dart_and_flutter:
     - title: "변수의 선언"
       url: /docs/dart_and_flutter/04_dart_variables
     - title: "자료형 (data type)"
+      url: /docs/dart_and_flutter/05_dart_datatype
     - title: "함수의 선언"
+      url: /docs/dart_and_flutter/06_dart_function
   - title: flutter
+    children:
+    - title: "Flutter 란?"
 
 # data analysis
 docs_data_analysis:
