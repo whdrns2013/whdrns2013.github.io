@@ -1,6 +1,6 @@
 ---
 title: 컴퓨터 보안의 개념과 정보보호의 목표 # 제목 (필수)
-excerpt:  # 서브 타이틀이자 meta description (필수)
+excerpt:  컴퓨터 보안의 개념과 정보보호 주요 목표 CIA triad # 서브 타이틀이자 meta description (필수)
 date: 2025-03-13 12:30:00 +0900      # 작성일 (필수)
 lastmod: 2025-03-13 12:30:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2025-03-13 12:30:00 +0900   # 최종 수정일 (필수)
