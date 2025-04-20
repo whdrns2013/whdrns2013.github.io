@@ -138,11 +138,30 @@ body {
 	}
 
   // ----- h3 custom :: start ----- //
-  h3{ font-size: 1.0em; }
+  h3{ font-size: 1.2em;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+  h3.before{
+    content: "• ";
+    color: black;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+  }
   // ----- h3 custom :: end -----//
 
+  // ----- h4 custom :: start ----- //
+  h4{ font-size: 1.0em, font-;
+      font-style: italic;
+      color:darkgreen;
+      font-weight: 500;
+      text-decoration: underline;}
+  // ----- h4 custom :: end -----//
+
   li{
-    font-size: 1.0em;
+    // font-size: 1.0em;
+    font-size: 0.9em;
     // font-size: $page-font-size;
   }
 
