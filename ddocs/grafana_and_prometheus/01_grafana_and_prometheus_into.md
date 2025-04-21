@@ -1,5 +1,5 @@
 ---
-title: Grafana and Prometheus를 활용한 모니터링 시스템 구축 1 Grafana와 Prometheus # 제목 (필수)
+title: Grafana와 Prometheus # 제목 (필수)
 excerpt: 시각화 모니터링 시스템 구축하기 # 서브 타이틀이자 meta description (필수)
 date: 2025-04-20 23:43:00 +0900      # 작성일 (필수)
 lastmod: 2025-04-20 23:43:00 +0900   # 최종 수정일 (필수)
