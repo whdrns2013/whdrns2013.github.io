@@ -1,5 +1,5 @@
 ---
-title: Grafana and Prometheus를 활용한 모니터링 시스템 구축 2 Prometheus 설치하기 # 제목 (필수)
+title: Prometheus 설치하기 # 제목 (필수)
 excerpt: 시계열 데이터를 수집하고 다루는 Prometheus 설치하기  # 서브 타이틀이자 meta description (필수)
 date: 2025-04-21 12:40:00 +0900      # 작성일 (필수)
 lastmod: 2025-04-21 12:40:00 +0900   # 최종 수정일 (필수)
