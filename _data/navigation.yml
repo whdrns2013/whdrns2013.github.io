@@ -26,11 +26,10 @@ docs:
     children:
       - title: "Docker"
         url: /docs/docker/intro/
-      - title: "Python"
-        url: /docs/python/intro/
       - title: Dart와 Flutter
         url: /docs/dart_and_flutter/intro
-
+      - title: Grafana and Prometheus를 활용한 모니터링 시스템 구축
+        url: /docs/grafana_and_prometheus/intro
 
 # docker docs
 docs_docker:
@@ -65,16 +64,14 @@ docs_docker:
     - title: "4-2. 보안 강화 - https 적용"
       url: /docs/docker/registry/05_ssl_tls
 
-# python docs
-docs_python:
+# grafana_nad_prometheus docs
+docs_grafana_nad_prometheus:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: python
+  - title: "Grafana and Prometheus를 활용한 모니터링 시스템 구축"
     children:
-    - title: "Python 소개"
-      url: /docs/python/intro/
-    - title: "Python 자료구조"
-      url: /docs/python/data_type/
+    - title: "Grafana와 Prometheus 소개"
+      url: /docs/grafana_and_prometheus/intro/
 
 # dart and flutter docs
 docs_dart_and_flutter:
@@ -121,6 +118,15 @@ docs_dart_and_flutter:
     - title: "URL Launcher"
     - title: "Shared Preferences"
 
+# python docs
+docs_python:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: python
+    children:
+    - title: "Python 소개"
+    - title: "Python 자료구조"
+
 # data analysis
 docs_data_analysis:
   - title: "<-Doc으로 돌아가기"
@@ -159,3 +165,20 @@ docs_data_analysis:
     - title: K폴드 교차검증
   - title: 분석모형 개선
   - title: 데이터 시각화
+
+# python docs
+docs_python:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: python
+    children:
+    - title: "Python 소개"
+    - title: "Python 자료구조"
+
+# airflow docs
+docs_airflow:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: airflow
+    children:
+    - title: "Airflow 소개"
