@@ -3,13 +3,14 @@ title: Grafana and Prometheus를 활용한 모니터링 시스템 구축 1 Grafa
 excerpt: 시각화 모니터링 시스템 구축하기 # 서브 타이틀이자 meta description (필수)
 date: 2025-04-20 23:43:00 +0900      # 작성일 (필수)
 lastmod: 2025-04-20 23:43:00 +0900   # 최종 수정일 (필수)
-permalink: /docs/grafana_nad_prometheus/intro/
+permalink: /docs/grafana_and_prometheus/intro/
 toc: true
 toc_sticky: true
 toc_icon: "columns"
 layout: single
+classes: wide
 sidebar:
-  nav: "docs_grafana_nad_prometheus"
+  nav: "docs_grafana_and_prometheus"
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??
