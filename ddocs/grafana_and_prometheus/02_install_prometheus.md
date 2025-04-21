@@ -1,0 +1,167 @@
+---
+title: Grafana and Prometheus를 활용한 모니터링 시스템 구축 2 Prometheus 설치하기 # 제목 (필수)
+excerpt: 시계열 데이터를 수집하고 다루는 Prometheus 설치하기  # 서브 타이틀이자 meta description (필수)
+date: 2025-04-21 12:40:00 +0900      # 작성일 (필수)
+lastmod: 2025-04-21 12:40:00 +0900   # 최종 수정일 (필수)
+permalink: /docs/grafana_and_prometheus/02_install_prometheus/
+toc: true
+toc_sticky: true
+toc_icon: "columns"
+layout: single
+classes:
+sidebar:
+  nav: "docs_grafana_and_prometheus"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image:             # 헤더 이미지 (제목과 겹치게)
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
+---
+<!--postNo: 20250421_001-->
+
+
+## 설치 환경  
+
+- OS : RockyOS 9.3  
+
+## 설치 방법  
+
+### 설치 방법  
+
+설치 방법은 (1) 설치 파일을 다운로드 받아 직접 설치 (2) docker image 를 통한 설치 가 있습니다. 이번 설치에서는 docker 를 이용하겠습니다.  
+
+[Prometheus 공식 도커](https://hub.docker.com/r/prom/prometheus)  
+### Docker Image Pull  
+
+가장 최근 이미지인 3.3.0 버전 프로메테우스 도커 이미지를 pull 하겠습니다.  
+
+```bash
+sudo docker pull prom/prometheus:v3.3.0
+```
+### Docker Compose  
+
+프로메테우스 서비스에 대한 명시를 명확히 하고, 재사용성을 높이기 위해 docker compose 로 서비스를 실행시키겠습니다. 먼저 docker-compose.yml 파일을 작성해보겠습니다.  
+
+```yaml
+services:
+	prometheus:
+		image: prom/prometheus:v3.3.0
+		ports:
+		  - 9091:9090 # prometheus 서비스 포트, 9090은 rocky 의 cockpit 과 중복
+		restart: always
+		volumes:
+		  - /path/to/prometheus.yml:/etc/prometheus/prometheus.yml
+```
+
+volumes 에 선언된 바인드마운트 파일은 프로메테우스 서비스 설정 파일입니다. 이 설정파일은 프로메테우스가 수집할 데이터를 가지고 있는 exporter 의 위치, 수집 주기 등을 설정하는 핵심적인 역할을 하는 파일입니다.  
+
+도커 컴포즈 파일을 여기까지 작성했다면, 프로메테우스 설정파일을 작성하러 가보겠습니다. 프로메테우스 설정파일은 위 docker-compose.yml 에 작성한 마운트 포인트(/path/to/prometeus.yml) 와 동일하게 만들어줍니다. 컨테이너 안쪽이 아닌, 호스트에서 한다는 점!  
+
+
+## 프로메테우스 설정하기  
+
+### 프로메테우스 설정파일 prometheus.yml  
+
+프로메테우스 설정 파일은 YAML 파일로 작성합니다. 아래는 프로메테우스의 공식 DOC에서 볼 수 있는 예시 YAML 파일입니다.  
+
+```yaml
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']
+    metrics_path: /metrics
+```
+
+### global  
+
+global 블록은 프로메테우스 서버의 전역적인 설정을 담당합니다. 가장 기본적인 설정 항목 두 가지는 `scrape_interval`과 `evaluation_interval` 입니다.  
+
+```yaml
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+```
+
+| 구분                  | 설명                                                             | 예시             |
+| ------------------- | -------------------------------------------------------------- | -------------- |
+| scrape_interval     | 타겟을 얼마나 자주 스크랩(수집) 할 것인지를 설정한다.                                | `15s` (15초 간격) |
+| evaluation_interval | 룰을 얼마나 자주 평가할 것인지를 설정한다.<br>프로메테우스는 이 인터벌마다 새 시계열과 경고를 생성한다. | `15s` (15초 간격) |
+
+### rule_files  
+
+프로메테우스 서버에서 사용할 룰들이 기록된 파일의 경로입니다.  
+
+```yml
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+```
+
+### scrape_configs  
+
+프로메테우스가 모니터링할 자원들에 대한 설정을 하는 블록입니다. 프로메테우스 서버 자신 또한 HTTP 엔드포인트에 자신의 데이터를 노출시키기 때문에, 자신 또한 모니터링할 수 있습니다.  
+
+```yml
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']
+    metrics_path: /metrics
+```
+
+| 항목             | 설명                                                 | 예시                   |
+| -------------- | -------------------------------------------------- | -------------------- |
+| job_name       | 스크랩 작업의 이름                                         |                      |
+| static_configs | 프로메테우스가 수집할 타겟에 대한 정보                       |                      |
+| targets        | 스크랩할 타겟 서비스의 엔드포인트.<br>리스트의 형태로, 여러 서비스를 입력할 수 있다. | `['localhost:9090']` |
+| metrics_path   | 타겟 서비스의 엔드포인트이다.<br>기본값 : metrics                  |                      |
+
+
+
+
+## 프로메테우스 실행하기  
+
+### 프로메테우스 실행하기  
+
+앞서 docker-compose 파일에 명세한 프로메테우스 서버를 실헹해보겠습니다. `docker compose up -d` 옵션으로 컨테이너를 실행시켜주면 됩니다.  
+
+```bash
+sudo docker compose up -d
+```
+
+### 프로메테우스 Web UI  
+
+프로메테우스는 Web UI를 제공합니디. 웹 브라우저를 통해 docker-compose 파일에서 설정한 포트 (이번 포스팅의 경우 9091) 로 접속하면 됩니다.  
+
+![](/assets/images/20250421_001_001.png)  
+
+그리고 각 노드 익스포터의 연결 상태를 보려면 `Status > Target health` 메뉴에서 확인할 수 있습니다.   
+
+![](/assets/images/20250421_001_002.png)  
+
+위 예시에서는 2개의 엔드포인트가 활성화 되어있습니다. Airflow용 statsd
+
+
+## 다음 포스팅  
+
+이렇게 프로메테우스를 설치해보고, WebUI를 둘러보며 기본적인 프로메테우스에 대한 개념을 잡아봤습니다.  
+다음 포스팅에서는 메트릭을 수집하고 이를 프로메테우스에게 제공하는 역할을 하는 exporter에 대해 살펴보고, 직접 구축하여 메트릭을 수집해보도록 하겠습니다.  
+
+
+## Reference  
+
+[Prometheus 공식 DOC](https://prometheus.io/docs/introduction/overview/)  
+[Prometheus 공식 docker](https://hub.docker.com/u/prom)  
+[HyejuYu.log - Prometheus/Grafana를 이용해 Airflow dag 작업 모니터링하기](https://velog.io/@dbgpwl34/DataEngineering-PrometheusGrafana%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-Airflow-dag-%EC%9E%91%EC%97%85-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%95%98%EA%B8%B0)  
+

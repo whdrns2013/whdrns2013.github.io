@@ -72,6 +72,8 @@ docs_grafana_and_prometheus:
     children:
     - title: "Grafana와 Prometheus 소개"
       url: /docs/grafana_and_prometheus/intro
+    - title: "Prometheus 설치하기"
+      url: /docs/grafana_and_prometheus/02_install_prometheus
 
 # dart and flutter docs
 docs_dart_and_flutter:
