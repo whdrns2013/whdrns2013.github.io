@@ -26,6 +26,8 @@ docs:
     children:
       - title: "• Docker"
         url: /docs/docker/intro/
+      - title: "• Docker Registry(Harbor) 구축"
+        url: /docs/docker_registry/01_registry
       - title: "• Dart와 Flutter"
         url: /docs/dart_and_flutter/intro
       - title: "• Grafana and Prometheus"
@@ -35,7 +37,7 @@ docs:
 docs_docker:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: docker
+  - title: "• docker"
     children:
     - title: "도커란?"
       url: /docs/docker/intro
@@ -46,12 +48,17 @@ docs_docker:
     - title: "3. 컨테이너 실행하기"
     - title: "4. 도커 이미지 만들기"
     - title: "5. Volume Mount"
-  - title: docker compose
+  - title: "• docker compose"
     children:
     - title: "도커 컴포즈란?"
     - title: "1. 도커 컴포즈 설치하기"
     - title: "2. docker-compose.yml 둘러보기"
-  - title: "개인용 도커 이미지 저장소 만들기"
+
+# docker_registry(Harbor)
+docs_docker_registry:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• Docker Registry(Harbor) 구축"
     children:
     - title: "1. docker registry"
       url: /docs/docker/registry/01_registry

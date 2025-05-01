@@ -2,7 +2,7 @@
 title: "3. docker registry 고도화 하기"
 excerpt: "보안 강화와 자료 안정성 향상 방안 고민하기"
 last_modified_at: 2024-01-13 18:25:00 +0900
-permalink: /docs/docker/registry/03_registry_advance
+permalink: /docs/docker_registry/03_registry_advance
 toc: false
 toc_sticky: true
 classes: wide

@@ -2,7 +2,7 @@
 title: "4-1. 보안 강화 - 인증 절차 구현하기"
 excerpt: "htpasswd 를 이용한 사용자 인증"
 last_modified_at: 2024-01-13 18:25:00 +0900
-permalink: /docs/docker/registry/04_authentication
+permalink: /docs/docker_registry/04_authentication
 toc: false
 toc_sticky: true
 toc_icon: "columns"

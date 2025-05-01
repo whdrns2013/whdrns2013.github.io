@@ -2,7 +2,7 @@
 title: "2. docker registry 설정 파일"
 excerpt: "도커 저장소 여러가지 설정해보기"
 last_modified_at: 2024-01-13 18:25:00 +0900
-permalink: /docs/docker/registry/02_registry_config
+permalink: /docs/docker_registry/02_registry_config
 toc: false
 toc_sticky: true
 toc_icon: "columns"

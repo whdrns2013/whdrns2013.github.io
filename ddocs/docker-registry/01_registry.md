@@ -2,7 +2,7 @@
 title: "1. docker registry"
 excerpt: "도커 저장소 역할을 하는 도커, registry"
 last_modified_at: 2024-01-13 16:25:00 +0900
-permalink: /docs/docker/registry/01_registry
+permalink: /docs/docker_registry/01_registry
 toc: false
 toc_sticky: true
 toc_icon: "columns"

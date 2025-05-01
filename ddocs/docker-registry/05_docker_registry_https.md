@@ -2,7 +2,7 @@
 title: "4-2. 보안 강화 - https 적용"
 excerpt: "SSL TLS 인증서로 https 적용하기"
 last_modified_at: 2024-01-13 18:25:00 +0900
-permalink: /docs/docker/registry/05_ssl_tls
+permalink: /docs/docker_registry/05_ssl_tls
 toc: false
 toc_sticky: true
 toc_icon: "columns"
