@@ -61,15 +61,15 @@ docs_docker_registry:
   - title: "• Docker Registry(Harbor) 구축"
     children:
     - title: "1. docker registry"
-      url: /docs/docker/registry/01_registry
+      url: /docs/docker_registry/01_registry
     - title: "2. docker registry 설정 파일"
-      url: /docs/docker/registry/02_registry_config
+      url: /docs/docker_registry/02_registry_config
     - title: "3. docker registry 고도화 하기"
-      url: /docs/docker/registry/03_registry_advance
+      url: /docs/docker_registry/03_registry_advance
     - title: "4-1. 보안 강화 - 인증 절차 구현하기"
-      url: /docs/docker/registry/04_authentication
+      url: /docs/docker_registry/04_authentication
     - title: "4-2. 보안 강화 - https 적용"
-      url: /docs/docker/registry/05_ssl_tls
+      url: /docs/docker_registry/05_ssl_tls
 
 # grafana_nad_prometheus docs
 docs_grafana_and_prometheus:
