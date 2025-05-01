@@ -8,7 +8,6 @@ toc: true
 toc_sticky: true
 toc_icon: "columns"
 layout: single
-classes:
 sidebar:
   nav: "docs_grafana_and_prometheus"
 header: 
