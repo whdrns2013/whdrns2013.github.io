@@ -19,5 +19,6 @@ Docs 는 게시판은 포스팅들을 엮어 체계화된 지식를 구축하기
 ## Contents
 
 - [Docker](https://whdrns2013.github.io/docs/docker/intro/)  
+- [Docker Registry / Harbor 구축](https://whdrns2013.github.io/docs/docker_registry/01_registry)  
 - [Dart 와 Flutter](https://whdrns2013.github.io/docs/dart_and_flutter/intro)  
 - [Grafana and Prometheus](https://whdrns2013.github.io/docs/grafana_and_prometheus/intro)  

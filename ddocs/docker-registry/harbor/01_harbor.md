@@ -1,8 +1,8 @@
 ---
 title: "1. Harbor 소개"
 excerpt: "대표적인 도커 레지스트리 관리 툴 Harbor"
-date: 2025-05-02 13:15:00 +0900      # 작성일 (필수)
-lastmod: 2025-05-02 13:15:00 +0900   # 최종 수정일 (필수)
+date: 2025-05-02 03:15:00 +0900      # 작성일 (필수)
+lastmod: 2025-05-02 03:15:00 +0900   # 최종 수정일 (필수)
 permalink: /docs/docker_registry/harbor/01_harbor
 toc: false
 toc_sticky: true

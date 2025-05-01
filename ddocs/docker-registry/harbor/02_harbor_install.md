@@ -1,8 +1,8 @@
 ---
 title: "2. Harbor 설치하기"
 excerpt: "호스트의 Nginx가 있는 상태에서 Harbor 설치하기"
-date: 2025-05-02 13:20:00 +0900      # 작성일 (필수)
-lastmod: 2025-05-02 13:20:00 +0900   # 최종 수정일 (필수)
+date: 2025-05-02 03:20:00 +0900      # 작성일 (필수)
+lastmod: 2025-05-02 03:20:00 +0900   # 최종 수정일 (필수)
 permalink: /docs/docker_registry/harbor/02_harbor_install
 toc: false
 toc_sticky: true

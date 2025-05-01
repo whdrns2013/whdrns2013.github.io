@@ -1,8 +1,8 @@
 ---
 title: "3. 계정 관리"
 excerpt: "사용자 계정과 로봇 계정 그리고 관리자 계정"
-date: 2025-05-02 13:25:00 +0900      # 작성일 (필수)
-lastmod: 2025-05-02 13:25:00 +0900   # 최종 수정일 (필수)
+date: 2025-05-02 03:25:00 +0900      # 작성일 (필수)
+lastmod: 2025-05-02 03:25:00 +0900   # 최종 수정일 (필수)
 permalink: /docs/docker_registry/harbor/03_harbor_account
 toc: false
 toc_sticky: true
