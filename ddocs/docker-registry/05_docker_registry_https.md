@@ -8,7 +8,7 @@ toc_sticky: true
 toc_icon: "columns"
 layout: single
 sidebar:
-  nav: "docs_docker"
+  nav: "docs_docker_registry"
 ---
 
 

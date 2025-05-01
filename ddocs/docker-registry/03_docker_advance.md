@@ -9,7 +9,7 @@ classes: wide
 toc_icon: "columns"
 layout: single
 sidebar:
-  nav: "docs_docker"
+  nav: "docs_docker_registry"
 ---
 
 ## 고도화 방향 고민하기  
