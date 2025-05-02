@@ -498,17 +498,8 @@
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
-  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-/* custom start */
-
-.nav__sub-title:hover {
-  color: blue;
-  font-weight: 900; // 더 굵은 글씨로
-}
-
-/* custom end */
 
 /*
      Table of contents navigation
