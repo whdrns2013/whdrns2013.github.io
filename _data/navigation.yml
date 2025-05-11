@@ -32,6 +32,8 @@ docs:
         url: /docs/dart_and_flutter/intro
       - title: "• Grafana and Prometheus"
         url: /docs/grafana_and_prometheus/intro/
+      - title: "• GitOps 도전기"
+        url: /docs/gitops/intro/
 
 # docker docs
 docs_docker:
@@ -102,6 +104,15 @@ docs_grafana_and_prometheus:
       url: /docs/grafana_and_prometheus/03_exporter
     - title: "Grafana 설치하고 사용하기"
       url: /docs/grafana_and_prometheus/04_grafana
+
+# gitops docs
+docs_gitops:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• GitOps 도전기"
+    children:
+    - title: "GitOps 에 대한 설명과 이번 시리즈의 목표"
+      url: /docs/gitops/intro/
 
 # dart and flutter docs
 docs_dart_and_flutter:
