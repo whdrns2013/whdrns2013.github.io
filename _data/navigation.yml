@@ -113,6 +113,8 @@ docs_gitops:
     children:
     - title: "GitOps 에 대한 설명과 이번 시리즈의 목표"
       url: /docs/gitops/intro/
+    - title: "1. Git 저장소와 GitLab 설치하기"
+      url: /docs/gitops/01_gitlab_install/
 
 # dart and flutter docs
 docs_dart_and_flutter:
