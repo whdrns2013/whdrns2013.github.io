@@ -115,6 +115,8 @@ docs_gitops:
       url: /docs/gitops/intro/
     - title: "1. Git 저장소와 GitLab 설치하기"
       url: /docs/gitops/01_gitlab_install/
+    - title: "2. Docker Registry 설치하기"
+      url: /docs/gitops/02_docker_registry_install/
 
 # dart and flutter docs
 docs_dart_and_flutter:
