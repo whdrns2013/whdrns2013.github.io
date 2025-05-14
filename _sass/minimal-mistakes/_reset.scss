@@ -38,8 +38,12 @@ body { margin: 0; }
 }
 
 ::selection {
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #b6ffb1;
+}
+code::selection {
+  color: #0d2dff;
+  background: #42e452;
 }
 
 /* Display HTML5 elements in IE6-9 and FF3 */
