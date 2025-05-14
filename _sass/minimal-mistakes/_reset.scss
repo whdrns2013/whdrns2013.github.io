@@ -41,6 +41,10 @@ body { margin: 0; }
   color: #000;
   background: #ffbb28;
 }
+code::selection {
+  color: #fffeed;
+  background: #ff7e28;
+}
 
 /* Display HTML5 elements in IE6-9 and FF3 */
 
