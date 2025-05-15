@@ -251,10 +251,10 @@
         fetch('https://cobeeapi.duckdns.org/blog_visitor')
           .then(response => response.json())
           .then(data => {
-            const today = data.today_count;
+            const yesterday = data.yesterday_count;
             const total = data.total_count;
             document.getElementById('blog_visitor').innerText = 
-              `Today: ${today} | Total: ${total}`;
+              `😀 Visitors\n• 어제 ${yesterday}명 방문\n• Total: ${total}`;
           })
           .catch(err => {
             document.getElementById('blog_visitor').innerText = 
