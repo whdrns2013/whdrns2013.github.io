@@ -242,10 +242,26 @@
 
       {% if author.visitor %}
       <li>
+        <span id="blog_visitor">Loading visitor info...</span>
         <!-- <a href="https://whdrns2013.github.io" itemprop="sameAs" rel="nofollow noopener noreferrer me">
           <i class="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwhdrns2013.github.io&count_bg=%23000000&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Vistors&edge_flat=false" aria-hidden="false"></i>
         </a> -->
       </li>
+      <script>
+        fetch('https://cobeeapi.duckdns.org/blog_visitor')
+          .then(response => response.json())
+          .then(data => {
+            const today = data.today_count;
+            const total = data.total_count;
+            document.getElementById('blog_visitor').innerText = 
+              `Today: ${today} | Total: ${total}`;
+          })
+          .catch(err => {
+            document.getElementById('blog_visitor').innerText = 
+              'Visitor data unavailable';
+            console.error('Failed to load visitor data:', err);
+          });
+      </script>
       {% endif %}
 
       {% include author-profile-custom-links.html %}
