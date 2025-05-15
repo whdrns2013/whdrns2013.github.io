@@ -242,6 +242,8 @@
 
       {% if author.visitor %}
       <li>
+        😀 Visitors
+        <br>
         <span id="blog_visitor">Loading visitor info...</span>
         <!-- <a href="https://whdrns2013.github.io" itemprop="sameAs" rel="nofollow noopener noreferrer me">
           <i class="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwhdrns2013.github.io&count_bg=%23000000&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Vistors&edge_flat=false" aria-hidden="false"></i>
@@ -254,7 +256,7 @@
             const yesterday = data.yesterday_count;
             const total = data.total_count;
             document.getElementById('blog_visitor').innerText = 
-              `😀 Visitors\n• 어제 ${yesterday}명 방문\n• Total: ${total}`;
+              `• 어제 ${yesterday}명 방문\n• Total: ${total}`;
           })
           .catch(err => {
             document.getElementById('blog_visitor').innerText = 
