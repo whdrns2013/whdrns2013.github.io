@@ -117,7 +117,7 @@ docs_gitops:
       url: /docs/gitops/01_gitlab_install/
     - title: "2. Docker Registry 설치하기"
       url: /docs/gitops/02_docker_registry_install/
-    - title: "3. GitLab - Docker Registry (Harbor) 연결하기"
+    - title: "3. GitLab - Docker Registry 연결하기"
       url: /docs/gitops/03_connect_gitlab_harbor/
     - title: "4. GitLab CI/CD 에 대해 알아보자"
       url: /docs/gitops/04_gitlab_cicd/

@@ -1,13 +1,15 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
-search: false
+saerch: false
 ---
+
+// dark mode toggle
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "custom/customImport.scss";
+
+@import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes"; // main partials
 
-// dark mode toggle
-@import "custom/customImport.scss";
 @import "custom/customOverride.scss";
