@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_icon: "columns"
 layout: single
-classes: wide
+classes: 
 sidebar:
   nav: "docs_gitops"
 header: 
