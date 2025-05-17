@@ -5,9 +5,12 @@ search: false
 
 @charset "utf-8";
 
+// dark mode toggle
+@import "custom/customImport.scss";
+@import "custom/customOverride.scss";
+
+// default
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 // dark mode toggle
-@import "custom/customImport.scss";
-@import "custom/customOverride.scss";
