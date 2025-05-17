@@ -1,5 +1,5 @@
 ---
-title: "3. docker registry 고도화 하기"
+title: "[DR]3. docker registry 고도화 하기"
 excerpt: "보안 강화와 자료 안정성 향상 방안 고민하기"
 last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker_registry/03_registry_advance
@@ -10,6 +10,14 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 ## 고도화 방향 고민하기  

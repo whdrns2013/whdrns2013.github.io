@@ -16,7 +16,7 @@ classes: wide
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??
-  overlay_image:             # 헤더 이미지 (제목과 겹치게)
+  overlay_image: /assets/images/banners/banner.png
   overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
   video:
     id:                      # 영상 ID (URL 뒷부분)

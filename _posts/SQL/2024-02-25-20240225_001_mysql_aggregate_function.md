@@ -49,6 +49,7 @@ author: # 주인 외 작성자 표기 필요시
 <details>
 <summary> 샘플 데이터 sql (열기/접기) </summary>
 <div markdown='1'>
+
 ```sql
 DROP TABLE IF EXISTS `math_sample`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -85,13 +86,14 @@ INSERT INTO `math_sample` VALUES
 /*!40000 ALTER TABLE `math_sample` ENABLE KEYS */;
 UNLOCK TABLES;
 ```
+
 </div>
 </details>
 
 
 ## 집계 함수  
 
-### <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>COUNT</span>  
+### COUNT    
 
 레코드의 개수를 반환합니다. 값이 NULL 인 경우는 COUNT에서 제외됩니다.  
 
@@ -123,7 +125,7 @@ SELECT COUNT(*) FROM math_sample;
 
 <br>
 
-### <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>SUM</span>  
+### SUM    
 
 지정한 컬럼의 합계를 반환합니다.  
 
@@ -178,7 +180,7 @@ SELECT SUM(product) FROM math_sample;
 
 <br>
 
-### <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>AVG</span>  
+### AVG    
 
 평균을 반환합니다.  
 
@@ -234,7 +236,7 @@ SELECT AVG(product) FROM math_sample;
 
 <br>
 
-### <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>MAX, MIN</span>  
+### MAX, MIN    
 
 MAX 는 최대값을, MIN 은 최소값을 반환합니다.  
 

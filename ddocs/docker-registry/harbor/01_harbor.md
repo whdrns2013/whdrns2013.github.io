@@ -1,5 +1,5 @@
 ---
-title: "1. Harbor 소개"
+title: "[Harbor] 1. Harbor 소개"
 excerpt: "대표적인 도커 레지스트리 관리 툴 Harbor"
 date: 2025-05-02 03:15:00 +0900      # 작성일 (필수)
 lastmod: 2025-05-02 03:15:00 +0900   # 최종 수정일 (필수)
@@ -10,6 +10,14 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 <!--postNo: 20250502_001-->

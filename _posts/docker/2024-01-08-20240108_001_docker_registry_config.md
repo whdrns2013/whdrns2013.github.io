@@ -25,7 +25,7 @@ author: # 주인 외 작성자 표기 필요시
 ---
 <!--postNo: 20240108_001-->
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Intro</span>
+## Intro  
 
 이전 포스트에서 개인화 도커 이미지 저장소 Docker Registry를 구축했습니다.  
 
@@ -34,7 +34,7 @@ author: # 주인 외 작성자 표기 필요시
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Docker Registry 환경 파악하기</span>
+## Docker Registry 환경 파악하기  
 
 ### 운영체제 : Alpine Linux  
 
@@ -107,7 +107,7 @@ auth:                # authentication 사용자 인증
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Reference</span>  
+## Reference    
 
 알파인 리눅스 위키백과 : https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C%EC%9D%B8_%EB%A6%AC%EB%88%85%EC%8A%A4  
 컨테이너 환경에서 알파인리눅스를 사용하는 이유 : https://velog.io/@dry8r3ad/why-alpine-linux  

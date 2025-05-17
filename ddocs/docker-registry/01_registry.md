@@ -1,5 +1,5 @@
 ---
-title: "1. docker registry"
+title: "[DR]1. docker registry"
 excerpt: "도커 저장소 역할을 하는 도커, registry"
 last_modified_at: 2024-01-13 16:25:00 +0900
 permalink: /docs/docker_registry/01_registry
@@ -9,9 +9,17 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>1. Intro</span>
+## 1. Intro  
 
 도커를 사용하면 도커허브(Docker Hub)에서 다양한 이미지를 손쉽게 받아올 수 있습니다. `docker pull` 명령어를 이용하면 원하는 도커 이미지를 쉽게 다운로드할 수 있죠.  
 
@@ -26,7 +34,7 @@ sidebar:
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>2. docker registry</span>
+## 2. docker registry  
 
 Docker Registry는 Docker 이미지를 저장하고 관리하는 저장소 시스템입니다.  
 또한 편하고 쉽게 Docker 이미지를 공유하고 배포하기 위한 서버 역할도 수행합니다.  
@@ -53,7 +61,7 @@ Docker Registry의 데이터를 백업하고 복원하여 이미지와 메타데
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>3. docker image 저장소 만들기</span>
+## 3. docker image 저장소 만들기  
 
 ### 3-1. 환경 준비 : docker 설치
 
@@ -119,7 +127,7 @@ cat /etc/issue
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>4. 이용하기</span>
+## 4. 이용하기  
 
 이제 다른 서버 혹은 다른 사용자가 위에서 만든 저장소를 이용하는 방법을 알아보겠습니다.  
 
@@ -227,14 +235,14 @@ docker images
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>5. Outro</span>
+## 5. Outro  
 
 지금까지 개인용 도커 이미지 저장소를 만드는 방법을 알아보았습니다.  
 다음엔 이어서 도커 이미지 저장소(Docker Registry)에 어떻게 이미지가 저장되는지, 그리고 데이터 보관 안정성과 보안성을 높이는 방법에 대해 살펴보겠습니다.  
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>6. Reference</span>  
+## 6. Reference    
 
 https://sharplee7.tistory.com/m/82  
 https://www.leafcats.com/190  

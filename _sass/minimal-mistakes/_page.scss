@@ -142,9 +142,10 @@ body {
       font-weight: 700;
     }
   h3:before{
-    content: "✦ ";
-    color: black;
+    content: "✦";
+    // color: black;
     font-size: 1.0em;
+    margin-right: 0.6em;
   }
   // ----- h3 custom :: end -----//
 

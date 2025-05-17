@@ -1,5 +1,5 @@
 ---
-title: "2. docker registry 설정 파일"
+title: "[DR]2. docker registry 설정 파일"
 excerpt: "도커 저장소 여러가지 설정해보기"
 last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker_registry/02_registry_config
@@ -9,10 +9,18 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Intro</span>
+## Intro  
 
 이전 포스트에서 개인화 도커 이미지 저장소 Docker Registry를 구축했습니다.  
 
@@ -21,7 +29,7 @@ sidebar:
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Docker Registry 환경 파악하기</span>
+## Docker Registry 환경 파악하기  
 
 ### 운영체제 : Alpine Linux  
 
@@ -94,7 +102,7 @@ auth:                # authentication 사용자 인증
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Reference</span>  
+## Reference    
 
 알파인 리눅스 위키백과 : https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C%EC%9D%B8_%EB%A6%AC%EB%88%85%EC%8A%A4  
 컨테이너 환경에서 알파인리눅스를 사용하는 이유 : https://velog.io/@dry8r3ad/why-alpine-linux  

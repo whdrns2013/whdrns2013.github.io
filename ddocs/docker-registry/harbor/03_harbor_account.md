@@ -1,5 +1,5 @@
 ---
-title: "3. 계정 관리"
+title: "[Harbor] 3. 계정 관리"
 excerpt: "사용자 계정과 로봇 계정 그리고 관리자 계정"
 date: 2025-05-02 03:25:00 +0900      # 작성일 (필수)
 lastmod: 2025-05-02 03:25:00 +0900   # 최종 수정일 (필수)
@@ -10,6 +10,14 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 <!--postNo: 20250502_002-->

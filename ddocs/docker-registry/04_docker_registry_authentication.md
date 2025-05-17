@@ -1,5 +1,5 @@
 ---
-title: "4-1. 보안 강화 - 인증 절차 구현하기"
+title: "[DR]4-1. 보안 강화 - 인증 절차 구현하기"
 excerpt: "htpasswd 를 이용한 사용자 인증"
 last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker_registry/04_authentication
@@ -9,17 +9,25 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Docker Registry 보안 강화</span>
+## Docker Registry 보안 강화  
 
 Docker registry 를 "개인화 도커 이미지 저장소" 목적으로 이용한 만큼, 보안을 강화하는 것은 중요한 문제입니다. 다양한 방법 중에서도 사용자 인증 절차와 HTTPS 통신 두 가지를 중점적으로 살펴보겠습니다.  
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>사용자 인증 절차 구축</span>  
+## 사용자 인증 절차 구축    
 
 사용자 인증을 통해 Docker registry의 보안성을 높일 수 있습니다. Docker registry는 silly, token, htpasswd 세 가지 사용자 인증 방법을 지원하고 있습니다.    
 
@@ -60,7 +68,7 @@ auth:
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>htpasswd</span>
+## htpasswd  
 
 세 가지 방법 중, 가장 권장할 수 있는 'htpasswd' 방식을 구현해보도록 하겠습니다.  
 
@@ -119,7 +127,7 @@ $ docker restart <registry 컨테이너 이름 혹은 id>
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>테스트 해보기</span>  
+## 테스트 해보기    
 
 docker registry에 접근해보겠습니다.  
 
@@ -171,7 +179,7 @@ $ docker login 서버ip:포트번호
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Reference</span>  
+## Reference    
 
 docker registry config : https://gdevillele.github.io/registry/configuration/  
 docker 사용자 인증 방법 : https://arisu1000.tistory.com/27799  

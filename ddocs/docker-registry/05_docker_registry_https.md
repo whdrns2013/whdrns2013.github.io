@@ -1,5 +1,5 @@
 ---
-title: "4-2. 보안 강화 - https 적용"
+title: "[DR}4-2. 보안 강화 - https 적용"
 excerpt: "SSL TLS 인증서로 https 적용하기"
 last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker_registry/05_ssl_tls
@@ -9,17 +9,25 @@ toc_icon: "columns"
 layout: single
 sidebar:
   nav: "docs_docker_registry"
+header: 
+  image:         # 헤더 이미지 (asset내 혹은 url)
+  teaser:        # 티저 이미지??
+  overlay_image: /assets/images/banners/banner.png
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  video:
+    id:                      # 영상 ID (URL 뒷부분)
+    provider:                # youtube, vimeo 등
 ---
 
 
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Docker Registry 보안 강화</span>  
+## Docker Registry 보안 강화    
 
 지난 포스트에서는 Docker Registry의 보안 강화 방법 중 "사용자 인증 절차 구축" 방법을 살펴보았습니다. 이번에는 그 다음으로 HTTPS 통신을 구현하는 방법을 알아보겠습니다. HTTPS 통신은 데이터를 암호화하고 안전하게 전송하여 중간자 공격과 데이터의 무단 접근을 방지할 수 있는 방법 중 하나입니다.  
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>https 적용하기</span>  
+## https 적용하기    
 
 ### (1) 인증서 발급  
 
@@ -151,7 +159,7 @@ $ systemctl restart containerd
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>테스트</span>  
+## 테스트    
 
 https가 잘 적용되었는지 확인해보겠습니다. 우선 기존과 같이 http로 접속해보면 "HTTPS 서버에 HTTP 요청을 보냈다" 라는 경고 문구가 발생합니다. 잘 적용이 되었네요!  
 
@@ -159,7 +167,7 @@ https가 잘 적용되었는지 확인해보겠습니다. 우선 기존과 같�
 
 <br>
 
-## <span style='background:linear-gradient(to top, #FFE400 50%, transparent 50%)'>Reference</span>  
+## Reference    
 tls 인증서 설명 : https://babbab2.tistory.com/5  
 openssl 을 이용한 ssl 인증서 발급 : https://m.blog.naver.com/espeniel/221845133507  
 docker compose - env 연동 사용 방법 : https://kb.mantech.co.kr/docs/docker-docker-compose-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95/  
