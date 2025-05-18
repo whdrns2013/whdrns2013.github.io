@@ -13,7 +13,7 @@ toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide �
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??
-  overlay_image:   /assets/images/banners/banner.png          # 헤더 이미지 (제목과 겹치게)
+  overlay_image:   /assets/images/banners/banner.gif          # 헤더 이미지 (제목과 겹치게)
   overlay_color:             # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색
   video:
     id:                      # 영상 ID (URL 뒷부분)

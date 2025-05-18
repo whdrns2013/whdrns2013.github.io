@@ -13,7 +13,7 @@ toc_sticky: true
 header: 
   image: 
   teaser: 
-  overlay_image: /assets/images/banners/banner.png
+  overlay_image: /assets/images/banners/banner.gif
   # overlay_color: '#333'
   video:
     id: 
