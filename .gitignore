@@ -2,7 +2,9 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+**/.DS_Store
 */.DS_Store
+*/*/.DS_Store
 vendor
 assets/.DS_Store
 _includes/.DS_Store
@@ -11,6 +13,7 @@ assets/.DS_Store
 docs_backup/.DS_Store
 assets/.DS_Store
 assets/.DS_Store
-assets/.DS_Store
 assets/images/.DS_Store
 assets/.DS_Store
+assets/images/.DS_Store
+assets/images/.DS_Store
