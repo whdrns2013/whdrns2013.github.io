@@ -34,6 +34,8 @@ docs:
         url: /docs/grafana_and_prometheus/intro/
       - title: "• GitOps 도전기"
         url: /docs/gitops/intro/
+      - title: "• Rust"
+        url: /docs/rust/01_rust_intro
 
 # docker docs
 docs_docker:
@@ -176,6 +178,7 @@ docs_python:
     - title: "Python 소개"
     - title: "Python 자료구조"
 
+# rust
 docs_rust:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro

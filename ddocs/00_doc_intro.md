@@ -25,3 +25,4 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 - [Dart 와 Flutter](https://whdrns2013.github.io/docs/dart_and_flutter/intro)  
 - [Grafana and Prometheus](https://whdrns2013.github.io/docs/grafana_and_prometheus/intro)  
 - [GitOps 도전기](https://whdrns2013.github.io/docs/gitops/intro/)  
+- [Rust](https://whdrns2013.github.io/docs/rust/01_rust_intro/)  
