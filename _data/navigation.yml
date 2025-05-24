@@ -176,6 +176,26 @@ docs_python:
     - title: "Python 소개"
     - title: "Python 자료구조"
 
+docs_rust:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: Rust
+    children:
+    - title: "0. Rust 소개"
+      url: /docs/rust/01_rust_intro
+    - title: "1. Rust 설치와 개발 환경 준비"
+      url: /docs/rust/02_rust_installation
+    - title: "2. 프로젝트 만들기"
+      url: /docs/rust/03_rust_make_project
+    - title: "3. Hello World!"
+      url: /docs/rust/04_rust_hello_world
+    - title: "4. Hello Cargo!"
+      url: /docs/rust/05_rust_hello_cargo
+    - title: "5. 프로젝트 디렉터리 구조"
+      url: /docs/rust/06_rust_project_dir
+    - title: "6. Rust 의 빌드 종류"
+      url: /docs/rust/06_rust_type_of_build
+
 # data analysis
 docs_data_analysis:
   - title: "<-Doc으로 돌아가기"

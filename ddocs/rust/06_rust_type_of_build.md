@@ -3,25 +3,22 @@ title: "[Rust] 6. Rust 의 빌드 종류" # 제목 (필수)
 excerpt: 디버깅 빌드 릴리즈 빌드 테스트 빌드 # 서브 타이틀이자 meta description (필수)
 date: 2025-05-24 18:30:00 +0900      # 작성일 (필수)
 lastmod: 2025-05-24 18:30:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2025-05-24 18:30:00 +0900   # 최종 수정일 (필수)
-categories: Rust         # 다수 카테고리에 포함 가능 (필수)
-tags: Rust 러스트 프로그래밍 언어 Lang Language 디버깅 빌드 릴리즈 테스트 doc debug debugging release test bench                    # 태그 복수개 가능 (필수)
-classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
-toc: true        # 목차 표시 여부
-toc_label:       # toc 제목
-toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
+permalink: /docs/rust/06_rust_type_of_build
+toc: true
+toc_sticky: true
+toc_icon: "columns"
+layout: single
+classes: wide
+sidebar:
+  nav: "docs_rust"
 header: 
-  image: wide        # 헤더 이미지 (asset내 혹은 url)
+  image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??
-  overlay_image: /assets/images/banners/banner.gif            # 헤더 이미지 (제목과 겹치게)
-  # overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
+  overlay_image: /assets/images/banners/banner.gif
+  overlay_color: '#333'            # 헤더 배경색 (제목과 겹치게) #333 : 짙은 회색 (필수)
   video:
     id:                      # 영상 ID (URL 뒷부분)
     provider:                # youtube, vimeo 등
-sitemap :                    # 구글 크롤링
-  changefreq : daily         # 구글 크롤링
-  priority : 1.0             # 구글 크롤링
-author: # 주인 외 작성자 표기 필요시
 ---
 <!--postNo: 20250524_007-->
 
