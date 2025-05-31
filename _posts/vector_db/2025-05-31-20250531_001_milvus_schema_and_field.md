@@ -5,7 +5,7 @@ date: 2025-05-31 09:40:00 +0900      # 작성일 (필수)
 lastmod: 2025-05-31 09:40:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2025-05-31 09:40:00 +0900   # 최종 수정일 (필수)
 categories: vector_db        # 다수 카테고리에 포함 가능 (필수)
-tags: vector db vectordb milvus 구조 컬렉션 스키마 schema 데이터필드 필드 field LLM RAG Embedding                     # 태그 복수개 가능 (필수)
+tags: vector db vectordb milvus 구조 컬렉션 스키마 schema 데이터필드 필드 field 데이터타입 데이터 타입 DataType data type 동적필드 dynamicfield dynamic field nullable defaul mmap LLM RAG Embedding                     # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
