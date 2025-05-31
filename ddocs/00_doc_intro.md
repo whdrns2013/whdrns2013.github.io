@@ -12,7 +12,7 @@ sidebar:
   nav: "docs"
 ---
 
-![](/assets/images/docs_banner.jpeg)
+<!-- ![](/assets/images/docs_banner.jpeg) -->
 
 ## Docs  
 
