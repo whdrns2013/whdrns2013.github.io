@@ -215,11 +215,9 @@ body {
   :not(pre) > code {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
-    // font-size: 0.8em; // origin
     font-size: 0.85em; // custom
-    // background: $code-background-color; //origin
-    background: #ebebeb; // custom
-    color: red; // custom
+    background: $code-highlight-background-color;
+    color: $code-highlight-foreground-color;
     border-radius: $border-radius;
 
     &::before,
