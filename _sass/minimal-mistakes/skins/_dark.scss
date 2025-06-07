@@ -19,6 +19,11 @@ $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 $code-highlight-background-color: black !default;
 $code-highlight-foreground-color: #30ff00 !default;
+$custom_ttag_background: green !default;
+$custom_ttag_foreground: white !default;
+$h2-background-color: #0f6946 !default;
+$h2-foreground-color: white !default;
+$h2-box-shadow-color: #00ff00 !default;
 
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,

@@ -91,8 +91,9 @@ body {
   h2 {
     padding-bottom: 0.5em;
     // border-bottom: 1px solid $border-color;
-    background: #03abb4;
-    color: #eaeaea;
+    background: $h2-background-color;
+    color: $h2-foreground-color;
+    box-shadow: 0 0px 5px $h2-box-shadow-color;
   }
 
   // ----- h2 custom :: start ----- //
@@ -146,6 +147,12 @@ body {
 			opacity: 1;
 		}
 	}
+
+  h2{
+    .header-link {
+    color: white !important;
+   }
+  }
 
   // ----- h3 custom :: start ----- //
   h3{ font-size: 1.08em;
@@ -650,3 +657,23 @@ body {
     }
   }
 }
+
+//-- custom start --//
+.ttag {
+  display: inline-block;
+  background-color: $custom_ttag_background;
+  color: $custom_ttag_foreground;
+  font-size: 1.0em;
+  border-radius: 999px; /* 둥근 모서리 */
+  padding: 4px 10px;  /* 내부 여백 */
+  font-family: 'Source Code Pro';
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 입체 그림자 */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 글자에 미묘한 입체감 */
+  transition: background 0.0s ease, transform 0.3s ease, box-shadow 0.0s ease
+}
+.ttag:hover {
+  background: linear-gradient(to bottom, #218838, #1e7e34);
+  transform: translateY(-1px); /* 눌리는 듯한 반응 */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+//-- custom end --//

@@ -16,6 +16,8 @@ sidebar:
 
 ## Docs  
 
+<span class="ttag">#독스</span> <span class="ttag">#지식체계화</span>
+
 Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입니다.  
 
 ## Contents
