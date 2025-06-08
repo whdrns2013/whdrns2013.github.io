@@ -669,11 +669,12 @@ body {
   font-family: 'Source Code Pro';
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 입체 그림자 */
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 글자에 미묘한 입체감 */
-  transition: background 0.0s ease, transform 0.3s ease, box-shadow 0.0s ease
+  transition: background 0.0s ease, transform 0.3s ease, box-shadow 0.0s ease;
+  margin-bottom: 0.4em;
 }
 .ttag:hover {
-  background: linear-gradient(to bottom, #218838, #1e7e34);
-  transform: translateY(-1px); /* 눌리는 듯한 반응 */
+  background: linear-gradient(to bottom, #ffc132, #ffc132);
+  transform: translateY(-3px); /* 눌리는 듯한 반응 */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
 }
 //-- custom end --//
