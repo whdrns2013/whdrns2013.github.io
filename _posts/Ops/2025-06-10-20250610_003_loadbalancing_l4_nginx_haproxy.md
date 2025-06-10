@@ -55,7 +55,7 @@ author: # 주인 외 작성자 표기 필요시
 
 ## L4 스위치  
 
-![](/assets/images/20250610_003_001.jpg)  
+![](/assets/images/20250610_003_001.png)  
 
 - **역할** : TCP/UDP 패킷 수준에서 빠른 분산 처리  
 - **특징** : 하드웨어 기반, 수십~수백만 QPS 처리  
@@ -66,7 +66,7 @@ author: # 주인 외 작성자 표기 필요시
 
 ## Nginx  
 
-![](/assets/images/20250610_003_002.jpg)  
+![](/assets/images/20250610_003_002.png)  
 
 [Nginx DOC](https://nginx.org/)  
 
@@ -78,7 +78,7 @@ author: # 주인 외 작성자 표기 필요시
 
 ## HAPROXY  
 
-![](/assets/images/20250610_003_003.jpg)  
+![](/assets/images/20250610_003_003.png)  
 
 [HAProxy Doc](https://www.haproxy.org/)  
 
