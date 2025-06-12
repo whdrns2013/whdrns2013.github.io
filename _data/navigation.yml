@@ -198,6 +198,8 @@ docs_rust:
       url: /docs/rust/06_rust_project_dir
     - title: "6. Rust 의 빌드 종류"
       url: /docs/rust/06_rust_type_of_build
+    - title: "7. Rust 변수와 상수 그리고 Shadowing"
+      url: /docs/rust/07_rust_variable_const_shadowing
 
 # data analysis
 docs_data_analysis:
