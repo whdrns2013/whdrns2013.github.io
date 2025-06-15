@@ -107,25 +107,7 @@ body {
       content: "⁍";
       margin-right: 0.5em;
   }
-  // h2:before,
-  // h2:after {
-  //   content: '[';
-  //   display: inline-block;
-  //   position: relative;
-  //   top: 1px;
-  //   height: 100%;
-  //   font-size: 1.25em;
-  //   color: tomato;
-  //   padding-right: 0.7em;
-  //   transition: all 0.5s ease;
-  // }
-  // h2:after { content: ']'; }
-  // h2:hover:before { 
-  //   transform: translateX(-5px);
-  // }
-  // h2:hover:after { 
-  //   transform: translateX(5px);
-  // }
+
   h2 span:before{
     background-color: #FFE400 50%;
   }
@@ -208,6 +190,12 @@ body {
       }
     }
   }
+
+  // -------- strong custom start -------- //
+  strong {
+    color: $custom_strong_content_color;
+  }
+  // -------- strong custom end -------- //
 
   a:not(.btn) {
     &:hover {
