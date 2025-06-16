@@ -198,8 +198,14 @@ docs_rust:
       url: /docs/rust/06_rust_project_dir
     - title: "6. Rust 의 빌드 종류"
       url: /docs/rust/06_rust_type_of_build
-    - title: "7. Rust 변수와 상수 그리고 Shadowing"
+    - title: "7. 변수와 상수 그리고 Shadowing"
       url: /docs/rust/07_rust_variable_const_shadowing
+  - title: Data Type
+    children:
+    - title: "8-1. 자료형 데이터 타입 Data Type"
+      url: /docs/rust/08_01_rust_datatype
+    - title: "8-2. 데이터타입 - 정수형과 부동소수형"
+      url: /docs/rust/08_02_rust_integer_float
 
 # data analysis
 docs_data_analysis:
