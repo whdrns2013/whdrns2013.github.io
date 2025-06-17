@@ -37,6 +37,11 @@ let sentence = "Sentence 1";
 println!("{sentence}");
 >> Sentence 1
 
+// 명시적 타입 어노테이션
+let some_number : u32 = 198;
+println!("{some_number}");
+>> 198
+
 // 변수는 기본적으로 불변성(immutable) 을 가짐  
 sentence = "Sentence 2";
 println!("{sentence}");
