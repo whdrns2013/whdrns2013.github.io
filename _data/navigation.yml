@@ -206,8 +206,10 @@ docs_rust:
       url: /docs/rust/08_01_rust_datatype
     - title: "8-2. 데이터타입 - 정수형과 부동소수형"
       url: /docs/rust/08_02_rust_integer_float
-    - title: "8-3. 데이터타입 - 부울형 (Boolean)"
+    - title: "8-3. 데이터타입 - 부울형 Boolean"
       url: /docs/rust/08_03_rust_bool
+    - title: "8-4. 데이터타입 - 문자형 char"
+      url: /docs/rust/08_04_rust_char
 
 # data analysis
 docs_data_analysis:
