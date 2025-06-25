@@ -210,6 +210,8 @@ docs_rust:
       url: /docs/rust/08_03_rust_bool
     - title: "8-4. 데이터타입 - 문자형 char"
       url: /docs/rust/08_04_rust_char
+    - title: "8-5. 데이터타입 - 튜플형 tuple"
+      url: /docs/rust/08_05_rust_tuple
 
 # data analysis
 docs_data_analysis:
