@@ -212,6 +212,8 @@ docs_rust:
       url: /docs/rust/08_04_rust_char
     - title: "8-5. 데이터타입 - 튜플형 tuple"
       url: /docs/rust/08_05_rust_tuple
+    - title: "8-6. 데이터타입 - 배열형 array"
+      url: /docs/rust/08-06_rust_array
 
 # data analysis
 docs_data_analysis:
