@@ -213,7 +213,9 @@ docs_rust:
     - title: "8-5. 데이터타입 - 튜플형 tuple"
       url: /docs/rust/08_05_rust_tuple
     - title: "8-6. 데이터타입 - 배열형 array"
-      url: /docs/rust/08-06_rust_array
+      url: /docs/rust/08_06_rust_array
+    - title: "8-7. 데이터타입 - 튜플과 배열의 원소 접근 방법 차이"
+      url: /docs/rust/08_07_rust_tuple_array_syntax
 
 # data analysis
 docs_data_analysis:
