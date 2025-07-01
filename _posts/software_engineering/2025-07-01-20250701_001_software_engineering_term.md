@@ -26,6 +26,7 @@ author: # 주인 외 작성자 표기 필요시
 <!--postNo: 20250701_001-->
 
 
+<span class="ttag">#컴포넌트</span> <span class="ttag">#모듈</span> <span class="ttag">#클래스</span> <span class="ttag">#아키텍처</span> <span class="ttag">#시스템</span> <span class="ttag">#펑션포인트</span> <span class="ttag">#프로세스</span> <span class="ttag">#워크플로우</span> <span class="ttag">#서브시스템</span> <span class="ttag">#인터페이스</span>
 
 
 
