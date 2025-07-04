@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_icon: "columns"
 layout: single
-classes: 
+classes: wide
 sidebar:
   nav: "docs_patterns"
 header: 
@@ -29,13 +29,13 @@ Patterns 문서는 소프트웨어 개발 과정에서 반복적으로 마주치
 
 ### (1) 아키텍처 패턴 (Architectural Patterns)  
 
-→ 시스템 전체의 구조와 모듈 간의 책임 분리, 데이터 흐름을 설계하는 전략  
-→ 예: Layered Architecture, CQRS, DDD 등  
+- 시스템 전체의 구조와 모듈 간의 책임 분리, 데이터 흐름을 설계하는 전략  
+- 예: Layered Architecture, CQRS, DDD 등  
 
 ### (2) 디자인 패턴 (Design Patterns)  
 
-→ 클래스, 객체, 메서드 수준의 구조와 협력 관계를 다루는 설계 해법  
-→ 예: Builder, Observer, Strategy 등  
+- 클래스, 객체, 메서드 수준의 구조와 협력 관계를 다루는 설계 해법  
+- 예: Builder, Observer, Strategy 등  
 
 ### 패턴을 공부하는 이유  
 
