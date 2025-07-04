@@ -36,6 +36,8 @@ docs:
         url: /docs/gitops/intro/
       - title: "• Rust"
         url: /docs/rust/01_rust_intro
+      - title: "• Patterns 다양한 설계 방법"
+        url: /docs/patterns/00_patterns_intro
 
 # docker docs
 docs_docker:
@@ -216,6 +218,27 @@ docs_rust:
       url: /docs/rust/08_06_rust_array
     - title: "8-7. 데이터타입 - 튜플과 배열의 원소 접근 방법 차이"
       url: /docs/rust/08_07_rust_tuple_array_syntax
+
+# design pattern
+docs_patterns:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "아키텍처 패턴"
+    url: /docs/patterns/architecture_pattern/00_architecture_pattern_intro
+    children:
+      - title: "DDD 도메인 주도 설계"
+        url: /docs/patterns/architecture_pattern/01_ddd
+      - title: "CQRS 명령 쿼리 책임 분리 설계"
+        url: /docs/patterns/architecture_pattern/02_cqrs
+  - title: "디자인 패턴"
+    url: /docs/patterns/design_pattern/00_design_pattern_intro
+    children:
+    - title: "1. 생성 패턴"
+      children:
+      - title: "03. 빌더 패턴 (Builder Pattern)"
+        url: /docs/design_pattern/01_builder_pattern
+    - title: "2. 구조 패턴"
+    - title: "3. 행동 패턴"
 
 # data analysis
 docs_data_analysis:
