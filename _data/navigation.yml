@@ -38,6 +38,8 @@ docs:
         url: /docs/rust/01_rust_intro
       - title: "• Patterns 다양한 설계 방법"
         url: /docs/patterns/00_patterns_intro
+      - title: "• Airflow"
+        url: /docs/airflow/01_airflow_intro
 
 # docker docs
 docs_docker:
@@ -238,6 +240,14 @@ docs_patterns:
       url: /docs/design_pattern/01_builder_pattern
     - title: "2. 구조 패턴"
     - title: "3. 행동 패턴"
+
+# airflow
+docs_airflow:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "01. Airflow 소개"
+    url: /docs/airflow/01_airflow_intro
+
 
 # data analysis
 docs_data_analysis:
