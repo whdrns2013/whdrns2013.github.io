@@ -237,7 +237,7 @@ docs_patterns:
     children:
     - title: "1. 생성 패턴"
     - title: "1-03. 빌더 패턴 (Builder Pattern)"
-      url: /docs/design_pattern/01_builder_pattern
+      url: /docs/patterns/design_pattern/01_builder_pattern
     - title: "2. 구조 패턴"
     - title: "3. 행동 패턴"
 
