@@ -247,6 +247,8 @@ docs_airflow:
     url: /docs/intro
   - title: "01. Airflow 소개"
     url: /docs/airflow/01_airflow_intro
+  - title: "02. Airflow 설치하기"
+    url: /docs/airflow/02_airflow_installation
 
 
 # data analysis
@@ -296,11 +298,3 @@ docs_python:
     children:
     - title: "Python 소개"
     - title: "Python 자료구조"
-
-# airflow docs
-docs_airflow:
-  - title: "<-Doc으로 돌아가기"
-    url: /docs/intro
-  - title: airflow
-    children:
-    - title: "Airflow 소개"
