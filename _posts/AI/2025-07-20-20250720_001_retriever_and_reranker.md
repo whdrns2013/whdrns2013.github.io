@@ -70,6 +70,14 @@ author: # 주인 외 작성자 표기 필요시
 
 ### Retrieval Phase 의 순서와 구성 요소  
 
+![alt text](/assets/images/20250720_001_006.png)  
+
+(1) Retriever 가 질의를 받음  
+(2) 참고 문서들이 저장된 저장소에 질의로 검색을 수행하고, 관련 있는 문서를 받아옴  
+(3) 검색된 문서들을 Reranker 에 보냄  
+(4) Reranker 에서는 받은 문서들로 Reranking 작업을 수행  
+(5) Reranking 작업을 통해 재정렬/선별 된 문서들을 Generation Phase로 넘김  
+
 
 ### 1. Retriever  
 
