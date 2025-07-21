@@ -1,9 +1,9 @@
 ---
 title: "[DP] Top-Down 방식의 다이나믹 프로그래밍 Dynamic Programming" # 제목 (필수)
 excerpt: "재귀와 메모이제이션을 이용한 다이나믹 프로그래밍" # 서브 타이틀이자 meta description (필수)
-date: 2025-07-22 03:52:00 +0900      # 작성일 (필수)
-lastmod: 2025-07-22 03:52:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2025-07-22 03:52:00 +0900   # 최종 수정일 (필수)
+date: 2025-07-19 03:52:00 +0900      # 작성일 (필수)
+lastmod: 2025-07-19 03:52:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2025-07-19 03:52:00 +0900   # 최종 수정일 (필수)
 categories: Algorithm         # 다수 카테고리에 포함 가능 (필수)
 tags: 파이썬 재귀함수 메모이제이션 lru_cache 다이나믹프로그래밍 재귀호출한도 setrecursionlimit 파이썬최적화 피보나치 재귀함수예제 알고리즘문제 해결방법 파이썬성능개선 알고리즘기초 dynamic programming dp dynamicprogramming python   # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
