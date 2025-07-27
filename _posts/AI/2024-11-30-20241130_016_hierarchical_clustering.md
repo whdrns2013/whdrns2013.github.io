@@ -4,7 +4,7 @@ excerpt: 계층적으로 하위 군집을 포함하는 군집에서 적절한 �
 date: 2024-11-30 23:58:00 +0900      # 작성일 (필수)
 lastmod: 2024-11-30 23:58:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2024-11-30 23:58:00 +0900   # 최종 수정일 (필수)
-categories: VCS       # 다수 카테고리에 포함 가능 (필수)
+categories: machine_learning       # 다수 카테고리에 포함 가능 (필수)
 tags: AI 머신러닝 군집화 계층적 알고리즘                     # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
