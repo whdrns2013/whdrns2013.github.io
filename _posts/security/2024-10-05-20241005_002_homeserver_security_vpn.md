@@ -2,8 +2,8 @@
 title: 홈 서버 보안 강화 (2) VPN 구축 # 제목 (필수)
 excerpt: 외부에서도 홈 네트워크를 이용해보자   # 서브 타이틀이자 meta description (필수)
 date: 2024-10-05 23:45:00 +0900      # 작성일 (필수)
-lastmod: 2024-10-05 23:45:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2024-10-05 23:45:00 +0900   # 최종 수정일 (필수)
+lastmod: 2025-08-11 19:40:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2025-08-11 19:40:00 +0900   # 최종 수정일 (필수)
 categories: [Infra, security]         # 다수 카테고리에 포함 가능 (필수)
 tags: linux rocky vpn wireguard openvpn 보안 사설망 가상사설망   # 태그 복수개 가능 (필수)
 classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
