@@ -245,16 +245,13 @@
         😀 Visitors
         <br>
         <span id="blog_visitor">Loading visitor info...</span>
-        <!-- <a href="https://whdrns2013.github.io" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-          <i class="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwhdrns2013.github.io&count_bg=%23000000&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Vistors&edge_flat=false" aria-hidden="false"></i>
-        </a> -->
       </li>
       <script>
-        fetch('https://blog-visitor-count-589520877122.asia-northeast3.run.app/')
+        fetch('https://getanalyticsstats-5ubwd3taqq-du.a.run.app/')
           .then(response => response.json())
           .then(data => {
-            const yesterday = data.yesterday_count;
-            const total = data.total_count;
+            const yesterday = data.yesterday;
+            const total = data.total;
             document.getElementById('blog_visitor').innerText = 
               `• 어제 ${yesterday}명 방문\n• Total: ${total}`;
           })
@@ -269,7 +266,4 @@
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
-  <!-- <div>
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwhdrns2013.github.io&count_bg=%23000000&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Vistors&edge_flat=false" style="width:50%">
-  </div> -->
 </div>
