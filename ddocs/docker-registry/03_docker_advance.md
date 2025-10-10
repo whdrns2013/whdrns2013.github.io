@@ -5,9 +5,9 @@ last_modified_at: 2024-01-13 18:25:00 +0900
 permalink: /docs/docker_registry/03_registry_advance
 toc: false
 toc_sticky: true
-classes: wide
 toc_icon: "columns"
 layout: single
+classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 sidebar:
   nav: "docs_docker_registry"
 header: 
