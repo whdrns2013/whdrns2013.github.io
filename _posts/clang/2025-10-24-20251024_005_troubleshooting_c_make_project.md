@@ -1,5 +1,5 @@
 ---
-title: "[C언어] Trouble Shooting - VS Code의 C 컴파일러 오류" # 제목 (필수)
+title: "[C언어] cl.exe build and debug active file is only usable when VS Code is run from the Developer Command Prompt for VS - VS Code의 C 컴파일러 오류" # 제목 (필수)
 excerpt: "cl.exe build and debug active file is only usable when VS Code is run from the Developer Command Prompt for VS"  # 서브 타이틀이자 meta description (필수)
 date: 2025-10-24 17:24:00 +0900      # 작성일 (필수)
 lastmod: 2025-10-24 17:24:00 +0900   # 최종 수정일 (필수)
