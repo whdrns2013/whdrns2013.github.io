@@ -31,7 +31,7 @@ author: # 주인 외 작성자 표기 필요시
 그런데 요즘에는 pydantic 의 base settings 를 사용한다고 한다. 이게 과연 무엇인지, 어떻게 사용하는지 알아보자.  
 
 > 설명을 보조하기 위해 github에 코드를 올려놨다.  
-> <붙이기!>
+> [https://github.com/whdrns2013/study/tree/main/04_python/11_pydantic/BaseSetting_study](https://github.com/whdrns2013/study/tree/main/04_python/11_pydantic/BaseSetting_study)  
 
 
 ## BaseSettings  
