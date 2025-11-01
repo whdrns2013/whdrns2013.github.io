@@ -2,6 +2,7 @@
 layout: archive
 title: "Diary"
 permalink: /diary/
+author_profile: true
 ---
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
