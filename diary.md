@@ -1,10 +1,12 @@
 ---
-layout: single
+layout: archive
 title: "Diary"
 permalink: /diary/
 ---
 
-{% for post in site.categories.diary %}
-  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-  <p>{{ post.date | date: "%Y-%m-%d" }}</p>
-{% endfor %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in site.categories.diary reversed %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
