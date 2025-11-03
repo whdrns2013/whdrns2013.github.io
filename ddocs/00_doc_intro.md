@@ -31,3 +31,4 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 - [Patterns 다양한 설계 방법](https://whdrns2013.github.io/docs/patterns/00_patterns_intro)  
 - [Airflow](https://whdrns2013.github.io/docs/airflow/01_airflow_intro)  
 - [홈서버 구축](https://whdrns2013.github.io/docs/homeserver/01_build/01_prepare_machine)  
+- [Python Logging](https://whdrns2013.github.io/python/20251104_001_logging_intro/)  
