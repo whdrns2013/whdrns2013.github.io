@@ -356,14 +356,14 @@ docs_python_logging:
     - title: "03. 파이썬 로깅 라이브러리의 구조"
       url: /python/20251104_003_python_logging_structure/
     - title: "04. Logger"
-      url: /docs/python_logging/04_python_logging_logger
+      url: /python/20251104_004_python_logging_logger/
     - title: "05. Handler"
-      url: /docs/python_logging/05_python_logging_handler
+      url: /python/20251104_005_python_logging_handler/
     - title: "06. Formatter"
-      url: /docs/python_logging/06_python_logging_formatter
+      url: /python/20251104_006_python_logging_formatter/
     - title: "07. LogRecord"
-      url: /docs/python_logging/07_python_logging_logrecord
+      url: /python/20251104_007_python_logging_log_record/
     - title: "08. 로깅 래퍼 클래스 만들어보기"
-      url: /docs/python_logging/08_python_logging_wrapper_class
+      url: /python/20251104_008_python_logging_custom/
     - title: "09. 다양한 Handler 들"
-      url: /docs/python_logging/09_python_logging_handlers
+      url: /python/20251104_009_python_logging_handlers/
