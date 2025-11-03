@@ -44,6 +44,8 @@ docs:
         url: /docs/airflow/01_airflow_intro
       - title: "• 홈서버 구축"
         url: /docs/homeserver/01_build/01_prepare_machine
+      - title: "• 파이썬에서 logging 하기"
+        url: /docs/python_logging/01_intro
 
 # docker docs
 docs_docker:
@@ -340,3 +342,28 @@ docs_python:
     children:
     - title: "Python 소개"
     - title: "Python 자료구조"
+
+# python_logging
+docs_python_logging:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: python logging
+    children:
+    - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
+      url: /docs/python_logging/01_intro
+    - title: "02. 파이썬 logging 라이브러리"
+      url: /docs/python_logging/02_python_logging
+    - title: "03. 파이썬 로깅 라이브러리의 구조"
+      url: /docs/python_logging/03_python_logging_structure
+    - title: "04. Logger"
+      url: /docs/python_logging/04_python_logging_logger
+    - title: "05. Handler"
+      url: /docs/python_logging/05_python_logging_handler
+    - title: "06. Formatter"
+      url: /docs/python_logging/06_python_logging_formatter
+    - title: "07. LogRecord"
+      url: /docs/python_logging/07_python_logging_logrecord
+    - title: "08. 로깅 래퍼 클래스 만들어보기"
+      url: /docs/python_logging/08_python_logging_wrapper_class
+    - title: "09. 다양한 Handler 들"
+      url: /docs/python_logging/09_python_logging_handlers
