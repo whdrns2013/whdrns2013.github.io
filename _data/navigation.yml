@@ -45,7 +45,7 @@ docs:
       - title: "• 홈서버 구축"
         url: /docs/homeserver/01_build/01_prepare_machine
       - title: "• 파이썬에서 logging 하기"
-        url: /docs/python_logging/01_intro
+        url: /python/20251104_001_logging_intro/
 
 # docker docs
 docs_docker:
@@ -350,7 +350,7 @@ docs_python_logging:
   - title: python logging
     children:
     - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
-      url: /docs/python_logging/01_intro
+      url: /python/20251104_001_logging_intro/
     - title: "02. 파이썬 logging 라이브러리"
       url: /docs/python_logging/02_python_logging
     - title: "03. 파이썬 로깅 라이브러리의 구조"

@@ -298,12 +298,6 @@ defaults:
       comments: true
       share: true
       related: true
-  - scope:
-      path: ""
-      type: posts
-      category: "doc"
-    values:
-      layout: "doc"
 
 
 # dark mode toggle
