@@ -352,9 +352,9 @@ docs_python_logging:
     - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
       url: /python/20251104_001_logging_intro/
     - title: "02. 파이썬 logging 라이브러리"
-      url: /docs/python_logging/02_python_logging
+      url: /python/20251104_002_python_logging_lib/
     - title: "03. 파이썬 로깅 라이브러리의 구조"
-      url: /docs/python_logging/03_python_logging_structure
+      url: /python/20251104_003_python_logging_structure/
     - title: "04. Logger"
       url: /docs/python_logging/04_python_logging_logger
     - title: "05. Handler"
