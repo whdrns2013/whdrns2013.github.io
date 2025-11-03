@@ -298,6 +298,13 @@ defaults:
       comments: true
       share: true
       related: true
+  - scope:
+      path: ""
+      type: posts
+      category: "doc"
+    values:
+      layout: "doc"
+
 
 # dark mode toggle
 dark_theme_toggle        : true # 다크 모드 토글 기능 추가

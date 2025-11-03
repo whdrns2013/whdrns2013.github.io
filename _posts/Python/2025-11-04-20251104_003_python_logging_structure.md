@@ -4,7 +4,8 @@ excerpt: "파이썬 로깅 라이브러리 파헤쳐보기" # 서브 타이틀�
 date: 2025-11-04 00:40:00 +0900      # 작성일 (필수)
 lastmod: 2025-11-04 00:40:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2025-11-04 00:40:00 +0900   # 최종 수정일 (필수)
-categories: Python      # 다수 카테고리에 포함 가능 (필수)
+categories: [Python, doc]      # 다수 카테고리에 포함 가능 (필수)
+doc_group: python_logging
 tags: python 파이썬 로깅 로그 logging log 라이브러리 구조 구성 요소 구성요소 Logger Handler Formatter LogRecord                    # 태그 복수개 가능 (필수)
 classes: wide         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부

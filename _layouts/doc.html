@@ -1,0 +1,46 @@
+---
+layout: single
+---
+
+<div id="main" role="main" class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar">
+        <nav class="nav__list">
+          <input id="ac-toc" name="accordion-toc" type="checkbox" />
+          <label for="ac-toc">Toggle Menu</label>
+          {% assign current_group = page.doc_group %}
+          {% if current_group %}
+            <h3 class="nav__title">{{ current_group }}</h3>
+            <ul class="nav__items">
+              {% assign all_doc_posts = site.posts | where: "categories", "doc" %}
+              {% assign topic_posts = all_doc_posts | where: "doc_group", current_group | sort: "date" %}
+              {% for post in topic_posts %}
+                <li>
+                  <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active"{% endif %}>
+                    {{ post.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <h3 class="nav__title">All Docs</h3>
+            <ul class="nav__items">
+              {% assign doc_posts = site.posts | where: "categories", "doc" | sort: "date" %}
+              {% for post in doc_posts %}
+                <li>
+                  <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active"{% endif %}>
+                    {{ post.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-9">
+      {{ content }}
+    </div>
+  </div>
+</div>
