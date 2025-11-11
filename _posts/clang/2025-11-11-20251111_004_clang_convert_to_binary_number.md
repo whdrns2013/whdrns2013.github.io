@@ -246,6 +246,14 @@ free(binary_string);
 
 이 부분은 `malloc` 함수와 연관이 있다. `malloc` 함수로 할당받은 메모리 공간은 Heap 영역에 존재하며, 이는 사용자가 명시적으로 해제하기 전까지는 해당 메모리 공간이 유지된다. 따라서 **`malloc` 으로 할당받은 메모리 공간은 반드시 `free` 함수로 해제해줘야**한다.  
 
+### 실행 예시  
+
+```bash
+# 10에 대한 출력값
+0B000000000000000000000000001010
+```
+
+
 ## Reference  
 
 [https://coding-factory.tistory.com/655](https://coding-factory.tistory.com/655)  
