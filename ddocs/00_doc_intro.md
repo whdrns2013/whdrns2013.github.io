@@ -32,3 +32,4 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 - [Airflow](https://whdrns2013.github.io/docs/airflow/01_airflow_intro)  
 - [홈서버 구축](https://whdrns2013.github.io/docs/homeserver/01_build/01_prepare_machine)  
 - [Python Logging](https://whdrns2013.github.io/python/20251104_001_logging_intro/)  
+- [PostgreSQL](https://whdrns2013.github.io/sql/20251111_001_postgresql_ddl/)  
