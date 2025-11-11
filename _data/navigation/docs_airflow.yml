@@ -1,8 +1,0 @@
-# airflow
-docs_airflow:
-  - title: "<-Doc으로 돌아가기"
-    url: /docs/intro
-  - title: "01. Airflow 소개"
-    url: /docs/airflow/01_airflow_intro
-  - title: "02. Airflow 설치하기"
-    url: /docs/airflow/02_airflow_installation
