@@ -1,0 +1,38 @@
+# data analysis
+docs_data_analysis:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 데이터
+    children:
+    - title: "데이터의 정의와 분류"
+    - title: "데이터 분석 용어 모음"
+  - title: 데이터 분석 방법
+    children:
+    - title: "데이터 분석의 종류"
+    - title: "정형 데이터 분석"
+    - title: "통계 분석"
+    - title: "회귀 분석"
+    - title: "상관 분석"
+    - title: "연관 분석"
+    - title: "주성분 분석"
+    - title: "시계열 분석"
+    - title: "군집 분석"
+    - title: "범주형 자료 분석"
+    - title: "서포트 벡터 머신"
+    - title: "베이즈 기법"
+    - title: "딥러닝 분석"
+    - title: "앙상블 분석"
+    - title: "다변량 분석"
+    - title: "비정형 데이터 분석"
+    - title: "데이터 마이닝"
+    - title: "텍스트 마이닝"
+    - title: "오피니언 마이닝"
+    - title: "웹 마이닝"
+  - title: 평가 지표
+    children:
+    - title: 분류모델 평가 지표
+    - title: 회귀모델 평가 지표
+    - title: 군집분석 평가 지표
+    - title: K폴드 교차검증
+  - title: 분석모형 개선
+  - title: 데이터 시각화

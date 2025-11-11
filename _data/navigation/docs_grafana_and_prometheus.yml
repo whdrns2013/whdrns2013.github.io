@@ -1,0 +1,14 @@
+# grafana_nad_prometheus docs
+docs_grafana_and_prometheus:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• Grafana and Prometheus"
+    children:
+    - title: "Grafana와 Prometheus 소개"
+      url: /docs/grafana_and_prometheus/intro
+    - title: "Prometheus 설치하기"
+      url: /docs/grafana_and_prometheus/02_install_prometheus
+    - title: "Exporter 설치하고 메트릭 수집하기"
+      url: /docs/grafana_and_prometheus/03_exporter
+    - title: "Grafana 설치하고 사용하기"
+      url: /docs/grafana_and_prometheus/04_grafana

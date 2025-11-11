@@ -1,0 +1,24 @@
+# docker_registry/Harbor
+docs_docker_registry:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• Docker Registry 구축"
+    children:
+    - title: "1. docker registry"
+      url: /docs/docker_registry/01_registry
+    - title: "2. docker registry 설정 파일"
+      url: /docs/docker_registry/02_registry_config
+    - title: "3. docker registry 고도화 하기"
+      url: /docs/docker_registry/03_registry_advance
+    - title: "4-1. 보안 강화 - 인증 절차 구현하기"
+      url: /docs/docker_registry/04_authentication
+    - title: "4-2. 보안 강화 - https 적용"
+      url: /docs/docker_registry/05_ssl_tls
+  - title: "• Harbor 구축"
+    children:
+    - title: "1. Harbor 소개"
+      url: /docs/docker_registry/harbor/01_harbor
+    - title: "2. Harbor 설치하기"
+      url: /docs/docker_registry/harbor/02_harbor_install
+    - title: "3. 계정 관리"
+      url: /docs/docker_registry/harbor/03_harbor_account

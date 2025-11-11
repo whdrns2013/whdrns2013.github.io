@@ -1,0 +1,26 @@
+# design pattern
+docs_patterns:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "아키텍처 패턴"
+    url: /docs/patterns/architecture_pattern/00_architecture_pattern_intro
+    children:
+      - title: "· DDD 도메인 주도 설계"
+        url: /docs/patterns/architecture_pattern/01_ddd
+      - title: "· CQRS 명령 쿼리 책임 분리 설계"
+        url: /docs/patterns/architecture_pattern/02_cqrs
+      - title: "· MSA 마이크로 서비스 아키텍처"
+        url: /docs/patterns/architecture_pattern/03_msa
+  - title: "디자인 패턴"
+    url: /docs/patterns/design_pattern/00_design_pattern_intro
+    children:
+    - title: "1. 생성 패턴"
+    - title: "1-03. 빌더 패턴 (Builder Pattern)"
+      url: /docs/patterns/design_pattern/01_builder_pattern
+    - title: "2. 구조 패턴"
+    - title: "3. 행동 패턴"
+  - title: "기타"
+    url: /docs/patterns/etc/00_anti_pattern
+    children:
+      - title: "· 안티패턴"
+        url: /docs/patterns/etc/00_anti_pattern
