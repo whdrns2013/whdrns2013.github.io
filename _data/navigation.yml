@@ -48,6 +48,8 @@ docs:
         url: /python/20251104_001_logging_intro/
       - title: "• PostgreSQL"
         url: /sql/20251111_001_postgresql_ddl/
+      - title: "• C 언어 기초"
+        url: /clang/20251024_001_programming_language/
 
 # docker docs
 docs_docker:
