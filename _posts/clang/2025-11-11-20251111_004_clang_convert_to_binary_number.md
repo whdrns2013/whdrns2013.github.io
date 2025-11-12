@@ -41,21 +41,21 @@ C언어는 숫자를 이진수로 변환하는 함수를 제공하지 않는다.
 #include <stdlib.h>
 #include <limits.h>
 
-char *to_binary_string(int num){
+char *to_binary_string(unsigned int num){
     // 비트 수 계산
-    int bits = sizeof(int) * CHAR_BIT;
+    int bits = sizeof(int) * CHAR_BIT + 1 + 2; // int 32비트 + 시작문자 2개 + 끝문자 1개 = 35개
 
     // 이진수 문자열 : 동적 할당으로 함수 바깥에서도 메모리가 해제되지 않도록 함
-    char *binary_string = (char *)malloc(bits + 1 + 2);
+    char *binary_string = (char *)malloc(bits);
 
     for (int i = 0; i < bits; i++){
         int bit_value = num >> i & 1;                   // num의 오른쪽에서부터 i 번째 이진수
-        binary_string[bits - 1 - i] = bit_value + '0';  // '+0' 을 하면 ASCII 문자 0 또는 1을 반환함
+        binary_string[bits-2-i] = bit_value + '0';  // '+0' 을 하면 ASCII 문자 0 또는 1을 반환함
     }
 
     // 문자열 끝을 뜻하는 널문자 ('\0')를 추가
     binary_string[0] = '0', binary_string[1] = 'B'; // 이진수임을 표현
-    binary_string[bits] = '\0';                     // 문자열의 끝을 지정
+    binary_string[bits-1] = '\0';                     // 문자열의 끝을 지정
 
     return binary_string;
 }
@@ -87,11 +87,19 @@ char *to_binary_string(int num)
 #### 비트 수 계산  
 
 ```c
-int bits = sizeof(int) * CHAR_BIT;
+int bits = sizeof(int) * CHAR_BIT + 1 + 2;
 ```
 
 위 코드는 입력 데이터(int형)를 **이진수 문자열로 표현할 때 필요한 총 자릿수(비트 수)**를 계산하기 위한 구문이다. 다시 말해, int형 변수를 표현하기 위해 최대 몇 개의 이진 비트('0' 또는 '1')가 필요한지 그 자릿수를 시스템에 관계없이 정확하게 확보하는 것이다.  
 
+여기에 1과 2를 더하는데, 이들은 각각 문자열 끝을 나타내는 null 문자, 그리고 이진수임을 나타내는 'OB' 로 사용될 공간(바이트)이다.  
+
+|표현|값(일반적)|단위|설명|
+|---|---|---|---|
+|sizeof(int)|4|byte|int 자료형 변수가 차지하는 메모리 크기. 보통 4바이트.|
+|CHAR_BIT|8|bit|1바이트가 차지하는 비트 수. int 형을 비트만큼 표현해야 하므로 이를 위와 곱한다.|
+|1|1|byte|문자열의 끝 문자 (`\0`)를 저장하기 위한 공간|
+|2|2|byte|2진수임을 표시하기 위한 문자열(`0B`)를 저장하기 위한 공간|
 
 #### 이진수 문자열 선언시 포인터  
 
@@ -117,7 +125,7 @@ char *binary_string
 #### malloc  
 
 ```c
-char *binary_string = (char *)malloc(bits + 1 + 2);
+char *binary_string = (char *)malloc(bits);
 ```
 
 `malloc` 은 프로그램 실행 중에 필요한 만큼의 메모리 공간을 개발자가 직접, 동적으로, Heap 영역에 할당받기 위해 사용된다. malloc 이 필요한 상황은 아래와 같다.  
@@ -138,7 +146,7 @@ malloc 함수는 매개변수로 받은 값 * byte 만큼의 메모리 공간을
 #### malloc 으로 선언되는 변수값 캐스팅  
 
 ```c
-char *binary_string = (char *)malloc(bits + 1 + 2);
+char *binary_string = (char *)malloc(bits);
 ```
 
 `malloc` 함수 앞을 보면 `(char *)` 라는 부분을 볼 수 있다. C 언어에서 값 앞에 `(자료형)` 과 같이 사용하는 것은 타입캐스팅 연산자이다. 즉 이것은, **malloc 함수가 반환하는 값을 문자 포인터 타입으로 명시적으로 변환**하는 역할을 하는 것이다.  
@@ -152,19 +160,10 @@ malloc 반환 값을 타입 캐스팅하는 이유를 살펴보자.
 #### malloc 을 통해 확보하는 데이터 크기  
 
 ```c
-char *binary_string = (char *)malloc(bits + 1 + 2);
+char *binary_string = (char *)malloc(bits);
 ```
 
-여기서 malloc 을 통해 `bits + 1 + 2` 만큼의 메모리 공간을 확보하고 있다. 이게 정확히 얼마만큼의 공간인지 보면, bits 는 (int형 바이트 사이즈 * 1바이트의 비트 개수) 이므로 (4 * 8 = 32) 가 된다. 그리고 여기에 1 + 2 를 더하므로 총 35바이트를 확보할 것이다. 다시 정리해보면 아래와 같다.  
-
-|표현|값(일반적)|단위|설명|
-|---|---|---|---|
-|sizeof(int)|4|byte|int 자료형 변수가 차지하는 메모리 크기. 보통 4바이트.|
-|CHAR_BIT|8|bit|1바이트가 차지하는 비트 수. int 형을 비트만큼 표현해야 하므로 이를 위와 곱한다.|
-|1|1|byte|문자열의 끝 문자 (`\0`)를 저장하기 위한 공간|
-|2|2|byte|2진수임을 표시하기 위한 문자열(`0B`)를 저장하기 위한 공간|
-
-즉, int 형 숫자는 총 32비트이고, 이를 문자열로 표현하려면 기본적으로 32개의 `char` 형 공간이 필요하므로, 32바이트를 확보해야 한다. 여기에 더해 끝 문자와 2진수 표시 문자의 공간을 더해 총 35바이트의 공간이 필요한 것이다.  
+여기서 malloc 을 통해 `35`(bits + 1 + 2) 만큼의 메모리 공간을 확보하고 있다. 이는 앞서 살펴본 대로 int 형의 비트 개수 + 끝문자 + 'OB'문자를 표현하기 위해 확보한 공간이다.  
 
 #### 반복문 조건  
 
@@ -207,21 +206,23 @@ num = 0B001010;  // 이진수로 변환하면
 #### 문자열에 값을 담기  
 
 ```c
-binary_string[bits - 1 - i] = bit_value + '0';
+binary_string[bits - 2 - i] = bit_value + '0';
 ```
 
-위 수식에서 `binary_string[bits - 1 -i]` 부분을 살펴보자. 이는 배열형 변수 `binary_string` 의 시작 주소에서 (bits - 1 -i)만큼 떨어진 위치에 있는 단일 문자 요소의 메모리 공간을 뜻한다.  
+위 수식에서 `binary_string[bits - 2 -i]` 부분을 살펴보자. 이는 배열형 변수 `binary_string` 의 시작 주소에서 (bits - 2 -i)만큼 떨어진 위치에 있는 단일 문자 요소의 메모리 공간을 뜻한다.  
 
 ```c
-*(binary_string + (bits - 1 - i)) = bit_value + '0';
+*(binary_string + (bits - 2 - i)) = bit_value + '0';
 ```
 
 이는 포인터 변수를 활용한 경우이다. C 언어에서 배열 표기 `A[i]` 은 내부적으로 포인터 연산 `*(A + i)`와 완전히 동일하게 처리된다. `*binary_string` 은 해당 문자열 데이터가 저장된 메모리 위치의 시작 주소이고, 뒤에 더해지는 숫자만큼 시작주소에서부터 떨어진 곳의 주소를 계산하게 된다.  
 
+그런데 왜 마지막 공간(`[bits-1]`) 부터 넣지 않고, 그 앞 공간`[bits-2]` 부터 넣는 것일까? 가장 마지막에는 문자열의 끝을 알리는 널문자를 넣어야 하기 때문이다.  
+
 #### 숫자를 문자열로 변경하기  
 
 ```c
-binary_string[bits - 1 - i] = bit_value + '0';
+binary_string[bits - 2 - i] = bit_value + '0';
 ```
 
 이번에는 위 수식에서 `bit_value + '0'` 구문을 살펴보자. 이 부분은 정수 값을 해당하는 문자로 변환하는 부분이다.  
@@ -232,7 +233,7 @@ C 언어에서 문자형은 정수형으로도 표현할 수 있다. 그리고 �
 
 ```c
 binary_string[0] = '0', binary_string[1] = 'B'; // 필수 아님
-binary_string[bits] = '\0'; // 필수
+binary_string[bits-1] = '\0'; // 필수
 ```
 
 (1) 첫 번째 줄 : 문자열 앞에 "0B" 를 붙이기 : 2진수라는 표현 (필수 아님)  
@@ -250,8 +251,50 @@ free(binary_string);
 
 ```bash
 # 10에 대한 출력값
-0B000000000000000000000000001010
+0B00000000000000000000000000001010
 ```
+
+## 다른 방법 (int 형으로 이진수 표시)  
+
+회사에서 이 이진수 변환 문제를 다르게 접근하는 동료의 방식을 배웠다. 바로 10진수로 이진수 값을 나타내는 것이다. 예를 들면 숫자 10을 숫자 `1010` 로 변환하는 것이다.  
+
+각 비트의 값이 무엇인지 `&`연산을 하는 것은 동일하고, 이렇게 나온 1 또는 0 값에 10^i 승을 곱해서 int 형으로 이진수를 표현하는 방법이다. 자세한 코드는 아래와 같다.  
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <limits.h>
+
+int* uint_to_binary(unsigned int num, int *result_arr){
+    int binary_num = 0;
+    int i = 0;
+    while (num != 0) {
+        binary_num += (num & 1)*pow(10, i);
+        num >>= 1;
+        i++;
+    }
+    result_arr[0] = binary_num;
+    result_arr[1] = i + 1;
+    return result_arr;
+}
+
+int main() {
+    int num = 23;
+    int result_arr[2];
+    to_binary_int(num, result_arr);
+    int digits = result_arr[1];
+    char *result_str = (char*)malloc(digits * CHAR_BIT);
+    sprintf(result_str, "%d", result_arr[0]);
+    printf("%s\n", result_str);
+    free(result_str); // 보통은 프로세스가 종료되면 운영체제에서 자동으로 메모리를 해제해줌
+    return EXIT_SUCCESS;
+}
+```
+
+## 제한사항  
+
+- 음수 변환 불가  
 
 
 ## Reference  
