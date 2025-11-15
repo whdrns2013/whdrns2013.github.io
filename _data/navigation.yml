@@ -50,6 +50,8 @@ docs:
         url: /sql/20251111_001_postgresql_ddl/
       - title: "• C 언어 기초"
         url: /clang/20251024_001_programming_language/
+      - title: "• MLflow"
+        url: /AI/20251115_001_mlflow_doc/
 
 # docker docs
 docs_docker:
@@ -384,6 +386,29 @@ docs_python_logging:
       url: /python/20251104_008_python_logging_custom/
     - title: "09. 다양한 Handler 들"
       url: /python/20251104_009_python_logging_handlers/
+
+# mlflow
+docs_mlflow:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: MLflow
+    children:
+    - title: "MLflow 소개"
+    - title: "MLflow DOC"
+      url: /AI/20251115_001_mlflow_doc/
+  - title: "MLflow Tracking Server"
+    children:
+      - title: ""
+  - title: "MLflow Client(SDK/CLI)"
+    children:
+      - title: ""
+  - title: "MLflow Backend Store"
+    children:
+      - title: ""
+  - title: "MLflow Artifact Store"
+    children:
+      - title: ""
+
 
 docs_clang:
   - title: "<-Doc으로 돌아가기"
