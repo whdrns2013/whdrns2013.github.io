@@ -450,6 +450,8 @@ docs_clang:
         url: /clang/20251102_004_clang_data_type_float/
       - title: "03-05. 자료형 04. 열거형 enum"
         url: /clang/20251102_005_clang_data_type_enum/
+      - title: "03-06. 자료형 05. 불형 bool"
+        url: /clang/20251116_008_clang_data_type_bool/
   - title: "4. 상수"
     children:
       - title: "04-01. C 언어의 리터럴 상수"
