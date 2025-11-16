@@ -494,6 +494,30 @@ docs_clang:
         url: /clang/20251116_006_clang_puts/
       - title: "07-07. gets - 문자열 입력함수"
         url: /clang/20251116_007_clang_gets/
+  - title: "8. 연산자"
+    children:
+      - title: "08-01. 연산자"
+        url: /clang/20251116_009_clang_operator/
+      - title: "08-02. 산술 연산자"
+        url: /clang/20251116_010_clang_arithmetic_operator/
+      - title: "08-03. 관계 연산자"
+        url: /clang/20251116_011_clang_relational_operator/
+      - title: "08-04. 논리 연산자"
+        url: /clang/20251116_012_clang_logical_operator/
+      - title: "08-05. 조건 연산자"
+        url: /clang/20251116_013_clang_conditional_operator/
+      - title: "08-06. 대입 연산자"
+        url: /clang/20251116_014_clang_assignment_operator/
+      - title: "08-07. 복합 대입 연산자"
+        url: /clang/20251116_015_clang_complex_assignment_operator/
+      - title: "08-08. 비트 연산자"
+        url: /clang/20251116_016_clang_bit_operator/
+      - title: "08-09. 형변환과 형변환 연산자"
+        url: /clang/20251116_017_clang_typecast/
+      - title: "08-10. 기타 연산자"
+        url: /clang/20251116_018_clang_etc_operator/
+      - title: "08-11. 연산자의 우선순위와 결합방향"
+        url: /clang/20251116_019_clang_operator_priority/
   - title: "99. 기타"
     children:
       - title: "etc. 숫자를 이진수로 변환하기"
