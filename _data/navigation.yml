@@ -476,5 +476,23 @@ docs_clang:
         url: /clang/20251102_014_clang_preprocessing_macro/
       - title: "06-04. 선행처리 3.조건부 컴파일"
         url: /clang/20251102_015_clang_preprocessing_if_compile/
+  - title: "7. 표준 입출력"
+    children:
+      - title: "07-01. 표준 입출력"
+        url: /clang/20251116_001_clang_stdio/
+      - title: "07-02. printf - 형식화 출력함수"
+        url: /clang/20251116_002_clang_printf/
+      - title: "07-03. scanf - 형식화 입력함수"
+        url: /clang/20251116_003_clang_scanf/
+      - title: "07-04. putchar - 단일문자 출력함수"
+        url: /clang/20251116_004_clang_putchar/
+      - title: "07-05. getchar - 단일문자 입력함수"
+        url: /clang/20251116_005_clang_getchar/
+      - title: "07-06. puts - 문자열 출력함수"
+        url: /clang/20251116_006_clang_puts/
+      - title: "07-07. gets - 문자열 입력함수"
+        url: /clang/20251116_007_clang_gets/
+  - title: "99. 기타"
+    children:
       - title: "etc. 숫자를 이진수로 변환하기"
         url: /clang/20251111_004_clang_convert_to_binary_number/
