@@ -414,8 +414,8 @@ docs_clang:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: "C 언어 기초"
+  - title: "1. Intro"
     children:
-      - title: "-- Intro"
       - title: "01-01. 프로그래밍 언어"
         url: /clang/20251024_001_programming_language/
       - title: "01-02. C언어의 탄생과 역사"
@@ -426,7 +426,8 @@ docs_clang:
         url: /clang/20251024_004_c_program_dev_intro/
       - title: "etc. C 언어의 컴파일러들"
         url: /clang/20251025_001_c_compiler/
-      - title: "-- 소스코드 구조"
+  - title: "2. 소스코드 구조"
+    children: 
       - title: "02-01. C 프로그램의 소스코드 구조와 구성 요소"
         url: /clang/20251025_002_structure_of_c_program/
       - title: "02-02. C 언어의 예약어들"
@@ -437,7 +438,8 @@ docs_clang:
         url: /clang/20251025_005_clang_comment/
       - title: "02-05. 에러와 경고"
         url: /clang/20251025_006_clang_error_and_warning/
-      - title: "-- 자료형"
+  - title: "3. 자료형"
+    children: 
       - title: "03-01. C 언어의 자료형(data type)"
         url: /clang/20251102_001_clang_datatype/
       - title: "03-02. 자료형 01. 정수형"
@@ -448,12 +450,14 @@ docs_clang:
         url: /clang/20251102_004_clang_data_type_float/
       - title: "03-05. 자료형 04. 열거형 enum"
         url: /clang/20251102_005_clang_data_type_enum/
-      - title: "-- 상수"
+  - title: "4. 상수"
+    children:
       - title: "04-01. C 언어의 리터럴 상수"
         url: /clang/20251102_006_clang_literal_constant/
       - title: "04-02. 제어문자 (이스케이프 시퀀스)"
         url: /clang/20251102_007_clang_escape_sequence/
-      - title: "-- 변수"
+  - title: "5. 변수"
+    children:
       - title: "05-01. C 언어의 변수"
         url: /clang/20251102_008_clang_variable/
       - title: "05-02. 변수 고려사항 1.변수의 크기"
@@ -462,7 +466,8 @@ docs_clang:
         url: /clang/20251102_010_clang_variable_declare_position/
       - title: "05-04. 변수 고려사항 3.초기화"
         url: /clang/20251102_011_clang_variable_initial/
-      - title: "-- 선행처리"
+  - title: "6. 선행처리"
+    children:
       - title: "06-01. 선행처리와 선행처리기"
         url: /clang/20251102_012_clang_preprocessor/
       - title: "06-02. 선행처리 1.파일 포함"
