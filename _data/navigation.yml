@@ -51,7 +51,7 @@ docs:
       - title: "• C 언어 기초"
         url: /clang/20251024_001_programming_language/
       - title: "• MLflow"
-        url: /AI/20251115_001_mlflow_doc/
+        url: /ai/20251115_001_mlflow_doc/
       - title: "• 통계"
         url: /statistics/20251121_001_statistics_data/
 
@@ -397,7 +397,7 @@ docs_mlflow:
     children:
     - title: "MLflow 소개"
     - title: "MLflow DOC"
-      url: /AI/20251115_001_mlflow_doc/
+      url: /ai/20251115_001_mlflow_doc/
   - title: "MLflow Tracking Server"
     children:
       - title: ""
