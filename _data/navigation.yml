@@ -52,6 +52,8 @@ docs:
         url: /clang/20251024_001_programming_language/
       - title: "• MLflow"
         url: /AI/20251115_001_mlflow_doc/
+      - title: "• 통계"
+        url: /statistics/20251121_001_statistics_data/
 
 # docker docs
 docs_docker:
@@ -408,6 +410,43 @@ docs_mlflow:
   - title: "MLflow Artifact Store"
     children:
       - title: ""
+
+# statistics
+docs_statistics:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "통계로 세상 읽기"
+    children:
+    - title: "데이터란"
+      url: /statistics/20251121_001_statistics_data/
+    - title: "통계와 통계학"
+      url: /statistics/20251121_002_statistics_and_statistics/
+    - title: "통계의 역사와 역사적 사례"
+      url: /statistics/20251121_003_statistics_history/
+    - title: "국가 통계"
+      url: /statistics/20251121_004_national_statistics/
+  - title: "통계 기법"
+    children:
+    - title: "통계 만들기"
+      url: /statistics/20251121_005_make_statistics/
+    - title: "중심위치"
+      url: /statistics/20251121_006_statistics_central_tendency/
+    - title: "중심위치 - 평균"
+      url: /statistics/20251121_007_statistics_mean/
+    - title: "중심위치 - 중앙값"
+      url: /statistics/20251121_008_statistics_median/
+    - title: "중심위치 - 최빈값"
+      url: /statistics/20251121_009_statistics_mode/
+    - title: "산포"
+      url: /statistics/20251121_010_statistics_dispersion/
+    - title: "산포 - 범위"
+      url: /statistics/20251121_011_statistics_range/
+    - title: "산포 - 분산"
+      url: /statistics/20251121_012_statistics_variance/
+    - title: "산포 - 표준편차"
+      url: /statistics/20251121_013_statistics_standard_deviation/
+    - title: "지수"
+      url: /statistics/20251121_014_statistics_index/
 
 
 docs_clang:
