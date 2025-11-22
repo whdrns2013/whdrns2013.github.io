@@ -54,6 +54,8 @@ docs:
         url: /ai/20251115_001_mlflow_doc/
       - title: "• 통계"
         url: /statistics/20251121_001_statistics_data/
+      - title: "• 자연언어처리"
+        url: /nlp/20251018_001_nlp_definition/
 
 # docker docs
 docs_docker:
@@ -583,3 +585,35 @@ docs_clang:
     children:
       - title: "etc. 숫자를 이진수로 변환하기"
         url: /clang/20251111_004_clang_convert_to_binary_number/
+
+
+# 자연언어처리
+docs_nlp:
+  - title: "자연언어처리"
+  - title: "자연언어처리에 대한 정의와 고찰"
+    children:
+    - title: "자연언어처리의 정의"
+      url: /nlp/20251018_001_nlp_definition/
+    - title: "UAT 문제:만능 머신러닝 모델은 존재할까"
+      url: /nlp/20251019_001_universal_approximation_theorem/
+    - title: "임베딩에 대한 정의와 고찰"
+      url: /nlp/20251019_002_embedding_consideration/
+  - title: "자연언어처리 관련 용어"
+    children:
+    - title: "자연어처리 관련 용어들"
+      url: /nlp/20251019_003_nlp_terms/
+  - title: "텍스트 표현"
+    children:
+    - title: "텍스트 표현의 방법들"
+      url: /nlp/20251020_001_text_representation/
+    - title: "Bag of Words (BoW)"
+      url: /nlp/20251020_002_bag_of_words/
+    - title: "TF-IDF"
+      url: /nlp/20251020_003_tfidf/
+    - title: "LSA"
+    children: /nlp/20251023_001_lsa/
+  - title: "유사도 측정"
+    children:
+    - title: "코사인 유사도"
+      url: /nlp/20251021_001_cosine_similarity/
+  - title: "차원 축소"
