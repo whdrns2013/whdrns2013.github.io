@@ -249,9 +249,9 @@ docs_pattern:
       - title: "· DDD 도메인 주도 설계"
         url: /design_pattern/20250702_001_ddd/
       - title: "· CQRS 명령 쿼리 책임 분리 설계"
-      - title: "(1) CQRS에 대해 알아보자"
+      - title: "   ├─ CQRS에 대해 알아보자"
         url: /design_pattern/20250510_001_cqrs_intro/
-      - title: "(2) CQRS 패턴의 구현 수준과 적용 방식"
+      - title: "   └─ CQRS 패턴의 구현 수준과 적용 방식"
         url: /design_pattern/20250510_002_cqrs_level/
       - title: "· MSA 마이크로 서비스 아키텍처"
         url: /design_pattern/20250708_001_msa/
@@ -259,10 +259,17 @@ docs_pattern:
     url: /design_pattern/20250704_004_design_pattern/
     children:
     - title: "1. 생성 패턴"
+    - title: "1-01. 팩토리 패턴(Factory Pattern)"
+      url: /design_pattern/20251123_003_factory_pattern/
     - title: "1-03. 빌더 패턴(Builder Pattern)"
       url: /design_pattern/20250704_002_builder_pattern/
     - title: "2. 구조 패턴"
     - title: "3. 행동 패턴"
+    - title: "3-01. 전략 패턴"
+      url: /design_pattern/20251123_002_strategy_pattern/
+    - title: "4. 참고"
+    - title: "4-01. 상속과 합성"
+    - title: "4-02. 인터페이스와 공통 규약, method signature"
   - title: "기타"
     children:
       - title: "· 안티패턴"
