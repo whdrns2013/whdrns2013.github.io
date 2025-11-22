@@ -468,7 +468,7 @@ docs_statistics:
     - title: "정규분포"
       url: /statistics/20251122_009_normal_distribution/
     - title: "중심극한정리"
-      url: /statistics/2025-11-22-20251122_010_central_limit_theorem/
+      url: /statistics/20251122_010_central_limit_theorem/
 
 
 docs_clang:
