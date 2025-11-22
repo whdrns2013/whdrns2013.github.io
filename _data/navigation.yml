@@ -447,6 +447,28 @@ docs_statistics:
       url: /statistics/20251121_013_statistics_standard_deviation/
     - title: "지수"
       url: /statistics/20251121_014_statistics_index/
+  - title: "확률"
+    children:
+    - title: "확률"
+      url: /statistics/20251122_001_probability/
+    - title: "확률의 역사"
+      url: /statistics/20251122_002_probability_history/
+    - title: "객관적 확률과 주관적 확률"
+      url: /statistics/20251122_003_probability_objective_and_subjective/
+    - title: "조건부 확률"
+      url: /statistics/20251122_004_conditional_probability/
+    - title: "역확률(사후확률)과 베이즈 정리"
+      url: /statistics/20251122_005_bayes_theorem/
+    - title: "독립"
+      url: /statistics/20251122_006_independence/
+    - title: "확률의 예시 : 복권"
+      url: /statistics/20251122_007_lotto_probability/
+    - title: "확률변수와 기댓값"
+      url: /statistics/20251122_008_random_variable/
+    - title: "정규분포"
+      url: /statistics/20251122_009_normal_distribution/
+    - title: "중심극한정리"
+      url: /statistics/2025-11-22-20251122_010_central_limit_theorem/
 
 
 docs_clang:
