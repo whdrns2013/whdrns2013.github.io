@@ -635,7 +635,7 @@ docs_nlp:
     - title: "TF-IDF"
       url: /nlp/20251020_003_tfidf/
     - title: "LSA"
-    children: /nlp/20251023_001_lsa/
+      url: /nlp/20251023_001_lsa/
   - title: "유사도 측정"
     children:
     - title: "코사인 유사도"
