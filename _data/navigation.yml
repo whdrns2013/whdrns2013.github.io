@@ -482,6 +482,19 @@ docs_statistics:
       url: /statistics/20251122_009_normal_distribution/
     - title: "중심극한정리"
       url: /statistics/20251122_010_central_limit_theorem/
+  - title: "통계학"
+    children:
+    - title: "통계학의 역사"
+      url: /statistics/20251123_004_statistics_history/
+    - title: "통계학의 기본 가정"
+      url: /statistics/20251123_005_statistics_basic_ assumption/
+    - title: "모집단과 표본, 모수와 통계량"
+      url: /statistics/20251123_006_population_and_sample/
+    - title: "통계적 추론-추정과 검정"
+      url: /statistics/20251123_007_statistical_inference/
+    - title: "통계적 추정-불편성,효율성,일치성"
+      url: /statistics/20251123_008_statistical_estimation/
+
 
 
 docs_clang:
