@@ -4,7 +4,7 @@ excerpt: 최신 모델만이 아닌, 여러 가지 모델을 공부해야 하는
 date: 2025-10-19 00:25:00 +0900      # 작성일 (필수)
 lastmod: 2025-10-19 00:25:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2025-10-19 00:25:00 +0900   # 최종 수정일 (필수)
-categories: [NLP, deep_learning, AI]       # 다수 카테고리에 포함 가능 (필수)
+categories: NLP       # 다수 카테고리에 포함 가능 (필수)
 tags: nlp 자연언어처리 자연어 자연언어 ai universal approximation theorem inductive learning bias 만능 머신러닝 모델 machinelearning machine learning 귀납편향 학습편향                       # 태그 복수개 가능 (필수)
 classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부

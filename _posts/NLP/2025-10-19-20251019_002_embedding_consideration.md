@@ -4,7 +4,7 @@ excerpt: 임베딩이 무엇인지, 그리고 현실의 문제에 대한 차원 
 date: 2025-10-19 01:41:00 +0900      # 작성일 (필수)
 lastmod: 2025-10-19 01:41:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2025-10-19 01:41:00 +0900   # 최종 수정일 (필수)
-categories: [NLP, deep_learning, AI]       # 다수 카테고리에 포함 가능 (필수)
+categories: NLP       # 다수 카테고리에 포함 가능 (필수)
 tags: nlp 자연언어처리 자연어 자연언어 임베딩 embedding 고차원 저차원 다양체 manifold ai 머신러닝 모델 machinelearning machine learning                       # 태그 복수개 가능 (필수)
 classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
