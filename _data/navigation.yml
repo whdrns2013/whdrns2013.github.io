@@ -636,7 +636,7 @@ docs_nlp:
       url: /nlp/20251020_003_tfidf/
     - title: "- LSA"
       url: /nlp/20251023_001_lsa/
-  - title: "유사도 측정"
+  - title: "유사성 분석"
     children:
     - title: "- 코사인 유사도"
       url: /nlp/20251021_001_cosine_similarity/
