@@ -628,12 +628,18 @@ docs_nlp:
       url: /nlp/20251019_003_nlp_terms/
   - title: "텍스트 표현"
     children:
-    - title: "- 텍스트 표현의 방법들"
+    - title: "- 텍스트 표현 방법들"
       url: /nlp/20251020_001_text_representation/
+  - title: "등장 횟수 기반 텍스트 표현"
+    children:
     - title: "- Bag of Words (BoW)"
       url: /nlp/20251020_002_bag_of_words/
     - title: "- TF-IDF"
       url: /nlp/20251020_003_tfidf/
+  - title: "분포 기반 표현"
+    children:
+    - title: "- 임베딩과 텍스트 표현 기술의 관계"
+      url: 
     - title: "- LSA"
       url: /nlp/20251023_001_lsa/
   - title: "유사성 분석"
@@ -641,3 +647,4 @@ docs_nlp:
     - title: "- 코사인 유사도"
       url: /nlp/20251021_001_cosine_similarity/
   - title: "차원 축소"
+  - title: "토픽 모델링"

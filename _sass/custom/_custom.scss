@@ -1,0 +1,17 @@
+.highlight {
+  position: relative; /* 배치를 위해 필요 */
+}
+
+.highlight code[data-lang]::before {
+  content: attr(data-lang); /* 코드 블록의 언어 속성을 가져와 표시 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.5em;
+  background-color: #666; /* 배지 배경색 */
+  color: #fff; /* 배지 글자색 */
+  font-size: 0.7em;
+  text-transform: uppercase;
+  border-bottom-left-radius: 5px; /* 왼쪽 아래 모서리를 둥글게 */
+  z-index: 1;
+}
