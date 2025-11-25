@@ -438,7 +438,7 @@ docs_statistics:
       url: /statistics/20251121_003_statistics_history/
     - title: "국가 통계"
       url: /statistics/20251121_004_national_statistics/
-  - title: "통계 기법"
+  - title: "통계"
     children:
     - title: "통계 만들기"
       url: /statistics/20251121_005_make_statistics/
@@ -494,6 +494,92 @@ docs_statistics:
       url: /statistics/20251123_007_statistical_inference/
     - title: "통계적 추정-불편성,효율성,일치성"
       url: /statistics/20251123_008_statistical_estimation/
+  - title: "통계적 검정"
+    children:
+    - title: "가설 - 귀무가설과 대립가설"
+      url:
+    - title: "가설의 검정"
+      url:
+    - title: "가설 검정의 오류"
+      url:
+    - title: "통계적 가설검정의 종류"
+      url:
+    - title: "통계적 가설검정의 절차"
+      url:
+    - title: "스포크 박사의 재판"
+      url:
+  - title: "여론조사"
+    children:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
+  - title: "야구에서의 통계"
+    children:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
+  - title: "상관 분석"
+    children:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
+  - title: "통계 시각화"
+    children:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
 
 
 
