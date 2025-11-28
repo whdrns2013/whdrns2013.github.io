@@ -498,15 +498,13 @@ docs_statistics:
     children:
     - title: "가설 - 귀무가설과 대립가설"
       url: /statistics/20251127_001_hypothesis/
-    - title: "가설의 검정"
-      url: /20251128_001_hypothesis_statistical_test/
-    - title: "가설 검정의 오류"
+    - title: "통계적 가설검정과 가설검정의 오류(1종 오류, 2종 오류)"
+      url: /statistics/20251128_001_hypothesis_statistical_test/
+    - title: "통계적 가설검정 - 유의확률과 유의수준"
       url:
-    - title: "통계적 가설검정의 종류"
+    - title: "통계적 가설검정의 기본 절차"
       url:
-    - title: "통계적 가설검정의 절차"
-      url:
-    - title: "스포크 박사의 재판"
+    - title: "통계적 가설검정 방법의 종류 - 유의성 검정과 최강력 검정"
       url:
   - title: "여론조사"
     children:
