@@ -497,9 +497,9 @@ docs_statistics:
   - title: "통계적 검정"
     children:
     - title: "가설 - 귀무가설과 대립가설"
-      url:
+      url: /statistics/20251127_001_hypothesis/
     - title: "가설의 검정"
-      url:
+      url: /20251128_001_hypothesis_statistical_test/
     - title: "가설 검정의 오류"
       url:
     - title: "통계적 가설검정의 종류"
