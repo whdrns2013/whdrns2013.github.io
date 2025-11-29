@@ -500,12 +500,14 @@ docs_statistics:
       url: /statistics/20251127_001_hypothesis/
     - title: "통계적 가설검정과 가설검정의 오류(1종 오류, 2종 오류)"
       url: /statistics/20251128_001_hypothesis_statistical_test/
-    - title: "통계적 가설검정 - 유의확률과 유의수준"
-      url:
-    - title: "통계적 가설검정의 기본 절차"
-      url:
-    - title: "통계적 가설검정 방법의 종류 - 유의성 검정과 최강력 검정"
-      url:
+    - title: "유의확률"
+      url: /statistics/20251129_001_significance_probabiliry/
+    - title: "유의수준과 기각역, 기각역의 임곗값"
+      url: /statistics/20251129_002_significance_level copy/
+    - title: "가설검정의 방법들 - 유의성 검정, 최강력 검정"
+      url: /statistics/2025-11-29-20251129_003_hypothesis_test_methods/
+    - title: "통계적 가설검정의 절차"
+      url: /statistics/20251129_003_steps_of_hypothesis_test/
   - title: "여론조사"
     children:
     - title: ""
