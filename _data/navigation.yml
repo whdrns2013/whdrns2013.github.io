@@ -541,15 +541,15 @@ docs_statistics:
     - title: "인과관계"
       url: /statistics/20251129_020_causality/
     - title: "반사실체계"
-      url: /statistics/
+      url: /statistics/20251130_001_counterfactual_framework/
     - title: "인과관계가 없는 상관관계"
-      url: /statistics/
+      url: /statistics/20251130_002_correlation_but_not_causality/
     - title: "인과관계가 없는 상관관계 - 우연"
-      url: /statistics/
+      url: /statistics/20251130_003_coincide/
     - title: "인과관계가 없는 상관관계 - 선택편향"
-      url: /statistics/
+      url: /statistics/20251130_004_selection_bias/
     - title: "인과관계가 없는 상관관계 - 교란작용"
-      url: /statistics/
+      url: /statistics/20251130_005_confounding/
     - title: "교란변수"
       url: /statistics/
     - title: "교란변수 통제 방법 - 랜덤화"
