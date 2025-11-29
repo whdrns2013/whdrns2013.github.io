@@ -537,9 +537,9 @@ docs_statistics:
   - title: "상관관계와 인과관계"
     children:
     - title: "상관관계"
-      url: /statistics/
+      url: /statistics/20251129_019_correlation/
     - title: "인과관계"
-      url: /statistics/
+      url: /statistics/20251129_020_causality/
     - title: "반사실체계"
       url: /statistics/
     - title: "인과관계가 없는 상관관계"
@@ -592,6 +592,8 @@ docs_statistics:
       url: /statistics/
   - title: "상관 분석"
     children:
+    - title: "상관관계"
+      url: /statistics/20251129_019_correlation/
     - title: "표본상관계수"
       url: /statistics/20251129_018_sample_correlation_coefficient/
     - title: ""
