@@ -503,7 +503,7 @@ docs_statistics:
     - title: "유의확률"
       url: /statistics/20251129_001_significance_probabiliry/
     - title: "유의수준과 기각역, 기각역의 임곗값"
-      url: /statistics/20251129_002_significance_level copy/
+      url: /statistics/20251129_002_significance_level/
     - title: "가설검정의 방법들 - 유의성 검정, 최강력 검정"
       url: /statistics/20251129_003_hypothesis_test_methods/
     - title: "통계적 가설검정의 절차"
@@ -514,11 +514,11 @@ docs_statistics:
       url: /statistics/20251129_004_public_opinion_poll/
     - title: "여론조사의 주요 용어"
       url: /statistics/20251129_005_terms_of_public_opinion_poll/
-    - title: "좋은 표본 추출 - 무작위 추출, 층화, 표본의 크기"
+    - title: "좋은 표본 추출(무작위추출,층화,표본의크기)"
       url: /statistics/20251129_006_random_sampling/
     - title: "여론조사의 단계"
       url: /statistics/20251129_007_steps_of_public_opinion_poll/
-    - title: "여론조사와 결과 해석에 영향을 미치는 사항들"
+    - title: "결과 해석에 영향을 미치는 사항들"
       url: /statistics/20251129_008_influcencing_factors/
     - title: "여론조사의 신뢰도 측정"
       url: /statistics/20251129_009_trust_of_public_opinion_poll/
@@ -528,12 +528,68 @@ docs_statistics:
       url: /statistics/20251129_011_essential_factors_in_result/
   - title: "야구에서의 통계"
     children:
-    - title: "야구와 데이터 - 타자와 투수의 경기력 지표"
+    - title: "야구와 데이터-타자와 투수의 경기력 지표"
       url: /statistics/20251129_012_baseball_and_data/
     - title: "그래프로 야구에서의 통계 나타내기"
       url: /statistics/20251129_013_baseball_graph/
-    - title: "상관계수로 선수의 지표와 연봉 관계 살펴보기"
+    - title: "상관계수로 살펴보는 경기력지표와 연봉"
       url: /statistics/20251129_017_baseball_sample_correlation_coefficient/
+  - title: "상관관계와 인과관계"
+    children:
+    - title: "상관관계"
+      url: /statistics/
+    - title: "인과관계"
+      url: /statistics/
+    - title: "반사실체계"
+      url: /statistics/
+    - title: "인과관계가 없는 상관관계"
+      url: /statistics/
+    - title: "인과관계가 없는 상관관계 - 우연"
+      url: /statistics/
+    - title: "인과관계가 없는 상관관계 - 선택편향"
+      url: /statistics/
+    - title: "인과관계가 없는 상관관계 - 교란작용"
+      url: /statistics/
+    - title: "교란변수"
+      url: /statistics/
+    - title: "교란변수 통제 방법 - 랜덤화"
+      url: /statistics/
+    - title: "교란변수 통제 방법 - 층화"
+      url: /statistics/
+    - title: "교란변수 통제 방법 - 매칭"
+      url: /statistics/
+    - title: "교란변수 통제 방법 - 보정"
+      url: /statistics/
+    - title: "교란변수 통제 방법 - 그 외"
+      url: /statistics/
+  - title: "임상시험"
+    children:
+    - title: "임상시험의 정의"
+      url: /statistics/
+    - title: "임상시험의 단계"
+      url: /statistics/
+    - title: "임상시험의 원칙"
+      url: /statistics/
+    - title: "임상시험의 원칙 1.대조군"
+      url: /statistics/
+    - title: "임상시험의 원칙 2.랜덤화"
+      url: /statistics/
+    - title: "임상시험의 원칙 3.눈가림"
+      url: /statistics/
+    - title: "임상시험의 원칙 4.계획"
+      url: /statistics/
+    - title: "통계적 기법 - 랜덤화와 배정 은폐"
+      url: /statistics/
+    - title: "통계적 기법 - 연구대상자 수 결정"
+      url: /statistics/
+    - title: "통계적 기법 - 분석대상 선정"
+      url: /statistics/
+    - title: "통계적 기법 - 베이스라인 평가"
+      url: /statistics/
+    - title: "결과 분석"
+      url: /statistics/
+    - title: "중간 분석"
+      url: /statistics/
   - title: "상관 분석"
     children:
     - title: "표본상관계수"
