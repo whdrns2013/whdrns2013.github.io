@@ -505,53 +505,39 @@ docs_statistics:
     - title: "유의수준과 기각역, 기각역의 임곗값"
       url: /statistics/20251129_002_significance_level copy/
     - title: "가설검정의 방법들 - 유의성 검정, 최강력 검정"
-      url: /statistics/2025-11-29-20251129_003_hypothesis_test_methods/
+      url: /statistics/20251129_003_hypothesis_test_methods/
     - title: "통계적 가설검정의 절차"
       url: /statistics/20251129_003_steps_of_hypothesis_test/
   - title: "여론조사"
     children:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-      - title: ""
-      url:
+    - title: "여론조사란"
+      url: /statistics/20251129_004_public_opinion_poll/
+    - title: "여론조사의 주요 용어"
+      url: /statistics/20251129_005_terms_of_public_opinion_poll/
+    - title: "좋은 표본 추출 - 무작위 추출, 층화, 표본의 크기"
+      url: /statistics/20251129_006_random_sampling/
+    - title: "여론조사의 단계"
+      url: /statistics/20251129_007_steps_of_public_opinion_poll/
+    - title: "여론조사와 결과 해석에 영향을 미치는 사항들"
+      url: /statistics/20251129_008_influcencing_factors/
+    - title: "여론조사의 신뢰도 측정"
+      url: /statistics/20251129_009_trust_of_public_opinion_poll/
+    - title: "여론조사의 결과를 바르게 읽기"
+      url: /statistics/20251129_010_understand_result/
+    - title: "여론조사 결과에 반드시 포함할 사항들"
+      url: /statistics/20251129_011_essential_factors_in_result/
   - title: "야구에서의 통계"
     children:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
-      - title: ""
-      url:
+    - title: "야구와 데이터 - 타자와 투수의 경기력 지표"
+      url: /statistics/20251129_012_baseball_and_data/
+    - title: "그래프로 야구에서의 통계 나타내기"
+      url: /statistics/20251129_013_baseball_graph/
+    - title: "상관계수로 선수의 지표와 연봉 관계 살펴보기"
+      url: /statistics/20251129_017_baseball_sample_correlation_coefficient/
   - title: "상관 분석"
     children:
-    - title: ""
-      url:
-    - title: ""
-      url:
-    - title: ""
-      url:
+    - title: "표본상관계수"
+      url: /statistics/20251129_018_sample_correlation_coefficient/
     - title: ""
       url:
     - title: ""
@@ -564,8 +550,12 @@ docs_statistics:
       url:
   - title: "통계 시각화"
     children:
-    - title: ""
-      url:
+    - title: "줄기-잎 그림"
+      url: /statistics/20251129_014_stem_leaf_diagram/
+    - title: "상자 그림"
+      url: /statistics/20251129_015_box_plot/
+    - title: "산점도"
+      url: /statistics/20251129_016_scatter_plot/
     - title: ""
       url:
     - title: ""
