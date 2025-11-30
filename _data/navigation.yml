@@ -569,11 +569,11 @@ docs_statistics:
     - title: "임상시험의 원칙 1.대조군"
       url: /statistics/20251130_013_control_group/
     - title: "임상시험의 원칙 2.랜덤화"
-      url: /statistics/
+      url: /statistics/20251201_001_randomization/
     - title: "임상시험의 원칙 3.눈가림"
-      url: /statistics/
+      url: /statistics/20251201_002_blinding/
     - title: "임상시험의 원칙 4.계획"
-      url: /statistics/
+      url: /statistics/20251201_003_planning/
     - title: "통계적 기법 - 랜덤화와 배정 은폐"
       url: /statistics/
     - title: "통계적 기법 - 연구대상자 수 결정"
