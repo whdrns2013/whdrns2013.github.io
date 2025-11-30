@@ -551,17 +551,15 @@ docs_statistics:
     - title: "인과관계가 없는 상관관계 - 교란작용"
       url: /statistics/20251130_005_confounding/
     - title: "교란변수"
-      url: /statistics/
-    - title: "교란변수 통제 방법 - 랜덤화"
-      url: /statistics/
-    - title: "교란변수 통제 방법 - 층화"
-      url: /statistics/
-    - title: "교란변수 통제 방법 - 매칭"
-      url: /statistics/
-    - title: "교란변수 통제 방법 - 보정"
-      url: /statistics/
-    - title: "교란변수 통제 방법 - 그 외"
-      url: /statistics/
+      url: /statistics/20251130_006_confounding_variable/
+    - title: "교란변수 통제 - 랜덤화"
+      url: /statistics/20251130_007_randomization/
+    - title: "교란변수 통제 - 층화"
+      url: /statistics/20251130_008_stratification/
+    - title: "교란변수 통제 - 매칭"
+      url: /statistics/20251130_009_matching/
+    - title: "교란변수 통제 - 보정"
+      url: /statistics/20251130_010_regression_adjustment/
   - title: "임상시험"
     children:
     - title: "임상시험의 정의"
