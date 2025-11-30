@@ -562,14 +562,12 @@ docs_statistics:
       url: /statistics/20251130_010_regression_adjustment/
   - title: "임상시험"
     children:
-    - title: "임상시험의 정의"
-      url: /statistics/
-    - title: "임상시험의 단계"
-      url: /statistics/
+    - title: "임상시험의 정의와 시험 단계"
+      url: /statistics/20251130_011_clinical_trial/
     - title: "임상시험의 원칙"
-      url: /statistics/
+      url: /statistics/20251130_012_principal_of_clinical_trial/
     - title: "임상시험의 원칙 1.대조군"
-      url: /statistics/
+      url: /statistics/20251130_013_control_group/
     - title: "임상시험의 원칙 2.랜덤화"
       url: /statistics/
     - title: "임상시험의 원칙 3.눈가림"
