@@ -205,18 +205,26 @@ docs_python:
       url: /python/20251201_004_python_list_slicing/
     - title: "Comprehension"
       url: /python/20230105_001_python_comprehension/
-    - title: "String 문자열"
-      children:
+  - title: "String 문자열"
+    children:
     - title: "String Formatting - 문자열 형식 지정"
       url: /python/20251201_005_python_string_formatting/
+  - title: "예외 처리"
+    children:
+    - title: "try-except finally"
+      url: /python/20251202_002_python_exception_handling/
+    - title: "Error 의 종류"
+      url: /python/20251202_003_python_error_type/
   - title: "문법적 요소"
     children:
-    - title : "컨텍스트 관리"
-      children:
-      - title: "컨텍스트 관리"
-        url: /python/20251201_006_context_management/
-      - title: "컨텍스트 관리자 'with'"
-        url: /python/20251201_007_python_with/
+    - title: "컨텍스트 관리"
+      url: /python/20251201_006_context_management/
+    - title: "컨텍스트 관리자 'with'"
+      url: /python/20251201_007_python_with/
+    - title: "언패킹 unpacking"
+      url: /python/20251201_008_python_unpacking/
+    - title: "언더스코어 underscore"
+      url: /python/20251202_001_python_throwaway_variable_underscore/
 
 # rust
 docs_rust:
