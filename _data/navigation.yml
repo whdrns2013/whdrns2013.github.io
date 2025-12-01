@@ -199,16 +199,24 @@ docs_python:
       url:
   - title: "Python 자료구조"
     children:
-    - title: "List 리스트"
-      url:
+  - title: "List 리스트"
+    children:
     - title: "시퀀스 슬라이싱"
       url: /python/20251201_004_python_list_slicing/
     - title: "Comprehension"
       url: /python/20230105_001_python_comprehension/
-  - title: "String 문자열"
-    children:
+    - title: "String 문자열"
+      children:
     - title: "String Formatting - 문자열 형식 지정"
       url: /python/20251201_005_python_string_formatting/
+  - title: "문법적 요소"
+    children:
+    - title : "컨텍스트 관리"
+      children:
+      - title: "컨텍스트 관리"
+        url: /python/20251201_006_context_management/
+      - title: "컨텍스트 관리자 'with'"
+        url: /python/20251201_007_python_with/
 
 # rust
 docs_rust:
