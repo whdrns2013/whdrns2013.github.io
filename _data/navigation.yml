@@ -217,8 +217,6 @@ docs_python:
       url: /python/20251202_003_python_error_type/
   - title: "문법적 요소"
     children:
-    - title: "컨텍스트 관리"
-      url: /python/20251201_006_context_management/
     - title: "컨텍스트 관리자 'with'"
       url: /python/20251201_007_python_with/
     - title: "언패킹 unpacking"
