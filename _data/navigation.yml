@@ -196,7 +196,17 @@ docs_python:
   - title: python
     children:
     - title: "Python 소개"
-    - title: "Python 자료구조"
+  - title: "Python 자료구조"
+    children:
+    - title: "List"
+    - title: "시퀀스 슬라이싱"
+      url: /python/20251201_004_python_list_slicing/
+    - title: "Comprehension"
+  - title: "문자열 형식 지정 String Formatting"
+    children:
+    - title: "C 스타일 formatting"
+    - title: "str.format() 메서드"
+    - title: "f-string formatting"
 
 # rust
 docs_rust:
