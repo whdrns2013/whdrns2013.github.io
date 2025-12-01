@@ -196,17 +196,19 @@ docs_python:
   - title: python
     children:
     - title: "Python 소개"
+      url:
   - title: "Python 자료구조"
     children:
-    - title: "List"
+    - title: "List 리스트"
+      url:
     - title: "시퀀스 슬라이싱"
       url: /python/20251201_004_python_list_slicing/
     - title: "Comprehension"
-  - title: "문자열 형식 지정 String Formatting"
+      url: /python/20230105_001_python_comprehension/
+  - title: "String 문자열"
     children:
-    - title: "C 스타일 formatting"
-    - title: "str.format() 메서드"
-    - title: "f-string formatting"
+    - title: "String Formatting - 문자열 형식 지정"
+      url: /python/20251201_005_python_string_formatting/
 
 # rust
 docs_rust:
@@ -343,10 +345,38 @@ docs_postgresql:
 docs_data_analysis:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: 데이터
+  - title: "데이터"
     children:
-    - title: "데이터의 정의와 분류"
-    - title: "데이터 분석 용어 모음"
+    - title: "데이터와 정보"
+      url:
+    - title: "데이터의 분류 - 속성을 기준으로"
+      url:
+    - title: "데이터의 분류 - 형태를 기준으로"
+      url:
+  - title: "데이터 분석"
+    children:
+    - title: "데이터 분석의 정의"
+      url:
+    - title: "데이터 분석의 4단계"
+      url:
+    - title: "데이터 분석 적용 사례"
+      url:
+    - title: "데이터 분석의 발전 과정"
+      url:
+    - title: "데이터 분석의 3요소"
+      url:
+    - title: "데이터 분석과 데이터 과학"
+      url:
+    - title: "데이터 분석의 과정(workflow)"
+      url:
+    - title: ""
+      url:
+    - title:
+      url:
+    - title:
+      url:
+    - title:
+      url:
   - title: 데이터 분석 방법
     children:
     - title: "데이터 분석의 종류"
@@ -377,15 +407,7 @@ docs_data_analysis:
     - title: K폴드 교차검증
   - title: 분석모형 개선
   - title: 데이터 시각화
-
-# python docs
-docs_python:
-  - title: "<-Doc으로 돌아가기"
-    url: /docs/intro
-  - title: python
-    children:
-    - title: "Python 소개"
-    - title: "Python 자료구조"
+  - title: "데이터 분석 용어 모음"
 
 # python_logging
 docs_python_logging:
