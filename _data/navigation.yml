@@ -375,9 +375,9 @@ docs_data_analysis:
     children:
     - title: "데이터와 정보"
       url:
-    - title: "데이터의 유형 - 속성을 기준으로"
+    - title: "데이터의 분류 - 속성을 기준으로"
       url:
-    - title: "데이터의 유형 - 형태를 기준으로"
+    - title: "데이터의 분류 - 형태를 기준으로"
       url:
   - title: "데이터 분석 개요"
     children:
@@ -397,7 +397,7 @@ docs_data_analysis:
       url:
   - title:  "데이터 수집"
     children:
-    - title: "데이터 수집의 필요성"
+    - title: "데이터 수집"
       url:
     - title: "고품질 데이터"
       url:
