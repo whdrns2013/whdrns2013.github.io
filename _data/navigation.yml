@@ -375,11 +375,11 @@ docs_data_analysis:
     children:
     - title: "데이터와 정보"
       url:
-    - title: "데이터의 분류 - 속성을 기준으로"
+    - title: "데이터의 유형 - 속성을 기준으로"
       url:
-    - title: "데이터의 분류 - 형태를 기준으로"
+    - title: "데이터의 유형 - 형태를 기준으로"
       url:
-  - title: "데이터 분석"
+  - title: "데이터 분석 개요"
     children:
     - title: "데이터 분석의 정의"
       url:
@@ -395,13 +395,21 @@ docs_data_analysis:
       url:
     - title: "데이터 분석의 과정(workflow)"
       url:
-    - title: ""
+  - title:  "데이터 수집"
+    children:
+    - title: "데이터 수집의 필요성"
       url:
-    - title:
+    - title: "고품질 데이터"
       url:
-    - title:
+    - title: "데이터 수집 방법"
       url:
-    - title:
+    - title: "파일 기반 데이터 수집"
+      url:
+    - title: "API 기반 데이터 수집"
+      url:
+    - title: "웹 스크래핑 기반 데이터 수집"
+      url:
+    - title: "웹 스크래핑과 웹 크롤링의 차이"
       url:
   - title: 데이터 분석 방법
     children:
