@@ -801,6 +801,26 @@ docs_clang:
         url: /clang/20251116_018_clang_etc_operator/
       - title: "08-11. 연산자의 우선순위와 결합방향"
         url: /clang/20251116_019_clang_operator_priority/
+  - title: "9. 제어문"
+    children:
+    - title: "프로그래밍 언어의 제어 구조와 C언어의 제어문"
+      url: /clang/20251206_001_clang_control_structure/
+    - title: "선택 제어문 1. if"
+      url:
+    - title: "선택 제어문 2. switch"
+      url:
+    - title: "반복 제어문 1. for"
+      url:
+    - title: "반복 제어문 2. while"
+      url:
+    - title: "반복 제어문 3. do-while"
+      url:
+    - title: "break 문"
+      url:
+    - title: "continue 문"
+      url:
+    - title: "goto 문"
+      url:
   - title: "99. 기타"
     children:
       - title: "etc. 숫자를 이진수로 변환하기"
