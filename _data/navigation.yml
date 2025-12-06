@@ -806,7 +806,7 @@ docs_clang:
     - title: "프로그래밍 언어의 제어 구조와 C언어의 제어문"
       url: /clang/20251206_001_clang_control_structure/
     - title: "선택 제어문 1. if"
-      url:
+      url: /clang/20251207_001_clang_if/
     - title: "선택 제어문 2. switch"
       url:
     - title: "반복 제어문 1. for"
