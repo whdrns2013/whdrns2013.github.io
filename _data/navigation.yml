@@ -56,6 +56,8 @@ docs:
         url: /statistics/20251121_001_statistics_data/
       - title: "• 자연언어처리"
         url: /nlp/20251018_001_nlp_definition/
+      - title: "• 추천 기술
+        url: /
 
 # docker docs
 docs_docker:
@@ -829,6 +831,8 @@ docs_clang:
 
 # 자연언어처리
 docs_nlp:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
   - title: "자연언어처리"
   - title: "자연언어처리에 대한 정의와 고찰"
     children:
@@ -864,3 +868,19 @@ docs_nlp:
       url: /nlp/20251021_001_cosine_similarity/
   - title: "차원 축소"
   - title: "토픽 모델링"
+
+# 추천 기술
+docs_recommendation:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "추천 기술"
+  - title: "추천 기술의 개요"
+  - title: "추천 기술의 발전"
+  - title: "협업 필터링과 컨텐츠 기반 필터링"
+  - title: "추천 시스템의 해결 과제"
+    children:
+      - title: "콜드스타트"
+      - title: "롱테일"
+      - title: "데이터 확장"
+  - title: "하드 필터링과 소프트 필터링"
+  - title: "추천 성능 평가"
