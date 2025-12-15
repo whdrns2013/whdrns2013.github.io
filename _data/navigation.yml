@@ -39,7 +39,7 @@ docs:
       - title: "• Rust"
         url: /docs/rust/01_rust_intro
       - title: "• Patterns 다양한 설계 방법"
-        url: /docs/patterns/00_patterns_intro
+        url: /design_pattern/20251123_001_pattern/
       - title: "• Airflow"
         url: /docs/airflow/01_airflow_intro
       - title: "• 홈서버 구축"
