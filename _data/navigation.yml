@@ -39,7 +39,7 @@ docs:
       - title: "• Rust"
         url: /docs/rust/01_rust_intro
       - title: "• Patterns 다양한 설계 방법"
-        url: /docs/patterns/00_patterns_intro
+        url: /design_pattern/20251123_001_pattern/
       - title: "• Airflow"
         url: /docs/airflow/01_airflow_intro
       - title: "• 홈서버 구축"
@@ -299,17 +299,19 @@ docs_pattern:
         url: /design_pattern/20250708_001_msa/
   - title: "디자인 패턴"
     url: /design_pattern/20250704_004_design_pattern/
+  - title: "1. 생성 패턴"
     children:
-    - title: "1. 생성 패턴"
     - title: "1-01. 팩토리 패턴(Factory Pattern)"
       url: /design_pattern/20251123_003_factory_pattern/
     - title: "1-03. 빌더 패턴(Builder Pattern)"
       url: /design_pattern/20250704_002_builder_pattern/
-    - title: "2. 구조 패턴"
-    - title: "3. 행동 패턴"
+  - title: "2. 구조 패턴"
+  - title: "3. 행동 패턴"
+    children:
     - title: "3-01. 전략 패턴"
       url: /design_pattern/20251123_002_strategy_pattern/
-    - title: "4. 참고"
+  - title: "4. 참고"
+    children:
     - title: "4-01. 상속과 합성"
     - title: "4-02. 인터페이스와 공통 규약, method signature"
   - title: "기타"
@@ -363,6 +365,8 @@ docs_postgresql:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
     children:
+    - title: "PostgreSQL 관행"
+      url: /sql/20251215_001_postgresql_best_practice/
     - title: "PostgreSQL DDL문"
       url: /sql/20251111_001_postgresql_ddl/
     - title: "PostgreSQL DB dump"
@@ -886,6 +890,11 @@ docs_recommendation:
       - title: "데이터 확장"
   - title: "하드 필터링과 소프트 필터링"
   - title: "추천 성능 평가"
+    children:
+      - title: "1. HIT-RATE"
+      - title: "2. MRR"
+      - title: "3. MAP"
+      - title: "4. NDCG"
 
 docs_pandas:
   - title: "<-Doc으로 돌아가기"
