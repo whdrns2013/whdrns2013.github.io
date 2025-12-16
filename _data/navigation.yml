@@ -911,6 +911,8 @@ docs_pandas:
   - title: "Pandas 소개"
   - title: "Best Practice"
     children:
+    - title: "반복문 감소"
+      url: /python/20251217_001_pandas_reduce_loop/
     - title: "딕셔너리 캐싱"
     - title: "해시 join으로 반복문 제거 및 처리 가속"
   - title: "Trouble Shooting"
