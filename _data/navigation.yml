@@ -914,7 +914,9 @@ docs_pandas:
     - title: "반복문 감소"
       url: /python/20251217_001_pandas_reduce_loop/
     - title: "딕셔너리 캐싱"
-    - title: "해시 join으로 반복문 제거 및 처리 가속"
+      url: /python/20251217_002_pandas_dictionary_caching/
+    - title: "merge를 통한 해시 join"
+      url: /python/20251217_003_pandas_hash_join/
   - title: "Trouble Shooting"
     children:
     - title: "merge 과정에서 컬럼이 float64로 바뀌는 문제"
