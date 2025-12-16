@@ -213,6 +213,10 @@ docs_python:
     children:
     - title: "String Formatting - 문자열 형식 지정"
       url: /python/20251201_005_python_string_formatting/
+  - title: "내장 함수"
+    children:
+    - title: "sum()"
+      url: /python/20251216_002_python_sum/
   - title: "예외 처리"
     children:
     - title: "try-except finally"
@@ -239,6 +243,10 @@ docs_python:
       url: /python/20251202_007_python_filter/
     - title: "reduce 함수"
       url: /python/20251202_008_python_reduce/
+  - title: "Best Practice"
+    children:
+    - title: "hash lookup으로 탐색 성능 최적화"
+      url: python/20251216_001_python_hash_lookup/
 
 # rust
 docs_rust:
