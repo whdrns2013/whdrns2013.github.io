@@ -834,9 +834,29 @@ docs_clang:
     - title: "흐름 제어문 1. break 문"
       url: /clang/20251217_007_clang_break/
     - title: "continue 문"
-      url:
+      url: /clang/20251217_008_clang_continue/
     - title: "goto 문"
-      url:
+      url: /clang/20251217_009_clang_goto/
+  - title: "10. 함수"
+    children:
+    - title: "함수"
+      url: /clang/20251217_010_clang_function/
+    - title: "표준 함수와 사용자 정의 함수"
+      url: /clang/20251217_011_clang_std_function_and_custom_function/
+    - title: "함수의 구조"
+      url: /clang/20251217_012_clang_structure_of_function/
+    - title: "실 매개변수와 형식 매개변수"
+      url: /clang/20251217_013_clang_parameter/
+    - title: "함수의 원형"
+      url: 
+    - title: "매개변수를 통한 값의 전달"
+      url: 
+  - title: "11. 유효범위와 기억클래스"
+    children:
+    - title:
+      url: 
+    - title:
+      url: 
   - title: "99. 기타"
     children:
       - title: "etc. 숫자를 이진수로 변환하기"
