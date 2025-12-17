@@ -824,15 +824,15 @@ docs_clang:
     - title: "선택 제어문 1. if"
       url: /clang/20251207_001_clang_if/
     - title: "선택 제어문 2. switch"
-      url:
+      url: /clang/20251207_002_clang_swtich/
     - title: "반복 제어문 1. for"
-      url:
+      url: /clang/20251217_004_clang_for/
     - title: "반복 제어문 2. while"
-      url:
+      url: /clang/20251217_005_clang_while/
     - title: "반복 제어문 3. do-while"
-      url:
-    - title: "break 문"
-      url:
+      url: /clang/20251217_006_clang_do_while/
+    - title: "흐름 제어문 1. break 문"
+      url: /clang/20251217_007_clang_break/
     - title: "continue 문"
       url:
     - title: "goto 문"
