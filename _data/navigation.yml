@@ -247,6 +247,8 @@ docs_python:
     children:
     - title: "hash lookup으로 탐색 성능 최적화"
       url: python/20251216_001_python_hash_lookup/
+    - title: "comprehension으로 서브 딕셔너리 만들기"
+      url: python/20251218_004_dictionary_comprehension/
 
 # rust
 docs_rust:
