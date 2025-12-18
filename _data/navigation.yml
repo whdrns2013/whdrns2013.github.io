@@ -850,12 +850,102 @@ docs_clang:
     - title: "함수의 원형"
       url: /clang/20251218_001_clang_function_prototypemd/
     - title: "매개변수를 통한 값의 전달"
-      url: 
+      url: /clang/20251218_002_clang_call_by/
   - title: "11. 유효범위와 기억클래스"
     children:
-    - title:
+    - title: "유효범위 - 지역변수와 전역변수"
+      url: /clang/20251218_003_clang_scope/
+    - title: "기억 클래스 - 자동, 정적, 외부, 레지스터 변수"
       url: 
-    - title:
+  - title: "12. 배열"
+    children:
+    - title: "배열의 개념"
+      url: 
+    - title: "C언어에서의 배열"
+      url: 
+    - title: "배열의 초기화"
+      url: 
+    - title: "1차원 배열"
+      url: 
+    - title: "2차원 배열"
+      url: 
+    - title: "3차원 배열"
+      url: 
+    - title: "문자형 배열과 문자열"
+      url: 
+    - title: "함수에서의 배열 사용"
+      url: 
+  - title: "13. 포인터"
+    children:
+    - title: "포인터의 개념"
+      url: 
+    - title: "포인터 변수의 선언과 초기화"
+      url: 
+    - title: "포인터 변수와 일반 변수 간 비교"
+      url: 
+    - title: "주소 연산자와 포인터 연산자"
+      url: 
+    - title: "포인터의 주소"
+      url: 
+    - title: "포인터 연산자의 논리적 처리 과정"
+      url: 
+    - title: "포인터 연산"
+      url: 
+    - title: "포인터 사용시 주의할 점"
+      url: 
+  - title: "14. 배열과 포인터"
+    children:
+    - title: "1차원 배열과 포인터"
+      url: 
+    - title: "2차원 배열과 포인터"
+      url: 
+    - title: "문자열과 포인터"
+      url: 
+    - title: "포인터 배열"
+      url: 
+    - title: "이중 포인터"
+      url: 
+  - title: "15. 구조체"
+    children:
+    - title: "구조체의 개념"
+      url: 
+    - title: "구조체 선언과 정의 및 초기화"
+      url: 
+    - title: "구조체 멤버에 접근"
+      url: 
+    - title: "typedef"
+      url: 
+    - title: "구조체의 기억공간"
+      url: 
+    - title: "구조체 배열"
+      url: 
+    - title: "구조체 포인터"
+      url: 
+    - title: "함수에서의 구조체 사용"
+      url: 
+    - title: "구조체의 비트필드"
+      url: 
+    - title: "공용체"
+      url: 
+  - title: "16. 파일처리"
+    children:
+    - title: "파일의 개념"
+      url: 
+    - title: "C언어에서의 파일처리"
+      url: 
+    - title: "순차파일의 처리"
+      url: 
+    - title: "랜덤파일의 처리"
+      url: 
+  - title: "17. 메모리 할당"
+    children:
+    - title: "기억 공간"
+      url: 
+    - title: "메모리 정적 할당"
+      url: 
+    - title: "메모리 동적 할당"
+      url: 
+    - title: "기억 공간 관리"
       url: 
   - title: "99. 기타"
     children:
