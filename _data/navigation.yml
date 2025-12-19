@@ -1011,6 +1011,8 @@ docs_recommendation:
   - title: "하드 필터링과 소프트 필터링"
   - title: "추천 성능 평가"
     children:
+      - title: "추천시스템은 왜 하나의 정확도로 평가할 수 없을까"
+        url: /recommend_system/20251219_005_recommend_metric_intro/
       - title: "1. HIT-RATE"
       - title: "2. MRR"
       - title: "3. MAP"
