@@ -1013,10 +1013,13 @@ docs_recommendation:
     children:
       - title: "추천시스템은 왜 하나의 정확도로 평가할 수 없을까"
         url: /recommend_system/20251219_005_recommend_metric_intro/
-      - title: "1. HIT-RATE"
-      - title: "2. MRR"
-      - title: "3. MAP"
-      - title: "4. NDCG"
+      - title: "1. Precision"
+        url: /recommend_system/20251220_001_reco_precision/
+      - title: "2. Recall"
+        url: /recommend_system/20251220_002_reco_recall/
+      - title: "3. RR과 MRR"
+      - title: "4. AP와 MAP"
+      - title: "5. DCG와 NDCG, 그리고 Mean NDCG"
 
 docs_pandas:
   - title: "<-Doc으로 돌아가기"
