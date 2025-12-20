@@ -10,6 +10,7 @@ classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide �
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
 toc_sticky: true # 이동하는 목차 표시 여부 (toc:true 필요) // wide 시에는 sticky toc 불가
+pinned: true
 header: 
   image:         # 헤더 이미지 (asset내 혹은 url)
   teaser:        # 티저 이미지??

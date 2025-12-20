@@ -25,6 +25,7 @@ author: # 주인 외 작성자 표기 필요시
 permalink: 
 sidebar:
   nav: 
+pinned: 
 ---
 <!--postNo: 연월일_00n-->
 

@@ -4,7 +4,23 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator.page == 1 or paginator == nil %}
+  {% assign pinned_posts = site.posts | where: "pinned", true %}
+  {% if pinned_posts.size > 0 %}
+    <h2 class="archive__subtitle">📍 Featured Posts</h2>
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    <div class="entries-{{ entries_layout }}">
+      {% for post in pinned_posts %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}
+
+<br>
+
+<h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "⭐️ Recent Posts" }}</h2>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
