@@ -165,8 +165,17 @@ body {
 
   li{
     // font-size: 1.0em;
-    font-size: 0.9em;
-    // font-size: $page-font-size;
+    font-size: $page-font-size;
+  }
+  
+  // Prevent nested lists from shrinking further
+  li li {
+    font-size: 1em;
+  }
+
+  // Toggle (details) content - fixed size using rem to avoid compounding and ensure visibility
+  details li, details p {
+    font-size: 1.5rem;
   }
 
   p {
