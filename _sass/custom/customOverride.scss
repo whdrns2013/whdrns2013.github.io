@@ -37,3 +37,19 @@
   background-color: #28a745;
   border-color: #28a745;
 }
+
+/* Language Badge */
+.code-lang-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.2em 0.5em;
+  background-color: #666;
+  color: #ffffff;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom-right-radius: 5px;
+  pointer-events: none; /* Let clicks pass through if needed, though it's text */
+}
