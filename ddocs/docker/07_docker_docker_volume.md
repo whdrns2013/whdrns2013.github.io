@@ -159,7 +159,7 @@ docker exec al cat /root/test.txt
 >> test
 
 # docker inspect에도 바인드 마운트가 잡힘
-docker inspect -f '{{ .Mounts }}' al
+docker inspect -f '{% raw %}{{ .Mounts }}{% endraw %}' al
 >> [{bind  /weird /root   true rprivate}]
 ```
 
@@ -175,7 +175,7 @@ docker exec al ls /
 >> bin dev ... usr var 'weird2'
 
 # docker inspect에도 바인드 마운트 잡힘
-docker inspect -f '{{ .Mounts }}' al
+docker inspect -f '{% raw %}{{ .Mounts }}{% endraw %}' al
 >> [{bind  /home/user/b_mount /weird2   true rprivate}]
 ```
 

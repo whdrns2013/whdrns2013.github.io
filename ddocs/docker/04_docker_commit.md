@@ -126,7 +126,7 @@ docker ps
 >> 197387f1b436   ubuntu:22.04 /bin/bash  ...   focused_hamilton
 
 # c3f279d17e0a 컨테이너의 환경변수를 조회
-docker inspect -f "{{ .Config.Env }}" c3f279d17e0a
+docker inspect -f "{% raw %}{{ .Config.Env }}{% endraw %}" c3f279d17e0a
 >> [HOME=/ PATH=/usr/local/sbin:/usr/local/bin:...]
 
 # commit 하면서 ENV에 DEBUG=true 추가
@@ -134,7 +134,7 @@ docker commit --change "ENV DEBUG=true" c3f279d17e0a  svendowideit/test:v3
 >> f5283438590d
 
 # commit을 통해 새로 만들어진 이미지의 환경변수를 조회
-docker inspect -f "{{ .Config.Env }}" f5283438590d
+docker inspect -f "{% raw %}{{ .Config.Env }}{% endraw %}" f5283438590d
 >> [HOME=/ PATH=/usr/local/sbin:/usr/local/bin:... DEBUG=true]
 ```
 

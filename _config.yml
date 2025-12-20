@@ -221,6 +221,7 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  cache: false
 
 
 # Outputting
@@ -304,3 +305,4 @@ defaults:
 dark_theme_toggle        : true # 다크 모드 토글 기능 추가
 after_footer_scripts:
   - /assets/js/custom/dark-theme.js
+  - /assets/js/custom/copy-code.js

@@ -2,3 +2,38 @@
 @import "./toggle.scss";
 // @import "./summary.scss";
 /* ... */
+
+/* Copy Code Button */
+.highlight, .highlighter-rouge {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 2;
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.highlighter-rouge:hover .copy-code-button,
+.highlight:hover .copy-code-button {
+  opacity: 1;
+}
+
+.copy-code-button:hover {
+  background-color: #555;
+}
+
+.copy-code-button.copied {
+  background-color: #28a745;
+  border-color: #28a745;
+}
