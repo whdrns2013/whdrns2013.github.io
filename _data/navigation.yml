@@ -998,6 +998,8 @@ docs_nlp:
     children:
     - title: "BERT를 이용한 유사도 계산 실습"
       url: /nlp/20251224_001_bert_similarity/
+    - title: "HuggingFace LLM 모델 이용 실습"
+      url: /nlp/20251224_002_using_huggingface_model/
 
 # 추천 기술
 docs_recommendation:
