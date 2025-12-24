@@ -2,8 +2,8 @@
 title: Docker 에서 GPU 사용하기 (feat CUDA) # 제목 (필수)
 excerpt: 컨테이너에서 GPU를 사용해보자 # 서브 타이틀이자 meta description (필수)
 date: 2024-10-15 17:30:00 +0900      # 작성일 (필수)
-lastmod: 2024-10-15 17:30:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2024-10-15 17:30:00 +0900   # 최종 수정일 (필수)
+lastmod: 2025-12-24 15:16:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2025-12-24 15:16:00 +0900   # 최종 수정일 (필수)
 categories: docker         # 다수 카테고리에 포함 가능 (필수)
 tags:  docker dockercompose compose 도커 컴포즈 도커 컴포즈 gpu CUDA                   # 태그 복수개 가능 (필수)
 classes:  wide       # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -126,17 +126,44 @@ chmod 111 ./NVIDIA-Linux-<아키텍처>-<버전>.run
 ./NVIDIA-Linux-<아키텍처>-<버전>.run
 ```
 
+### (2) 재부팅  
 
-### (2) Nidia 드라이버 설치 완료 확인  
+재부팅을 합니다.  
+
+```bash
+sudo reboot
+```
+
+### (3) Nidia 드라이버 설치 완료 확인  
 
 ```bash
 # 드라이버 상태 출력
 nvidia-smi
 ```
 
-![[Pasted image 20240114133521.png]]  
+```bash
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:01:00.0 Off |                  N/A |
+|  0%   49C    P8              8W /  350W |       1MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
 
-### (3) 호스트에 Nvidia-CUDA-Toolkit 설치  
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+```
+
+### (4) 호스트에 Nvidia-CUDA-Toolkit 설치  
 
 **nvidia-cuda-toolkit**은 **CUDA**(Compute Unified Device Architecture) 개발 환경을 제공하여, GPU에서 **병렬 계산**을 수행할 수 있는 도구입니다.
 
@@ -146,7 +173,7 @@ apt install nvidia-cuda-toolkit
 ```
 
 
-### (4) 호스트에 nvidia-docker2 설치  
+### (5) 호스트에 nvidia-docker2 설치  
 
 **nvidia-docker2**는 **Docker** 컨테이너에서 **GPU**를 사용할 수 있도록 해주는 패키지입니다.
 
@@ -161,7 +188,7 @@ sudo apt-get update
 sudo apt-get install -y nvidia-docker2
 ```
 
-### (5) docker daemon 설정 파일에 runtime 추가  
+### (6) docker daemon 설정 파일에 runtime 추가  
 
 ```bash
 nano /etc/docker/daemon.json
@@ -177,7 +204,7 @@ nano /etc/docker/daemon.json
 ```
 
 
-### (6) docker 서비스 재시작  
+### (7) docker 서비스 재시작  
 
 ```bash
 sudo systemctl restart doker
