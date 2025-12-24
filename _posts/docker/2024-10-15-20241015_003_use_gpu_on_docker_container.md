@@ -163,52 +163,35 @@ nvidia-smi
 +-----------------------------------------------------------------------------------------+
 ```
 
-### (4) 호스트에 Nvidia-CUDA-Toolkit 설치  
+### (4) 호스트에 nvidia-container-toolkit 설치  
 
-**nvidia-cuda-toolkit**은 **CUDA**(Compute Unified Device Architecture) 개발 환경을 제공하여, GPU에서 **병렬 계산**을 수행할 수 있는 도구입니다.
+**nvidia-container-toolkit**은 **CUDA**(Compute Unified Device Architecture) 개발 환경을 제공하여, GPU에서 **병렬 계산**을 수행할 수 있는 도구입니다.
 
 ```bash
+# 저장소 추가
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
+  | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list \
+  | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
+  | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+# 패키지 목록 갱신
+sudo apt update
+
 # Nvidia 툴킷 설치
-apt install nvidia-cuda-toolkit
+sudo apt install -y nvidia-container-toolkit
 ```
 
-
-### (5) 호스트에 nvidia-docker2 설치  
-
-**nvidia-docker2**는 **Docker** 컨테이너에서 **GPU**를 사용할 수 있도록 해주는 패키지입니다.
-
-```bash
-# Nvidia Docker 리포지토리 추가
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-&& curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
-&& curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-
-# nvidia-docker2 설치
-sudo apt-get update
-sudo apt-get install -y nvidia-docker2
-```
-
-### (6) docker daemon 설정 파일에 runtime 추가  
-
-```bash
-nano /etc/docker/daemon.json
-```
-
-```json
-{ "runtimes": 
-     "nvidia": {
-         "path": "nvidia-container-runtime",
-         "runtimeArgs": []
-         }
-}
-```
-
-
-### (7) docker 서비스 재시작  
+### (5) docker 서비스 재시작  
 
 ```bash
 sudo systemctl restart doker
 ```
+
+> 2025-12-24 업데이트  
+> 과거에는 nvidia-docker2 를 설치하고, docker 설정파일(daemon.json)에 nvidia runtime을 추가해줬어햐 합니다.  
+> 하지만 현재는 docker 자체가 `--gpus` 옵션을 네이티브로 지원하며, NVIDIA Container Toolkit이 자동 연동되면서, 수동으로 runtime을 설정해주지 않아도 됩니다.  
+
 
 ## 도커 이미지 준비  
 
@@ -216,10 +199,15 @@ sudo systemctl restart doker
 
 [Nvidia/Cuda docker registry](https://hub.docker.com/r/nvidia/cuda)  
 
+> cudnn  
+> NVIDIA GPU에서 딥러닝 연산을 빠르게 해주는 핵심 라이브러리입니다. 직접 쓰기보다는 PyTorch·TensorFlow가 내부에서 사용합니다.  
 
-## 도커 컨테이너 실행  
 
-### 1번 방법. docker run 으로 실행할 경우  
+## 도커 컨테이너 실행 및 CUDA 작동 테스트  
+
+### 도커 컨테이너 실행  
+
+#### 1번 방법. docker run 으로 실행할 경우  
 
 ```bash
 # 모든 GPU를 사용할 경우
@@ -232,17 +220,97 @@ docker run --gpus '"device=0"' -dit <이미지:태그> bash
 ```
 
 
-### 2번 방법. docker compose up 으로 실행할 경우  
+#### 2번 방법. docker compose up 으로 실행할 경우  
 
 
 ```yaml
-version: '3.8'
 services:
   <서비스명>:
     image: <이미지명:태그>
-    runtime: nvidia  # 컨테이너가 NVIDIA GPU를 사용할 수 있게 설정
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=all  # 모든 GPU를 사용
-      - NVIDIA_DRIVER_CAPABILITIES=compute,utility  # 컨테이너가 GPU에서 사용할 수 있는 기능 지정
+    container_name: <컨테이너이름>
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     command: bash
+
+
+## 과거 설정 방법들
+# runtime: nvidia  # 컨테이너가 NVIDIA GPU를 사용할 수 있게 설정
+# environment:
+#   - NVIDIA_VISIBLE_DEVICES=all  # 모든 GPU를 사용
+#   - NVIDIA_DRIVER_CAPABILITIES=compute,utility  # 컨테이너가 GPU에서 사용할 수 있는 기능 지정
+```
+
+### CUDA 작동 테스트  
+
+#### nvidia-smi 출력 확인  
+
+```bash
+nvidia-smi
+```
+
+```bash
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:01:00.0 Off |                  N/A |
+|  0%   49C    P8              8W /  350W |       1MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+```
+
+#### python에서 cuda 사용 가능 여부 확인  
+
+```python
+import torch
+print(torch.cuda.is_available())
+# >> True
+```
+
+### Dockerfile로 이미지를 만들 경우 참고  
+
+- Cuda 도커 이미지 기반으로 커스텀 이미지를 만들 경우, 아래 레이어를 추가하는 것을 권장  
+- Ubuntu24.04는 원래 이미지 안에 있는 python을 보호하기 위해 의도적으로 `pip install`을 막아뒀습니다.  
+- 이를 피하고, 정상적으로 python을 사용하기 위해 아래와 같은 설정을 하는 게 필요합니다.  
+
+```bash
+# Dockerfile
+RUN apt install python3 python3-pip python3-venv python-is-python3 -y
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+```
+
+- 전체 Dockerfile 내용 예시  
+
+```bash
+FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04
+
+RUN mkdir /workspace
+RUN mkdir -p /run/sshd
+WORKDIR /workspace
+RUN apt update -y && apt install vim net-tools gcc openssh-server build-essential ca-certificates apt-transport-https default-jdk -y
+RUN apt install python3 python3-pip python3-venv python-is-python3 -y
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+RUN ssh-keygen -A
+RUN /usr/sbin/sshd
+
+RUN pip install ipykernel konlpy pandas tqdm
+RUN pip install sentence-transformers torch scikit-learn transformers accelerate
 ```
