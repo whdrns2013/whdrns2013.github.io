@@ -994,6 +994,10 @@ docs_nlp:
       url: /nlp/20251021_001_cosine_similarity/
   - title: "차원 축소"
   - title: "토픽 모델링"
+  - title: "실습 예제"
+    children:
+    - title: "BERT를 이용한 유사도 계산 실습"
+      url: /nlp/20251224_001_bert_similarity/
 
 # 추천 기술
 docs_recommendation:
@@ -1025,6 +1029,10 @@ docs_recommendation:
         url: /recommend_system/20251221_003_reco_dcg_ngcg/
       - title: "6. Hit Rate"
         url: /recommend_system/20251221_004_reco_hitrate/
+  - title: "추천 예제"
+    children:
+      - title: "SBERT 벡터라이징과 유사도 계산을 통한 추천"
+        url: /nlp/20251224_001_bert_similarity/
 
 docs_pandas:
   - title: "<-Doc으로 돌아가기"
