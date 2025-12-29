@@ -869,14 +869,12 @@ docs_clang:
       url: /clang/20251219_004_clang_init_array/
     - title: "1차원 배열"
       url: /clang/20251225_001_clang_1d_array/
-    - title: "2차원 배열"
-      url: 
-    - title: "3차원 배열"
-      url: 
+    - title: "다차원 배열"
+      url: /clang/20251229_001_clang_n_dim_array/
     - title: "문자형 배열과 문자열"
-      url: 
+      url: /clang/20251229_002_clang_char_array/
     - title: "함수에서의 배열 사용"
-      url: 
+      url: /clang/20251229_003_array_in_function/
   - title: "13. 포인터"
     children:
     - title: "포인터의 개념"
