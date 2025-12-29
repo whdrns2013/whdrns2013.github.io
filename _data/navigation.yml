@@ -1054,3 +1054,32 @@ docs_pandas:
     - title: "merge 과정에서 컬럼이 float64로 바뀌는 문제"
       url: /python/20251211_001_pandas_ts_merge_float/
 
+
+# 벡터 DB
+docs_vector_db:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "Vector DB"
+    children:
+    - title: "Vector DB에 대해 알아보자"
+      url: /vector_db/20250527_001_vector_db/
+    - title: "Vector DB의 종류"
+      url: /vector_db/20250527_002_compare_vector_dbs/
+  - title: "Milvus"
+    children:
+    - title: "Milvus 소개"
+      url: /vector_db/20250528_001_milvus/
+    - title: "Milvus 설치"
+      url: /vector_db/20250528_002_milvus_installation/
+    - title: "Milvus SDK 설치"
+      url: /vector_db/20250528_003_milvus_sdk_installation/
+    - title: "Milvus 아키텍처"
+      url: /vector_db/20250528_004_milvus_architecture/
+    - title: "Milvus 컬렉션과 데이터베이스"
+      url: /vector_db/20250530_001_milvus_collection_and_database/
+    - title: "Milvus 스키마와 데이터 필드"
+      url: /vector_db/20250531_001_milvus_schema_and_field/
+    - title: "Milvus 엔티티 삽입, 업데이트(업서트), 삭제"
+      url: /vector_db/20250531_002_milvus_entity_insert_delete/
+    - title: "Milvus 색인 (인덱스, index)"
+      url: /vector_db/20250604_001_milvus_index/
