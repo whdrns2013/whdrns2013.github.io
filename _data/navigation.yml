@@ -878,7 +878,7 @@ docs_clang:
   - title: "13. 포인터"
     children:
     - title: "포인터의 개념"
-      url: 
+      url: /clang/20251229_004_clang_pointer/
     - title: "포인터 변수의 선언과 초기화"
       url: 
     - title: "포인터 변수와 일반 변수 간 비교"
