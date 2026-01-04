@@ -38,12 +38,12 @@ docs:
         url: /docs/gitops/intro/
       - title: "• Rust"
         url: /docs/rust/01_rust_intro
-      - title: "• Patterns 다양한 설계 방법"
+      - title: "• Patterns 디자인 및 아키텍처 패턴"
         url: /design_pattern/20251123_001_pattern/
       - title: "• Airflow"
         url: /docs/airflow/01_airflow_intro
       - title: "• 홈서버 구축"
-        url: /docs/homeserver/01_build/01_prepare_machine
+        url: /infra/20240914_001_setting_home_server_01/
       - title: "• 파이썬에서 logging 하기"
         url: /python/20251104_001_logging_intro/
       - title: "• PostgreSQL"
@@ -57,9 +57,13 @@ docs:
       - title: "• 자연언어처리"
         url: /nlp/20251018_001_nlp_definition/
       - title: "• 추천 기술"
-        url: /
+        url: /recommend_system/20251219_005_recommend_metric_intro/
       - title: "• Pandas"
-        url: /
+        url: /python/20251217_001_pandas_reduce_loop/
+      - title: "• Vector DB"
+        url: /vector_db/20250527_001_vector_db/
+      - title: "• Python"
+        url: /python/20251201_004_python_list_slicing/
 
 # docker docs
 docs_docker:
