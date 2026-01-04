@@ -334,31 +334,31 @@ docs_homeserver:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: "홈서버 구축하기"
-    url: /docs/homeserver/01_build/01_prepare_machine
+    url: /infra/20240914_001_setting_home_server_01/
     children:
       - title: "(1) 미니 PC 구매와 설치"
-        url: /docs/homeserver/01_build/01_prepare_machine
+        url: /infra/20240914_001_setting_home_server_01/
       - title: "(2) OS 설치하기"
-        url: /docs/homeserver/01_build/02_install_os
+        url: /infra/20240914_003_setting_homeserver_02/
       - title: "(3) 네트워크 준비"
-        url: /docs/homeserver/01_build/03_prepare_network
+        url: /infra/20240914_004_setting_homeserver_03/
       - title: "(4) 포트포워딩과 DMZ"
-        url: /docs/homeserver/01_build/04_portfowarding_and_dmz
+        url: /infra/20240916_001_setting_homeserver_04/
       - title: "(5) SSH 접속"
-        url: /docs/homeserver/01_build/05_ssh
+        url: /infra/20240918_001_setting_homeserver_05/
       - title: "(6) Jupyter 서버 구축"
-        url: /docs/homeserver/01_build/06_jupyter_server
+        url: /infra/20240919_001_setting_homeserver_06/
       - title: "(7) 웹서버 애플리케이션 도커"
-        url: /docs/homeserver/01_build/07_webserver
+        url: /infra/20240920_002_setting_homeserver_07/
       - title: "(8) DDNS와 개인 도메인 네임 생성"
-        url: /docs/homeserver/01_build/08_ddns
+        url: /infra/20241005_001_setting_homeserver_08/
   - title: "홈서버 보안 강화"
     url:
     children:
       - title: "(1) SSH 보안 강화"
-        url: /docs/homeserver/02_security/01_ssh_security
+        url: /infra/20240918_002_ssh_security/
       - title: "(2) VPN 구축"
-        url: /docs/homeserver/02_security/02_vpn
+        url: /infra/20241005_002_homeserver_security_vpn/
 
 # airflow
 docs_airflow:
