@@ -56,6 +56,8 @@ docs:
         url: /statistics/20251121_001_statistics_data/
       - title: "• 자연언어처리"
         url: /nlp/20251018_001_nlp_definition/
+      - title: "• LLM"
+        url: /ai/20250720_001_retriever_and_reranker/
       - title: "• 추천 기술"
         url: /recommend_system/20251219_005_recommend_metric_intro/
       - title: "• Pandas"
@@ -1085,3 +1087,18 @@ docs_vector_db:
       url: /vector_db/20250531_002_milvus_entity_insert_delete/
     - title: "Milvus 색인 (인덱스, index)"
       url: /vector_db/20250604_001_milvus_index/
+
+# LLM
+docs_llm:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "RAG"
+    children:
+    - title: "RAG - Retriever와 Reranker"
+      url: /ai/20250720_001_retriever_and_reranker/
+    - title: "Reranker의 개념과 실습"
+      url: /ai/20250720_002_reranker/
+  - title: "MCP"
+    children:
+    - title: "MCP의 개념"
+      url: 
