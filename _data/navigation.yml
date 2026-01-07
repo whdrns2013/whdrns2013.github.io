@@ -1100,5 +1100,5 @@ docs_llm:
       url: /ai/20250720_002_reranker/
   - title: "MCP"
     children:
-    - title: "MCP의 개념"
-      url: 
+    - title: "MCP의 등장 배경과 개념"
+      url: /ai/20260108_001_mcp_concept/
