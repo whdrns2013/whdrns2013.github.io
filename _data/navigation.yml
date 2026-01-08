@@ -856,7 +856,7 @@ docs_clang:
     - title: "실 매개변수와 형식 매개변수"
       url: /clang/20251217_013_clang_parameter/
     - title: "함수의 원형"
-      url: /clang/20251218_001_clang_function_prototypemd/
+      url: /clang/20251218_001_clang_function_prototype/
     - title: "매개변수를 통한 값의 전달"
       url: /clang/20251218_002_clang_call_by/
   - title: "11. 유효범위와 기억클래스"
