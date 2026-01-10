@@ -54,7 +54,7 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 ### ⏵ Infra/Tool    
 
 - [Docker](https://whdrns2013.github.io/docker/20230702_002_docker/)  
-- [Docker Registry/Harbor 구축]()  
+- [Docker Registry/Harbor 구축](https://whdrns2013.github.io/docker/20240104_001_docker_registry/)  
 - [Grafana and Prometheus]()  
 - [Airflow]()  
 - [MLflow](https://whdrns2013.github.io/ai/20251115_001_mlflow_doc/)  
