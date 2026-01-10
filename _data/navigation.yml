@@ -25,47 +25,64 @@ docs:
   - title: Doc Intro
     url: /docs/intro/
   - title: Contents
+  - title: ⏵ 프로그래밍 언어  
     children:
-      - title: "• Docker"
-        url: /docs/docker/intro/
-      - title: "• Docker Registry/Harbor 구축"
-        url: /docs/docker_registry/01_registry
-      - title: "• Dart와 Flutter"
-        url: /docs/dart_and_flutter/intro
-      - title: "• Grafana and Prometheus"
-        url: /docs/grafana_and_prometheus/intro/
-      - title: "• GitOps 도전기"
-        url: /docs/gitops/intro/
-      - title: "• Rust"
-        url: /docs/rust/01_rust_intro
-      - title: "• Patterns 디자인 및 아키텍처 패턴"
-        url: /design_pattern/20251123_001_pattern/
-      - title: "• Airflow"
-        url: /docs/airflow/01_airflow_intro
-      - title: "• 홈서버 구축"
-        url: /infra/20240914_001_setting_home_server_01/
-      - title: "• 파이썬에서 logging 하기"
-        url: /python/20251104_001_logging_intro/
-      - title: "• PostgreSQL"
-        url: /sql/20251111_001_postgresql_ddl/
-      - title: "• C 언어 기초"
+      - title: "└─ • C 언어 기초"
         url: /clang/20251024_001_programming_language/
-      - title: "• MLflow"
-        url: /ai/20251115_001_mlflow_doc/
-      - title: "• 통계"
-        url: /statistics/20251121_001_statistics_data/
-      - title: "• 자연언어처리"
-        url: /nlp/20251018_001_nlp_definition/
-      - title: "• LLM"
-        url: /ai/20250720_001_retriever_and_reranker/
-      - title: "• 추천 기술"
-        url: /recommend_system/20251219_005_recommend_metric_intro/
-      - title: "• Pandas"
-        url: /python/20251217_001_pandas_reduce_loop/
-      - title: "• Vector DB"
-        url: /vector_db/20250527_001_vector_db/
-      - title: "• Python"
+      - title: "└─ • Python"
         url: /python/20251201_004_python_list_slicing/
+      - title: "└─ • Rust"
+        url: /docs/rust/01_rust_intro
+      - title: "└─ • Dart와 Flutter"
+        url: /docs/dart_and_flutter/intro
+  - title: ⏵ AI  
+    children:
+      - title: "└─ • 통계"
+        url: /statistics/20251121_001_statistics_data/
+      - title: "└─ • 자연언어처리"
+        url: /nlp/20251018_001_nlp_definition/
+      - title: "└─ • LLM"
+        url: /ai/20250720_001_retriever_and_reranker/
+      - title: "└─ • 추천 기술"
+        url: /recommend_system/20251219_005_recommend_metric_intro/
+  - title: ⏵ 데이터베이스  
+    children:
+      - title: "└─ • PostgreSQL"
+        url: /sql/20251111_001_postgresql_ddl/
+      - title: "└─ • Vector DB"
+        url: /vector_db/20250527_001_vector_db/
+  - title: ⏵ 설계  
+    children:
+      - title: "└─ • Patterns 디자인 및 아키텍처 패턴"
+        url: /design_pattern/20251123_001_pattern/
+  - title: ⏵ 문제해결  
+    children:
+      - title: "└─ • 알고리즘"
+        rul: /algorithm/20260110_001_difference_array/
+  - title: "⏵ Infra/Tool"
+    children:
+      - title: "└─ • Docker"
+        url: /docs/docker/intro/
+      - title: "└─ • Docker Registry/Harbor 구축"
+        url: /docs/docker_registry/01_registry
+      - title: "└─ • Grafana and Prometheus"
+        url: /docs/grafana_and_prometheus/intro/
+      - title: "└─ • Airflow"
+        url: /docs/airflow/01_airflow_intro
+      - title: "└─ • MLflow"
+        url: /ai/20251115_001_mlflow_doc/
+      - title: "└─ • 홈서버 구축"
+        url: /infra/20240914_001_setting_home_server_01/
+  - title: "⏵ CI/CD"
+    children:
+      - title: "└─ • GitOps 도전기"
+        url: /docs/gitops/intro/
+  - title: "⏵ 라이브러리"
+    children:
+      - title: "└─ • Pandas"
+        url: /python/20251217_001_pandas_reduce_loop/
+      - title: "└─ • 파이썬에서 logging 하기"
+        url: /python/20251104_001_logging_intro/
 
 # docker docs
 docs_docker:
@@ -1102,3 +1119,12 @@ docs_llm:
     children:
     - title: "MCP의 등장 배경과 개념"
       url: /ai/20260108_001_mcp_concept/
+
+# 알고리즘
+docs_algorithm:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 알고리즘
+    children:
+      - title: "차분배열"
+        rul: /algorithm/20260110_001_difference_array/
