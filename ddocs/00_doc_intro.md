@@ -62,7 +62,7 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 
 ### ⏵ CI/CD    
 
-- [GitOps 도전기]()  
+- [GitOps 도전기](https://whdrns2013.github.io/ops/20250512_001_gitops/)  
 
 ### ⏵ 라이브러리    
 
