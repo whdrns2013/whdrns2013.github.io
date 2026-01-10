@@ -27,7 +27,7 @@ Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입
 - [C언어 기초](https://whdrns2013.github.io/clang/20251024_001_programming_language/)  
 - [Python](https://whdrns2013.github.io/python/20251201_004_python_list_slicing/)  
 - [Rust](https://whdrns2013.github.io/rust/20250524_001_rust_intro/)  
-- [Dart와 Flutter]()  
+- [Dart와 Flutter](https://whdrns2013.github.io/flutter/20240113_005_flutter/)  
 
 
 ### ⏵ AI    

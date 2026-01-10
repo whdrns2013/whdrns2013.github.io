@@ -34,7 +34,7 @@ docs:
       - title: "└─ • Rust"
         url: /rust/20250524_001_rust_intro/
       - title: "└─ • Dart와 Flutter"
-        url: /
+        url: /flutter/20240113_005_flutter/
   - title: ⏵ AI  
     children:
       - title: "└─ • 통계"
@@ -175,30 +175,38 @@ docs_gitops:
 docs_dart_and_flutter:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
+  - title: "Intro"
+    children:
+    - title: "Flutter란?"
+      url: /flutter/20240113_005_flutter/
   - title: dart
     children:
+    - title: "Dart 소개"
+      url: /dart/20240120_001_dart/
     - title: "Dart 설치하기"
-      url: /docs/dart_and_flutter/01_dart_installation
+      url: /dart/20240121_001_dart_installation/
     - title: "Dart 개발 환경 준비"
-      url: /docs/dart_and_flutter/02_dart_develope_env_setting
+      url: /dart/20240121_002_dart_first_step/
     - title: "Main Function"
-      url: /docs/dart_and_flutter/03_dart_main_function
+      url: /dart/20240121_003_dart_main_function/
     - title: "변수의 선언"
-      url: /docs/dart_and_flutter/04_dart_variables
+      url: /dart/20240121_004_dart_variables/
     - title: "자료형 (data type)"
-      url: /docs/dart_and_flutter/05_dart_datatype
+      url: /dart/20240121_005_dart_datatype/
     - title: "MAP 자료형"
-      url: /docs/dart_and_flutter/05_02_map
+      url: /dart/20240209_002_dart_dictionary/
     - title: "함수의 선언"
-      url: /docs/dart_and_flutter/06_dart_function
+      url: /dart/20240121_006_dart_function/
     - title: "클래스"
-      url: /docs/dart_and_flutter/07_dart_class
+      url: /dart/20240122_001_dart_class/
   - title: flutter
     children:
+    - title: "Flutter 소개"
+      url: /flutter/20240128_001_flutter_intro/
     - title: "Flutter 설치하기"
-      url: /docs/dart_and_flutter/08_flutter_installation
+      url: /flutter/20240128_002_flutter_installation/
     - title: "프로젝트 만들기"
-      url: /docs/dart_and_flutter/09_make_flutter_project
+      url: /flutter/20240128_003_make_flutter_project/
     - title: "Hello World"
     - title: "Flutter 의 구성 요소 (App, Widget, ...)"
     - title: "개발 전에 알아두면 좋을 것 (Inspector, guideline, codeaction)"
