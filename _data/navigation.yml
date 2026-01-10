@@ -923,7 +923,7 @@ docs_clang:
       url: /clang/20250109_004_clang_address_and_pointer_operator/
     - title: "포인터 연산자의 논리적 처리 과정"
       url: /clang/20260111_001_clang_pointer_logical_operation/
-    - title: "포인터 연산"
+    - title: "포인터 산술 연산"
       url: /clang/20260111_002_clang_pointer_calc/
     - title: "포인터 사용시 주의할 점"
       url: /clang/20260111_003_clang_pointer_caution/
