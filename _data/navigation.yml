@@ -66,7 +66,7 @@ docs:
       - title: "└─ • Docker Registry/Harbor 구축"
         url: /docker/20240104_001_docker_registry/
       - title: "└─ • Grafana and Prometheus"
-        url: /docs/grafana_and_prometheus/intro/
+        url: /ops/20250420_001_grafana_prometheus/
       - title: "└─ • Airflow"
         url: /docs/airflow/01_airflow_intro
       - title: "└─ • MLflow"
@@ -149,13 +149,13 @@ docs_grafana_and_prometheus:
   - title: "• Grafana and Prometheus"
     children:
     - title: "Grafana와 Prometheus 소개"
-      url: /docs/grafana_and_prometheus/intro
+      url: /ops/20250420_001_grafana_prometheus/
     - title: "Prometheus 설치하기"
-      url: /docs/grafana_and_prometheus/02_install_prometheus
+      url: /ops/20250421_001_install_prometheus/
     - title: "Exporter 설치하고 메트릭 수집하기"
-      url: /docs/grafana_and_prometheus/03_exporter
+      url: /ops/20250422_001_exporter/
     - title: "Grafana 설치하고 사용하기"
-      url: /docs/grafana_and_prometheus/04_grafana
+      url: /ops/20250430_001_grafana/
 
 # gitops docs
 docs_gitops:
