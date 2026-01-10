@@ -32,9 +32,9 @@ docs:
       - title: "└─ • Python"
         url: /python/20251201_004_python_list_slicing/
       - title: "└─ • Rust"
-        url: /docs/rust/01_rust_intro
+        url: /rust/20250524_001_rust_intro/
       - title: "└─ • Dart와 Flutter"
-        url: /docs/dart_and_flutter/intro
+        url: /
   - title: ⏵ AI  
     children:
       - title: "└─ • 통계"
@@ -280,37 +280,37 @@ docs_rust:
   - title: Rust
     children:
     - title: "0. Rust 소개"
-      url: /docs/rust/01_rust_intro
+      url: /rust/20250524_001_rust_intro/
     - title: "1. Rust 설치와 개발 환경 준비"
-      url: /docs/rust/02_rust_installation
+      url: /rust/20250524_002_rust_installation/
     - title: "2. 프로젝트 만들기"
-      url: /docs/rust/03_rust_make_project
+      url: /rust/20250524_003_rust_make_project/
     - title: "3. Hello World!"
-      url: /docs/rust/04_rust_hello_world
+      url: /rust/20250524_004_rust_hello_world/
     - title: "4. Hello Cargo!"
-      url: /docs/rust/05_rust_hello_cargo
+      url: /rust/20250524_005_rust_hello_cargo/
     - title: "5. 프로젝트 디렉터리 구조"
-      url: /docs/rust/06_rust_project_dir
+      url: /rust/20250524_006_rust_project_dir/
     - title: "6. Rust 의 빌드 종류"
-      url: /docs/rust/06_rust_type_of_build
+      url: /rust/20250524_007_rust_type_of_build/
     - title: "7. 변수와 상수 그리고 Shadowing"
-      url: /docs/rust/07_rust_variable_const_shadowing
+      url: /rust/20250613_001_rust_variables/
   - title: Data Type
     children:
     - title: "8-1. 자료형 데이터 타입 Data Type"
-      url: /docs/rust/08_01_rust_datatype
+      url: /rust/20250616_001_rust_datatype/
     - title: "8-2. 데이터타입 - 정수형과 부동소수형"
-      url: /docs/rust/08_02_rust_integer_float
+      url: /rust/20250616_002_rust_integer_float/
     - title: "8-3. 데이터타입 - 부울형 Boolean"
-      url: /docs/rust/08_03_rust_bool
+      url: /rust/20250617_001_rust_bool/
     - title: "8-4. 데이터타입 - 문자형 char"
-      url: /docs/rust/08_04_rust_char
+      url: /rust/20250618_001_rust_char/
     - title: "8-5. 데이터타입 - 튜플형 tuple"
-      url: /docs/rust/08_05_rust_tuple
+      url: /rust/20250625_002_rust_tuple/
     - title: "8-6. 데이터타입 - 배열형 array"
-      url: /docs/rust/08_06_rust_array
+      url: /rust/20250627_001_rust_array/
     - title: "8-7. 데이터타입 - 튜플과 배열의 원소 접근 방법 차이"
-      url: /docs/rust/08_07_rust_tuple_array_syntax
+      url: /rust/20250628_001_tuple_array_syntax/
 
 # pattern
 docs_pattern:
