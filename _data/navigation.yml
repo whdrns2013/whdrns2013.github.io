@@ -1130,6 +1130,10 @@ docs_llm:
     children:
     - title: "MCP의 등장 배경과 개념"
       url: /ai/20260108_001_mcp_concept/
+    - title: "MCP 서버의 개념과 Tool, Resource, Prompt"
+      url: /ai/20260113_001_mcp_server/
+    - title: "얼렁뚱땅 MCP 서버 구축해보기"
+      url: /ai/20260113_002_mcp_server_quickstart/
   - title: "Open WebUI"
     children:
     - title: "Open WebUI"
