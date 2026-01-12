@@ -1130,6 +1130,23 @@ docs_llm:
     children:
     - title: "MCP의 등장 배경과 개념"
       url: /ai/20260108_001_mcp_concept/
+  - title: "Open WebUI"
+    children:
+    - title: "Open WebUI"
+      url: 
+    - title: "Open WebUI 설치(도커)"
+      url: 
+    - title: "LLM 모델 연결"
+      url: 
+    - title: "MCP Tool 연결"
+      url: 
+  - title: "BitNet"
+    children:
+    - title: "주목받는 초 경량 LLM Bitnet"
+      url: /ai/20250508_001_bitnet/
+    - title: "Bitnet 설치하고 사용해보기 / 리소스 사용량 측정"
+      url: /ai/20250517_002_bitnet_install_use/
+
 
 # 알고리즘
 docs_algorithm:
