@@ -1134,16 +1134,19 @@ docs_llm:
       url: /ai/20260113_001_mcp_server/
     - title: "얼렁뚱땅 MCP 서버 구축해보기"
       url: /ai/20260113_002_mcp_server_quickstart/
+    - title: "Open WebUI 에 MCP 서버 붙여보기"
+      url: /ai/20260113_006_openwebui_connect_mcp_server/
   - title: "Open WebUI"
     children:
-    - title: "Open WebUI"
-      url: 
-    - title: "Open WebUI 설치(도커)"
-      url: 
-    - title: "LLM 모델 연결"
-      url: 
-    - title: "MCP Tool 연결"
-      url: 
+    - title: "Open WebUI 소개"
+      url: /ai/20260113_003_openwebui/
+    - title: "Open WebUI 설치와 기본 세팅"
+      url: /ai/20260113_004_install_openwebui/
+    - title: "외부 LLM 모델 API 연결"
+      url: /ai/20260113_005_openwebui_connect_llm_api/
+    - title: "로컬 LLM 모델 연결(작성 전)"
+    - title: "MCP 서버 연결"
+      url: /ai/20260113_006_openwebui_connect_mcp_server/
   - title: "BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
