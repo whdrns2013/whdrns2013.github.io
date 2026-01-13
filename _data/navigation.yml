@@ -930,11 +930,13 @@ docs_clang:
   - title: "14. 배열과 포인터"
     children:
     - title: "1차원 배열과 포인터"
-      url: 
+      url: /clang/20260113_008_clang_1d_array_pointer/
     - title: "2차원 배열과 포인터"
-      url: 
+      url: /clang/20260113_009_clang_2d_array_pointer/
     - title: "문자열과 포인터"
-      url: 
+      url: /clang/20260113_010_clang_string_pointer/
+    - title: "배열과 포인터의 기억공간 확보"
+      url: /clang/20260113_011_clang_array_pointer_memory/
     - title: "포인터 배열"
       url: 
     - title: "이중 포인터"
