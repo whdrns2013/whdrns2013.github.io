@@ -938,9 +938,9 @@ docs_clang:
     - title: "배열과 포인터의 기억공간 확보"
       url: /clang/20260113_011_clang_array_pointer_memory/
     - title: "포인터 배열"
-      url: 
+      url: /clang/20260114_002_clang_pointer_array/
     - title: "이중 포인터"
-      url: 
+      url: /clang/20260114_003_nested_pointer/
   - title: "15. 구조체"
     children:
     - title: "구조체의 개념"
