@@ -944,8 +944,8 @@ docs_clang:
   - title: "15. 구조체"
     children:
     - title: "구조체의 개념"
-      url: 
-    - title: "구조체 선언과 정의 및 초기화"
+      url: /clang/20260114_005_clang_structure/
+    - title: "구조체 선언, 정의, 초기화"
       url: 
     - title: "구조체 멤버에 접근"
       url: 
