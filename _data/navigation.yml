@@ -946,17 +946,17 @@ docs_clang:
     - title: "구조체의 개념"
       url: /clang/20260114_005_clang_structure/
     - title: "구조체 선언, 정의, 초기화"
-      url: 
-    - title: "구조체 멤버에 접근"
-      url: 
+      url: /clang/20260116_002_clang_structure_init/
+    - title: "구조체 멤버에 접근하기"
+      url: /clang/20260116_003_clang_struct_member/
     - title: "typedef"
-      url: 
+      url: /clang/20260116_004_clang_typedef/
     - title: "구조체의 기억공간"
-      url: 
+      url: /clang/20260116_005_clang_struct_memory/
     - title: "구조체 배열"
-      url: 
+      url: /clang/20260116_006_clang_struct_array/
     - title: "구조체 포인터"
-      url: 
+      url: /clang/20260116_007_clang_struct_pointer/
     - title: "함수에서의 구조체 사용"
       url: 
     - title: "구조체의 비트필드"
