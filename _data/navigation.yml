@@ -1122,23 +1122,23 @@ docs_vector_db:
 docs_llm:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: "LLM"
+  - title: "◆ LLM"
     children:
     - title: "LLM에 대해 간단히 알아보기"
       url: /ai/20260118_002_llm/
     - title: "LLM을 공부해야 하는 이유"
       url: /ai/20260118_003_why_study_llm/
-  - title: "LLM API 사용하기"
+  - title: "◆ LLM API 사용하기"
     children:
     - title: "Gemini API"
       url: /ai/20260119_001_gemini_api/
-  - title: "RAG"
+  - title: "◆ RAG"
     children:
     - title: "RAG - Retriever와 Reranker"
       url: /ai/20250720_001_retriever_and_reranker/
     - title: "Reranker의 개념과 실습"
       url: /ai/20250720_002_reranker/
-  - title: "MCP"
+  - title: "◆ MCP"
     children:
     - title: "MCP의 등장 배경과 개념"
       url: /ai/20260108_001_mcp_concept/
@@ -1150,7 +1150,7 @@ docs_llm:
       url: /ai/20260113_006_openwebui_connect_mcp_server/
     - title: "(참고)MCPO - MCP-to-OpenAPI"
       url: /ai/20260118_001_mcpo/
-  - title: "Open WebUI"
+  - title: "◆ Open WebUI"
     children:
     - title: "Open WebUI 소개"
       url: /ai/20260113_003_openwebui/
@@ -1161,7 +1161,7 @@ docs_llm:
     - title: "로컬 LLM 모델 연결(작성 전)"
     - title: "MCP 서버 연결"
       url: /ai/20260113_006_openwebui_connect_mcp_server/
-  - title: "BitNet"
+  - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
       url: /ai/20250508_001_bitnet/
