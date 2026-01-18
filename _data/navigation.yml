@@ -1128,6 +1128,10 @@ docs_llm:
       url: /ai/20260118_002_llm/
     - title: "LLM을 공부해야 하는 이유"
       url: /ai/20260118_003_why_study_llm/
+  - title: "LLM API 사용하기"
+    children:
+    - title: "Gemini API"
+      url: /ai/20260119_001_gemini_api/
   - title: "RAG"
     children:
     - title: "RAG - Retriever와 Reranker"
