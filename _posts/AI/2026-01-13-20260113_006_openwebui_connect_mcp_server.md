@@ -51,7 +51,7 @@ Open WebUI 에 외부 툴을 붙이기 위해서는 동작하고 있는 MCP 서�
 
 ### MCP 서버 가동하기
 
-Open WebUI에서 MCP 서버를 사용하기 위해서는 몇 가지 사전 구성이 필요하며, 그중 핵심 구성 요소가 **MCPO(MCP Proxy)** 입니다. 현재 Open WebUI는 **MCP 서버를 직접 등록하는 기능을 제공하지 않고,** 브라우저 기반 UI 특성상 MCP 서버에 직접 연결하는 방식에는 제약이 존재합니다. 이 때문에 Open WebUI는 **MCPO를 활용하여 MCP 서버를 OpenAPI 형식으로 변환한 뒤 사용하는 구조를 권장**합니다.
+Open WebUI에서 MCP 서버를 사용하기 위해서는 몇 가지 사전 구성이 필요하며, 그중 핵심 구성 요소가 **MCPO(MCP-to-OpenAPI)** 입니다. 현재 Open WebUI는 **MCP 서버를 직접 등록하는 기능을 제공하지 않고,** 브라우저 기반 UI 특성상 MCP 서버에 직접 연결하는 방식에는 제약이 존재합니다. 이 때문에 Open WebUI는 **MCPO를 활용하여 MCP 서버를 OpenAPI 형식으로 변환한 뒤 사용하는 구조를 권장**합니다.
 
 이 방식으로 구성해야만 Open WebUI의 External Tools 메뉴에서 URL 기반 도구 등록 및 호출이 정상적으로 동작합니다.
 

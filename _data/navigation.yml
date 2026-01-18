@@ -1138,6 +1138,8 @@ docs_llm:
       url: /ai/20260113_002_mcp_server_quickstart/
     - title: "Open WebUI 에 MCP 서버 붙여보기"
       url: /ai/20260113_006_openwebui_connect_mcp_server/
+    - title: "(참고)MCPO - MCP-to-OpenAPI"
+      url: /ai/20260118_001_mcpo/
   - title: "Open WebUI"
     children:
     - title: "Open WebUI 소개"
