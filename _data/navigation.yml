@@ -1122,6 +1122,12 @@ docs_vector_db:
 docs_llm:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
+  - title: "LLM"
+    children:
+    - title: "LLM에 대해 간단히 알아보기"
+      url: /ai/20260118_002_llm/
+    - title: "LLM을 공부해야 하는 이유"
+      url: /ai/20260118_003_why_study_llm/
   - title: "RAG"
     children:
     - title: "RAG - Retriever와 Reranker"
