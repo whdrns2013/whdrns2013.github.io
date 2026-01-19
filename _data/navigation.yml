@@ -1132,6 +1132,8 @@ docs_llm:
     children:
     - title: "Gemini API"
       url: /ai/20260119_001_gemini_api/
+    - title: "OpenAI API (chatGPT)"
+      url: /ai/20260120_001_openai_api/
   - title: "◆ RAG"
     children:
     - title: "RAG - Retriever와 Reranker"
