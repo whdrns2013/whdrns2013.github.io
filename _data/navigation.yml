@@ -1128,6 +1128,8 @@ docs_llm:
       url: /ai/20260118_002_llm/
     - title: "LLM을 공부해야 하는 이유"
       url: /ai/20260118_003_why_study_llm/
+    - title: "싱글턴과 멀티턴"
+      url:
   - title: "◆ LLM API 사용하기"
     children:
     - title: "Gemini API"
@@ -1169,6 +1171,12 @@ docs_llm:
       url: /ai/20250508_001_bitnet/
     - title: "Bitnet 설치하고 사용해보기 / 리소스 사용량 측정"
       url: /ai/20250517_002_bitnet_install_use/
+  - title: "◆ 프롬프트 엔지니어링"
+    children:
+    - title: "프롬프트 엔지니어링의 개념"
+      url: /ai/20260120_002_prompting/
+    - title: "원샷 프롬프팅과 퓨샷 프롬프팅"
+      url: /ai/20260120_003_n_shot_prompting/
 
 
 # 알고리즘
