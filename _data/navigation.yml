@@ -1129,7 +1129,7 @@ docs_llm:
     - title: "LLM을 공부해야 하는 이유"
       url: /ai/20260118_003_why_study_llm/
     - title: "싱글턴과 멀티턴"
-      url:
+      url: /ai/20260121_001_multiturn/
   - title: "◆ LLM API 사용하기"
     children:
     - title: "Gemini API"
@@ -1154,17 +1154,19 @@ docs_llm:
       url: /ai/20260113_006_openwebui_connect_mcp_server/
     - title: "(참고)MCPO - MCP-to-OpenAPI"
       url: /ai/20260118_001_mcpo/
-  - title: "◆ Open WebUI"
+  - title: "◆ Chat UI"
     children:
-    - title: "Open WebUI 소개"
+    - title: "[Open WebUI] 소개"
       url: /ai/20260113_003_openwebui/
-    - title: "Open WebUI 설치와 기본 세팅"
+    - title: "[Open WebUI] 설치와 기본 세팅"
       url: /ai/20260113_004_install_openwebui/
-    - title: "외부 LLM 모델 API 연결"
+    - title: "[Open WebUI] 외부 LLM 모델 API 연결"
       url: /ai/20260113_005_openwebui_connect_llm_api/
-    - title: "로컬 LLM 모델 연결(작성 전)"
-    - title: "MCP 서버 연결"
+    - title: "[Open WebUI] 로컬 LLM 모델 연결(작성 전)"
+    - title: "[Open WebUI] MCP 서버 연결"
       url: /ai/20260113_006_openwebui_connect_mcp_server/
+    - title: "[Streamlit] 소개와 채팅 화면 구축"
+      url: /ai/20260121_002_streamlit/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
