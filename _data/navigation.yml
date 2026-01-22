@@ -289,6 +289,8 @@ docs_python:
       url: /python/20250515_002_uv/
     - title: "devpi - 폐쇄망 사설 PyPI 서버"
       url: /python/20260122_001_devpi/
+    - title: "devpi - 업로드, 테스트, 푸시, 릴리즈"
+    - title: "devpi - devpi 서버 설정"
 
 # rust
 docs_rust:
