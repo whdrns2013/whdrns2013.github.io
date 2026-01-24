@@ -25,7 +25,7 @@ author: # 주인 외 작성자 표기 필요시
 permalink: 
 sidebar:
   nav: 
-pinned: true
+pinned:
 ---
 <!--postNo: 20251107_001-->
 

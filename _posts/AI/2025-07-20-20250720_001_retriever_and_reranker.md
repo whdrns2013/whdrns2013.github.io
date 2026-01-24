@@ -24,7 +24,7 @@ sitemap :                    # 구글 크롤링
 author: # 주인 외 작성자 표기 필요시
 sidebar:
   nav: docs_llm
-pinned: true
+pinned:
 ---
 <!--postNo: 20250720_001-->
 
