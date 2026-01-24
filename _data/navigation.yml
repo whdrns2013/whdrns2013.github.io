@@ -283,6 +283,10 @@ docs_python:
       url: /python/20251216_001_python_hash_lookup/
     - title: "comprehension으로 서브 딕셔너리 만들기"
       url: /python/20251218_004_dictionary_comprehension/
+  - title: "패키지 만들기"
+    children:
+    - title: "파이썬 패키지(라이브러리) 만들기"
+      url: 
   - title: "패키지 관리"
     children:
     - title: "uv - 매우 빠른 패키지 및 프로젝트 관리자"
