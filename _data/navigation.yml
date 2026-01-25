@@ -291,10 +291,20 @@ docs_python:
     children:
     - title: "uv - 매우 빠른 패키지 및 프로젝트 관리자"
       url: /python/20250515_002_uv/
-    - title: "devpi - 폐쇄망 사설 PyPI 서버"
+    - title: "[devpi] devpi server 사설 PyPI 서버"
       url: /python/20260122_001_devpi/
-    - title: "devpi - 업로드, 테스트, 푸시, 릴리즈"
-    - title: "devpi - devpi 서버 설정"
+    - title: "[devpi] index 생성과 설정 및 삭제"
+      url: /python/20260125_001_devpi_index/
+    - title: "[devpi] 패키지 설치 및 캐싱"
+      url: /python/20260125_002_devpi_package_caching/
+    - title: "[devpi] 패키지 캐싱 자동화 스크립트"
+      url: /python/20260125_003_devpi_package_caching_auto/
+    - title: "[devpi] 릴리즈(패키지) 업로드 및 삭제"
+      url: /python/20260125_004_devpi_package_upload/
+    - title: "[devpi] devpi-server 내보내기 및 가져오기 (백업과 복원)"
+      url: /python/20260125_005_devpi_server_export_and_import/
+    - title: "[devpi] 명령어 모음"
+      url: /python/20260125_006_devpi_commands/
 
 # rust
 docs_rust:
