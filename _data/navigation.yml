@@ -301,7 +301,7 @@ docs_python:
       url: /python/20260125_003_devpi_package_caching_auto/
     - title: "[devpi] 릴리즈(패키지) 업로드 및 삭제"
       url: /python/20260125_004_devpi_package_upload/
-    - title: "[devpi] devpi-server 내보내기 및 가져오기 (백업과 복원)"
+    - title: "[devpi] server 내보내기 및 가져오기"
       url: /python/20260125_005_devpi_server_export_and_import/
     - title: "[devpi] 명령어 모음"
       url: /python/20260125_006_devpi_commands/
