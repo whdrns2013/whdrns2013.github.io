@@ -247,10 +247,12 @@ docs_python:
     children:
     - title: "String Formatting - 문자열 형식 지정"
       url: /python/20251201_005_python_string_formatting/
-  - title: "내장 함수"
+  - title: "내장 함수 및 모듈"
     children:
     - title: "sum()"
       url: /python/20251216_002_python_sum/
+    - title: "pytz - 타임존 다루기"
+      url: /python/20260126_001_pytz/
   - title: "예외 처리"
     children:
     - title: "try-except finally"
