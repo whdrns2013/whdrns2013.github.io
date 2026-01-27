@@ -4,7 +4,6 @@ layout: archive
 
 {{ content }}
 
-
 {% if paginator.page == 1 or paginator == nil %}
   {% assign pinned_posts = site.posts | where: "pinned", true %}
   {% if pinned_posts.size > 0 %}
@@ -35,4 +34,10 @@ layout: archive
   {% endfor %}
 </div>
 
+
 {% include paginator.html %}
+
+<br>
+<div style="margin-top: 20px;">
+  <img src="https://ghchart.rshah.org/whdrns2013" alt="whdrns2013's Github chart">
+</div>
