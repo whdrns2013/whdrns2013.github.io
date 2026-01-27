@@ -251,6 +251,8 @@ docs_python:
     children:
     - title: "sum()"
       url: /python/20251216_002_python_sum/
+    - titls: "json"
+      url: /python/20230806_002_python_json/
   - title: "예외 처리"
     children:
     - title: "try-except finally"
