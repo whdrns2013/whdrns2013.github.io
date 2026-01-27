@@ -251,8 +251,6 @@ docs_python:
     children:
     - title: "sum()"
       url: /python/20251216_002_python_sum/
-    - title: "pytz - 타임존 다루기"
-      url: /python/20260126_001_pytz/
   - title: "예외 처리"
     children:
     - title: "try-except finally"
@@ -307,6 +305,10 @@ docs_python:
       url: /python/20260125_005_devpi_server_export_and_import/
     - title: "[devpi] 명령어 모음"
       url: /python/20260125_006_devpi_commands/
+  - title: "기타 라이브러리"
+    children:
+    - title: "pytz - 타임존 다루기"
+      url: /python/20260126_001_pytz/
 
 # rust
 docs_rust:
