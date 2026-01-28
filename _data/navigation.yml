@@ -311,6 +311,8 @@ docs_python:
     children:
     - title: "pytz - 타임존 다루기"
       url: /python/20260126_001_pytz/
+    - title: "yfinance - 주식 정보"
+      url: /python/20260129_001_yfinance/
 
 # rust
 docs_rust:
