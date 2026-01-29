@@ -279,6 +279,10 @@ docs_python:
       url: /python/20251202_007_python_filter/
     - title: "reduce 함수"
       url: /python/20251202_008_python_reduce/
+  - title: "키워드"
+    children:
+    - title: "yield - 함수를 제너레이터로"
+      url: /python/20260129_002_python_yield/
   - title: "Best Practice"
     children:
     - title: "hash lookup으로 탐색 성능 최적화"
