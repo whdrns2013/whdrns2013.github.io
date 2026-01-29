@@ -317,6 +317,10 @@ docs_python:
       url: /python/20260126_001_pytz/
     - title: "yfinance - 주식 정보"
       url: /python/20260129_001_yfinance/
+  - title: "TroubleShooting"
+    children:
+    - title: "출력 버퍼와 print flush"
+      url: /python/20260129_003_python_print_flush/
 
 # rust
 docs_rust:
