@@ -317,6 +317,10 @@ docs_python:
       url: /python/20260126_001_pytz/
     - title: "yfinance - 주식 정보"
       url: /python/20260129_001_yfinance/
+  - title: "기법들"
+    children:
+    - title: "연산자 오버로딩"
+      url: /python/20260131_001_python_operator_overloading/
   - title: "TroubleShooting"
     children:
     - title: "출력 버퍼와 print flush"
@@ -1205,6 +1209,10 @@ docs_llm:
       url: /ai/20260113_006_openwebui_connect_mcp_server/
     - title: "[Streamlit] 소개와 채팅 화면 구축"
       url: /ai/20260121_002_streamlit/
+  - title: "◆ LangChain"
+    children:
+    - title: "파이프 체이닝의 원리"
+      url: /python/20260131_002_python_pipe_chaining/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
