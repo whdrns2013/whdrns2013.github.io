@@ -1188,8 +1188,8 @@ docs_llm:
     children:
     - title: "펑션 콜링의 개념"
       url: /ai/20260202_001_function_calling/
-    - title:
-      url:
+    - title: "펑션 콜링 실습"
+      url: /ai/20260202_002_function_calling_practice/
     - title:
       url:
     - title:
