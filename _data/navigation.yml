@@ -1184,6 +1184,16 @@ docs_llm:
       url: /ai/20250720_001_retriever_and_reranker/
     - title: "Reranker의 개념과 실습"
       url: /ai/20250720_002_reranker/
+  - title: "◆ 펑션 콜링"
+    children:
+    - title: "펑션 콜링의 개념"
+      url: /ai/20260202_001_function_calling/
+    - title:
+      url:
+    - title:
+      url:
+    - title:
+      url:
   - title: "◆ MCP"
     children:
     - title: "MCP의 등장 배경과 개념"
