@@ -27,7 +27,7 @@ sidebar:
   nav: docs_llm
 pinned: 
 ---
-<!--postNo: 20260222_002-->
+<!--postNo: 20260202_002-->
 
 ## 펑션 콜링 실습  
 
