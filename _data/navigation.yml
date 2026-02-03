@@ -249,6 +249,10 @@ docs_python:
       url: /python/20251201_005_python_string_formatting/
   - title: "내장 함수 및 모듈"
     children:
+    - title: "any()"
+      url: /python/20260203_001_python_any/
+    - title: "all()"
+      url: /python/20260203_002_python_all/
     - title: "sum()"
       url: /python/20251216_002_python_sum/
     - titls: "json"
