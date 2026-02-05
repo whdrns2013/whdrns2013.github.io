@@ -257,6 +257,10 @@ docs_python:
       url: /python/20251216_002_python_sum/
     - titls: "json"
       url: /python/20230806_002_python_json/
+  - title: "파이썬 객체와 프로토콜"
+    children:
+    - title: "Iterable과 Iterator"
+      url: /python/20260205_001_python_iterable_iterator/
   - title: "예외 처리"
     children:
     - title: "try-except finally"
