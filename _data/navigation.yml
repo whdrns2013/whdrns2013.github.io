@@ -436,9 +436,15 @@ docs_homeserver:
         url: /infra/20240920_002_setting_homeserver_07/
       - title: "(8) DDNS와 개인 도메인 네임 생성"
         url: /infra/20241005_001_setting_homeserver_08/
-  - title: "가상화"
+  - title: "가상화 서버 만들기"
     children:
-      - title:
+      - title: "1.KVM과 Cockpit 설치"
+        url: 
+      - title: "2.가상 머신(VM) 만들기"
+        url: 
+      - title: "3.가상 머신(VM) 네트워크 설정 "
+        url: 
+      - title: "4.VPN 구축 - Wireguard"
         url: 
   - title: "홈서버 보안 강화"
     url:
