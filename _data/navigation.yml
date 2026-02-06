@@ -436,13 +436,17 @@ docs_homeserver:
         url: /infra/20240920_002_setting_homeserver_07/
       - title: "(8) DDNS와 개인 도메인 네임 생성"
         url: /infra/20241005_001_setting_homeserver_08/
+  - title: "가상화"
+    children:
+      - title:
+        url: 
   - title: "홈서버 보안 강화"
     url:
     children:
       - title: "(1) SSH 보안 강화"
-        url: /infra/20240918_002_ssh_security/
+        url: /security/20240918_002_ssh_security/
       - title: "(2) VPN 구축"
-        url: /infra/20241005_002_homeserver_security_vpn/
+        url: /security/20241005_002_homeserver_security_vpn/
 
 # airflow
 docs_airflow:
