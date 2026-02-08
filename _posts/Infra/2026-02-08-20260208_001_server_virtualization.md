@@ -43,12 +43,15 @@ pinned:
 
 > 하나의 물리 서버를 여러 대의 가상 서버처럼 활용할 수 있도록 만들어주는 기반 환경  
 
-가상화 플랫폼이란, **하나의 물리 서버 위에서 여러 개의 독립적인 가상 서버(정확히는 가상 머신 -VM)을 실행하고, 관리**할 수 있도록 구성된 환경을 말합니다. 가상화 플랫폼은 일반적으로 아래와 같은 역할을 수행합니다.  
+가상화 플랫폼이란, **하나의 베어메탈 서버 위에서 여러 개의 독립적인 가상 서버(정확히는 가상 머신 -VM)을 실행하고, 관리**할 수 있도록 구성된 환경을 말합니다. 가상화 플랫폼은 일반적으로 아래와 같은 역할을 수행합니다.  
 
 - 물리 서버의 CPU, 메모리, 저장공간 등의 자원을 여러 VM에 분배한다.  
 - 각 VM을 완전히 독립된 시스템처럼 동작하도록 격리한다.  
 - 네트워크, 저장공간 등을 가상화하여 제공한다.  
 - VM의 생성, 삭제, 백업, 스냅샷을 관리한다.  
+
+> 베어메탈 서버 (Bare-metal server) : 가상 머신이 아닌 물리적 서버를 뜻하는 용어.  
+
 
 ### 가상화 플랫폼을 구축하면 뭐가 좋은데?  
 
@@ -226,4 +229,6 @@ sudo systemctl start cockpit
 ## Reference  
 
 [https://aws.amazon.com/ko/what-is/kvm/](https://aws.amazon.com/ko/what-is/kvm/)  
+[https://cockpit-project.org/documentation.html](https://cockpit-project.org/documentation.html)  
 [https://feccle.tistory.com/207#google_vignette](https://feccle.tistory.com/207#google_vignette)  
+[https://en.wikipedia.org/wiki/Bare-metal_server](https://en.wikipedia.org/wiki/Bare-metal_server)  
