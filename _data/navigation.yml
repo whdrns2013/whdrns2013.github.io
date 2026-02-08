@@ -441,7 +441,7 @@ docs_homeserver:
       - title: "1.KVM과 Cockpit 설치"
         url: /infra/20260208_001_server_virtualization/
       - title: "2.가상 머신(VM) 만들기"
-        url: 
+        url: /infra/20260209_001_homeserver_make_vm/
       - title: "3.가상 머신(VM) 네트워크 설정 "
         url: 
       - title: "4.VPN 구축 - Wireguard"
