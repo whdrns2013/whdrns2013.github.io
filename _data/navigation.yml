@@ -439,7 +439,7 @@ docs_homeserver:
   - title: "가상화 서버 만들기"
     children:
       - title: "1.KVM과 Cockpit 설치"
-        url: 
+        url: /infra/20260208_001_server_virtualization/
       - title: "2.가상 머신(VM) 만들기"
         url: 
       - title: "3.가상 머신(VM) 네트워크 설정 "
