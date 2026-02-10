@@ -444,8 +444,8 @@ docs_homeserver:
         url: /infra/20260209_001_homeserver_make_vm/
       - title: "3.가상 머신(VM) 네트워크 알아보기"
         url: /infra/20260210_001_vm_network/
-      - title: "4.가상 머신(VM) 네트워크 설정 "
-        url: 
+      - title: "4.bridge 네트워크 설정 "
+        url: /infra/20260211_001_vm_bridge_network/
       - title: "5.VPN 구축 - Wireguard"
         url: 
   - title: "홈서버 보안 강화"
