@@ -447,7 +447,7 @@ docs_homeserver:
       - title: "4.bridge 네트워크 설정 "
         url: /infra/20260211_001_vm_bridge_network/
       - title: "5.VPN 구축 - Wireguard"
-        url: 
+        url: /infra/20260212_001_wireguard_vpn.md/
   - title: "홈서버 보안 강화"
     url:
     children:
