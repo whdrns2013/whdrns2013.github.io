@@ -1241,7 +1241,7 @@ docs_llm:
   - title: "◆ LangChain"
     children:
     - title: "LangChain"
-      url:
+      url: /ai/20260214_001_langchain/
     - title: "파이프 체이닝의 원리"
       url: /python/20260131_002_python_pipe_chaining/
   - title: "◆ BitNet"
