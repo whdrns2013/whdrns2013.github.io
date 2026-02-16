@@ -129,7 +129,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE users TO username;
 - 시퀀스 권한
 
 ```sql
-GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO username;
+GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO username;
 ```
 
 - 실행 권한
@@ -177,8 +177,20 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO username;
 
 ## 3. 권한 구조의 핵심 이해하기
 
+### User와 Role의 관계
+
+- User(사용자) = 로그인이 가능한 Role
 - Role = 사용자 + 그룹 개념
 - 권한은 Role에 부여
+
+```sql
+CREATE USER user1 PASSWORD 'pass';
+-- 위 구문은 아래와 동일  
+CREATE ROLE user1 WITH LOGIN PASSWORD 'pass';
+```
+
+### Role을 다른 Role에 할당하기
+
 - Role을 다른 Role에 할당 가능
 
 ```sql
