@@ -473,11 +473,14 @@ docs_airflow:
 docs_postgresql:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
+  - title: "PostgreSQL"
     children:
     - title: "PostgreSQL 관행"
       url: /sql/20251215_001_postgresql_best_practice/
     - title: "PostgreSQL 명령어"
       url: /sql/20260215_001_postgresql_command/
+    - title: "사용자 및 권한"
+      url: /sql/20260216_001_postgresql_user_and_role/
     - title: "PostgreSQL DDL문"
       url: /sql/20251111_001_postgresql_ddl/
     - title: "PostgreSQL DB dump"
