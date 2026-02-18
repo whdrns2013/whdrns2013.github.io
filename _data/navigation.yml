@@ -482,7 +482,7 @@ docs_postgresql:
     - title: "사용자 및 권한"
       url: /sql/20260216_001_postgresql_user_and_role/
     - title: "PostgreSQL DDL문"
-      url: /sql/20251111_001_postgresql_ddl/
+      url: /sql/20260218_001_postgresql_ddl/
     - title: "PostgreSQL DB dump"
       url: /sql/20251111_002_postgresql_dump/
     - title: "Python 에서 PostgreSQL 사용하기"
