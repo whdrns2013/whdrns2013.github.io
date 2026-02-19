@@ -483,6 +483,8 @@ docs_postgresql:
       url: /sql/20260216_001_postgresql_user_and_role/
     - title: "PostgreSQL DDL문"
       url: /sql/20260218_001_postgresql_ddl/
+    - title: "PostgreSQL 데이터베이스와 스키마"
+      url: /sql/20260219_001_postgresql_database_and_schema/
     - title: "PostgreSQL DB dump"
       url: /sql/20251111_002_postgresql_dump/
     - title: "Python 에서 PostgreSQL 사용하기"
