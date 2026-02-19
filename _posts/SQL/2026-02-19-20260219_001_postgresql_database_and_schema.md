@@ -84,6 +84,8 @@ CREATE DATABASE analysis;
 
 👉  shop DB에서 analysis DB 테이블은 일반적인 방식으로는 바로 조회 불가  
 
+---
+
 ### Schema
 
 #### 특징  
@@ -115,7 +117,9 @@ CREATE TABLE marketing.users ( ... );  -- marketing.users 테이블이 생성됨
 
 👉  같은 DB 안에서도 같은 이름의 테이블 공존 가능  
 
-### 기본 스키마 public
+---
+
+### 기본 스키마 
 
 - PostgreSQL은 데이터베이스를 만들면 기본적으로 `public` 이라는 스키마를 가진다.
 - 조회 등에서 스키마를 지정하지 않으면 `saerch_path` 설정값을 따른다.
@@ -140,6 +144,8 @@ SELECT * FROM users;
 SELECT * FROM public.users;
 ```
 
+---
+
 ### 스키마를 지정하여 조회
 
 ```sql
@@ -147,6 +153,8 @@ SELECT * FROM sales.users;
 ```
 
 → `sales` 스키마의 `users` 테이블에서 조회  
+
+---
 
 ### 핵심 요약
 
