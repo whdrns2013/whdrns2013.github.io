@@ -490,7 +490,7 @@ docs_postgresql:
     - title: "Python 에서 PostgreSQL 사용하기"
       url: /sql/20251111_003_postgresql_python/
 
-
+ 
 # data analysis
 docs_data_analysis:
   - title: "<-Doc으로 돌아가기"
