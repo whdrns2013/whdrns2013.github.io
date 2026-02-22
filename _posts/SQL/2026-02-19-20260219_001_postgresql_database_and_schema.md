@@ -135,7 +135,7 @@ CREATE TABLE marketing.users ( ... );  -- marketing.users 테이블이 생성됨
 ```sql
 SELECT * FROM users;
 ```
-
+ 
 → `search_path` 에 따라 스키마 지정이 결정되며, 기본값은 `public` 스키마이다.  
 
 ```sql
