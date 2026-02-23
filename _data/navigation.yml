@@ -317,6 +317,8 @@ docs_python:
       url: /python/20260125_004_devpi_package_upload/
     - title: "[devpi] server 내보내기 및 가져오기"
       url: /python/20260125_005_devpi_server_export_and_import/
+    - title: "[devpi] 실무에서 안정적으로 구축하기"
+      url: /python/202602223_001_devpi_best_practice/
     - title: "[devpi] 명령어 모음"
       url: /python/20260125_006_devpi_commands/
   - title: "기타 라이브러리"
