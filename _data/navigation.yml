@@ -257,6 +257,10 @@ docs_python:
       url: /python/20251216_002_python_sum/
     - titls: "json"
       url: /python/20230806_002_python_json/
+  - titls: "클래스"
+    children:
+    - title: "getattr과 setattr"
+      url: /python/2026-03-21-20260321_001_python_getattr_setattr/
   - title: "파이썬 객체와 프로토콜"
     children:
     - title: "Iterable과 Iterator"

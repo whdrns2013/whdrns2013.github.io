@@ -1,5 +1,5 @@
 ---
-title: "파이썬 @property, @setter, @deleter 사용법" # 제목 (필수)
+title: "[Python] 파이썬 @property, @setter, @deleter 사용법" # 제목 (필수)
 excerpt: "클래스 속성을 메서드로 정의하기" # 서브 타이틀이자 meta description (필수)
 date: 2026-03-20 01:54:00 +0900      # 작성일 (필수)
 lastmod: 2026-03-20 01:54:00 +0900   # 최종 수정일 (필수)
