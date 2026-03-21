@@ -247,6 +247,10 @@ docs_python:
     children:
     - title: "String Formatting - 문자열 형식 지정"
       url: /python/20251201_005_python_string_formatting/
+  - title: "함수"
+    children:
+    - title: "동적 매개변수 전달"
+      url: /python/20260322_001_python_args_kwargs/
   - title: "내장 함수 및 모듈"
     children:
     - title: "any()"
