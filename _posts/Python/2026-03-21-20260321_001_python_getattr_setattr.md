@@ -91,7 +91,7 @@ getattr(객체, "속성이름", 기본값)
 print(u.name)
 
 # getattr 이용
-print(getattr(u, "name")
+print(getattr(u, "name"))
 ```
 
 ```bash
