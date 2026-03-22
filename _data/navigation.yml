@@ -264,7 +264,7 @@ docs_python:
   - titls: "클래스"
     children:
     - title: "getattr과 setattr"
-      url: /python/2026-03-21-20260321_001_python_getattr_setattr/
+      url: /python/20260321_001_python_getattr_setattr/
   - title: "파이썬 객체와 프로토콜"
     children:
     - title: "Iterable과 Iterator"
@@ -279,6 +279,8 @@ docs_python:
     children:
     - title: "컨텍스트 관리자 'with'"
       url: /python/20251201_007_python_with/
+    - title: "컨텍스트 관리자 만들어보기"
+      url: /python/20260323_001_python_with_context_manager/
     - title: "언패킹 unpacking"
       url: /python/20251201_008_python_unpacking/
     - title: "언더스코어 underscore"
