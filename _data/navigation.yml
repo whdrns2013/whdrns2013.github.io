@@ -1267,6 +1267,8 @@ docs_llm:
       url: /ai/20260214_001_langchain/
     - title: "LangChain 기본 사용법"
       url: /ai/20260326_001_langchain_basic/
+    - title: "LangChain 에서 이미지 보내기"
+      url: /ai/20260327_001_langchain_send_image/
     - title: "파이프 체이닝의 원리"
       url: /python/20260131_002_python_pipe_chaining/
   - title: "◆ LangGraph"
