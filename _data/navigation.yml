@@ -481,8 +481,20 @@ docs_airflow:
     children:
     - title: "01. Airflow 소개"
       url: /ops/20250705_001_airflow_intro/
-    - title: "02. Airflow 설치하기"
+    - title: "02. Airflow 설치 방법들"
       url: /ops/20250706_001_airflow_installation/
+    - title: "03. 설치 - PyPI 이용"
+      url: /ops/20260330_005_airflow_install_pypi/
+    - title: "04. 설치 - Docker 이용"
+      url: /ops/20260330_006_airflow_install_by_docker/
+    - title: "05. Provider와 Extras"
+      url: /ops/20260330_007_airflow_provider_and_extras/
+    - title: "06. Executor"
+      url: /ops/20260330_008_airflow_executor/
+    - title: "07. Airflow 작업 병렬처리"
+      url: /ops/20260330_009_airflow_parallel_exec/
+    - title: "08. Docker Operator"
+      url: /ops/20260330_010_airflow_docker_operator/
 
 
 # postgresql
