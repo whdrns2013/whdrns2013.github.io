@@ -56,11 +56,11 @@ pip install "apache-airflow[google]"
 - Provider는 Airflow와 외부 서비스를 연결하는 기능을 제공하는 패키지  
 - Extras를 통해 특정 기능 묶음을 설치할 때, 필요시 Provider 패키지가 포함될 수 있음  
 
-|매핑 관계|설명|예시 Extra|
-|---|---|---|
-|1대1 매핑|특정 Extra를 호출하면 대응하는 Provider 하나가 설치|Extras: `amazon`<br>Provider: `apache-airflow-providers-amazon`|
-|번들(묶음)매핑|하나의 Extra 키워드가 여러 개의 Provider나 라이브러리를 포함하는 경우|Extras : `google`<br>설치 : `apache-airflow-providers-google`<br>및 구글 인증 라이브러리|
-|Core 기능 확장|모든 Extra가 Provider를 설치하는 것은 아님. Airflow 자체의 기능을 확장하는 경우도 있음.|Extras: `password`<br>설치 : `bcrypt`, `flask-bcrypt`|
+|매핑 관계|설명|
+|---|---|
+|1대1 매핑|특정 Extra를 호출하면 대응하는 Provider 하나가 설치|
+|번들(묶음)매핑|하나의 Extra 키워드가 여러 개의 Provider나 라이브러리를 포함하는 경우|
+|Core 기능 확장|모든 Extra가 Provider를 설치하는 것은 아님. Airflow 자체의 기능을 확장하는 경우도 있음.|
 
 
 ### (4) Extras 의 종류  
