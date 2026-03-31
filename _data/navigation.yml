@@ -624,21 +624,31 @@ docs_python_logging:
 docs_mlflow:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: MLflow
+  - title: 1. MLflow
     children:
-    - title: "MLflow 소개"
-    - title: "MLflow DOC"
-      url: /ai/20251115_001_mlflow_doc/
-  - title: "MLflow Tracking Server"
+    - title: "(1)MLflow 소개"
+      url: /Ops/20260401_001_mlflow_intro/
+    - title: "(2)MLflow DOC"
+      url: /Ops/20251115_001_mlflow_doc/
+    - title: "(3)환경 준비"
+      url: /Ops/20260401_002_mlflow_dev_environment/
+  - title: "2. MLflow Server Side"
+    children:
+    - title: "(1)MLflow Server 구조"
+      url: /Ops/20260401_003_mlflow_server_architecture/
+    - title: "(2)Backend Store"
+      url: /Ops/20260401_004_mlflow_backend_store/
+    - title: "(3)Artifact Store"
+      url: /Ops/20260401_005_mlflow_artifact_store/
+    - title: "(4)Tracking Server(미작성)"
+    - title: "(5)MLflow Server Side 설치하기"
+      url: /Ops/20260401_006_mlflow_server_side_install/
+    - title: "(6)테스트 모델 등록해보기"
+      url: /Ops/20260401_007_mlflow_test_model_registration/
+  - title: "3. MLflow 메인 컨셉"
     children:
       - title: ""
-  - title: "MLflow Client(SDK/CLI)"
-    children:
-      - title: ""
-  - title: "MLflow Backend Store"
-    children:
-      - title: ""
-  - title: "MLflow Artifact Store"
+  - title: "4. MLflow Client Side"
     children:
       - title: ""
 
