@@ -1307,6 +1307,8 @@ docs_llm:
     children:
     - title: "LangGraph 소개"
       url: /ai/20260325_001_langgraph_intro/
+    - title: "LangGraph 개발환경 구성"
+      url: /ai/20260406_001_langgraph_environment/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
