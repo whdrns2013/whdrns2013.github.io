@@ -619,7 +619,7 @@ docs_python_logging:
       url: /python/20251104_008_python_logging_custom/
     - title: "09. 다양한 Handler 들"
       url: /python/20251104_009_python_logging_handlers/
- 
+  
 # mlflow
 docs_mlflow:
   - title: "<-Doc으로 돌아가기"
