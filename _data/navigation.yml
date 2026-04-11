@@ -259,8 +259,12 @@ docs_python:
       url: /python/20260203_002_python_all/
     - title: "sum()"
       url: /python/20251216_002_python_sum/
-    - titls: "json"
+    - title: "json"
       url: /python/20230806_002_python_json/
+    - title: "typing - TypedDict"
+      url: /python/20260411_001_python_typeddict/
+    - title: "typing - Annotated"
+      url: /python/20260411_002_python_annotated/
   - titls: "클래스"
     children:
     - title: "getattr과 setattr"
