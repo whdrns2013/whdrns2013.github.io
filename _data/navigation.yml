@@ -57,6 +57,8 @@ docs:
     children:
       - title: "└─ • Patterns 디자인 및 아키텍처 패턴"
         url: /design_pattern/20251123_001_pattern/
+      - title: "└─ • 데이터베이스 모델링"
+        url: /database_system/20241223_002_database_modeling_intro/
   - title: ⏵ 문제해결  
     children:
       - title: "└─ • 알고리즘"
@@ -1341,3 +1343,29 @@ docs_algorithm:
     children:
       - title: "차분배열"
         rul: /algorithm/20260110_001_difference_array/
+
+
+docs_golang:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: Go
+    children:
+      - title: "◆ 개빌환경 구성"
+        url: /golang/20260412_001_go_dev_environment/
+
+
+docs_database_modeling:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 데이터베이스 모델링
+    children:
+      - title: "데이터베이스 모델링의 개념"
+        url: /database_system/20241223_002_database_modeling_intro/
+      - title: "사용자 요구사항 분석"
+        url: /database_system/20241224_001_database_modeling_2_requirement_analysis/
+      - title: "개념 데이터 모델링"
+        url: /database_system/20241229_001_database_modeling_3_concept_and_er_model/
+      - title: "논리적 데이터 모델링"
+        url: /database_system/20241229_002_database_modeling_4_logical_and_rm/
+      - title: "물리적 데이터 모델링"
+        url: /database_system/20241229_004_database_modeling_5_physical_data_modeling/
