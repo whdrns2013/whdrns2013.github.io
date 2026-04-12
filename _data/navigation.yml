@@ -35,6 +35,8 @@ docs:
         url: /rust/20250524_001_rust_intro/
       - title: "└─ • Dart와 Flutter"
         url: /flutter/20240113_005_flutter/
+      - title: "└─ • Go"
+        url: /golang/20260412_001_go_dev_environment/
   - title: ⏵ AI  
     children:
       - title: "└─ • 통계"
