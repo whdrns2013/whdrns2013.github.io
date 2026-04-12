@@ -1363,6 +1363,8 @@ docs_database_modeling:
         url: /database_system/20241223_002_database_modeling_intro/
       - title: "사용자 요구사항 분석"
         url: /database_system/20241224_001_database_modeling_2_requirement_analysis/
+      - title: "개념, 논리, 물리 데이터 모델"
+        url: /database_system/20260413_001_database_modeling_3steps/
       - title: "개념 데이터 모델링"
         url: /database_system/20241229_001_database_modeling_3_concept_and_er_model/
       - title: "논리적 데이터 모델링"
