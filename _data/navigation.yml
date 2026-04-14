@@ -1319,7 +1319,7 @@ docs_llm:
       url: /ai/20260406_001_langgraph_environment/
     - title: "LangGraph의 구성 요소"
       url: /ai/20260407_001_langgraph_components/
-    - title: "State 1.상태의 개념과 설계 원칙"
+    - title: "State 1.상태의 개념"
       url: /ai/20260408_001_langgraph_state_intro/
   - title: "◆ BitNet"
     children:
