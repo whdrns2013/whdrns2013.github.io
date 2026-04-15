@@ -1321,6 +1321,8 @@ docs_llm:
       url: /ai/20260407_001_langgraph_components/
     - title: "State 1.상태의 개념"
       url: /ai/20260408_001_langgraph_state_intro/
+    - title: "State 2.상태 설계와 생성"
+      url: /ai/20260416_001_langgraph_state_design/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
