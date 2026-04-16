@@ -1319,6 +1319,8 @@ docs_llm:
       url: /ai/20260406_001_langgraph_environment/
     - title: "LangGraph의 구성 요소"
       url: /ai/20260407_001_langgraph_components/
+    - title: "StateGraph"
+      url: /ai/20260417_001_langgraph_stategraph/
     - title: "State 1.상태의 개념"
       url: /ai/20260408_001_langgraph_state_intro/
     - title: "State 2.상태 설계와 생성"
