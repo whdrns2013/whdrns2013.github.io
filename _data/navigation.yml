@@ -1325,6 +1325,14 @@ docs_llm:
       url: /ai/20260408_001_langgraph_state_intro/
     - title: "State 2.상태 설계와 생성"
       url: /ai/20260416_001_langgraph_state_design/
+    - title: "State 3.상태 업데이트 메커니즘과 리듀서"
+      url: /ai/20260419_001_langgraph_state_update_mechanism_and_reducer/
+    - title: "Node 노드의 개념과 사용법"
+      url: /ai/20260419_002_langgraph_node/
+    - title: "Edge 엣지의 개념과 종류"
+      url: /ai/20260419_003_langgraph_edge/
+    - title: "Graph 그래프 생성, 컴파일, 실행"
+      url: /ai/20260419_004_langgraph_graph_compile_and_run/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
