@@ -817,3 +817,8 @@ for step in app.stream({"query" : "근처 공원이 있나요?"}):
 {'fallback': {'response': '카페 이용 및 브랜드 관련 문의만 가능합니다. 다시 질문해주시기 바랍니다.'}}
 {'output': {'response': '카페 이용 및 브랜드 관련 문의만 가능합니다. 다시 질문해주시기 바랍니다.'}}
 ```
+
+## Reference  
+
+[https://ai.google.dev/gemini-api/docs/embeddings?hl=ko#generate-embeddings](https://ai.google.dev/gemini-api/docs/embeddings?hl=ko#generate-embeddings)  
+[https://ai.google.dev/gemini-api/docs/pricing?hl=ko#gemini-2.5-flash-lite](https://ai.google.dev/gemini-api/docs/pricing?hl=ko#gemini-2.5-flash-lite)  
