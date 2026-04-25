@@ -1337,6 +1337,8 @@ docs_llm:
       url: /ai/20260419_003_langgraph_edge/
     - title: "Graph 그래프 생성, 컴파일, 실행"
       url: /ai/20260419_004_langgraph_graph_compile_and_run/
+    - title: "(실습)카페 Q&A RAG 개발"
+      url: /ai/20260426_001_langgraph_cafe_rag_exam
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
