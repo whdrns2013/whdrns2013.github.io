@@ -1233,6 +1233,10 @@ docs_vector_db:
       url: /vector_db/20250531_002_milvus_entity_insert_delete/
     - title: "Milvus 색인 (인덱스, index)"
       url: /vector_db/20250604_001_milvus_index/
+  - totle: "Chroma"
+    children:
+    - title: "Chroma 소개와 사용법"
+      url: /vector_db/20260425_001_chroma/
 
 # LLM
 docs_llm:
