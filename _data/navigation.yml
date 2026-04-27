@@ -343,6 +343,12 @@ docs_python:
       url: /python/202602223_001_devpi_best_practice/
     - title: "[devpi] 명령어 모음"
       url: /python/20260125_006_devpi_commands/
+  - title: "데이터 다루기"
+    children:
+    - title: "SQLAlchemy - 파이썬 ORM"
+      url: /python/20260427_001_python_sqlalchemy/
+    - title: "quote_plus - URL 인코딩"
+      url: /python/20260428_001_python_quote_plus/
   - title: "기타 라이브러리"
     children:
     - title: "pytz - 타임존 다루기"
