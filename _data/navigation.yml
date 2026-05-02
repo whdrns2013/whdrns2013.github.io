@@ -351,7 +351,7 @@ docs_python:
       url: /python/20260503_001_alembic/
     - title: "quote_plus - URL 인코딩"
       url: /python/20260428_001_python_quote_plus/
-    - titls: "ConnectorX - 빠른 RDB 조회"
+    - title: "ConnectorX - 빠른 RDB 조회"
       url: /python/20260502_001_connectorx/
   - title: "기타 라이브러리"
     children:
