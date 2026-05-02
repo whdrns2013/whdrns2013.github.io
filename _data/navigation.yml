@@ -347,6 +347,8 @@ docs_python:
     children:
     - title: "SQLAlchemy - 파이썬 ORM"
       url: /python/20260427_001_python_sqlalchemy/
+    - title: "Alembic - DB 마이그레이션"
+      url: /python/20260503_001_alembic/
     - title: "quote_plus - URL 인코딩"
       url: /python/20260428_001_python_quote_plus/
     - titls: "ConnectorX - 빠른 RDB 조회"
