@@ -349,6 +349,8 @@ docs_python:
       url: /python/20260427_001_python_sqlalchemy/
     - title: "quote_plus - URL 인코딩"
       url: /python/20260428_001_python_quote_plus/
+    - titls: "ConnectorX - 빠른 RDB 조회"
+      url: /python/20260502_001_connectorx/
   - title: "기타 라이브러리"
     children:
     - title: "pytz - 타임존 다루기"
