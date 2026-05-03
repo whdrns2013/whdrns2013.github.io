@@ -352,7 +352,7 @@ docs_python:
       url: /python/20260411_001_python_typeddict/
     - title: "typing - Annotated"
       url: /python/20260411_002_python_annotated/
-  - titls: "클래스"
+  - title: "클래스"
     children:
     - title: "getattr과 setattr"
       url: /python/20260321_001_python_getattr_setattr/
@@ -1427,6 +1427,8 @@ docs_llm:
       url: /ai/20260419_003_langgraph_edge/
     - title: "Graph 그래프 생성, 컴파일, 실행"
       url: /ai/20260419_004_langgraph_graph_compile_and_run/
+    - title: "LangGraph의 다양한 출력 방식"
+      url: /ai/20260503_002_langgraph_output_methods/
     - title: "(실습)카페 Q&A RAG 개발"
       url: /ai/20260426_001_langgraph_cafe_rag_exam
   - title: "◆ BitNet"
