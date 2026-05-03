@@ -17,3 +17,24 @@ python-data-migration-guide-with-sqlalchemy-and-alembic:
   title: "Python 데이터베이스 마이그레이션 가이드"
   description: "SQLAlchemy와 Alembic을 사용하여 데이터베이스 마이그레이션을 쉽게 해보자"
   cover: "/assets/images/series/python-data-migration-guide-with-sqlalchemy-and-alembic.jpg"
+
+python-logging:
+  title: "파이썬 로깅 Python Logging"
+  description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"
+  cover: "/assets/images/series/python-logging.jpg"
+
+homeserver_setting:
+  title: "홈서버 구축"
+  description: "미니 PC와 리눅스를 이용한 개인 서버 구축 및 운영 일지"
+  cover: "/assets/images/series/homeserver_setting.jpg"
+
+docker-registry:
+  title: "Docker Registry"
+  description: "도커 컨테이너 저장소 구축하기"
+  cover: "/assets/images/series/docker-registry.jpg"
+
+postgresql:
+  title: "PostgreSQL"
+  description: "강력한 오픈소스 RDBMS PostgreSQL"
+  cover: "/assets/images/series/postgresql.jpg"
+

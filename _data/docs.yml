@@ -40,10 +40,10 @@ meta:
     title: "디자인 및 아키텍처 패턴"
     description: "유연하고 확장 가능한 소프트웨어 설계를 위한 다양한 패턴들"
     cover: "/assets/images/docs/docs_pattern.jpg"
-  docs_postgresql:
-    title: "PostgreSQL"
-    description: "강력한 오픈소스 RDBMS PostgreSQL의 운영 및 최적화"
-    cover: "/assets/images/docs/docs_postgresql.jpg"
+  docs_rdb:
+    title: "RDB"
+    description: "전통적인 데이터 저장 체계"
+    cover: "/assets/images/docs/docs_rdb.jpg"
   docs_vector_db:
     title: "Vector DB"
     description: "고차원 벡터 검색을 위한 Milvus, Chroma 등 벡터 데이터베이스"
@@ -51,7 +51,7 @@ meta:
   docs_database_modeling:
     title: "데이터베이스 모델링"
     description: "현실 세계의 데이터를 효율적인 구조로 설계하는 방법"
-    cover: "/assets/images/docs/docs_dbmodeling.jpg"
+    cover: "/assets/images/docs/docs_database_modeling.jpg"
   docs_algorithm:
     title: "알고리즘"
     description: "효율적인 문제 해결을 위한 핵심 알고리즘 및 문제 풀이"
@@ -60,10 +60,6 @@ meta:
     title: "Docker"
     description: "컨테이너 가상화의 표준, 도커의 기초부터 활용까지"
     cover: "/assets/images/docs/docs_docker.jpg"
-  docs_docker_registry:
-    title: "Docker Registry/Harbor"
-    description: "사설 컨테이너 이미지 저장소 구축 및 운영"
-    cover: "/assets/images/docs/docs_harbor.jpg"
   docs_grafana_and_prometheus:
     title: "Monitoring"
     description: "Prometheus와 Grafana를 이용한 시스템 메트릭 수집 및 시각화"
@@ -76,18 +72,14 @@ meta:
     title: "MLflow"
     description: "머신러닝 실험 관리 및 모델 배포를 위한 MLOps 플랫폼"
     cover: "/assets/images/docs/docs_mlflow.jpg"
-  docs_gitops:
-    title: "GitOps & CI/CD"
-    description: "Git을 통한 인프라 및 애플리케이션의 자동화된 배포 시스템"
-    cover: "/assets/images/docs/docs_gitops.jpg"
-  docs_homeserver:
-    title: "홈서버 구축"
-    description: "미니 PC와 우분투를 이용한 개인 서버 구축 및 운영 일지"
-    cover: "/assets/images/docs/docs_homeserver.jpg"
-  docs_python_logging:
-    title: "파이썬 로깅"
-    description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"
-    cover: "/assets/images/docs/docs_logging.jpg"
+  docs_cicd:
+    title: "CI/CD"
+    description: "코드 통합부터 지속적 배포까지, 중단 없는 서비스 구축을 위한 CI/CD"
+    cover: "/assets/images/docs/docs_cicd.jpg"
+  docs_server_infra:
+    title: "서버 인프라"
+    description: "서버 인프라 및 운영체제와 관련된 지식"
+    cover: "/assets/images/docs/docs_server_infra.jpg"
   docs_pandas:
     title: "Pandas"
     description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
@@ -194,12 +186,6 @@ docs_docker:
     children:
     - title: "Docker 에서 GPU 사용하기"
       url: /docker/20241015_003_use_gpu_on_docker_container/
-
- 
-# docker_registry/Harbor
-docs_docker_registry:
-  - title: "<-Doc으로 돌아가기"
-    url: /docs/intro
   - title: "• Docker Registry 구축"
     children:
     - title: "1. docker registry"
@@ -219,6 +205,30 @@ docs_docker_registry:
     - title: "3. 계정 관리"
       url: /docker/20250502_003_harbor_account/
 
+ 
+# docker_registry/Harbor
+# docs_docker_registry:
+#   - title: "<-Doc으로 돌아가기"
+#     url: /docs/intro
+#   - title: "• Docker Registry 구축"
+#     children:
+#     - title: "1. docker registry"
+#       url: /docker/20240104_001_docker_registry/
+#     - title: "2. docker registry 설정 파일"
+#       url: /docker/20240108_001_docker_registry_config/
+#     - title: "3-1. 보안 강화 - 인증 절차 구현하기"
+#       url: /docker/20240113_001_docker_auth/
+#     - title: "3-2. 보안 강화 - https 적용"
+#       url: /docker/20240113_003_docker_https/
+#   - title: "• Harbor 구축"
+#     children:
+#     - title: "1. Harbor 소개"
+#       url: /docker/20250502_001_harbor/
+#     - title: "2. Harbor 설치하기"
+#       url: /docker/20250502_002_harbor_install/
+#     - title: "3. 계정 관리"
+#       url: /docker/20250502_003_harbor_account/
+
 # grafana_nad_prometheus docs
 docs_grafana_and_prometheus:
   - title: "<-Doc으로 돌아가기"
@@ -234,11 +244,11 @@ docs_grafana_and_prometheus:
     - title: "Grafana 설치하고 사용하기"
       url: /ops/20250430_001_grafana/
 
-# gitops docs
-docs_gitops:
+# cicd docs
+docs_cicd:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: "• GitOps 도전기"
+  - title: "• GitOps"
     children:
     - title: "0. GitOps 에 대한 설명과 이번 시리즈의 목표"
       url: /ops/20250512_001_gitops/
@@ -440,6 +450,27 @@ docs_python:
     children:
     - title: "출력 버퍼와 print flush"
       url: /python/20260129_003_python_print_flush/
+  - title: python logging
+    children:
+    - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
+      url: /python/20251104_001_logging_intro/
+    - title: "02. 파이썬 logging 라이브러리"
+      url: /python/20251104_002_python_logging_lib/
+    - title: "03. 파이썬 로깅 라이브러리의 구조"
+      url: /python/20251104_003_python_logging_structure/
+    - title: "04. Logger"
+      url: /python/20251104_004_python_logging_logger/
+    - title: "05. Handler"
+      url: /python/20251104_005_python_logging_handler/
+    - title: "06. Formatter"
+      url: /python/20251104_006_python_logging_formatter/
+    - title: "07. LogRecord"
+      url: /python/20251104_007_python_logging_log_record/
+    - title: "08. 로깅 래퍼 클래스 만들어보기"
+      url: /python/20251104_008_python_logging_custom/
+    - title: "09. 다양한 Handler 들"
+      url: /python/20251104_009_python_logging_handlers/
+
 
 # rust
 docs_rust:
@@ -520,8 +551,8 @@ docs_pattern:
       - title: "· 안티패턴"
         url: /design_pattern/20250709_002_anti_pattern/
 
-# homeserver
-docs_homeserver:
+# server infra
+docs_server_infra:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
   - title: "홈서버 구축하기"
@@ -588,17 +619,18 @@ docs_airflow:
       url: /ops/20260330_010_airflow_docker_operator/
 
 
-# postgresql
-docs_postgresql:
+# rdb
+docs_rdb:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
+  - title: "RDB"
   - title: "PostgreSQL"
     children:
     - title: "PostgreSQL 관행"
       url: /sql/20251215_001_postgresql_best_practice/
     - title: "PostgreSQL 명령어"
       url: /sql/20260215_001_postgresql_command/
-    - title: "사용자 및 권한"
+    - title: "PostgreSQL 사용자 및 권한"
       url: /sql/20260216_001_postgresql_user_and_role/
     - title: "PostgreSQL DDL문"
       url: /sql/20260218_001_postgresql_ddl/
@@ -685,31 +717,6 @@ docs_data_analysis:
   - title: 분석모형 개선
   - title: 데이터 시각화
   - title: "데이터 분석 용어 모음"
-
-# python_logging
-docs_python_logging:
-  - title: "<-Doc으로 돌아가기"
-    url: /docs/intro
-  - title: python logging
-    children:
-    - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
-      url: /python/20251104_001_logging_intro/
-    - title: "02. 파이썬 logging 라이브러리"
-      url: /python/20251104_002_python_logging_lib/
-    - title: "03. 파이썬 로깅 라이브러리의 구조"
-      url: /python/20251104_003_python_logging_structure/
-    - title: "04. Logger"
-      url: /python/20251104_004_python_logging_logger/
-    - title: "05. Handler"
-      url: /python/20251104_005_python_logging_handler/
-    - title: "06. Formatter"
-      url: /python/20251104_006_python_logging_formatter/
-    - title: "07. LogRecord"
-      url: /python/20251104_007_python_logging_log_record/
-    - title: "08. 로깅 래퍼 클래스 만들어보기"
-      url: /python/20251104_008_python_logging_custom/
-    - title: "09. 다양한 Handler 들"
-      url: /python/20251104_009_python_logging_handlers/
   
 # mlflow
 docs_mlflow:

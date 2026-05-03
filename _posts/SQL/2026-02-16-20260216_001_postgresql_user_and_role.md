@@ -24,7 +24,9 @@ sitemap :                    # 구글 크롤링
 author: # 주인 외 작성자 표기 필요시
 permalink: 
 sidebar: 
-  nav: docs_postgresql
+  nav: docs_rdb
+series: postgresql
+series_index: 3
 ---
 <!--postNo: 20260216_001-->
 

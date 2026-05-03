@@ -6,10 +6,10 @@ main:
     # url: /about/
   - title: "Docs"
     url: /docs/intro/
-  - title: "Categories"
-    url: /categories/
   - title: "Series"
     url: /series/
+  - title: "Categories"
+    url: /categories/
   - title: "Archive"
     url: /year-archive/
   # - title: "Collections"

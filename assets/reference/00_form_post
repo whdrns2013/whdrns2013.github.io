@@ -26,7 +26,7 @@ permalink:
 sidebar:
   nav: 
 pinned: 
-series: "Post Series Test"
+series: series_id
 series_index: 1
 ---
 <!--postNo: 연월일_00n-->

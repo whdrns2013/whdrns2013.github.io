@@ -24,7 +24,9 @@ sitemap :                    # 구글 크롤링
 author: # 주인 외 작성자 표기 필요시
 permalink:
 sidebar:
-  nav: "docs_python_logging"
+  nav: "docs_python"
+series: python-logging
+series_index: 9
 ---
 <!--postNo: 20251104_009-->
 

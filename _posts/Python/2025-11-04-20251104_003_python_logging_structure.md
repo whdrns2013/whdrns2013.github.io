@@ -25,7 +25,9 @@ author: # 주인 외 작성자 표기 필요시
 layout: single
 permalink: /python/20251104_003_python_logging_structure/
 sidebar:
-  nav: "docs_python_logging"
+  nav: "docs_python"
+series: python-logging
+series_index: 3
 ---
 <!--postNo: 20251104_003-->
 
