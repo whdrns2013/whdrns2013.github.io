@@ -1,0 +1,38 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="entries-list">
+  {% comment %}
+    시리즈 데이터(site.data.series)를 순회하며 
+    각 시리즈의 정보를 카드 형태로 출력합니다.
+  {% endcomment %}
+
+  {% for series in site.data.series %}
+    {% assign series_id = series[0] %}
+    {% assign series_info = series[1] %}
+    {% assign series_posts = site.posts | where: "series", series_id %}
+    
+    {% if series_posts.size > 0 %}
+      {% comment %} 시리즈의 첫 번째 포스팅을 링크 대상으로 설정 {% endcomment %}
+      {% assign sorted_posts = series_posts | sort: "series_index" %}
+      {% assign first_post = sorted_posts | first %}
+      
+      <div class="list__item">
+        <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+          <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="{{ first_post.url | relative_url }}">{{ series_info.title }}</a>
+            <span class="taxonomy__count" style="font-size: 0.6em; margin-left: 0.5em;">{{ series_posts.size }} posts</span>
+          </h2>
+          {% if series_info.description %}
+            <div class="archive__item-excerpt" itemprop="description">
+              <p>{{ series_info.description }}</p>
+            </div>
+          {% endif %}
+        </article>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

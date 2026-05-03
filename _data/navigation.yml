@@ -8,6 +8,8 @@ main:
     url: /docs/intro/
   - title: "Categories"
     url: /categories/
+  - title: "Series"
+    url: /series/
   - title: "Archive"
     url: /year-archive/
   # - title: "Collections"
