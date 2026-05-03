@@ -1405,6 +1405,8 @@ docs_llm:
       url: /ai/20260330_003_langchain_lcel_model/
     - title: "LCEL - Output Parser"
       url: /ai/20260330_004_langchain_lcel_outputparser/
+    - title: "LangServe - 빠르게 랭체인 서빙하기"
+      url: /ai/20260503_003_langserve/
   - title: "◆ LangGraph"
     children:
     - title: "LangGraph 소개"
