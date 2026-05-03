@@ -29,25 +29,28 @@
   {% endif %}
 
   <div class="post-series">
-    <div class="post-series__header">
-      <h4 class="post-series__title">
-        <i class="fas fa-list-ol"></i> [시리즈] <span>{{ series_title }}</span>
-      </h4>
-      {% if series_description %}
-        <div class="post-series__description">{{ series_description }}</div>
-      {% endif %}
-    </div>
-    <ul class="post-series__list">
-      {% for post in sorted_series_posts %}
-        <li class="post-series__item{% if post.url == page.url %} is-current{% endif %}">
-          {% if post.url == page.url %}
-            <span class="post-series__current-marker">▶</span>
-            <span class="post-series__title-text">{{ post.title }}</span>
-          {% else %}
-            <a href="{{ post.url | relative_url }}" class="post-series__link">{{ post.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    <details open>
+      <summary class="post-series__header">
+        <h4 class="post-series__title">
+          <i class="fas fa-list-ol"></i> [시리즈] <span>{{ series_title }}</span>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </h4>
+        {% if series_description %}
+          <div class="post-series__description">{{ series_description }}</div>
+        {% endif %}
+      </summary>
+      <ul class="post-series__list">
+        {% for post in sorted_series_posts %}
+          <li class="post-series__item{% if post.url == page.url %} is-current{% endif %}">
+            {% if post.url == page.url %}
+              <span class="post-series__current-marker">▶</span>
+              <span class="post-series__title-text">{{ post.title }}</span>
+            {% else %}
+              <a href="{{ post.url | relative_url }}" class="post-series__link">{{ post.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
   </div>
 {% endif %}

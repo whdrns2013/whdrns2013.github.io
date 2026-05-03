@@ -127,24 +127,51 @@
 /* Post Page Series Box */
 .post-series {
   margin: 2em 0;
-  padding: 1.5em;
+  padding: 0; /* Changed padding to 0 because header now has padding */
   border: 1px solid $border-color;
   border-radius: 12px;
   background-color: mix($background-color, $primary-color, 97%);
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  overflow: hidden;
+
+  details {
+    summary {
+      list-style: none; /* Remove default arrow */
+      outline: none;
+      cursor: pointer;
+      padding: 1.5em;
+
+      &::-webkit-details-marker {
+        display: none; /* Remove default arrow for Safari */
+      }
+    }
+    
+    &[open] {
+      .toggle-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
   &__header {
-    margin-bottom: 1em;
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 0.8em;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    details[open] & {
+      border-bottom-color: $border-color;
+      padding-bottom: 0.8em;
+    }
   }
 
   &__title {
     margin: 0;
     font-size: 1.15rem;
     color: $text-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    i {
+    i:first-child {
       margin-right: 0.6em;
       color: $primary-color;
     }
@@ -152,6 +179,13 @@
     span {
       color: $primary-color;
       font-weight: bold;
+      flex: 1;
+    }
+
+    .toggle-icon {
+      font-size: 0.9rem;
+      color: mix($text-color, $background-color, 40%);
+      transition: transform 0.3s ease;
     }
   }
 
@@ -163,8 +197,8 @@
   }
 
   &__list {
-    margin: 0.5em 0 0;
-    padding: 0;
+    margin: 0;
+    padding: 0.5em 1.5em 1.5em; /* Added side/bottom padding */
     list-style: none;
     counter-reset: series-counter;
   }
