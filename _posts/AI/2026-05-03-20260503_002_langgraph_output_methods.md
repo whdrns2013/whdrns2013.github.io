@@ -42,21 +42,19 @@ series:
 | **`invoke`** | 그래프를 한 번 실행하고 최종 상태(State)를 반환한다. | 동기 방식이며, 실행이 끝날 때까지 대기함. |
 | **`ainvoke`** | `invoke`의 비동기 버전. | `await`를 사용하여 비동기 환경에서 실행 가능 |
 | **`batch`** | 여러 개의 입력을 동시에 처리. | 리스트 형태의 입력을 받아 병렬로 처리한 뒤 결과 리스트를 반환함 |
+
 - 스트리밍 출력 : 노드 단위의 결과물을 출력
 
 | **메서드** | **설명** | **주요 특징** |
 | --- | --- | --- |
-| **`stream`** | 각 노드의 결과를 노드별로 출력 |   • 노드 단위의 결과를 각각 출력
-  • 챗봇의 스트리밍 출력과는 다름 |
+| **`stream`** | 각 노드의 결과를 노드별로 출력 |   • 노드 단위의 결과를 각각 출력<br>  • 챗봇의 스트리밍 출력과는 다름 |
+| **`astream`** | stream에 더해 비동기 처리 기능을 더한 방식 | |
 
 | 스트리밍 주요 모드 | 설명 | 출력 결과 |
 | --- | --- | --- |
-| `values` |   • 그래프의 상태 전체를 스트리밍
-  • 노드가 실행될 때마다 업데이트된 전체 상태를 출력 | 전체 상태 |
-| `updates`  |   • 각 노드 실행 후 변경사항(Delta)만 출력
-  • 각 노드의 반환값을 추적하는 데 용이 | 변경 사항 |
-| `debug`  |   • 그래프 실행의 상세한 내부 이벤트 모드 출력
-  • 개발 단계에서 흐름 파악에 용이 |  |
+| `values` |   • 그래프의 상태 전체를 스트리밍<br>  • 노드가 실행될 때마다 업데이트된 전체 상태를 출력 | 전체 상태 |
+| `updates`  |   • 각 노드 실행 후 변경사항(Delta)만 출력<br>  • 각 노드의 반환값을 추적하는 데 용이 | 변경 사항 |
+| `debug`  |   • 그래프 실행의 상세한 내부 이벤트 모드 출력<br>  • 개발 단계에서 흐름 파악에 용이 |  |
 
 ### 2. 예시 랭그래프
 
@@ -220,4 +218,35 @@ for result in app.stream({"input":10, "count":0}, stream_mode=mode):
 {'step': 4, 'timestamp': '2026-05-03T09:05:50.367329+00:00', 'type': 'task_result', 'payload': {'id': '08b09278-c833-66d4-4e9d-c63e5be47350', 'name': 'generate', 'error': None, 'result': {'value': 4, 'count': 4}, 'interrupts': []}}
 {'step': 5, 'timestamp': '2026-05-03T09:05:50.367387+00:00', 'type': 'task', 'payload': {'id': 'a5d102d1-eb46-9dd1-198c-bf36f6d1576c', 'name': 'terminate', 'input': {'input': 10, 'value': 4, 'count': 4}, 'triggers': ('branch:to:terminate',)}}
 {'step': 5, 'timestamp': '2026-05-03T09:05:50.367455+00:00', 'type': 'task_result', 'payload': {'id': 'a5d102d1-eb46-9dd1-198c-bf36f6d1576c', 'name': 'terminate', 'error': None, 'result': {'response': '4 번 반복 실행됐습니다.'}, 'interrupts': []}}
+```
+
+### 6. astream
+
+- stream에 더해 비동기 처리가 가능한 출력 모드이다.
+
+```python
+# astream : a
+mode = "updates"
+async for result in app.astream({"input":10, "count":0}, stream_mode=mode):
+    print(result)
+```
+
+```bash
+{'generate': {'value': 28, 'count': 1}}
+{'generate': {'value': 55, 'count': 2}}
+{'generate': {'value': 33, 'count': 3}}
+{'generate': {'value': 33, 'count': 4}}
+{'generate': {'value': 74, 'count': 5}}
+{'generate': {'value': 31, 'count': 6}}
+{'generate': {'value': 96, 'count': 7}}
+{'generate': {'value': 65, 'count': 8}}
+{'generate': {'value': 84, 'count': 9}}
+{'generate': {'value': 37, 'count': 10}}
+{'generate': {'value': 83, 'count': 11}}
+{'generate': {'value': 81, 'count': 12}}
+{'generate': {'value': 27, 'count': 13}}
+{'generate': {'value': 75, 'count': 14}}
+{'generate': {'value': 98, 'count': 15}}
+{'generate': {'value': 2, 'count': 16}}
+{'terminate': {'response': '16 번 반복 실행됐습니다.'}}
 ```
