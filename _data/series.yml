@@ -1,0 +1,19 @@
+# Post Series Master List
+# 
+# Usage:
+# Add a unique ID for each series and its metadata.
+# In your post front matter, use:
+# series: series-id
+# series_index: 1
+
+post-series-test:
+  title: "포스팅 시리즈 테스트"
+  description: "시리즈 기능이 정상적으로 작동하는지 확인하기 위한 테스트 시리즈입니다."
+
+langgraph-cafe-rag:
+  title: "LangGraph로 만드는 카페 RAG 시스템"
+  description: "LangGraph를 활용하여 카페 도메인에 특화된 RAG(Retrieval-Augmented Generation) 시스템을 구축하는 과정을 다룹니다."
+
+alembic-guide:
+  title: "Python 데이터베이스 마이그레이션 가이드"
+  description: "Python SQLAlchemy 프로젝트에서 Alembic을 사용하여 데이터베이스 스키마를 관리하는 방법을 배웁니다."

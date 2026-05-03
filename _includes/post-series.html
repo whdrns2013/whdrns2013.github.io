@@ -1,5 +1,15 @@
 {% if page.series %}
-  {% assign series_posts = site.posts | where: "series", page.series %}
+  {% assign series_id = page.series %}
+  {% assign series_info = site.data.series[series_id] %}
+  
+  {% if series_info %}
+    {% assign series_title = series_info.title %}
+    {% assign series_description = series_info.description %}
+  {% else %}
+    {% assign series_title = series_id %}
+  {% endif %}
+
+  {% assign series_posts = site.posts | where: "series", series_id %}
   
   {% comment %} 
     series_index가 있으면 이를 기준으로 정렬하고, 없으면 날짜 오름차순으로 정렬합니다.
@@ -21,8 +31,11 @@
   <div class="post-series">
     <div class="post-series__header">
       <h4 class="post-series__title">
-        <i class="fas fa-list-ol"></i> 이 포스팅이 포함된 시리즈: <span>{{ page.series }}</span>
+        <i class="fas fa-list-ol"></i> 이 포스팅이 포함된 시리즈: <span>{{ series_title }}</span>
       </h4>
+      {% if series_description %}
+        <div class="post-series__description">{{ series_description }}</div>
+      {% endif %}
     </div>
     <ul class="post-series__list">
       {% for post in sorted_series_posts %}
