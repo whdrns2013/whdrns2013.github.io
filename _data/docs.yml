@@ -1,0 +1,1474 @@
+# Metadata for Doc Groups
+meta:
+  docs_clang:
+    title: "C 언어 기초"
+    description: "컴퓨터 구조의 이해와 C 언어의 기초부터 포인터, 메모리 관리까지"
+    cover: "/assets/images/docs/docs_clang.jpg"
+  docs_python:
+    title: "Python"
+    description: "파이썬 언어의 문법, 객체 지향 프로그래밍, 그리고 다양한 라이브러리 활용"
+    cover: "/assets/images/docs/docs_python.jpg"
+  docs_rust:
+    title: "Rust"
+    description: "메모리 안전성과 성능을 모두 잡는 현대적인 언어 Rust 입문"
+    cover: "/assets/images/docs/docs_rust.jpg"
+  docs_dart_and_flutter:
+    title: "Dart와 Flutter"
+    description: "모바일 및 크로스 플랫폼 개발을 위한 Dart 언어와 Flutter 프레임워크"
+    cover: "/assets/images/docs/docs_flutter.jpg"
+  docs_golang:
+    title: "Go"
+    description: "심플하고 강력한 병렬 처리를 지원하는 Go 언어 학습"
+    cover: "/assets/images/docs/docs_golang.jpg"
+  docs_statistics:
+    title: "통계학"
+    description: "데이터를 읽는 눈, 기초 통계부터 확률, 가설 검정 및 인과관계 분석"
+    cover: "/assets/images/docs/docs_statistics.jpg"
+  docs_nlp:
+    title: "자연언어처리 (NLP)"
+    description: "텍스트 데이터의 수치화부터 임베딩, 최신 LLM 기술의 이해"
+    cover: "/assets/images/docs/docs_nlp.jpg"
+  docs_llm:
+    title: "LLM & AI Application"
+    description: "RAG, LangChain, LangGraph 등을 이용한 실전 AI 서비스 개발"
+    cover: "/assets/images/docs/docs_llm.jpg"
+  docs_recommendation:
+    title: "추천 시스템"
+    description: "협업 필터링부터 컨텐츠 기반 필터링, 추천 성능 평가 지표"
+    cover: "/assets/images/docs/docs_recommendation.jpg"
+  docs_pattern:
+    title: "디자인 및 아키텍처 패턴"
+    description: "유연하고 확장 가능한 소프트웨어 설계를 위한 다양한 패턴들"
+    cover: "/assets/images/docs/docs_pattern.jpg"
+  docs_postgresql:
+    title: "PostgreSQL"
+    description: "강력한 오픈소스 RDBMS PostgreSQL의 운영 및 최적화"
+    cover: "/assets/images/docs/docs_postgresql.jpg"
+  docs_vector_db:
+    title: "Vector DB"
+    description: "고차원 벡터 검색을 위한 Milvus, Chroma 등 벡터 데이터베이스"
+    cover: "/assets/images/docs/docs_vector_db.jpg"
+  docs_database_modeling:
+    title: "데이터베이스 모델링"
+    description: "현실 세계의 데이터를 효율적인 구조로 설계하는 방법"
+    cover: "/assets/images/docs/docs_dbmodeling.jpg"
+  docs_algorithm:
+    title: "알고리즘"
+    description: "효율적인 문제 해결을 위한 핵심 알고리즘 및 문제 풀이"
+    cover: "/assets/images/docs/docs_algorithm.jpg"
+  docs_docker:
+    title: "Docker"
+    description: "컨테이너 가상화의 표준, 도커의 기초부터 활용까지"
+    cover: "/assets/images/docs/docs_docker.jpg"
+  docs_docker_registry:
+    title: "Docker Registry/Harbor"
+    description: "사설 컨테이너 이미지 저장소 구축 및 운영"
+    cover: "/assets/images/docs/docs_harbor.jpg"
+  docs_grafana_and_prometheus:
+    title: "Monitoring"
+    description: "Prometheus와 Grafana를 이용한 시스템 메트릭 수집 및 시각화"
+    cover: "/assets/images/docs/docs_monitoring.jpg"
+  docs_airflow:
+    title: "Airflow"
+    description: "데이터 파이프라인 워크플로우 관리 도구 Airflow 활용"
+    cover: "/assets/images/docs/docs_airflow.jpg"
+  docs_mlflow:
+    title: "MLflow"
+    description: "머신러닝 실험 관리 및 모델 배포를 위한 MLOps 플랫폼"
+    cover: "/assets/images/docs/docs_mlflow.jpg"
+  docs_gitops:
+    title: "GitOps & CI/CD"
+    description: "Git을 통한 인프라 및 애플리케이션의 자동화된 배포 시스템"
+    cover: "/assets/images/docs/docs_gitops.jpg"
+  docs_homeserver:
+    title: "홈서버 구축"
+    description: "미니 PC와 우분투를 이용한 개인 서버 구축 및 운영 일지"
+    cover: "/assets/images/docs/docs_homeserver.jpg"
+  docs_python_logging:
+    title: "파이썬 로깅"
+    description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"
+    cover: "/assets/images/docs/docs_logging.jpg"
+  docs_pandas:
+    title: "Pandas"
+    description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
+    cover: "/assets/images/docs/docs_pandas.jpg"
+
+# documentation links
+docs:
+  - title: Doc Intro
+    url: /docs/intro/
+  - title: Contents
+  - title: ⏵ 프로그래밍 언어  
+    children:
+      - title: "└─ • C 언어 기초"
+        url: /clang/20251024_001_programming_language/
+      - title: "└─ • Python"
+        url: /python/20251201_004_python_list_slicing/
+      - title: "└─ • Rust"
+        url: /rust/20250524_001_rust_intro/
+      - title: "└─ • Dart와 Flutter"
+        url: /flutter/20240113_005_flutter/
+      - title: "└─ • Go"
+        url: /golang/20260412_001_go_dev_environment/
+  - title: ⏵ AI  
+    children:
+      - title: "└─ • 통계"
+        url: /statistics/20251121_001_statistics_data/
+      - title: "└─ • 자연언어처리"
+        url: /nlp/20251018_001_nlp_definition/
+      - title: "└─ • LLM"
+        url: /ai/20250720_001_retriever_and_reranker/
+      - title: "└─ • 추천 기술"
+        url: /recommend_system/20251219_005_recommend_metric_intro/
+  - title: ⏵ 데이터베이스  
+    children:
+      - title: "└─ • PostgreSQL"
+        url: /sql/20251215_001_postgresql_best_practice/
+      - title: "└─ • Vector DB"
+        url: /vector_db/20250527_001_vector_db/
+  - title: ⏵ 설계  
+    children:
+      - title: "└─ • Patterns 디자인 및 아키텍처 패턴"
+        url: /design_pattern/20251123_001_pattern/
+      - title: "└─ • 데이터베이스 모델링"
+        url: /database_system/20241223_002_database_modeling_intro/
+  - title: ⏵ 문제해결  
+    children:
+      - title: "알고리즘"
+        url: /algorithm/20260110_001_difference_array/
+  - title: "⏵ Infra/Tool"
+    children:
+      - title: "└─ • Docker"
+        url: /docker/20230702_002_docker/
+      - title: "└─ • Docker Registry/Harbor 구축"
+        url: /docker/20240104_001_docker_registry/
+      - title: "└─ • Grafana and Prometheus"
+        url: /ops/20250420_001_grafana_prometheus/
+      - title: "└─ • Airflow"
+        url: /ops/20250705_001_airflow_intro/
+      - title: "└─ • MLflow"
+        url: /ai/20251115_001_mlflow_doc/
+      - title: "└─ • 홈서버 구축"
+        url: /infra/20240914_001_setting_home_server_01/
+  - title: "⏵ CI/CD"
+    children:
+      - title: "└─ • GitOps 도전기"
+        url: /ops/20250512_001_gitops/
+  - title: "⏵ 라이브러리"
+    children:
+      - title: "└─ • Pandas"
+        url: /python/20251217_001_pandas_reduce_loop/
+      - title: "└─ • 파이썬에서 logging 하기"
+        url: /python/20251104_001_logging_intro/
+
+# docker docs
+docs_docker:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• docker"
+    children:
+    - title: "1. 도커란?"
+      url: /docker/20230702_002_docker/
+    - title: "2. 도커 설치하기"
+      url: /docker/20230912_001_docker_installation/
+    - title: "3. 도커 이미지 다운받기"
+      url: /docker/20230912_002_docker_pull/
+    - title: "4. 컨테이너 실행하기"
+      url: /docker/20240226_001_docker_container_run/
+    - title: "5. 컨테이너를 이미지로 만들기"
+      url: /docker/20240714_001_docker_commit/
+    - title: "6. 컨테이너 및 이미지를 파일로 추출하기"
+      url: /docker/20240715_001_docker_save_export/
+    - title: "7. 호스트 - 컨테이너 간 파일 옮기기"
+      url: /docker/20240725_001_dockercp_dockeradd/
+    - title: "8. Volume Mount"
+      url: /docker/20240920_001_docker_volumes/
+  - title: "• docker compose"
+    children:
+    - title: "1. 도커 컴포즈란?"
+      url: /docker/20241015_001_docker_compose/
+    - title: "2. 도커 컴포즈 설치하기"
+      url: /docker/20241015_002_docker_compose_install/
+    - title: "(예정)3. docker-compose.yml 둘러보기"
+  - title: "• docker 사용 팁"
+    children:
+    - title: "Docker 에서 GPU 사용하기"
+      url: /docker/20241015_003_use_gpu_on_docker_container/
+
+ 
+# docker_registry/Harbor
+docs_docker_registry:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• Docker Registry 구축"
+    children:
+    - title: "1. docker registry"
+      url: /docker/20240104_001_docker_registry/
+    - title: "2. docker registry 설정 파일"
+      url: /docker/20240108_001_docker_registry_config/
+    - title: "3-1. 보안 강화 - 인증 절차 구현하기"
+      url: /docker/20240113_001_docker_auth/
+    - title: "3-2. 보안 강화 - https 적용"
+      url: /docker/20240113_003_docker_https/
+  - title: "• Harbor 구축"
+    children:
+    - title: "1. Harbor 소개"
+      url: /docker/20250502_001_harbor/
+    - title: "2. Harbor 설치하기"
+      url: /docker/20250502_002_harbor_install/
+    - title: "3. 계정 관리"
+      url: /docker/20250502_003_harbor_account/
+
+# grafana_nad_prometheus docs
+docs_grafana_and_prometheus:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• Grafana and Prometheus"
+    children:
+    - title: "Grafana와 Prometheus 소개"
+      url: /ops/20250420_001_grafana_prometheus/
+    - title: "Prometheus 설치하기"
+      url: /ops/20250421_001_install_prometheus/
+    - title: "Exporter 설치하고 메트릭 수집하기"
+      url: /ops/20250422_001_exporter/
+    - title: "Grafana 설치하고 사용하기"
+      url: /ops/20250430_001_grafana/
+
+# gitops docs
+docs_gitops:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "• GitOps 도전기"
+    children:
+    - title: "0. GitOps 에 대한 설명과 이번 시리즈의 목표"
+      url: /ops/20250512_001_gitops/
+    - title: "1. Git 저장소와 GitLab 설치하기"
+      url: /ops/20250512_002_gitlab_install/
+    - title: "2. Docker Registry 설치하기"
+      url: /ops/20250515_001_docker_registry/
+    - title: "3. GitLab - Docker Registry 연결하기"
+      url: /ops/20250516_001_connect_gitlab_harbor/
+    - title: "4. GitLab CI/CD 에 대해 알아보자"
+      url: /ops/20250517_001_gitlab_cicd/
+
+# dart and flutter docs
+docs_dart_and_flutter:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "Intro"
+    children:
+    - title: "Flutter란?"
+      url: /flutter/20240113_005_flutter/
+  - title: dart
+    children:
+    - title: "Dart 소개"
+      url: /dart/20240120_001_dart/
+    - title: "Dart 설치하기"
+      url: /dart/20240121_001_dart_installation/
+    - title: "Dart 개발 환경 준비"
+      url: /dart/20240121_002_dart_first_step/
+    - title: "Main Function"
+      url: /dart/20240121_003_dart_main_function/
+    - title: "변수의 선언"
+      url: /dart/20240121_004_dart_variables/
+    - title: "자료형 (data type)"
+      url: /dart/20240121_005_dart_datatype/
+    - title: "MAP 자료형"
+      url: /dart/20240209_002_dart_dictionary/
+    - title: "함수의 선언"
+      url: /dart/20240121_006_dart_function/
+    - title: "클래스"
+      url: /dart/20240122_001_dart_class/
+  - title: flutter
+    children:
+    - title: "Flutter 소개"
+      url: /flutter/20240128_001_flutter_intro/
+    - title: "Flutter 설치하기"
+      url: /flutter/20240128_002_flutter_installation/
+    - title: "프로젝트 만들기"
+      url: /flutter/20240128_003_make_flutter_project/
+    - title: "Hello World"
+    - title: "Flutter 의 구성 요소 (App, Widget, ...)"
+    - title: "개발 전에 알아두면 좋을 것 (Inspector, guideline, codeaction)"
+    - title: "Widgets"
+    - title: "Stateless Widget과 Stateful Widget"
+    - title: "Build Context"
+    - title: "Widget Lifecycle"
+    - title: "API와 비동기 프로그래밍"
+    - title: "JSON 다루기"
+    - title: "data fetch and future builder"
+    - title: "ListView"
+    - title: "Gesture Detector"
+    - title: "Navigator"
+    - title: "Hero Widget"
+    - title: "URL Launcher"
+    - title: "Shared Preferences"
+
+# python docs
+docs_python:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: python
+    children:
+    - title: "Python 소개"
+      url:
+  - title: "Python 자료구조"
+    children:
+  - title: "List 리스트"
+    children:
+    - title: "시퀀스 슬라이싱"
+      url: /python/20251201_004_python_list_slicing/
+    - title: "Comprehension"
+      url: /python/20230105_001_python_comprehension/
+  - title: "String 문자열"
+    children:
+    - title: "String Formatting - 문자열 형식 지정"
+      url: /python/20251201_005_python_string_formatting/
+  - title: "함수"
+    children:
+    - title: "동적 매개변수 전달"
+      url: /python/20260322_001_python_args_kwargs/
+  - title: "내장 함수 및 모듈"
+    children:
+    - title: "any()"
+      url: /python/20260203_001_python_any/
+    - title: "all()"
+      url: /python/20260203_002_python_all/
+    - title: "sum()"
+      url: /python/20251216_002_python_sum/
+    - title: "json"
+      url: /python/20230806_002_python_json/
+    - title: "typing - TypedDict"
+      url: /python/20260411_001_python_typeddict/
+    - title: "typing - Annotated"
+      url: /python/20260411_002_python_annotated/
+  - titls: "클래스"
+    children:
+    - title: "getattr과 setattr"
+      url: /python/20260321_001_python_getattr_setattr/
+  - title: "파이썬 객체와 프로토콜"
+    children:
+    - title: "Iterable과 Iterator"
+      url: /python/20260205_001_python_iterable_iterator/
+  - title: "예외 처리"
+    children:
+    - title: "try-except finally"
+      url: /python/20251202_002_python_exception_handling/
+    - title: "Error 의 종류"
+      url: /python/20251202_003_python_error_type/
+  - title: "문법적 요소"
+    children:
+    - title: "컨텍스트 관리자 'with'"
+      url: /python/20251201_007_python_with/
+    - title: "컨텍스트 관리자 만들어보기"
+      url: /python/20260323_001_python_with_context_manager/
+    - title: "언패킹 unpacking"
+      url: /python/20251201_008_python_unpacking/
+    - title: "언더스코어 underscore"
+      url: /python/20251202_001_python_throwaway_variable_underscore/
+  - title: "함수형 프로그래밍"
+    children:
+    - title: "함수형 프로그래밍"
+      url: /python/20251202_004_functional_programming/
+    - title: "람다 lambda"
+      url: /python/20251202_005_python_lambda/
+    - title: "map 함수"
+      url: /python/20251202_006_python_map_function/
+    - title: "filter 함수"
+      url: /python/20251202_007_python_filter/
+    - title: "reduce 함수"
+      url: /python/20251202_008_python_reduce/
+  - title: "키워드"
+    children:
+    - title: "yield - 함수를 제너레이터로"
+      url: /python/20260129_002_python_yield/
+  - title: "데코레이터"
+    children:
+    - title: "@property, @setter, @deleter"
+      url: /python/20260320_001_python_property_setter_deleter/
+  - title: "Best Practice"
+    children:
+    - title: "hash lookup으로 탐색 성능 최적화"
+      url: /python/20251216_001_python_hash_lookup/
+    - title: "comprehension으로 서브 딕셔너리 만들기"
+      url: /python/20251218_004_dictionary_comprehension/
+  - title: "패키지 만들기"
+    children:
+    - title: "파이썬 패키지(라이브러리) 만들기"
+      url: 
+  - title: "패키지 관리"
+    children:
+    - title: "uv - 매우 빠른 패키지 및 프로젝트 관리자"
+      url: /python/20250515_002_uv/
+    - title: "[devpi] devpi server 사설 PyPI 서버"
+      url: /python/20260122_001_devpi/
+    - title: "[devpi] index 생성과 설정 및 삭제"
+      url: /python/20260125_001_devpi_index/
+    - title: "[devpi] 패키지 설치 및 캐싱"
+      url: /python/20260125_002_devpi_package_caching/
+    - title: "[devpi] 패키지 캐싱 자동화 스크립트"
+      url: /python/20260125_003_devpi_package_caching_auto/
+    - title: "[devpi] 릴리즈(패키지) 업로드 및 삭제"
+      url: /python/20260125_004_devpi_package_upload/
+    - title: "[devpi] server 내보내기 및 가져오기"
+      url: /python/20260125_005_devpi_server_export_and_import/
+    - title: "[devpi] 실무에서 안정적으로 구축하기"
+      url: /python/202602223_001_devpi_best_practice/
+    - title: "[devpi] 명령어 모음"
+      url: /python/20260125_006_devpi_commands/
+  - title: "데이터 다루기"
+    children:
+    - title: "SQLAlchemy - 파이썬 ORM"
+      url: /python/20260427_001_python_sqlalchemy/
+    - title: "Alembic - DB 마이그레이션"
+      url: /python/20260503_001_alembic/
+    - title: "quote_plus - URL 인코딩"
+      url: /python/20260428_001_python_quote_plus/
+    - title: "ConnectorX - 빠른 RDB 조회"
+      url: /python/20260502_001_connectorx/
+  - title: "기타 라이브러리"
+    children:
+    - title: "pytz - 타임존 다루기"
+      url: /python/20260126_001_pytz/
+    - title: "yfinance - 주식 정보"
+      url: /python/20260129_001_yfinance/
+  - title: "기법들"
+    children:
+    - title: "연산자 오버로딩"
+      url: /python/20260131_001_python_operator_overloading/
+  - title: "TroubleShooting"
+    children:
+    - title: "출력 버퍼와 print flush"
+      url: /python/20260129_003_python_print_flush/
+
+# rust
+docs_rust:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: Rust
+    children:
+    - title: "0. Rust 소개"
+      url: /rust/20250524_001_rust_intro/
+    - title: "1. Rust 설치와 개발 환경 준비"
+      url: /rust/20250524_002_rust_installation/
+    - title: "2. 프로젝트 만들기"
+      url: /rust/20250524_003_rust_make_project/
+    - title: "3. Hello World!"
+      url: /rust/20250524_004_rust_hello_world/
+    - title: "4. Hello Cargo!"
+      url: /rust/20250524_005_rust_hello_cargo/
+    - title: "5. 프로젝트 디렉터리 구조"
+      url: /rust/20250524_006_rust_project_dir/
+    - title: "6. Rust 의 빌드 종류"
+      url: /rust/20250524_007_rust_type_of_build/
+    - title: "7. 변수와 상수 그리고 Shadowing"
+      url: /rust/20250613_001_rust_variables/
+  - title: Data Type
+    children:
+    - title: "8-1. 자료형 데이터 타입 Data Type"
+      url: /rust/20250616_001_rust_datatype/
+    - title: "8-2. 데이터타입 - 정수형과 부동소수형"
+      url: /rust/20250616_002_rust_integer_float/
+    - title: "8-3. 데이터타입 - 부울형 Boolean"
+      url: /rust/20250617_001_rust_bool/
+    - title: "8-4. 데이터타입 - 문자형 char"
+      url: /rust/20250618_001_rust_char/
+    - title: "8-5. 데이터타입 - 튜플형 tuple"
+      url: /rust/20250625_002_rust_tuple/
+    - title: "8-6. 데이터타입 - 배열형 array"
+      url: /rust/20250627_001_rust_array/
+    - title: "8-7. 데이터타입 - 튜플과 배열의 원소 접근 방법 차이"
+      url: /rust/20250628_001_tuple_array_syntax/
+
+# pattern
+docs_pattern:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "패턴이란?"
+    url: /design_pattern/20251123_001_pattern/
+  - title: "아키텍처 패턴"
+    url: /design_pattern/20250704_003_architecture_pattern/
+    children:
+      - title: "· DDD 도메인 주도 설계"
+        url: /design_pattern/20250702_001_ddd/
+      - title: "· CQRS 명령 쿼리 책임 분리 설계"
+      - title: "   - CQRS에 대해 알아보자"
+        url: /design_pattern/20250510_001_cqrs_intro/
+      - title: "   - CQRS 패턴의 구현 수준과 적용 방식"
+        url: /design_pattern/20250510_002_cqrs_level/
+      - title: "· MSA 마이크로 서비스 아키텍처"
+        url: /design_pattern/20250708_001_msa/
+  - title: "디자인 패턴"
+    url: /design_pattern/20250704_004_design_pattern/
+  - title: "1. 생성 패턴"
+    children:
+    - title: "1-01. 팩토리 패턴(Factory Pattern)"
+      url: /design_pattern/20251123_003_factory_pattern/
+    - title: "1-03. 빌더 패턴(Builder Pattern)"
+      url: /design_pattern/20250704_002_builder_pattern/
+  - title: "2. 구조 패턴"
+  - title: "3. 행동 패턴"
+    children:
+    - title: "3-01. 전략 패턴"
+      url: /design_pattern/20251123_002_strategy_pattern/
+  - title: "4. 참고"
+    children:
+    - title: "4-01. 상속과 합성"
+    - title: "4-02. 인터페이스와 공통 규약, method signature"
+  - title: "기타"
+    children:
+      - title: "· 안티패턴"
+        url: /design_pattern/20250709_002_anti_pattern/
+
+# homeserver
+docs_homeserver:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "홈서버 구축하기"
+    url: /infra/20240914_001_setting_home_server_01/
+    children:
+      - title: "(1) 미니 PC 구매와 설치"
+        url: /infra/20240914_001_setting_home_server_01/
+      - title: "(2) OS 설치하기"
+        url: /infra/20240914_003_setting_homeserver_02/
+      - title: "(3) 네트워크 준비"
+        url: /infra/20240914_004_setting_homeserver_03/
+      - title: "(4) 포트포워딩과 DMZ"
+        url: /infra/20240916_001_setting_homeserver_04/
+      - title: "(5) SSH 접속"
+        url: /infra/20240918_001_setting_homeserver_05/
+      - title: "(6) Jupyter 서버 구축"
+        url: /infra/20240919_001_setting_homeserver_06/
+      - title: "(7) 웹서버 애플리케이션 도커"
+        url: /infra/20240920_002_setting_homeserver_07/
+      - title: "(8) DDNS와 개인 도메인 네임 생성"
+        url: /infra/20241005_001_setting_homeserver_08/
+  - title: "가상화 서버 만들기"
+    children:
+      - title: "1.KVM과 Cockpit 설치"
+        url: /infra/20260208_001_server_virtualization/
+      - title: "2.가상 머신(VM) 만들기"
+        url: /infra/20260209_001_homeserver_make_vm/
+      - title: "3.가상 머신(VM) 네트워크 알아보기"
+        url: /infra/20260210_001_vm_network/
+      - title: "4.bridge 네트워크 설정 "
+        url: /infra/20260211_001_vm_bridge_network/
+      - title: "5.VPN 구축 - Wireguard"
+        url: /infra/20260212_001_wireguard_vpn.md/
+  - title: "홈서버 보안 강화"
+    url:
+    children:
+      - title: "(1) SSH 보안 강화"
+        url: /security/20240918_002_ssh_security/
+      - title: "(2) VPN 구축"
+        url: /security/20241005_002_homeserver_security_vpn/
+
+
+# airflow
+docs_airflow:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "Airflow"
+    children:
+    - title: "01. Airflow 소개"
+      url: /ops/20250705_001_airflow_intro/
+    - title: "02. Airflow 설치 방법들"
+      url: /ops/20250706_001_airflow_installation/
+    - title: "03. 설치 - PyPI 이용"
+      url: /ops/20260330_005_airflow_install_pypi/
+    - title: "04. 설치 - Docker 이용"
+      url: /ops/20260330_006_airflow_install_by_docker/
+    - title: "05. Provider와 Extras"
+      url: /ops/20260330_007_airflow_provider_and_extras/
+    - title: "06. Executor"
+      url: /ops/20260330_008_airflow_executor/
+    - title: "07. Airflow 작업 병렬처리"
+      url: /ops/20260330_009_airflow_parallel_exec/
+    - title: "08. Docker Operator"
+      url: /ops/20260330_010_airflow_docker_operator/
+
+
+# postgresql
+docs_postgresql:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "PostgreSQL"
+    children:
+    - title: "PostgreSQL 관행"
+      url: /sql/20251215_001_postgresql_best_practice/
+    - title: "PostgreSQL 명령어"
+      url: /sql/20260215_001_postgresql_command/
+    - title: "사용자 및 권한"
+      url: /sql/20260216_001_postgresql_user_and_role/
+    - title: "PostgreSQL DDL문"
+      url: /sql/20260218_001_postgresql_ddl/
+    - title: "PostgreSQL 데이터베이스와 스키마"
+      url: /sql/20260219_001_postgresql_database_and_schema/
+    - title: "PostgreSQL DB dump"
+      url: /sql/20251111_002_postgresql_dump/
+    - title: "Python 에서 PostgreSQL 사용하기"
+      url: /sql/20251111_003_postgresql_python/
+
+ 
+# data analysis
+docs_data_analysis:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "데이터"
+    children:
+    - title: "데이터와 정보"
+      url:
+    - title: "데이터의 분류 - 속성을 기준으로"
+      url:
+    - title: "데이터의 분류 - 형태를 기준으로"
+      url:
+  - title: "데이터 분석 개요"
+    children:
+    - title: "데이터 분석의 정의"
+      url:
+    - title: "데이터 분석의 4단계"
+      url:
+    - title: "데이터 분석 적용 사례"
+      url:
+    - title: "데이터 분석의 발전 과정"
+      url:
+    - title: "데이터 분석의 3요소"
+      url:
+    - title: "데이터 분석과 데이터 과학"
+      url:
+    - title: "데이터 분석의 과정(workflow)"
+      url:
+  - title:  "데이터 수집"
+    children:
+    - title: "데이터 수집"
+      url:
+    - title: "고품질 데이터"
+      url:
+    - title: "데이터 수집 방법"
+      url:
+    - title: "파일 기반 데이터 수집"
+      url:
+    - title: "API 기반 데이터 수집"
+      url:
+    - title: "웹 스크래핑 기반 데이터 수집"
+      url:
+    - title: "웹 스크래핑과 웹 크롤링의 차이"
+      url:
+  - title: 데이터 분석 방법
+    children:
+    - title: "데이터 분석의 종류"
+    - title: "정형 데이터 분석"
+    - title: "통계 분석"
+    - title: "회귀 분석"
+    - title: "상관 분석"
+    - title: "연관 분석"
+    - title: "주성분 분석"
+    - title: "시계열 분석"
+    - title: "군집 분석"
+    - title: "범주형 자료 분석"
+    - title: "서포트 벡터 머신"
+    - title: "베이즈 기법"
+    - title: "딥러닝 분석"
+    - title: "앙상블 분석"
+    - title: "다변량 분석"
+    - title: "비정형 데이터 분석"
+    - title: "데이터 마이닝"
+    - title: "텍스트 마이닝"
+    - title: "오피니언 마이닝"
+    - title: "웹 마이닝"
+  - title: 평가 지표
+    children:
+    - title: 분류모델 평가 지표
+    - title: 회귀모델 평가 지표
+    - title: 군집분석 평가 지표
+    - title: K폴드 교차검증
+  - title: 분석모형 개선
+  - title: 데이터 시각화
+  - title: "데이터 분석 용어 모음"
+
+# python_logging
+docs_python_logging:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: python logging
+    children:
+    - title: "01. 로깅의 정의와 목적, 로그의 기본 요소"
+      url: /python/20251104_001_logging_intro/
+    - title: "02. 파이썬 logging 라이브러리"
+      url: /python/20251104_002_python_logging_lib/
+    - title: "03. 파이썬 로깅 라이브러리의 구조"
+      url: /python/20251104_003_python_logging_structure/
+    - title: "04. Logger"
+      url: /python/20251104_004_python_logging_logger/
+    - title: "05. Handler"
+      url: /python/20251104_005_python_logging_handler/
+    - title: "06. Formatter"
+      url: /python/20251104_006_python_logging_formatter/
+    - title: "07. LogRecord"
+      url: /python/20251104_007_python_logging_log_record/
+    - title: "08. 로깅 래퍼 클래스 만들어보기"
+      url: /python/20251104_008_python_logging_custom/
+    - title: "09. 다양한 Handler 들"
+      url: /python/20251104_009_python_logging_handlers/
+  
+# mlflow
+docs_mlflow:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 1. MLflow
+    children:
+    - title: "(1)MLflow 소개"
+      url: /ops/20260401_001_mlflow_intro/
+    - title: "(2)MLflow DOC"
+      url: /ops/20251115_001_mlflow_doc/
+    - title: "(3)환경 준비"
+      url: /ops/20260401_002_mlflow_dev_environment/
+  - title: "2. MLflow Server Side"
+    children:
+    - title: "(1)MLflow Server 구조"
+      url: /ops/20260401_003_mlflow_server_architecture/
+    - title: "(2)Backend Store"
+      url: /ops/20260401_004_mlflow_backend_store/
+    - title: "(3)Artifact Store"
+      url: /ops/20260401_005_mlflow_artifact_store/
+    - title: "(4)Tracking Server(미작성)"
+    - title: "(5)MLflow Server Side 설치하기"
+      url: /ops/20260401_006_mlflow_server_side_install/
+    - title: "(6)테스트 모델 등록해보기"
+      url: /ops/20260401_007_mlflow_test_model_registration/
+  - title: "3. MLflow 메인 컨셉"
+    children:
+      - title: ""
+  - title: "4. MLflow Client Side"
+    children:
+      - title: ""
+
+# statistics
+docs_statistics:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "통계로 세상 읽기"
+    children:
+    - title: "데이터란"
+      url: /statistics/20251121_001_statistics_data/
+    - title: "통계와 통계학"
+      url: /statistics/20251121_002_statistics_and_statistics/
+    - title: "통계의 역사와 역사적 사례"
+      url: /statistics/20251121_003_statistics_history/
+    - title: "국가 통계"
+      url: /statistics/20251121_004_national_statistics/
+  - title: "통계"
+    children:
+    - title: "통계 만들기"
+      url: /statistics/20251121_005_make_statistics/
+    - title: "중심위치"
+      url: /statistics/20251121_006_statistics_central_tendency/
+    - title: "중심위치 - 평균"
+      url: /statistics/20251121_007_statistics_mean/
+    - title: "중심위치 - 중앙값"
+      url: /statistics/20251121_008_statistics_median/
+    - title: "중심위치 - 최빈값"
+      url: /statistics/20251121_009_statistics_mode/
+    - title: "산포"
+      url: /statistics/20251121_010_statistics_dispersion/
+    - title: "산포 - 범위"
+      url: /statistics/20251121_011_statistics_range/
+    - title: "산포 - 분산"
+      url: /statistics/20251121_012_statistics_variance/
+    - title: "산포 - 표준편차"
+      url: /statistics/20251121_013_statistics_standard_deviation/
+    - title: "지수"
+      url: /statistics/20251121_014_statistics_index/
+  - title: "확률"
+    children:
+    - title: "확률"
+      url: /statistics/20251122_001_probability/
+    - title: "확률의 역사"
+      url: /statistics/20251122_002_probability_history/
+    - title: "객관적 확률과 주관적 확률"
+      url: /statistics/20251122_003_probability_objective_and_subjective/
+    - title: "조건부 확률"
+      url: /statistics/20251122_004_conditional_probability/
+    - title: "역확률(사후확률)과 베이즈 정리"
+      url: /statistics/20251122_005_bayes_theorem/
+    - title: "독립"
+      url: /statistics/20251122_006_independence/
+    - title: "확률의 예시 : 복권"
+      url: /statistics/20251122_007_lotto_probability/
+    - title: "확률변수와 기댓값"
+      url: /statistics/20251122_008_random_variable/
+    - title: "정규분포"
+      url: /statistics/20251122_009_normal_distribution/
+    - title: "중심극한정리"
+      url: /statistics/20251122_010_central_limit_theorem/
+  - title: "통계학"
+    children:
+    - title: "통계학의 역사"
+      url: /statistics/20251123_004_statistics_history/
+    - title: "통계학의 기본 가정"
+      url: /statistics/20251123_005_statistics_basic_assumption/
+    - title: "모집단과 표본, 모수와 통계량"
+      url: /statistics/20251123_006_population_and_sample/
+    - title: "통계적 추론-추정과 검정"
+      url: /statistics/20251123_007_statistical_inference/
+    - title: "통계적 추정-불편성,효율성,일치성"
+      url: /statistics/20251123_008_statistical_estimation/
+  - title: "통계적 검정"
+    children:
+    - title: "가설 - 귀무가설과 대립가설"
+      url: /statistics/20251127_001_hypothesis/
+    - title: "통계적 가설검정과 가설검정의 오류(1종 오류, 2종 오류)"
+      url: /statistics/20251128_001_hypothesis_statistical_test/
+    - title: "유의확률"
+      url: /statistics/20251129_001_significance_probabiliry/
+    - title: "유의수준과 기각역, 기각역의 임곗값"
+      url: /statistics/20251129_002_significance_level/
+    - title: "가설검정의 방법들 - 유의성 검정, 최강력 검정"
+      url: /statistics/20251129_003_hypothesis_test_methods/
+    - title: "통계적 가설검정의 절차"
+      url: /statistics/20251129_003_steps_of_hypothesis_test/
+  - title: "여론조사"
+    children:
+    - title: "여론조사란"
+      url: /statistics/20251129_004_public_opinion_poll/
+    - title: "여론조사의 주요 용어"
+      url: /statistics/20251129_005_terms_of_public_opinion_poll/
+    - title: "좋은 표본 추출(무작위추출,층화,표본의크기)"
+      url: /statistics/20251129_006_random_sampling/
+    - title: "여론조사의 단계"
+      url: /statistics/20251129_007_steps_of_public_opinion_poll/
+    - title: "결과 해석에 영향을 미치는 사항들"
+      url: /statistics/20251129_008_influcencing_factors/
+    - title: "여론조사의 신뢰도 측정"
+      url: /statistics/20251129_009_trust_of_public_opinion_poll/
+    - title: "여론조사의 결과를 바르게 읽기"
+      url: /statistics/20251129_010_understand_result/
+    - title: "여론조사 결과에 반드시 포함할 사항들"
+      url: /statistics/20251129_011_essential_factors_in_result/
+  - title: "야구에서의 통계"
+    children:
+    - title: "야구와 데이터-타자와 투수의 경기력 지표"
+      url: /statistics/20251129_012_baseball_and_data/
+    - title: "그래프로 야구에서의 통계 나타내기"
+      url: /statistics/20251129_013_baseball_graph/
+    - title: "상관계수로 살펴보는 경기력지표와 연봉"
+      url: /statistics/20251129_017_baseball_sample_correlation_coefficient/
+  - title: "상관관계와 인과관계"
+    children:
+    - title: "상관관계"
+      url: /statistics/20251129_019_correlation/
+    - title: "인과관계"
+      url: /statistics/20251129_020_causality/
+    - title: "반사실체계"
+      url: /statistics/20251130_001_counterfactual_framework/
+    - title: "인과관계가 없는 상관관계"
+      url: /statistics/20251130_002_correlation_but_not_causality/
+    - title: "인과관계가 없는 상관관계 - 우연"
+      url: /statistics/20251130_003_coincide/
+    - title: "인과관계가 없는 상관관계 - 선택편향"
+      url: /statistics/20251130_004_selection_bias/
+    - title: "인과관계가 없는 상관관계 - 교란작용"
+      url: /statistics/20251130_005_confounding/
+    - title: "교란변수"
+      url: /statistics/20251130_006_confounding_variable/
+    - title: "교란변수 통제 - 랜덤화"
+      url: /statistics/20251130_007_randomization/
+    - title: "교란변수 통제 - 층화"
+      url: /statistics/20251130_008_stratification/
+    - title: "교란변수 통제 - 매칭"
+      url: /statistics/20251130_009_matching/
+    - title: "교란변수 통제 - 보정"
+      url: /statistics/20251130_010_regression_adjustment/
+  - title: "임상시험"
+    children:
+    - title: "임상시험의 정의와 시험 단계"
+      url: /statistics/20251130_011_clinical_trial/
+    - title: "임상시험의 원칙"
+      url: /statistics/20251130_012_principal_of_clinical_trial/
+    - title: "임상시험의 원칙 1.대조군"
+      url: /statistics/20251130_013_control_group/
+    - title: "임상시험의 원칙 2.랜덤화"
+      url: /statistics/20251201_001_randomization/
+    - title: "임상시험의 원칙 3.눈가림"
+      url: /statistics/20251201_002_blinding/
+    - title: "임상시험의 원칙 4.계획"
+      url: /statistics/20251201_003_planning/
+    - title: "통계적 기법 - 랜덤화와 배정 은폐"
+      url: /statistics/
+    - title: "통계적 기법 - 연구대상자 수 결정"
+      url: /statistics/
+    - title: "통계적 기법 - 분석대상 선정"
+      url: /statistics/
+    - title: "통계적 기법 - 베이스라인 평가"
+      url: /statistics/
+    - title: "결과 분석"
+      url: /statistics/
+    - title: "중간 분석"
+      url: /statistics/
+  - title: "상관 분석"
+    children:
+    - title: "상관관계"
+      url: /statistics/20251129_019_correlation/
+    - title: "표본상관계수"
+      url: /statistics/20251129_018_sample_correlation_coefficient/
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
+  - title: "통계 시각화"
+    children:
+    - title: "줄기-잎 그림"
+      url: /statistics/20251129_014_stem_leaf_diagram/
+    - title: "상자 그림"
+      url: /statistics/20251129_015_box_plot/
+    - title: "산점도"
+      url: /statistics/20251129_016_scatter_plot/
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+    - title: ""
+      url:
+      - title: ""
+      url:
+
+
+
+docs_clang:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "C 언어 기초"
+  - title: "1. Intro"
+    children:
+      - title: "01-01. 프로그래밍 언어"
+        url: /clang/20251024_001_programming_language/
+      - title: "01-02. C언어의 탄생과 역사"
+        url: /clang/20251024_002_clang_birth_and_history/
+      - title: "01-03. C언어의 특징"
+        url: /clang/20251024_003_clang_feature/
+      - title: "01-04. C 프로그램 개발 (컴파일, 링크, 빌드)"
+        url: /clang/20251024_004_c_program_dev_intro/
+      - title: "etc. C 언어의 컴파일러들"
+        url: /clang/20251025_001_c_compiler/
+  - title: "2. 소스코드 구조"
+    children: 
+      - title: "02-01. C 프로그램의 소스코드 구조와 구성 요소"
+        url: /clang/20251025_002_structure_of_c_program/
+      - title: "02-02. C 언어의 예약어들"
+        url: /clang/20251025_003_clang_keywords/
+      - title: "02-03. C 언어의 명칭(식별자, identifier)"
+        url: /clang/20251025_004_clang_identifier/
+      - title: "02-04. C 언어의 주석(설명문)"
+        url: /clang/20251025_005_clang_comment/
+      - title: "02-05. 에러와 경고"
+        url: /clang/20251025_006_clang_error_and_warning/
+  - title: "3. 자료형"
+    children: 
+      - title: "03-01. C 언어의 자료형(data type)"
+        url: /clang/20251102_001_clang_datatype/
+      - title: "03-02. 자료형 01. 정수형"
+        url: /clang/20251102_002_clang_data_type_integer/
+      - title: "03-03. 자료형 02. 문자형"
+        url: /clang/20251102_003_clang_data_type_char/
+      - title: "03-04. 자료형 03. 실수형"
+        url: /clang/20251102_004_clang_data_type_float/
+      - title: "03-05. 자료형 04. 열거형 enum"
+        url: /clang/20251102_005_clang_data_type_enum/
+      - title: "03-06. 자료형 05. 불형 bool"
+        url: /clang/20251116_008_clang_data_type_bool/
+  - title: "4. 상수"
+    children:
+      - title: "04-01. C 언어의 리터럴 상수"
+        url: /clang/20251102_006_clang_literal_constant/
+      - title: "04-02. 제어문자 (이스케이프 시퀀스)"
+        url: /clang/20251102_007_clang_escape_sequence/
+  - title: "5. 변수"
+    children:
+      - title: "05-01. C 언어의 변수"
+        url: /clang/20251102_008_clang_variable/
+      - title: "05-02. 변수 고려사항 1.변수의 크기"
+        url: /clang/20251102_009_clang_variable_size_of/
+      - title: "05-03. 변수 고려사항 2.선언 위치"
+        url: /clang/20251102_010_clang_variable_declare_position/
+      - title: "05-04. 변수 고려사항 3.초기화"
+        url: /clang/20251102_011_clang_variable_initial/
+  - title: "6. 선행처리"
+    children:
+      - title: "06-01. 선행처리와 선행처리기"
+        url: /clang/20251102_012_clang_preprocessor/
+      - title: "06-02. 선행처리 1.파일 포함"
+        url: /clang/20251102_013_clang_preprocessing_include/
+      - title: "06-03. 선행처리 2.매크로"
+        url: /clang/20251102_014_clang_preprocessing_macro/
+      - title: "06-04. 선행처리 3.조건부 컴파일"
+        url: /clang/20251102_015_clang_preprocessing_if_compile/
+  - title: "7. 표준 입출력"
+    children:
+      - title: "07-01. 표준 입출력"
+        url: /clang/20251116_001_clang_stdio/
+      - title: "07-02. printf - 형식화 출력함수"
+        url: /clang/20251116_002_clang_printf/
+      - title: "07-03. scanf - 형식화 입력함수"
+        url: /clang/20251116_003_clang_scanf/
+      - title: "07-04. putchar - 단일문자 출력함수"
+        url: /clang/20251116_004_clang_putchar/
+      - title: "07-05. getchar - 단일문자 입력함수"
+        url: /clang/20251116_005_clang_getchar/
+      - title: "07-06. puts - 문자열 출력함수"
+        url: /clang/20251116_006_clang_puts/
+      - title: "07-07. gets - 문자열 입력함수"
+        url: /clang/20251116_007_clang_gets/
+  - title: "8. 연산자"
+    children:
+      - title: "08-01. 연산자"
+        url: /clang/20251116_009_clang_operator/
+      - title: "08-02. 산술 연산자"
+        url: /clang/20251116_010_clang_arithmetic_operator/
+      - title: "08-03. 관계 연산자"
+        url: /clang/20251116_011_clang_relational_operator/
+      - title: "08-04. 논리 연산자"
+        url: /clang/20251116_012_clang_logical_operator/
+      - title: "08-05. 조건 연산자"
+        url: /clang/20251116_013_clang_conditional_operator/
+      - title: "08-06. 대입 연산자"
+        url: /clang/20251116_014_clang_assignment_operator/
+      - title: "08-07. 복합 대입 연산자"
+        url: /clang/20251116_015_clang_complex_assignment_operator/
+      - title: "08-08. 비트 연산자"
+        url: /clang/20251116_016_clang_bit_operator/
+      - title: "08-09. 형변환과 형변환 연산자"
+        url: /clang/20251116_017_clang_typecast/
+      - title: "08-10. 기타 연산자"
+        url: /clang/20251116_018_clang_etc_operator/
+      - title: "08-11. 연산자의 우선순위와 결합방향"
+        url: /clang/20251116_019_clang_operator_priority/
+  - title: "9. 제어문"
+    children:
+    - title: "프로그래밍 언어의 제어 구조와 C언어의 제어문"
+      url: /clang/20251206_001_clang_control_structure/
+    - title: "선택 제어문 1. if"
+      url: /clang/20251207_001_clang_if/
+    - title: "선택 제어문 2. switch"
+      url: /clang/20251207_002_clang_swtich/
+    - title: "반복 제어문 1. for"
+      url: /clang/20251217_004_clang_for/
+    - title: "반복 제어문 2. while"
+      url: /clang/20251217_005_clang_while/
+    - title: "반복 제어문 3. do-while"
+      url: /clang/20251217_006_clang_do_while/
+    - title: "흐름 제어문 1. break 문"
+      url: /clang/20251217_007_clang_break/
+    - title: "continue 문"
+      url: /clang/20251217_008_clang_continue/
+    - title: "goto 문"
+      url: /clang/20251217_009_clang_goto/
+  - title: "10. 함수"
+    children:
+    - title: "함수"
+      url: /clang/20251217_010_clang_function/
+    - title: "표준 함수와 사용자 정의 함수"
+      url: /clang/20251217_011_clang_std_function_and_custom_function/
+    - title: "함수의 구조"
+      url: /clang/20251217_012_clang_structure_of_function/
+    - title: "실 매개변수와 형식 매개변수"
+      url: /clang/20251217_013_clang_parameter/
+    - title: "함수의 원형"
+      url: /clang/20251218_001_clang_function_prototype/
+    - title: "매개변수를 통한 값의 전달"
+      url: /clang/20251218_002_clang_call_by/
+  - title: "11. 유효범위와 기억클래스"
+    children:
+    - title: "유효범위 - 지역변수와 전역변수"
+      url: /clang/20251218_003_clang_scope/
+    - title: "기억 클래스 - 자동, 정적, 외부, 레지스터 변수"
+      url:  /clang/20251219_001_clang_storage_class/
+  - title: "12. 배열"
+    children:
+    - title: "C언어에서의 배열"
+      url:  /clang/20251219_002_clang_array/
+    - title: "배열의 기억공간"
+      url: /clang/20251219_003_clang_array_store/
+    - title: "배열의 초기화"
+      url: /clang/20251219_004_clang_init_array/
+    - title: "1차원 배열"
+      url: /clang/20251225_001_clang_1d_array/
+    - title: "다차원 배열"
+      url: /clang/20251229_001_clang_n_dim_array/
+    - title: "문자형 배열과 문자열"
+      url: /clang/20251229_002_clang_char_array/
+    - title: "함수에서의 배열 사용"
+      url: /clang/20251229_003_array_in_function/
+  - title: "13. 포인터"
+    children:
+    - title: "포인터의 개념"
+      url: /clang/20251229_004_clang_pointer/
+    - title: "포인터 변수의 선언과 초기화"
+      url: /clang/20250109_002_clang_pointer_init/
+    - title: "포인터의 자료형"
+      url: /clang/20250109_003_clang_data_type/
+    - title: "주소 연산자와 포인터 연산자"
+      url: /clang/20250109_004_clang_address_and_pointer_operator/
+    - title: "포인터 연산자의 논리적 처리 과정"
+      url: /clang/20260111_001_clang_pointer_logical_operation/
+    - title: "포인터 산술 연산"
+      url: /clang/20260111_002_clang_pointer_calc/
+    - title: "포인터 사용시 주의할 점"
+      url: /clang/20260111_003_clang_pointer_caution/
+  - title: "14. 배열과 포인터"
+    children:
+    - title: "1차원 배열과 포인터"
+      url: /clang/20260113_008_clang_1d_array_pointer/
+    - title: "2차원 배열과 포인터"
+      url: /clang/20260113_009_clang_2d_array_pointer/
+    - title: "문자열과 포인터"
+      url: /clang/20260113_010_clang_string_pointer/
+    - title: "배열과 포인터의 기억공간 확보"
+      url: /clang/20260113_011_clang_array_pointer_memory/
+    - title: "포인터 배열"
+      url: /clang/20260114_002_clang_pointer_array/
+    - title: "이중 포인터"
+      url: /clang/20260114_003_nested_pointer/
+  - title: "15. 구조체"
+    children:
+    - title: "구조체의 개념"
+      url: /clang/20260114_005_clang_structure/
+    - title: "구조체 선언, 정의, 초기화"
+      url: /clang/20260116_002_clang_structure_init/
+    - title: "구조체 멤버에 접근하기"
+      url: /clang/20260116_003_clang_struct_member/
+    - title: "typedef"
+      url: /clang/20260116_004_clang_typedef/
+    - title: "구조체의 기억공간"
+      url: /clang/20260116_005_clang_struct_memory/
+    - title: "구조체 배열"
+      url: /clang/20260116_006_clang_struct_array/
+    - title: "구조체 포인터"
+      url: /clang/20260116_007_clang_struct_pointer/
+    - title: "함수에서의 구조체 사용"
+      url: 
+    - title: "구조체의 비트필드"
+      url: 
+    - title: "공용체"
+      url: 
+  - title: "16. 파일처리"
+    children:
+    - title: "파일의 개념"
+      url: 
+    - title: "C언어에서의 파일처리"
+      url: 
+    - title: "순차파일의 처리"
+      url: 
+    - title: "랜덤파일의 처리"
+      url: 
+  - title: "17. 메모리 할당"
+    children:
+    - title: "기억 공간"
+      url: 
+    - title: "메모리 정적 할당"
+      url: 
+    - title: "메모리 동적 할당"
+      url: 
+    - title: "기억 공간 관리"
+      url: 
+  - title: "99. 기타"
+    children:
+      - title: "etc. 숫자를 이진수로 변환하기"
+        url: /clang/20251111_004_clang_convert_to_binary_number/
+
+
+# 자연언어처리
+docs_nlp:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "자연언어처리"
+  - title: "자연언어처리에 대한 정의와 고찰"
+    children:
+    - title: "- 자연언어처리의 정의"
+      url: /nlp/20251018_001_nlp_definition/
+    - title: "- UAT 문제:만능 머신러닝 모델은 존재할까"
+      url: /nlp/20251019_001_universal_approximation_theorem/
+    - title: "- 임베딩에 대한 정의와 고찰"
+      url: /nlp/20251019_002_embedding_consideration/
+  - title: "자연언어처리 관련 용어"
+    children:
+    - title: "- 자연어처리 관련 용어들"
+      url: /nlp/20251019_003_nlp_terms/
+  - title: "텍스트 표현"
+    children:
+    - title: "- 텍스트 표현 방법들"
+      url: /nlp/20251020_001_text_representation/
+  - title: "등장 횟수 기반 텍스트 표현"
+    children:
+    - title: "- Bag of Words (BoW)"
+      url: /nlp/20251020_002_bag_of_words/
+    - title: "- TF-IDF"
+      url: /nlp/20251020_003_tfidf/
+  - title: "분포 기반 표현"
+    children:
+    - title: "- 임베딩과 텍스트 표현 기술의 관계"
+      url: 
+    - title: "- LSA"
+      url: /nlp/20251023_001_lsa/
+  - title: "유사성 분석"
+    children:
+    - title: "- 코사인 유사도"
+      url: /nlp/20251021_001_cosine_similarity/
+  - title: "차원 축소"
+  - title: "토픽 모델링"
+  - title: "실습 예제"
+    children:
+    - title: "BERT를 이용한 유사도 계산 실습"
+      url: /nlp/20251224_001_bert_similarity/
+    - title: "HuggingFace LLM 모델 이용 실습"
+      url: /nlp/20251224_002_using_huggingface_model/
+
+# 추천 기술
+docs_recommendation:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "추천 기술"
+  - title: "추천 기술의 개요"
+  - title: "추천 기술의 발전"
+  - title: "협업 필터링과 컨텐츠 기반 필터링"
+  - title: "추천 시스템의 해결 과제"
+    children:
+      - title: "콜드스타트"
+      - title: "롱테일"
+      - title: "데이터 확장"
+  - title: "하드 필터링과 소프트 필터링"
+  - title: "추천 성능 평가"
+    children:
+      - title: "추천은 하나의 정확도로 평가할 수 없을까"
+        url: /recommend_system/20251219_005_recommend_metric_intro/
+      - title: "1. Precision"
+        url: /recommend_system/20251220_001_reco_precision/
+      - title: "2. Recall"
+        url: /recommend_system/20251220_002_reco_recall/
+      - title: "3. RR과 MRR"
+        url: /recommend_system/20251221_001_reco_rr_mrr/
+      - title: "4. AP와 MAP"
+        url: /recommend_system/20251221_002_reco_ap_map/
+      - title: "5. DCG와 NDCG, 그리고 Mean NDCG"
+        url: /recommend_system/20251221_003_reco_dcg_ngcg/
+      - title: "6. Hit Rate"
+        url: /recommend_system/20251221_004_reco_hitrate/
+  - title: "추천 예제"
+    children:
+      - title: "SBERT 벡터라이징과 유사도 계산을 통한 추천"
+        url: /nlp/20251224_001_bert_similarity/
+
+docs_pandas:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "Pandas"
+  - title: "Pandas 소개"
+  - title: "Best Practice"
+    children:
+    - title: "반복문 감소"
+      url: /python/20251217_001_pandas_reduce_loop/
+    - title: "딕셔너리 캐싱"
+      url: /python/20251217_002_pandas_dictionary_caching/
+    - title: "merge를 통한 해시 join"
+      url: /python/20251217_003_pandas_hash_join/
+  - title: "Trouble Shooting"
+    children:
+    - title: "merge 과정에서 컬럼이 float64로 바뀌는 문제"
+      url: /python/20251211_001_pandas_ts_merge_float/
+
+
+# 벡터 DB
+docs_vector_db:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "Vector DB"
+    children:
+    - title: "Vector DB에 대해 알아보자"
+      url: /vector_db/20250527_001_vector_db/
+    - title: "Vector DB의 종류"
+      url: /vector_db/20250527_002_compare_vector_dbs/
+  - title: "Milvus"
+    children:
+    - title: "Milvus 소개"
+      url: /vector_db/20250528_001_milvus/
+    - title: "Milvus 설치"
+      url: /vector_db/20250528_002_milvus_installation/
+    - title: "Milvus SDK 설치"
+      url: /vector_db/20250528_003_milvus_sdk_installation/
+    - title: "Milvus 아키텍처"
+      url: /vector_db/20250528_004_milvus_architecture/
+    - title: "Milvus 컬렉션과 데이터베이스"
+      url: /vector_db/20250530_001_milvus_collection_and_database/
+    - title: "Milvus 스키마와 데이터 필드"
+      url: /vector_db/20250531_001_milvus_schema_and_field/
+    - title: "Milvus 엔티티 삽입, 업데이트(업서트), 삭제"
+      url: /vector_db/20250531_002_milvus_entity_insert_delete/
+    - title: "Milvus 색인 (인덱스, index)"
+      url: /vector_db/20250604_001_milvus_index/
+  - title: "Chroma"
+    children:
+    - title: "Chroma 소개와 사용법"
+      url: /vector_db/20260425_001_chroma/
+
+# LLM
+docs_llm:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: "◆ LLM"
+    children:
+    - title: "LLM에 대해 간단히 알아보기"
+      url: /ai/20260118_002_llm/
+    - title: "LLM을 공부해야 하는 이유"
+      url: /ai/20260118_003_why_study_llm/
+    - title: "싱글턴과 멀티턴"
+      url: /ai/20260121_001_multiturn/
+  - title: "◆ LLM API 사용하기"
+    children:
+    - title: "Gemini API"
+      url: /ai/20260119_001_gemini_api/
+    - title: "OpenAI API (chatGPT)"
+      url: /ai/20260120_001_openai_api/
+  - title: "◆ RAG"
+    children:
+    - title: "RAG - Retriever와 Reranker"
+      url: /ai/20250720_001_retriever_and_reranker/
+    - title: "Reranker의 개념과 실습"
+      url: /ai/20250720_002_reranker/
+  - title: "◆ 펑션 콜링"
+    children:
+    - title: "펑션 콜링의 개념"
+      url: /ai/20260202_001_function_calling/
+    - title: "펑션 콜링 실습"
+      url: /ai/20260202_002_function_calling_practice/
+    - title: "펑션 콜링 Stream"
+      url: /ai/20260203_001_function_calling_stream/
+  - title: "◆ MCP"
+    children:
+    - title: "MCP의 등장 배경과 개념"
+      url: /ai/20260108_001_mcp_concept/
+    - title: "MCP 서버의 개념과 Tool, Resource, Prompt"
+      url: /ai/20260113_001_mcp_server/
+    - title: "얼렁뚱땅 MCP 서버 구축해보기"
+      url: /ai/20260113_002_mcp_server_quickstart/
+    - title: "Open WebUI 에 MCP 서버 붙여보기"
+      url: /ai/20260113_006_openwebui_connect_mcp_server/
+    - title: "(참고)MCPO - MCP-to-OpenAPI"
+      url: /ai/20260118_001_mcpo/
+  - title: "◆ Chat UI"
+    children:
+    - title: "[Open WebUI] 소개"
+      url: /ai/20260113_003_openwebui/
+    - title: "[Open WebUI] 설치와 기본 세팅"
+      url: /ai/20260113_004_install_openwebui/
+    - title: "[Open WebUI] 외부 LLM 모델 API 연결"
+      url: /ai/20260113_005_openwebui_connect_llm_api/
+    - title: "[Open WebUI] 로컬 LLM 모델 연결(작성 전)"
+    - title: "[Open WebUI] MCP 서버 연결"
+      url: /ai/20260113_006_openwebui_connect_mcp_server/
+    - title: "[Streamlit] 소개와 채팅 화면 구축"
+      url: /ai/20260121_002_streamlit/
+  - title: "◆ LangChain"
+    children:
+    - title: "LangChain"
+      url: /ai/20260214_001_langchain/
+    - title: "LangChain 기본 사용법"
+      url: /ai/20260326_001_langchain_basic/
+    - title: "LangChain 에서 이미지 다루기"
+      url: /ai/20260327_001_langchain_send_image/
+    - title: "LangChain 에서 오디오 다루기"
+      url: /ai/20260329_001_langchain_send_audio/
+    - title: "LCEL의 개념과 구성요소"
+      url: /ai/20260330_001_langchain_lcel/
+    - title: "LCEL 파이프 체이닝의 원리"
+      url: /python/20260131_002_python_pipe_chaining/
+    - title: "LCEL - Prompt와 Prompt Template"
+      url: /ai/20260330_002_langchain_lcel_prompt/
+    - title: "LCEL - Model(LLM)"
+      url: /ai/20260330_003_langchain_lcel_model/
+    - title: "LCEL - Output Parser"
+      url: /ai/20260330_004_langchain_lcel_outputparser/
+  - title: "◆ LangGraph"
+    children:
+    - title: "LangGraph 소개"
+      url: /ai/20260325_001_langgraph_intro/
+    - title: "LangGraph 개발환경 구성"
+      url: /ai/20260406_001_langgraph_environment/
+    - title: "LangGraph의 구성 요소"
+      url: /ai/20260407_001_langgraph_components/
+    - title: "StateGraph"
+      url: /ai/20260417_001_langgraph_stategraph/
+    - title: "State 1.상태의 개념"
+      url: /ai/20260408_001_langgraph_state_intro/
+    - title: "State 2.상태 설계와 생성"
+      url: /ai/20260416_001_langgraph_state_design/
+    - title: "State 3.상태 업데이트 메커니즘과 리듀서"
+      url: /ai/20260419_001_langgraph_state_update_mechanism_and_reducer/
+    - title: "Node 노드의 개념과 사용법"
+      url: /ai/20260419_002_langgraph_node/
+    - title: "Edge 엣지의 개념과 종류"
+      url: /ai/20260419_003_langgraph_edge/
+    - title: "Graph 그래프 생성, 컴파일, 실행"
+      url: /ai/20260419_004_langgraph_graph_compile_and_run/
+    - title: "(실습)카페 Q&A RAG 개발"
+      url: /ai/20260426_001_langgraph_cafe_rag_exam
+  - title: "◆ BitNet"
+    children:
+    - title: "주목받는 초 경량 LLM Bitnet"
+      url: /ai/20250508_001_bitnet/
+    - title: "Bitnet 설치하고 사용해보기 / 리소스 사용량 측정"
+      url: /ai/20250517_002_bitnet_install_use/
+  - title: "◆ 프롬프트 엔지니어링"
+    children:
+    - title: "프롬프트 엔지니어링의 개념"
+      url: /ai/20260120_002_prompting/
+    - title: "원샷 프롬프팅과 퓨샷 프롬프팅"
+      url: /ai/20260120_003_n_shot_prompting/
+
+
+# 알고리즘
+docs_algorithm:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 알고리즘
+    children:
+      - title: "차분배열"
+        url: /algorithm/20260110_001_difference_array/
+
+
+docs_golang:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: Go
+    children:
+      - title: "◆ 개빌환경 구성"
+        url: /golang/20260412_001_go_dev_environment/
+
+
+docs_database_modeling:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 데이터베이스 모델링
+    children:
+      - title: "데이터베이스 모델링의 개념"
+        url: /database_system/20241223_002_database_modeling_intro/
+      - title: "사용자 요구사항 분석"
+        url: /database_system/20241224_001_database_modeling_2_requirement_analysis/
+      - title: "개념, 논리, 물리 데이터 모델"
+        url: /database_system/20260413_001_database_modeling_3steps/
+      - title: "개념 데이터 모델링"
+        url: /database_system/20241229_001_database_modeling_3_concept_and_er_model/
+      - title: "논리적 데이터 모델링"
+        url: /database_system/20241229_002_database_modeling_4_logical_and_rm/
+      - title: "물리적 데이터 모델링"
+        url: /database_system/20241229_004_database_modeling_5_physical_data_modeling/

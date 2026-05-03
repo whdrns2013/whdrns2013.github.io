@@ -1,6 +1,6 @@
 ---
-title: "Docs 게시판 소개"
-excerpt: "Docs 게시판 소개"
+title: "Docs"
+excerpt: "Docs"
 last_modified_at: 2026-01-10 22:38:00 +0900
 permalink: /docs/intro/
 toc: false
@@ -12,59 +12,54 @@ sidebar:
   nav: "docs"
 ---
 
-<!-- ![](/assets/images/docs_banner.jpeg) -->
+<span class="ttag">#지식체계화</span>
 
-## Docs  
+Docs 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입니다.  
 
-<span class="ttag">#독스</span> <span class="ttag">#지식체계화</span>
+<div class="series-grid">
+  {% for doc in site.data.docs.meta %}
+    {% assign doc_id = doc[0] %}
+    {% assign info = doc[1] %}
+    
+    {% comment %} 
+      해당 문서 그룹의 첫 번째 실제 포스트 링크를 찾습니다. 
+      "<-Doc으로 돌아가기" 링크는 제외합니다.
+    {% endcomment %}
+    {% assign target_url = "#" %}
+    {% for item in site.data.docs[doc_id] %}
+      {% if item.url != nil and item.url != "" and item.url != "/docs/intro" and item.url != "/docs/intro/" %}
+        {% assign target_url = item.url %}
+        {% break %}
+      {% elsif item.children %}
+        {% for child in item.children %}
+          {% if child.url != nil and child.url != "" %}
+            {% assign target_url = child.url %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if target_url != "#" %}{% break %}{% endif %}
+      {% endif %}
+    {% endfor %}
 
-Docs 는 게시판은 포스팅들을 엮어 지식을 체계화하는 공간입니다.  
-
-## Contents
-
-### ⏵ 프로그래밍 언어  
-
-- [C언어 기초](https://whdrns2013.github.io/clang/20251024_001_programming_language/)  
-- [Python](https://whdrns2013.github.io/python/20251201_004_python_list_slicing/)  
-- [Rust](https://whdrns2013.github.io/rust/20250524_001_rust_intro/)  
-- [Dart와 Flutter](https://whdrns2013.github.io/flutter/20240113_005_flutter/)  
-
-
-### ⏵ AI    
-
-- [통계](https://whdrns2013.github.io/statistics/20251121_001_statistics_data/)  
-- [자연언어처리](https://whdrns2013.github.io/nlp/20251018_001_nlp_definition/)  
-- [LLM](https://whdrns2013.github.io/ai/20250720_001_retriever_and_reranker/)  
-- [추천 기술](https://whdrns2013.github.io/recommend_system/20251219_005_recommend_metric_intro/)  
-
-
-### ⏵ 데이터베이스    
-
-- [PostgreSQL](https://whdrns2013.github.io/sql/20251111_001_postgresql_ddl/)  
-- [Vector DB](https://whdrns2013.github.io/vector_db/20250527_001_vector_db/)  
-
-### ⏵ 설계    
-
-- [Patterns 디자인 및 아키텍처 패턴](https://whdrns2013.github.io/design_pattern/20251123_001_pattern/)  
-
-### ⏵ 문제해결    
-
-- [알고리즘](https://whdrns2013.github.io/algorithm/20260110_001_difference_array/)  
-
-### ⏵ Infra/Tool    
-
-- [Docker](https://whdrns2013.github.io/docker/20230702_002_docker/)  
-- [Docker Registry/Harbor 구축](https://whdrns2013.github.io/docker/20240104_001_docker_registry/)  
-- [Grafana and Prometheus](https://whdrns2013.github.io/ops/20250420_001_grafana_prometheus/)  
-- [Airflow](https://whdrns2013.github.io/ops/20250705_001_airflow_intro/)  
-- [MLflow](https://whdrns2013.github.io/ai/20251115_001_mlflow_doc/)  
-- [홈서버 구축](https://whdrns2013.github.io/infra/20240914_001_setting_home_server_01/)  
-
-### ⏵ CI/CD    
-
-- [GitOps 도전기](https://whdrns2013.github.io/ops/20250512_001_gitops/)  
-
-### ⏵ 라이브러리    
-
-- [Pandas](https://whdrns2013.github.io/python/20251217_001_pandas_reduce_loop/)  
-- [파이썬에서 logging 하기](https://whdrns2013.github.io/python/20251104_001_logging_intro/)  
+    <a href="{{ target_url | relative_url }}" class="series-card">
+      <div class="series-card__image-wrapper">
+        {% if info.cover %}
+          <img src="{{ info.cover | relative_url }}" alt="{{ info.title }}">
+        {% else %}
+          <div class="no-image">
+            <i class="fas fa-book"></i>
+          </div>
+        {% endif %}
+      </div>
+      <div class="series-card__content">
+        <h4 class="series-card__title">{{ info.title }}</h4>
+        {% if info.description %}
+          <p class="series-card__description">{{ info.description }}</p>
+        {% endif %}
+        <div class="series-card__footer">
+          <span class="post-count">지식 체계 바로가기 <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+</div>
