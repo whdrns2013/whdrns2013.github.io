@@ -16,6 +16,7 @@ post-series-test:
 langgraph-cafe-rag:
   title: "LangGraph로 만드는 카페 RAG 시스템"
   description: "LangGraph를 활용하여 카페 도메인에 특화된 RAG 시스템을 구축하는 과정을 다룹니다."
+  cover: "/assets/images/series/langgraph-cafe-rag.jpg"
 
 alembic-guide:
   title: "Python 데이터베이스 마이그레이션 가이드"
