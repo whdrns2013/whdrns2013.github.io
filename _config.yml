@@ -306,3 +306,4 @@ dark_theme_toggle        : true # 다크 모드 토글 기능 추가
 after_footer_scripts:
   - /assets/js/custom/dark-theme.js
   - /assets/js/custom/copy-code.js
+  - /assets/js/custom/toc-toggle.js

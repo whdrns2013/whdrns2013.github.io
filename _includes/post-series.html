@@ -1,0 +1,40 @@
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series %}
+  
+  {% comment %} 
+    series_index가 있으면 이를 기준으로 정렬하고, 없으면 날짜 오름차순으로 정렬합니다.
+  {% endcomment %}
+  {% assign has_index = false %}
+  {% for p in series_posts %}
+    {% if p.series_index %}
+      {% assign has_index = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_index %}
+    {% assign sorted_series_posts = series_posts | sort: "series_index" %}
+  {% else %}
+    {% assign sorted_series_posts = series_posts | sort: "date" %}
+  {% endif %}
+
+  <div class="post-series">
+    <div class="post-series__header">
+      <h4 class="post-series__title">
+        <i class="fas fa-list-ol"></i> 이 포스팅이 포함된 시리즈: <span>{{ page.series }}</span>
+      </h4>
+    </div>
+    <ul class="post-series__list">
+      {% for post in sorted_series_posts %}
+        <li class="post-series__item{% if post.url == page.url %} is-current{% endif %}">
+          {% if post.url == page.url %}
+            <span class="post-series__current-marker">▶</span>
+            <span class="post-series__title-text">{{ post.title }}</span>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" class="post-series__link">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

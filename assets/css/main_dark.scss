@@ -7,9 +7,10 @@ saerch: false
 
 @charset "utf-8";
 
-@import "custom/customImport.scss";
-
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes"; // main partials
 
+@import "custom/customImport.scss";
 @import "custom/customOverride.scss";
+@import "custom/series";
+@import "custom/toc-toggle";

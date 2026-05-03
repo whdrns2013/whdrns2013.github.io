@@ -1,0 +1,29 @@
+.toc {
+  .nav__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: inherit;
+    font-size: 0.8em;
+  }
+
+  &__menu-container {
+    max-height: 5000px; /* Large enough to show content */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1;
+
+    &.is-collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}
