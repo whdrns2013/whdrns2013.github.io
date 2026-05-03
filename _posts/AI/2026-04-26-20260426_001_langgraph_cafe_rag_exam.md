@@ -26,6 +26,7 @@ permalink:
 sidebar:
   nav: docs_llm
 pinned: 
+series: langgraph-cafe-rag
 ---
 
 <!--postNo: 20260426_001-->

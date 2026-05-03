@@ -4,35 +4,38 @@ layout: archive
 
 {{ content }}
 
-<div class="entries-list">
-  {% comment %}
-    시리즈 데이터(site.data.series)를 순회하며 
-    각 시리즈의 정보를 카드 형태로 출력합니다.
-  {% endcomment %}
-
+<div class="series-grid">
   {% for series in site.data.series %}
     {% assign series_id = series[0] %}
     {% assign series_info = series[1] %}
     {% assign series_posts = site.posts | where: "series", series_id %}
     
     {% if series_posts.size > 0 %}
-      {% comment %} 시리즈의 첫 번째 포스팅을 링크 대상으로 설정 {% endcomment %}
       {% assign sorted_posts = series_posts | sort: "series_index" %}
       {% assign first_post = sorted_posts | first %}
+      {% assign last_post = sorted_posts | last %}
       
-      <div class="list__item">
-        <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-          <h2 class="archive__item-title no_toc" itemprop="headline">
-            <a href="{{ first_post.url | relative_url }}">{{ series_info.title }}</a>
-            <span class="taxonomy__count" style="font-size: 0.6em; margin-left: 0.5em;">{{ series_posts.size }} posts</span>
-          </h2>
-          {% if series_info.description %}
-            <div class="archive__item-excerpt" itemprop="description">
-              <p>{{ series_info.description }}</p>
+      <a href="{{ first_post.url | relative_url }}" class="series-card">
+        <div class="series-card__image-wrapper">
+          {% if series_info.cover %}
+            <img src="{{ series_info.cover | relative_url }}" alt="{{ series_info.title }}">
+          {% else %}
+            <div class="no-image">
+              <i class="fas fa-layer-group"></i>
             </div>
           {% endif %}
-        </article>
-      </div>
+        </div>
+        <div class="series-card__content">
+          <h2 class="series-card__title">{{ series_info.title }}</h2>
+          {% if series_info.description %}
+            <p class="series-card__description">{{ series_info.description }}</p>
+          {% endif %}
+          <div class="series-card__footer">
+            <span class="post-count"><b>{{ series_posts.size }}</b>개의 포스트</span>
+            <span class="last-updated">마지막 업데이트: {{ last_post.date | date: "%Y년 %m월 %d일" }}</span>
+          </div>
+        </div>
+      </a>
     {% endif %}
   {% endfor %}
 </div>

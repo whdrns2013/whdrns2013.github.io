@@ -1,23 +1,146 @@
+/* ==========================================================================
+   Series Archive (Velog Style) - Refined
+   ========================================================================== */
+
+.series-grid {
+  display: grid;
+  /* Default: 1 column for mobile */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2em 0;
+
+  /* Desktop: exactly 2 columns as requested */
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.series-card {
+  display: flex;
+  flex-direction: column;
+  background: $background-color;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid $border-color;
+  text-decoration: none !important;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    padding-top: 45%; /* Slightly flatter aspect ratio to reduce height */
+    position: relative;
+    background-color: rgba($primary-color, 0.1);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .no-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem; /* Reduced icon size */
+      color: rgba($primary-color, 0.2);
+    }
+  }
+
+  &:hover &__image-wrapper img {
+    transform: scale(1.05);
+  }
+
+  &__content {
+    padding: 1.25rem; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.15rem; /* Slightly smaller title */
+    font-weight: bold;
+    color: $text-color;
+    line-height: 1.4;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 0.85rem; /* Slightly smaller description */
+    color: mix($text-color, $background-color, 65%);
+    line-height: 1.5;
+    flex: 1;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Reduced to 2 lines to save vertical space */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__footer {
+    margin-top: 1rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column; /* Vertical layout as requested */
+    align-items: flex-start;
+    gap: 0.3rem; /* Spacing between lines */
+    font-size: 0.75rem;
+    color: mix($text-color, $background-color, 50%);
+
+    .post-count {
+      b {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Post Page Series Box */
 .post-series {
   margin: 2em 0;
-  padding: 1.2em;
+  padding: 1.5em;
   border: 1px solid $border-color;
-  border-radius: $border-radius;
-  background-color: rgba($primary-color, 0.05);
+  border-radius: 12px;
+  background-color: mix($background-color, $primary-color, 97%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 
   &__header {
-    margin-bottom: 0.5em; /* Reduced from 0.8em */
+    margin-bottom: 1em;
     border-bottom: 1px solid $border-color;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.8em;
   }
 
   &__title {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: $text-color;
 
     i {
-      margin-right: 0.5em;
+      margin-right: 0.6em;
       color: $primary-color;
     }
 
@@ -28,47 +151,57 @@
   }
 
   &__description {
-    margin: 0.5em 0 0.2em !important; /* Force override and explicit bottom margin */
-    font-size: 0.85rem;
-    color: mix($text-color, $background-color, 60%);
-    line-height: 1.5;
+    margin: 0.5em 0 0.2em !important;
+    font-size: 0.9rem;
+    color: mix($text-color, $background-color, 65%);
+    line-height: 1.6;
   }
 
   &__list {
-    margin: 0;
+    margin: 0.5em 0 0;
     padding: 0;
     list-style: none;
-    font-size: 0.9rem;
+    counter-reset: series-counter;
   }
 
   &__item {
-    margin-bottom: 0.4em;
-    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    font-size: 0.95rem;
     line-height: 1.4;
+    transition: background-color 0.2s;
 
-    &:last-child {
-      margin-bottom: 0;
+    &:hover:not(.is-current) {
+      background-color: rgba($primary-color, 0.05);
+    }
+
+    &::before {
+      counter-increment: series-counter;
+      content: counter(series-counter) ". ";
+      margin-right: 0.5em;
+      color: mix($text-color, $background-color, 40%);
+      font-size: 0.85em;
     }
 
     &.is-current {
+      background-color: rgba($primary-color, 0.1);
       font-weight: bold;
-      color: $text-color;
-    }
-  }
+      color: $primary-color;
 
-  &__current-marker {
-    color: $primary-color;
-    margin-right: 0.5em;
-    font-size: 0.8em;
+      &::before {
+        content: "▶";
+        color: $primary-color;
+      }
+    }
   }
 
   &__link {
     text-decoration: none;
-    color: mix($text-color, $background-color, 70%);
+    color: inherit;
 
     &:hover {
       text-decoration: underline;
-      color: $link-color-hover;
     }
   }
 }
