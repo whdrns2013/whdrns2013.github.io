@@ -1372,6 +1372,10 @@ docs_llm:
       url: /ai/20260113_006_openwebui_connect_mcp_server/
     - title: "(참고)MCPO - MCP-to-OpenAPI"
       url: /ai/20260118_001_mcpo/
+  - title: "◆ 표준"
+    children:
+    - title: "OepnAI Compitable API"
+      url: /ai/20260505_001_openai_compitable_api/
   - title: "◆ Chat UI"
     children:
     - title: "[Open WebUI] 소개"
