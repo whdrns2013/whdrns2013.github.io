@@ -1435,6 +1435,8 @@ docs_llm:
       url: /ai/20260419_004_langgraph_graph_compile_and_run/
     - title: "LangGraph의 다양한 출력 방식"
       url: /ai/20260503_002_langgraph_output_methods/
+    - title: "Custom Stream 응답 생성하기"
+      url: /ai/20260506_001_langgraph_custom_stream/
     - title: "(실습)카페 Q&A RAG 개발"
       url: /ai/20260426_001_langgraph_cafe_rag_exam
   - title: "◆ BitNet"
