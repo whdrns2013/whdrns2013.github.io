@@ -1,9 +1,9 @@
 ---
 title: "[LangGraph] Custom Stream - 랭그래프에서 직접 Stream 응답을 만들기" # 제목 (필수)
 excerpt: "그리고 OpenAI Compitable API 로 감싸주기" # 서브 타이틀이자 meta description (필수)
-date: 2026-05-05 00:01:00 +0900      # 작성일 (필수)
-lastmod: 2026-05-05 00:01:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-05-05 00:01:00 +0900   # 최종 수정일 (필수)
+date: 2026-05-06 00:01:00 +0900      # 작성일 (필수)
+lastmod: 2026-05-06 00:01:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-05-06 00:01:00 +0900   # 최종 수정일 (필수)
 categories: AI       # 다수 카테고리에 포함 가능 (필수)
 tags: ai llm langgraph 랭그래프 스트림 스트리밍 stream streaming 커스텀 custom openai compitable api 오픈AI 호환 형식 openwebui                  # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
