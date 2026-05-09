@@ -1439,6 +1439,8 @@ docs_llm:
       url: /ai/20260506_001_langgraph_custom_stream/
     - title: "(실습)카페 Q&A RAG 개발"
       url: /ai/20260426_001_langgraph_cafe_rag_exam
+    - title: "(실습)카페 챗봇 UI 연동"
+      url: /ai/20260509_001_langgraph_cafe_chatbot_with_ui/
   - title: "◆ BitNet"
     children:
     - title: "주목받는 초 경량 LLM Bitnet"
