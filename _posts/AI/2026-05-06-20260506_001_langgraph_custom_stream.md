@@ -1,11 +1,11 @@
 ---
 title: "[LangGraph] Custom Stream - 랭그래프에서 직접 Stream 응답을 만들기" # 제목 (필수)
-excerpt: "그리고 OpenAI Compitable API 로 감싸주기" # 서브 타이틀이자 meta description (필수)
+excerpt: "그리고 OpenAI Compatible API 로 감싸주기" # 서브 타이틀이자 meta description (필수)
 date: 2026-05-06 00:01:00 +0900      # 작성일 (필수)
 lastmod: 2026-05-06 00:01:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2026-05-06 00:01:00 +0900   # 최종 수정일 (필수)
 categories: AI       # 다수 카테고리에 포함 가능 (필수)
-tags: ai llm langgraph 랭그래프 스트림 스트리밍 stream streaming 커스텀 custom openai compitable api 오픈AI 호환 형식 openwebui                  # 태그 복수개 가능 (필수)
+tags: ai llm langgraph 랭그래프 스트림 스트리밍 stream streaming 커스텀 custom openai compatible api 오픈AI 호환 형식 openwebui                  # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
@@ -295,7 +295,7 @@ def main():
 숫자를 입력해주세요 : 
 ```
 
-## OpenAI Compitable API 로 감싸기
+## OpenAI Compatible API 로 감싸기
 
 ### 1. 코드 구성
 
@@ -467,7 +467,7 @@ if __name__ == "__main__":
 </details>
 
 - 코드 전문은 길이가 길어, 필요할시 위 "펼치기" 버튼을 이용한다.  
-- OpenAI Compitable API 를 만드는 방식은 [이전 포스팅](https://whdrns2013.github.io/ai/20260505_001_openai_compitable_api/)을 참고한다.  
+- OpenAI Compatible API 를 만드는 방식은 [이전 포스팅](https://whdrns2013.github.io/ai/20260505_001_openai_compatible_api/)을 참고한다.  
 - 중요한 부분은, 빌드한 랭그래프를 스트리밍하고, 스트림 모드를 커스텀으로 지정해주는 부분이다. (`app.stream()` + 스트림 모드를 `custom` 으로 지정)
 
 ```python
@@ -580,7 +580,7 @@ for token in app.stream(input_state, stream_mode="custom"):
 
 ### 3. OpenWebUI와 연결
 
-- OpenAI Compitable API 로 만들었으므로, OpenWebUI와 연결하기는 쉽다.
+- OpenAI Compatible API 로 만들었으므로, OpenWebUI와 연결하기는 쉽다.
 
 ![](/assets/images/20260506_001_001.gif)  
 
