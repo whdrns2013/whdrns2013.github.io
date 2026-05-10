@@ -148,7 +148,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...
 
 이때 브라우저는 이 내용을 보고 다음과 같이 해석한다.  
 
-```simpletext
+```plaintext
 이 데이터는 PNG 이미지이고, Base64 방식으로 인코딩되어 있다.
 ```
 
@@ -156,13 +156,13 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...
 
 Data URL Prefix의 기본 구조는 다음과 같다.  
 
-```simpletext
+```plaintext
 data:[MIME 타입];base64,[Base64 문자열]
 ```
 
 예를 들어 PNG 이미지는 다음과 같이 표현할 수 있다.  
 
-```simpletext
+```plaintext
 data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...
 ```
 

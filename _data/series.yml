@@ -18,15 +18,20 @@ python-data-migration-guide-with-sqlalchemy-and-alembic:
   description: "SQLAlchemy와 Alembic을 사용하여 데이터베이스 마이그레이션을 쉽게 해보자"
   cover: "/assets/images/series/python-data-migration-guide-with-sqlalchemy-and-alembic.jpg"
 
-python-logging:
-  title: "파이썬 로깅 Python Logging"
-  description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"
-  cover: "/assets/images/series/python-logging.jpg"
+python-handling-concurrent-tasks:
+  title: "파이썬에서 여러 작업을 동시에 처리하기"
+  description: "파이썬 동시성 처리: 비동기, 스레딩, 멀티프로세싱 비교"
+  cover: "/assets/images/series/python-handling-concurrent-tasks.jpg"
 
 homeserver_setting:
   title: "홈서버 구축"
   description: "미니 PC와 리눅스를 이용한 개인 서버 구축 및 운영 일지"
   cover: "/assets/images/series/homeserver_setting.jpg"
+
+python-logging:
+  title: "파이썬 로깅 Python Logging"
+  description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"
+  cover: "/assets/images/series/python-logging.jpg"
 
 docker-registry:
   title: "Docker Registry"
@@ -38,8 +43,5 @@ postgresql:
   description: "강력한 오픈소스 RDBMS PostgreSQL"
   cover: "/assets/images/series/postgresql.jpg"
 
-python-handling-concurrent-tasks:
-  title: "파이썬에서 여러 작업을 동시에 처리하기"
-  description: "파이썬 동시성 처리: 비동기, 스레딩, 멀티프로세싱 비교"
-  cover: "/assets/images/series/python-handling-concurrent-tasks.jpg"
+
 

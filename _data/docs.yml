@@ -440,6 +440,14 @@ docs_python:
     children:
     - title: "base64로 이미지 인코딩"
       url: /python/20260511_001_base64_encoding_with_mime_type/
+  - title: "동기와 비동기"
+    children:
+    - title: "파이썬에서 여러 작업을 동시에 처리하기"
+      url: /python/20260510_001_python_handling_concurrent_tasks/
+    - title: "동기와 비동기의 개념"
+      url: /python/20260511_002_python_sync_and_async/
+    - title: "asyncio로 비동기 처리"
+      url: /python/20260511_003_python_asyncio/
   - title: "기타 라이브러리"
     children:
     - title: "pytz - 타임존 다루기"
