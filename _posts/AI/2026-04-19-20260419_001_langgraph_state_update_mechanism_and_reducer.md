@@ -2,8 +2,8 @@
 title: "[LangGraph] State(상태) - 3.상태 업데이트 메커니즘과 리듀서" # 제목 (필수)
 excerpt: "랭그래프에서 상태의 업데이트는 어떻게 이루어질까?" # 서브 타이틀이자 meta description (필수)
 date: 2026-04-19 19:00:00 +0900      # 작성일 (필수)
-lastmod: 2026-04-19 19:00:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-04-19 19:00:00 +0900   # 최종 수정일 (필수)
+lastmod: 2026-05-10 00:40:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-05-10 00:40:00 +0900   # 최종 수정일 (필수)
 categories: AI       # 다수 카테고리에 포함 가능 (필수)
 tags: ai llm langgraph 랭그래프 langchain 랭체인 상태 state 업데이트 수정 변경 메커니즘 작동방식 방식 리듀서 reducer                   # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -243,12 +243,130 @@ app.invoke(state)
 def reducer(a:SOMETYPE, b:SOMETYPE) -> SOMETYPE
 ```
 
-### (4) 주의할 사항
+### (5) 주의할 사항
 
 - (1) 업데이트 되는 자료형과, 리듀서가 리턴하는 자료형이 같아야 한다.  
 - (2) list 형태인 채널에 대해서는 list 로 리턴해야 한다.
 - 이 정도를 주의하면 좋을 것이다.  
 - 추후 추가  
+
+
+## 3. messages 에 대한 리듀서  
+
+### (1) messages  
+
+- LangGraph 에서는 대화형 애플리케이션을 만들 때 `messages` 라는 채널을 자주 사용한다.  
+- `messages` 채널은 사용자 메시지, AI 응답 메시지, 시스템 메시지, 툴 호출 메시지 등을 순서대로 저장하는 리스트다.  
+- 즉, 챗봇이나 에이전트가 지금까지 어떤 대화를 주고받았는지 저장하는 대화 기록 역할을 한다.  
+
+### (2) add_messages 리듀서  
+
+```python
+from typing import Annotated
+from typing_extensions import TypedDict
+from langchain_core.messages import AnyMessage
+from langgraph.graph.message import add_messages
+
+class State(TypedDict):
+    messages: Annotated[list[AnyMessage], add_messages]
+```
+
+- 여기서 messages 채널에는 `add_messages` 라는 리듀서를 적용했다.
+- 앞서 operator.add 를 사용하면 리스트가 단순히 이어붙여졌다면, `add_messages` 는 메시지 목록을 다루기 위해 LangGraph 에서 제공하는 전용 리듀서다.  
+- 기본적인 역할은 **기존 messages 리스트에 새로 들어온 메시지를 추가하는 것**이다.  
+
+### (3) add_message 리듀서 작동방식  
+
+예를 들어 현재 State 가 아래와 같다고 해보자.  
+
+```python
+{
+    "messages": [
+        HumanMessage(content="안녕하세요")
+    ]
+}
+```
+
+이후 어떤 노드가 아래와 같이 AI 응답 메시지만 반환한다고 해보자.
+
+```python
+def chatbot_node(state: State) -> dict:
+    return {
+        "messages": [
+            AIMessage(content="안녕하세요. 무엇을 도와드릴까요?")
+        ]
+    }
+```
+
+그러면 LangGraph 런타임은 messages 채널의 리듀서인 add_messages 를 사용해 기존 메시지 목록과 새 메시지를 합치고, 최종 State 는 아래와 같이 된다.
+
+```python
+{
+    "messages": [
+        HumanMessage(content="안녕하세요"),
+        AIMessage(content="안녕하세요. 무엇을 도와드릴까요?")
+    ]
+}
+```
+
+### (4) add_message만의 장점  
+
+- add_messages 는 단순히 리스트를 더하는 것과 비슷해 보이지만, 메시지 객체를 다룰 때 더 적합하다.  
+- HumanMessage, AIMessage, SystemMessage, ToolMessage 같은 LangChain 메시지 객체들을 대화 흐름에 맞게 누적하는 데 용이하다.  
+- 또한 입력으로 메시지 객체뿐 아니라 딕셔너리 형태의 메시지가 들어와도 LangChain 메시지 객체로 역직렬화해서 다룰 수 있다.  
+
+예를 들어 아래 두 방식 모두 사용 가능하다.  
+
+```python
+{
+    "messages": [
+        HumanMessage(content="안녕하세요")
+    ]
+}
+```
+
+```python
+{
+    "messages": [
+        {"role": "user", "content": "안녕하세요"}
+    ]
+}
+```
+
+### (5) message 내용을 꺼낼 때  
+
+```python
+last_message = state["messages"][-1]
+content = last_message.content
+```
+
+### (6) MessageState  
+
+- MessageState란, LangGraph에서 제공하는 State의 한 종류  
+- 내부적으로 messages 채널을 가지고 있고, 이 채널에 add_messages 리듀서가 적용되어 있다.  
+- 대화형 그래프에서는 messages 채널을 정의하는 일이 많기 때문이, 이를 준비해둔 템플릿이라고 보면 된다.  
+
+```python
+from langgraph.graph import MessagesState
+
+class State(MessagesState):
+    user_id: str
+    summary: str
+```
+
+- 위 코드는 아래와 비슷한 구조라고 이해하면 된다.  
+
+```python
+from typing import TypedDict
+from langchain_core.messages import AnyMessage
+from langgraph.graph.message import add_messages
+
+class MessagesState(TypedDict):
+    user_id: str
+    summary: str
+    messages: Annotated[list[AnyMessage], add_messages]
+```
+
 
 ## Reference
 
