@@ -38,3 +38,8 @@ postgresql:
   description: "강력한 오픈소스 RDBMS PostgreSQL"
   cover: "/assets/images/series/postgresql.jpg"
 
+python-handling-concurrent-tasks:
+  title: "파이썬에서 여러 작업을 동시에 처리하기"
+  description: "파이썬 동시성 처리: 비동기, 스레딩, 멀티프로세싱 비교"
+  cover: "/assets/images/series/python-handling-concurrent-tasks.jpg"
+
