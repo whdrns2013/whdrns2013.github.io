@@ -436,6 +436,10 @@ docs_python:
       url: /python/20260428_001_python_quote_plus/
     - title: "ConnectorX - 빠른 RDB 조회"
       url: /python/20260502_001_connectorx/
+  - title: "인코딩과 디코딩"
+    children:
+    - title: "base64로 이미지 인코딩"
+      url: /python/20260511_001_base64_encoding_with_mime_type/
   - title: "기타 라이브러리"
     children:
     - title: "pytz - 타임존 다루기"
