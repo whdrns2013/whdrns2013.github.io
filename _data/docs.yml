@@ -9,7 +9,7 @@ meta:
     description: "파이썬 언어의 문법, 객체 지향 프로그래밍, 그리고 다양한 라이브러리 활용"
     cover: "/assets/images/docs/docs_python.jpg"
   docs_rust:
-    title: "Rust"
+    title: "Rust" 
     description: "메모리 안전성과 성능을 모두 잡는 현대적인 언어 Rust 입문"
     cover: "/assets/images/docs/docs_rust.jpg"
   docs_dart_and_flutter:
@@ -84,7 +84,7 @@ meta:
     title: "Pandas"
     description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
     cover: "/assets/images/docs/docs_pandas.jpg"
-
+ 
 # documentation links
 docs:
   - title: Doc Intro
