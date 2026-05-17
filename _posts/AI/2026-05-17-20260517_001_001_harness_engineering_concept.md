@@ -27,6 +27,7 @@ sidebar:
   nav: docs_ai_coding
 pinned: 
 series: harness_engineering
+series_index: 1
 ---
 
 <!--postNo: 20260517_001-->

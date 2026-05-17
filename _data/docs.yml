@@ -1517,3 +1517,5 @@ docs_ai_coding:
     children:
       - title: "(1) 하네스 엔지니어링이란"
         url: /ai/20260517_001_001_harness_engineering_concept/
+      - title: "(1) 사람 개발자의 역할은"
+        url: /ai/20260517_001_002_harness_engineering_human/
