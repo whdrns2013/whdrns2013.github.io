@@ -4,6 +4,7 @@
 
 $readability-accent-color: #23836f !default;
 $readability-strong-color: mix($danger-color, $text-color, 72%) !default;
+$readability-single-code-color: mix(#5bc64a, $text-color, 72%) !default;
 $readability-muted-color: mix($text-color, $background-color, 64%) !default;
 $readability-soft-border: mix($border-color, $background-color, 72%) !default;
 $readability-soft-background: mix($background-color, $text-color, 96%) !default;
@@ -135,19 +136,22 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       border-bottom: 1px solid mix($readability-accent-color, $readability-soft-border, 28%);
       border-left: 4px solid $readability-accent-color;
       background: linear-gradient(90deg, $readability-heading-background 0%, rgba($readability-heading-background, 0) 72%);
-      font-size: 1.46em;
+      // font-size: 1.46em;
+      font-size: 1.55em;
     }
 
     > h3 {
       margin-top: 2.25rem;
       padding-bottom: 0.28rem;
       border-bottom: 1px solid $readability-soft-border;
-      font-size: 1.22em;
+      // font-size: 1.22em;
+      font-size: 1.35em;
     }
 
     > h4 {
       margin-top: 1.75rem;
-      color: mix($text-color, $readability-accent-color, 76%);
+      // color: mix($text-color, $readability-accent-color, 76%);
+      color: mix($text-color, #0d5e00, 76%);
       font-size: 1.08em;
     }
 
@@ -195,7 +199,7 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       border: 1px solid mix($border-color, $background-color, 60%);
       border-radius: 4px;
       background: $readability-code-background;
-      color: $readability-strong-color;
+      color: $readability-single-code-color;
       font-size: 0.88em;
       font-weight: 500;
 
