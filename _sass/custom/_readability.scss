@@ -10,8 +10,23 @@ $readability-soft-background: mix($background-color, $text-color, 96%) !default;
 $readability-code-background: mix($background-color, $text-color, 92%) !default;
 $readability-code-block-background: mix($background-color, #111827, 12%) !default;
 $readability-code-block-border: mix($readability-code-block-background, #ffffff, 82%) !default;
+$readability-heading-background: mix($background-color, $readability-accent-color, 94%) !default;
 
 .layout--single {
+  .page__hero--overlay {
+    .page__title,
+    .page__title a,
+    .page__lead,
+    .page__meta {
+      color: #fff;
+      text-shadow: 0 2px 14px rgba(#000, 0.72), 0 1px 2px rgba(#000, 0.88);
+    }
+
+    .page__title {
+      font-weight: 800;
+    }
+  }
+
   .page__inner-wrap {
     header {
       max-width: 820px;
@@ -35,7 +50,7 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
     max-width: 820px;
     color: mix($text-color, $background-color, 92%);
     font-size: 0.86rem;
-    line-height: 1.78;
+    line-height: 1.62;
     letter-spacing: 0;
     word-break: keep-all;
     overflow-wrap: break-word;
@@ -54,17 +69,21 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
     > div.highlighter-rouge,
     > figure.highlight {
       margin-top: 0;
-      margin-bottom: 1.15rem;
+      margin-bottom: 1.38rem;
     }
 
     p,
     li {
       font-size: 1em;
-      line-height: 1.78;
+      line-height: 1.62;
+    }
+
+    p {
+      margin-bottom: 1.38rem;
     }
 
     li {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.28rem;
       padding-left: 0.05rem;
     }
 
@@ -81,7 +100,7 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
     > h5,
     > h6 {
       position: relative;
-      margin: 2.35rem 0 0.8rem;
+      margin: 2.6rem 0 0.95rem;
       padding: 0;
       background: transparent;
       color: $text-color;
@@ -103,21 +122,25 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
     }
 
     > h1 {
-      margin-top: 2.8rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid $readability-soft-border;
+      margin-top: 3rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid mix($readability-accent-color, $readability-soft-border, 24%);
       font-size: 1.72em;
     }
 
     > h2 {
-      margin-top: 2.75rem;
-      padding-bottom: 0.45rem;
-      border-bottom: 1px solid $readability-soft-border;
+      margin-top: 3rem;
+      padding: 0.42rem 0 0.48rem 0.75rem;
+      border-bottom: 1px solid mix($readability-accent-color, $readability-soft-border, 28%);
+      border-left: 4px solid $readability-accent-color;
+      background: linear-gradient(90deg, $readability-heading-background 0%, rgba($readability-heading-background, 0) 72%);
       font-size: 1.46em;
     }
 
     > h3 {
-      margin-top: 2.1rem;
+      margin-top: 2.25rem;
+      padding-bottom: 0.28rem;
+      border-bottom: 1px solid $readability-soft-border;
       font-size: 1.22em;
     }
 
@@ -158,6 +181,7 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
 
     blockquote {
       margin-left: 0;
+      margin-bottom: 1.55rem;
       padding: 0.15rem 1rem;
       border-left: 3px solid mix($readability-accent-color, $border-color, 70%);
       background: $readability-soft-background;
@@ -188,31 +212,165 @@ $readability-code-block-border: mix($readability-code-block-background, #ffffff,
       border-radius: 8px;
       background: $readability-code-block-background;
       box-shadow: none;
-      font-size: 0.92em;
+      font-size: 0.82em;
       line-height: 1.72;
+      overflow-x: auto;
 
       > pre,
       pre.highlight {
         padding: 1.05rem 1.15rem;
+        overflow-x: auto;
+        white-space: pre;
+      }
+
+      pre,
+      pre code,
+      table,
+      td,
+      th {
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+
+      pre code,
+      .rouge-code pre {
+        white-space: pre;
+      }
+
+      table {
+        display: table;
+        width: max-content;
+        min-width: 100%;
+        margin: 0;
+        border: 0;
+        border-collapse: collapse;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-family: inherit;
+        font-size: 1em;
+        line-height: inherit;
+        overflow: visible;
+      }
+
+      th,
+      td {
+        border: 0;
+        background: transparent;
+        color: inherit;
+      }
+
+      .rouge-gutter,
+      .gutter {
+        width: 1em;
+        padding-right: 1em;
+        border-right: 1px dashed $base03;
+      }
+
+      .rouge-code,
+      .code {
+        padding-left: 1em;
       }
     }
 
     table {
-      font-size: 0.95rem;
-      line-height: 1.6;
+      margin: 1.45rem 0;
+      // border: 1px solid mix($border-color, $text-color, 82%);
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      // box-shadow: 0 4px 14px rgba(#000, 0.04);
+      font-size: 0.82rem;
+      line-height: 1.52;
+      overflow: hidden;
 
       th {
+        background: mix($background-color, $readability-accent-color, 90%);
+        color: mix($text-color, $readability-accent-color, 86%);
         font-weight: 700;
       }
 
       th,
       td {
-        border-color: $readability-soft-border;
+        padding: 0.55rem 0.65rem;
+        border-right: 1px solid mix($border-color, $text-color, 88%);
+        border-bottom: 1px solid mix($border-color, $text-color, 88%);
+        border-top: 0;
+        border-left: 0;
+        vertical-align: top;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      th:last-child,
+      td:last-child {
+        border-right: 0;
+      }
+
+      tbody tr:nth-child(even) {
+        background: mix($background-color, $text-color, 97%);
       }
     }
 
     img {
       border-radius: 6px;
+    }
+
+    .toc {
+      border: 1px solid mix($border-color, $background-color, 70%);
+      border-radius: 8px;
+      background: mix($background-color, $text-color, 98%);
+      box-shadow: 0 8px 22px rgba(#000, 0.06);
+      color: $readability-muted-color;
+      overflow: hidden;
+
+      .nav__title {
+        padding: 0.62rem 0.8rem;
+        border-bottom: 1px solid mix($border-color, $background-color, 78%);
+        border-radius: 0;
+        background: mix($background-color, $readability-accent-color, 88%);
+        color: mix($text-color, $readability-accent-color, 82%);
+        font-size: 0.78rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: none;
+      }
+
+      .toc__toggle {
+        border-radius: 4px;
+        color: inherit;
+      }
+
+      .toc__menu {
+        font-size: 0.78rem;
+
+        a {
+          padding: 0.52rem 0.8rem;
+          border-bottom: 1px solid mix($border-color, $background-color, 82%);
+          color: mix($text-color, $background-color, 72%);
+          font-weight: 600;
+          line-height: 1.35;
+
+          &:hover {
+            background: mix($background-color, $readability-accent-color, 92%);
+            color: $text-color;
+            text-decoration: none;
+          }
+        }
+
+        li ul > li a {
+          padding-left: 1.3rem;
+          color: $readability-muted-color;
+          font-weight: 500;
+        }
+
+        .active a {
+          background: mix($background-color, $readability-accent-color, 86%);
+          color: mix($text-color, $readability-accent-color, 80%);
+        }
+      }
     }
   }
 }
