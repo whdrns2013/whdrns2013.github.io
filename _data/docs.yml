@@ -36,6 +36,10 @@ meta:
     title: "추천 시스템"
     description: "협업 필터링부터 컨텐츠 기반 필터링, 추천 성능 평가 지표"
     cover: "/assets/images/docs/docs_recommendation.jpg"
+  docs_ai_coding:
+    title: "AI-CODING"
+    description: "AI Coding 시대에서 엔지니어의 역할과 개발 방법"
+    cover:
   docs_pattern:
     title: "디자인 및 아키텍처 패턴"
     description: "유연하고 확장 가능한 소프트웨어 설계를 위한 다양한 패턴들"
@@ -84,6 +88,8 @@ meta:
     title: "Pandas"
     description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
     cover: "/assets/images/docs/docs_pandas.jpg"
+
+
  
 # documentation links
 docs:
@@ -1503,3 +1509,11 @@ docs_database_modeling:
         url: /database_system/20241229_002_database_modeling_4_logical_and_rm/
       - title: "물리적 데이터 모델링"
         url: /database_system/20241229_004_database_modeling_5_physical_data_modeling/
+
+docs_ai_coding:
+  - title: "<-Doc으로 돌아가기"
+    url: /docs/intro
+  - title: 1. 하네스 엔지니어링
+    children:
+      - title: "(1) 하네스 엔지니어링이란"
+        url: /ai/20260517_001_001_harness_engineering_concept/

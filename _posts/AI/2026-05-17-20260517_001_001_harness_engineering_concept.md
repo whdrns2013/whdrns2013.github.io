@@ -24,9 +24,9 @@ sitemap :                    # 구글 크롤링
 author: # 주인 외 작성자 표기 필요시
 permalink: 
 sidebar:
-  nav: docs_llm
+  nav: docs_ai_coding
 pinned: 
-series: langgraph-cafe-rag
+series: harness_engineering
 ---
 
 <!--postNo: 20260517_001-->

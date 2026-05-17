@@ -43,5 +43,8 @@ postgresql:
   description: "강력한 오픈소스 RDBMS PostgreSQL"
   cover: "/assets/images/series/postgresql.jpg"
 
-
+harness_engineering:
+  title: "하네스 엔지니어링"
+  description: "AI 코딩 시대에 사람 엔지니어가 해야할 일은?"
+  cover: "/assets/images/series/harness_engineering.jpg"
 
