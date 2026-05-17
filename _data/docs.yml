@@ -1516,6 +1516,8 @@ docs_ai_coding:
   - title: 1. 하네스 엔지니어링
     children:
       - title: "(1) 하네스 엔지니어링이란"
-        url: /ai/20260517_001_001_harness_engineering_concept/
-      - title: "(1) 사람 개발자의 역할은"
-        url: /ai/20260517_001_002_harness_engineering_human/
+        url: /ai/20260517_001harness_engineering_concept/
+      - title: "(2) 사람 개발자의 역할은"
+        url: /ai/20260517_002_harness_engineering_human/
+      - title: "(3) 리포지토리 구조"
+        url: /ai/20260518_001_harness_engineering_repository/
