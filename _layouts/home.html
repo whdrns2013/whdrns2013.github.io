@@ -4,10 +4,40 @@ layout: archive
 
 {{ content }}
 
+<div class="home-intro">
+  <p class="home-intro__eyebrow">Developer Notes</p>
+  <h3 class="home-intro__title">기술 기록을 빠르게 찾기 위한 기술 블로그</h3>
+  <p class="home-intro__desc">
+    실무에서 필요한 기술에 대한 개념, 사용법, 문제 해결, 그리고 실습 과정을 중심으로 기록합니다.
+    <br>
+    아래에서 최신 글과 주요 카테고리를 탐색해보세요.
+  </p>
+
+  <div class="home-intro__stats">
+    <div class="home-intro__stat">
+      <strong>{{ site.posts | size }}</strong>
+      <span>Posts</span>
+    </div>
+    <div class="home-intro__stat">
+      {% assign latest_post = site.posts | first %}
+      {% if latest_post and latest_post.date %}
+        <strong>{{ latest_post.date | date: "%Y-%m-%d" }}</strong>
+      {% else %}
+        <strong>-</strong>
+      {% endif %}
+      <span>Latest Update</span>
+    </div>
+    <div class="home-intro__stat">
+      <strong>{{ site.tags | size }}</strong>
+      <span>Tags</span>
+    </div>
+  </div>
+</div>
+
 {% if paginator.page == 1 or paginator == nil %}
   {% assign pinned_posts = site.posts | where: "pinned", true %}
   {% if pinned_posts.size > 0 %}
-    <h2 class="archive__subtitle">📍 Pinned Posts</h2>
+    <h2 class="archive__subtitle home-subtitle">Pinned Posts</h2>
     {% assign entries_layout = page.entries_layout | default: 'list' %}
     <div class="entries-{{ entries_layout }}">
       {% for post in pinned_posts %}
@@ -17,9 +47,7 @@ layout: archive
   {% endif %}
 {% endif %}
 
-<br>
-
-<h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "⭐️ Recent Posts" }}</h2>
+<h2 class="archive__subtitle home-subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h2>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -34,10 +62,8 @@ layout: archive
   {% endfor %}
 </div>
 
-
 {% include paginator.html %}
 
-<br>
-<div style="margin-top: 20px;">
+<div class="home-activity-chart">
   <img src="https://ghchart.rshah.org/whdrns2013" alt="whdrns2013's Github chart">
 </div>
