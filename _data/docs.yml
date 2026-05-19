@@ -761,10 +761,11 @@ docs_mlflow:
       url: /ops/20260401_006_mlflow_server_side_install/
     - title: "(6)테스트 모델 등록해보기"
       url: /ops/20260401_007_mlflow_test_model_registration/
-  - title: "3. MLflow 메인 컨셉"
+  - title: "3. MLflow Client Side"
     children:
-      - title: ""
-  - title: "4. MLflow Client Side"
+      - title: "MLflow Client란"
+        url: /ops/20260520_001_mlflow_client_side/
+  - title: "4. MLflow 메인 컨셉"
     children:
       - title: ""
 
