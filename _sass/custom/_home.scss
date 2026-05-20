@@ -50,8 +50,7 @@
   }
 
   .home-quick-card {
-    display: flex;
-    flex-direction: column;
+    display: block;
     text-decoration: none;
     padding: 0.7rem 0.8rem;
     border-radius: 12px;
@@ -67,7 +66,14 @@
       box-shadow: 0 7px 18px rgba(38, 70, 120, 0.2);
       background: linear-gradient(180deg, #ffffff 0%, #e8f1ff 100%);
     }
+  }
 
+  .home-quick-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    margin-bottom: 0.22rem;
   }
 
   .home-quick-card__icon {
@@ -78,13 +84,13 @@
   }
 
   .home-quick-card__title {
-    display: block;
+    display: inline-block;
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #203a5c;
-    margin-bottom: 0.22rem;
+    margin-bottom: 0;
   }
 
   .home-quick-card__desc {
@@ -92,13 +98,11 @@
     font-size: 0.72rem;
     line-height: 1.45;
     color: #4f617a;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0;
   }
 
   .home-quick-card__cta {
     display: inline-block;
-    align-self: flex-end;
-    margin-top: auto;
     padding: 0.22rem 0.52rem;
     border-radius: 999px;
     font-size: 0.68rem;
