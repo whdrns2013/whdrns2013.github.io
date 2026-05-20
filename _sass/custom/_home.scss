@@ -42,6 +42,72 @@
     margin-top: 0.8rem;
   }
 
+  .home-quick-links {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .home-quick-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0.7rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid #9cb5d8;
+    background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+    box-shadow: 0 2px 8px rgba(38, 70, 120, 0.1);
+    cursor: pointer;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: #6f95c8;
+      box-shadow: 0 7px 18px rgba(38, 70, 120, 0.2);
+      background: linear-gradient(180deg, #ffffff 0%, #e8f1ff 100%);
+    }
+
+  }
+
+  .home-quick-card__icon {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .home-quick-card__title {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #203a5c;
+    margin-bottom: 0.22rem;
+  }
+
+  .home-quick-card__desc {
+    display: block;
+    font-size: 0.72rem;
+    line-height: 1.45;
+    color: #4f617a;
+    margin-bottom: 0.45rem;
+  }
+
+  .home-quick-card__cta {
+    display: inline-block;
+    align-self: flex-end;
+    margin-top: auto;
+    padding: 0.22rem 0.52rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: #2f6fbd;
+  }
+
   .home-intro__stat {
     border-radius: 12px;
     padding: 0.58rem 0.72rem;
@@ -104,6 +170,10 @@
     }
 
     .home-intro__stats {
+      grid-template-columns: 1fr;
+    }
+
+    .home-quick-links {
       grid-template-columns: 1fr;
     }
   }

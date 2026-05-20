@@ -6,7 +6,7 @@ layout: archive
 
 <div class="home-intro">
   <p class="home-intro__eyebrow">Developer Notes</p>
-  <h3 class="home-intro__title">기술 기록을 빠르게 찾기 위한 기술 블로그</h3>
+  <h3 class="home-intro__title">기술 기록 개발자 노트</h3>
   <p class="home-intro__desc">
     실무에서 필요한 기술에 대한 개념, 사용법, 문제 해결, 그리고 실습 과정을 중심으로 기록합니다.
     <br>
@@ -32,6 +32,21 @@ layout: archive
       <span>Tags</span>
     </div>
   </div>
+</div>
+
+<div class="home-quick-links" aria-label="Quick Navigation">
+  <a class="home-quick-card" href="{{ '/docs/intro/' | relative_url }}">
+    <!-- <span class="home-quick-card__icon" aria-hidden="true">📘</span> -->
+    <span class="home-quick-card__title">DOC</span>
+    <span class="home-quick-card__desc">여러 포스팅을 큰 주제별 엮어 만든 체계화된 지식 공간입니다.</span>
+    <span class="home-quick-card__cta">바로가기</span>
+  </a>
+  <a class="home-quick-card" href="{{ '/series/' | relative_url }}">
+    <!-- <span class="home-quick-card__icon" aria-hidden="true">🧩</span> -->
+    <span class="home-quick-card__title">Series</span>
+    <span class="home-quick-card__desc">하나의 작은 주제를 연속 포스팅으로 깊게 다룬 시리즈 모음입니다.</span>
+    <span class="home-quick-card__cta">바로가기</span>
+  </a>
 </div>
 
 {% if paginator.page == 1 or paginator == nil %}
