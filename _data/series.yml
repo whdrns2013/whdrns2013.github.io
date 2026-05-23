@@ -38,6 +38,11 @@ homeserver_setting:
   description: "미니 PC와 리눅스를 이용한 개인 서버 구축 및 운영 일지"
   cover: "/assets/images/series/homeserver_setting.jpg"
 
+streamlit-cloud-deploy:
+  title: "Streamlit 웹앱을 클라우드로 배포하기"
+  description: "Streamlit + Supabase로 내가 만든 웹앱을 배포해보자"
+  cover: "/assets/images/series/streamlit-cloud-deploy.jpg"
+
 python-logging:
   title: "파이썬 로깅 Python Logging"
   description: "안정적인 서비스 운영을 위한 파이썬 로깅 시스템 설계"

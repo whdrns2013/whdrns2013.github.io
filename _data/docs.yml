@@ -488,6 +488,12 @@ docs_python:
       url: /python/20251104_008_python_logging_custom/
     - title: "09. 다양한 Handler 들"
       url: /python/20251104_009_python_logging_handlers/
+  - title: 웹앱 만들기
+    children:
+    - title: "01. Streamlit"
+      url: /python/20260524_001_streamlit/
+    - title: "02. With JavaScript"
+      url: /python/20260524_002_streamlit_with_javascript/
 
 
 # rust
