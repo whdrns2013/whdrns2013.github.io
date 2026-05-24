@@ -429,6 +429,20 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       > h3 {
         font-size: 1.16em;
       }
+
+      > table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      > table th,
+      > table td {
+        white-space: nowrap;
+      }
     }
   }
 }
