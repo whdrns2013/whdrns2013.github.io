@@ -1,5 +1,5 @@
 ---
-title: "[Python] Streamlit 에서 JavaScript 사용하기" # 제목 (필수)
+title: "[Streamlit] Streamlit 에서 JavaScript 사용하기" # 제목 (필수)
 excerpt: "Streamlit 웹앱에서 프론트엔드 작업이 필요할 경우" # 서브 타이틀이자 meta description (필수)
 date: 2026-05-24 04:56:00 +0900      # 작성일 (필수)
 lastmod: 2026-05-24 04:56:00 +0900   # 최종 수정일 (필수)
