@@ -666,6 +666,10 @@ docs_rdb:
       url: /sql/20251111_002_postgresql_dump/
     - title: "Python 에서 PostgreSQL 사용하기"
       url: /sql/20251111_003_postgresql_python/
+  - title: "Supabase"
+    children:
+    - title: "SQLAlchemy와 Alembic으로 Supabase 데이터베이스 마이그레이션"
+      url: /sql/20260526_001_supabase_db_migration_with_alembic/
 
  
 # data analysis
