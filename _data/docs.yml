@@ -563,6 +563,8 @@ docs_pattern:
       url: /design_pattern/20251123_003_factory_pattern/
     - title: "1-03. 빌더 패턴(Builder Pattern)"
       url: /design_pattern/20250704_002_builder_pattern/
+    - title: "1-04. 지연초기화(Lazy Initialization)"
+      url: /design_pattern/20260529_001_lazy_initialization/
   - title: "2. 구조 패턴"
   - title: "3. 행동 패턴"
     children:
