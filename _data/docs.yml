@@ -496,7 +496,8 @@ docs_python:
       url: /python/20260524_002_streamlit_with_javascript/
     - title: "03. 만든 웹앱을 배포하기"
       url: /python/20260525_001_streamlit_community_cloud/
-
+    - title: "04. Streamlit + Supabase"
+      url: /python/20260530_001_streamlit_supabase/
 
 # rust
 docs_rust:
