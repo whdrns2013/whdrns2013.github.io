@@ -88,6 +88,10 @@ meta:
     title: "Pandas"
     description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
     cover: "/assets/images/docs/docs_pandas.jpg"
+  docs_vcs:
+    titls: "Version Control System"
+    description: "안전하게 협업할 수 있도록 돕는 소스 교통정리 시스템"
+    covert: "/assets/images/docs/docs_version_control_system.jpg"
 
  
  
