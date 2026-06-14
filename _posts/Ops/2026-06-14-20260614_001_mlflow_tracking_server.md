@@ -263,8 +263,8 @@ mlflow server \
 
 ## Reference
 
-![https://mlflow.org/docs/latest/self-hosting/architecture/tracking-server/](https://mlflow.org/docs/latest/self-hosting/architecture/tracking-server/)  
-![https://mlflow.org/docs/latest/self-hosting/architecture/backend-store/](https://mlflow.org/docs/latest/self-hosting/architecture/backend-store/)  
-![https://mlflow.org/docs/latest/self-hosting/architecture/artifact-store/](https://mlflow.org/docs/latest/self-hosting/architecture/artifact-store/)  
-![https://mlflow.org/docs/latest/ml/tracking/](https://mlflow.org/docs/latest/ml/tracking/)  
-![https://mlflow.org/docs/latest/self-hosting/security/network/](https://mlflow.org/docs/latest/self-hosting/security/network/)  
+[https://mlflow.org/docs/latest/self-hosting/architecture/tracking-server/](https://mlflow.org/docs/latest/self-hosting/architecture/tracking-server/)  
+[https://mlflow.org/docs/latest/self-hosting/architecture/backend-store/](https://mlflow.org/docs/latest/self-hosting/architecture/backend-store/)  
+[https://mlflow.org/docs/latest/self-hosting/architecture/artifact-store/](https://mlflow.org/docs/latest/self-hosting/architecture/artifact-store/)  
+[https://mlflow.org/docs/latest/ml/tracking/](https://mlflow.org/docs/latest/ml/tracking/)  
+[https://mlflow.org/docs/latest/self-hosting/security/network/](https://mlflow.org/docs/latest/self-hosting/security/network/)  
