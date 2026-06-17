@@ -33,7 +33,7 @@ series_index:
 
 ## Tracking Server
 
-### 1. 개념
+### 1. 개념 
 
 MLflow Tracking Server는 MLflow의 **중앙 관제 서버 역할**을 담당한다.  
 
