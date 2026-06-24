@@ -1314,6 +1314,8 @@ docs_recommendation:
       - title: "소개와 논문 리뷰"
       - title: "설치와 기본 사용"
         url: /recommend_system/20260624_001_deepfm_install_basic_use
+      - title: "Negative Sampling"
+        url: /recommend_system/20260625_001_deepfm_negative_sampling
   - title: "추천 예제"
     children:
       - title: "SBERT 벡터라이징과 유사도 계산을 통한 추천"
