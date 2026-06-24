@@ -58,5 +58,9 @@ postgresql:
   description: "강력한 오픈소스 RDBMS PostgreSQL"
   cover: "/assets/images/series/postgresql.jpg"
 
+deepfm:
+  title: "DeepFM"
+  description: "FM으로 기본적인 특성 조합을, DNN으로 숨은 복잡한 패턴까지 학습하는 추천 모델"
+  cover: "/assets/images/series/deepfm.jpg"
 
 
