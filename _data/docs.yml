@@ -583,6 +583,8 @@ docs_pattern:
     children:
       - title: "· 안티패턴"
         url: /design_pattern/20250709_002_anti_pattern/
+      - title: "· 레지스트리 패턴"
+        url: /design_pattern/20260716_001_registry_pattern/
 
 # server infra
 docs_server_infra:
