@@ -1,19 +1,14 @@
 .category-hierarchy__index {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
   margin: 1.414em 0 2em;
-
-  @include breakpoint($medium) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
-.category-hierarchy__index-card {
-  padding: 0.85rem;
-  border: 1px solid $border-color;
-  border-radius: 8px;
-  background-color: mix(#fff, $background-color, 35%);
+.category-hierarchy__index-group {
+  padding: 1rem 0;
+  border-bottom: 1px solid $border-color;
+
+  &:first-child {
+    border-top: 1px solid $border-color;
+  }
 }
 
 .category-hierarchy__index-heading {
@@ -26,7 +21,7 @@
 
   strong {
     display: block;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -45,27 +40,35 @@
 }
 
 .category-hierarchy__index-children {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
   a {
-    display: inline-flex;
+    display: flex;
     gap: 0.3rem;
     align-items: center;
-    padding: 0.2rem 0.45rem;
+    justify-content: space-between;
+    min-height: 2.35rem;
+    padding: 0.55rem 0.7rem;
     border: 1px solid $border-color;
-    border-radius: 999px;
+    border-radius: 6px;
     color: inherit;
-    font-size: 0.68rem;
-    line-height: 1.2;
+    font-size: 0.74rem;
+    line-height: 1.25;
     text-decoration: none;
+    background-color: mix(#fff, $background-color, 18%);
 
     &:hover {
       color: $link-color-hover;
       text-decoration: none;
       border-color: mix(#000, $border-color, 20%);
+      background-color: mix(#fff, $background-color, 30%);
     }
   }
 }
