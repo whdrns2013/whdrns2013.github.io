@@ -127,13 +127,13 @@
     font-weight: 650;
     line-height: 1.25;
     text-decoration: none;
-    background-color: rgba(#fff, 0.7);
+    background-color: rgba(#fff, 0.1);
 
     &:hover {
       color: $link-color-hover;
       text-decoration: none;
       border-color: var(--category-index-accent);
-      background-color: rgba(#fff, 0.9);
+      background-color: rgba(#fff, 0.3);
     }
 
     .taxonomy__count {
