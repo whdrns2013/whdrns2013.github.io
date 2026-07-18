@@ -2,7 +2,8 @@
   main_title: Language & Framework
   sub_title: 개발 언어와 프레임워크
   categories:
-    - Language
+    - name: Language
+      sub_title: 언어 일반
     - name: Python
       sub_title: 파이썬
     - name: Java
@@ -22,65 +23,102 @@
   main_title: AI & Data
   sub_title: 인공지능과 데이터
   categories:
-    - AI
-    - machine_learning
-    - NLP
-    - recommend_system
-    - vector_db
-    - data_analysis
-    - data_engineering
-    - KnowledgeGraph
-    - statistics
+    - name: AI
+      sub_title: 인공지능
+    - name: machine_learning
+      sub_title: 머신러닝
+    - name: NLP
+      sub_title: 자연어 처리
+    - name: recommend_system
+      sub_title: 추천 시스템
+    - name: vector_db
+      sub_title: 벡터 데이터베이스
+    - name: data_analysis
+      sub_title: 데이터 분석
+    - name: data_engineering
+      sub_title: 데이터 엔지니어링
+    - name: KnowledgeGraph
+      sub_title: 지식 그래프
+    - name: statistics
+      sub_title: 통계
 
 - key: computer_science
   main_title: Computer Science
   sub_title: 컴퓨터과학(CS)
   categories:
-    - ComputerScience
-    - Algorithm
-    - data_structure
-    - mathematics
-    - operation_system
+    - name: ComputerScience
+      sub_title: 컴퓨터 과학 일반
+    - name: Algorithm
+      sub_title: 알고리즘
+    - name: data_structure
+      sub_title: 자료구조
+    - name: mathematics
+      sub_title: 수학
+    - name: operation_system
+      sub_title: 운영체제
 
 - key: infra_ops
   main_title: Infra & Ops
   sub_title: 인프라와 오퍼레이션
   categories:
-    - Linux
-    - docker
-    - Cloud
-    - Infra
-    - Ops
-    - network
-    - security
-    - VCS
+    - name: Linux
+      sub_title: 리눅스
+    - name: docker
+      sub_title: 도커
+    - name: Cloud
+      sub_title: 클라우드
+    - name: Infra
+      sub_title: 인프라
+    - name: Ops
+      sub_title: 운영
+    - name: network
+      sub_title: 네트워크
+    - name: security
+      sub_title: 보안
+    - name: VCS
+      sub_title: 버전 관리
 
 - key: database
   main_title: Database System
   sub_title: 데이터베이스 시스템
   categories:
-    - SQL
-    - database_system
+    - name: SQL
+      sub_title: SQL
+    - name: database_system
+      sub_title: 데이터베이스 시스템
 
 - key: software_engineering
   main_title: Software Engineering
   sub_title: 설계, 수행, 프랙티스
   categories:
-    - design_pattern
-    - software_engineering
-    - coding_test
-    - project_managing
-    - TroubleShooting
-    - Linux TroubleShooting
-    - network TroubleShooting
+    - name: design_pattern
+      sub_title: 디자인 패턴
+    - name: software_engineering
+      sub_title: 소프트웨어 공학
+    - name: coding_test
+      sub_title: 코딩 테스트
+    - name: project_managing
+      sub_title: 프로젝트 관리
+    - name: TroubleShooting
+      sub_title: 트러블슈팅
+    - name: Linux TroubleShooting
+      sub_title: 리눅스 문제 해결
+    - name: network TroubleShooting
+      sub_title: 네트워크 문제 해결
 
 - key: misc
   main_title: Misc
   sub_title: Notes and experiments
   categories:
-    - etc
-    - Lab
-    - project
-    - Trend_and_Thesis
-    - book
-    - diary
+    - name: etc
+      sub_title: 기타
+    - name: Lab
+      sub_title: 실험실
+    - name: project
+      sub_title: 프로젝트
+    - name: Trend_and_Thesis
+      sub_title: 트렌드와 논문
+    - name: book
+      sub_title: 책
+    - name: diary
+      sub_title: 일기
