@@ -108,41 +108,43 @@
 .category-hierarchy__index-children {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.38rem;
+  gap: 0.34rem;
   margin-top: 0;
-  padding: 0.52rem 0.58rem;
+  padding: 0.62rem 0.72rem;
   align-content: center;
-
-  @include breakpoint($medium) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 
   a {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.8rem;
     align-items: center;
     justify-content: space-between;
-    min-height: 1.7rem;
-    padding: 0.28rem 0.46rem;
+    min-height: 2.05rem;
+    padding: 0.38rem 0.62rem 0.38rem 0.72rem;
     border: 1px solid rgba(#000, 0.09);
-    border-radius: 999px;
+    border-radius: 10px;
     color: inherit;
-    font-size: 0.62rem;
+    font-size: 0.78rem;
+    font-weight: 650;
     line-height: 1.25;
     text-decoration: none;
-    background-color: rgba(#fff, 0.66);
+    background-color: rgba(#fff, 0.7);
 
     &:hover {
       color: $link-color-hover;
       text-decoration: none;
       border-color: var(--category-index-accent);
-      background-color: rgba(#fff, 0.86);
+      background-color: rgba(#fff, 0.9);
     }
 
     .taxonomy__count {
+      min-width: 1.7rem;
+      padding: 0.08rem 0.38rem;
+      border-radius: 999px;
+      background-color: rgba(#fff, 0.72);
       color: var(--category-index-accent);
-      font-size: 0.58rem;
+      font-size: 0.66rem;
       font-weight: 700;
+      text-align: center;
     }
   }
 }
