@@ -1,0 +1,79 @@
+- key: language
+  main_title: Language & Framework
+  sub_title: 개발 언어와 프레임워크
+  categories:
+    - Language
+    - Python
+    - Java
+    - clang
+    - Rust
+    - golang
+    - dart_and_flutter
+    - Spring
+
+- key: ai_data
+  main_title: AI & Data
+  sub_title: 인공지능과 데이터
+  categories:
+    - AI
+    - machine_learning
+    - NLP
+    - recommend_system
+    - vector_db
+    - data_analysis
+    - data_engineering
+    - KnowledgeGraph
+    - statistics
+
+- key: computer_science
+  main_title: Computer Science
+  sub_title: 컴퓨터과학(CS)
+  categories:
+    - ComputerScience
+    - Algorithm
+    - data_structure
+    - mathematics
+    - operation_system
+
+- key: infra_ops
+  main_title: Infra & Ops
+  sub_title: 인프라와 오퍼레이션
+  categories:
+    - Linux
+    - docker
+    - Cloud
+    - Infra
+    - Ops
+    - network
+    - security
+    - VCS
+
+- key: database
+  main_title: Database System
+  sub_title: 데이터베이스 시스템
+  categories:
+    - SQL
+    - database_system
+
+- key: software_engineering
+  main_title: Software Engineering
+  sub_title: 설계, 수행, 프랙티스
+  categories:
+    - design_pattern
+    - software_engineering
+    - coding_test
+    - project_managing
+    - TroubleShooting
+    - Linux TroubleShooting
+    - network TroubleShooting
+
+- key: misc
+  main_title: Misc
+  sub_title: Notes and experiments
+  categories:
+    - etc
+    - Lab
+    - project
+    - Trend_and_Thesis
+    - book
+    - diary

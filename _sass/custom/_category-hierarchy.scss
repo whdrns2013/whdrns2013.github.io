@@ -1,0 +1,107 @@
+.category-hierarchy__index {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.414em 0 2em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.category-hierarchy__index-card {
+  padding: 0.85rem;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  background-color: mix(#fff, $background-color, 35%);
+}
+
+.category-hierarchy__index-heading {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: inherit;
+  text-decoration: none;
+
+  strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  small {
+    display: block;
+    margin-top: 0.15rem;
+    color: $muted-text-color;
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.category-hierarchy__index-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+
+  a {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+    padding: 0.2rem 0.45rem;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    color: inherit;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color-hover;
+      text-decoration: none;
+      border-color: mix(#000, $border-color, 20%);
+    }
+  }
+}
+
+.category-hierarchy__group-header {
+  margin-bottom: 1rem;
+}
+
+.category-hierarchy__group-title {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.category-hierarchy__group-subtitle {
+  margin: 0;
+  color: $muted-text-color;
+  font-size: 0.85em;
+}
+
+.category-hierarchy__category {
+  margin-top: 1.4rem;
+}
+
+.category-hierarchy__category-title {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $border-color;
+  font-size: 0.95em;
+}
+
+.page__taxonomy-parent {
+  color: $muted-text-color;
+  font-size: 0.82em;
+}
+
+.page__taxonomy-divider {
+  margin: 0 0.2rem;
+  color: $muted-text-color;
+}

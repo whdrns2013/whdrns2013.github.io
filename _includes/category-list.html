@@ -12,7 +12,19 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for category_word in categories_sorted %}
-      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      {% assign parent_main_title = nil %}
+      {% for group in site.data.category_hierarchy %}
+        {% if group.categories contains category_word %}
+          {% assign parent_main_title = group.main_title %}
+        {% endif %}
+      {% endfor %}
+      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">
+        {% if parent_main_title and parent_main_title != category_word %}
+          <span class="page__taxonomy-parent">{{ parent_main_title }}</span>
+          <span class="page__taxonomy-divider">/</span>
+        {% endif %}
+        <span class="page__taxonomy-current">{{ category_word }}</span>
+      </a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>

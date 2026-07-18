@@ -8,40 +8,134 @@ layout: archive
 
 {{ content }}
 
-{% assign categories_max = 0 %}
-{% for category in site.categories %}
-  {% if category[1].size > categories_max %}
-    {% assign categories_max = category[1].size %}
-  {% endif %}
+{% assign category_groups = site.data.category_hierarchy %}
+{% assign mapped_categories = "" %}
+{% for group in category_groups %}
+  {% for category_name in group.categories %}
+    {% assign category_marker = category_name | prepend: "|" | append: "|" %}
+    {% assign mapped_categories = mapped_categories | append: category_marker %}
+  {% endfor %}
 {% endfor %}
 
-<ul class="taxonomy__index">
-  {% for i in (1..categories_max) reversed %}
-    {% for category in site.categories %}
-      {% if category[1].size == i %}
-        <li>
-          <a href="#{{ category[0] | slugify }}">
-            <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
+{% assign unmapped_total = 0 %}
+{% for category in site.categories %}
+  {% assign category_marker = category[0] | prepend: "|" | append: "|" %}
+  {% unless mapped_categories contains category_marker %}
+    {% assign unmapped_total = unmapped_total | plus: category[1].size %}
+  {% endunless %}
+{% endfor %}
+
+<div class="category-hierarchy__index">
+  {% for group in category_groups %}
+    {% assign group_total = 0 %}
+    {% for category_name in group.categories %}
+      {% assign category_posts = site.categories[category_name] %}
+      {% if category_posts %}
+        {% assign group_total = group_total | plus: category_posts.size %}
       {% endif %}
     {% endfor %}
-  {% endfor %}
-</ul>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..categories_max) reversed %}
-  {% for category in site.categories %}
-    {% if category[1].size == i %}
-      <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ category[0] }}</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in category.last %}
-            {% include archive-single.html type=entries_layout %}
+    {% if group_total > 0 %}
+      <section class="category-hierarchy__index-card">
+        <a class="category-hierarchy__index-heading" href="#category-group-{{ group.key | slugify | downcase }}">
+          <span>
+            <strong>{{ group.main_title }}</strong>
+            {% if group.sub_title %}
+              <small>{{ group.sub_title }}</small>
+            {% endif %}
+          </span>
+          <span class="taxonomy__count">{{ group_total }}</span>
+        </a>
+        <div class="category-hierarchy__index-children">
+          {% for category_name in group.categories %}
+            {% assign category_posts = site.categories[category_name] %}
+            {% if category_posts %}
+              <a href="#{{ category_name | slugify | downcase }}">
+                {{ category_name }} <span class="taxonomy__count">{{ category_posts.size }}</span>
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
     {% endif %}
   {% endfor %}
+
+  {% if unmapped_total > 0 %}
+    <section class="category-hierarchy__index-card">
+      <a class="category-hierarchy__index-heading" href="#category-group-unmapped">
+        <span>
+          <strong>Unmapped</strong>
+          <small>Not listed in category_hierarchy.yml</small>
+        </span>
+        <span class="taxonomy__count">{{ unmapped_total }}</span>
+      </a>
+    </section>
+  {% endif %}
+</div>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% for group in category_groups %}
+  {% assign group_total = 0 %}
+  {% for category_name in group.categories %}
+    {% assign category_posts = site.categories[category_name] %}
+    {% if category_posts %}
+      {% assign group_total = group_total | plus: category_posts.size %}
+    {% endif %}
+  {% endfor %}
+
+  {% if group_total > 0 %}
+    <section id="category-group-{{ group.key | slugify | downcase }}" class="taxonomy__section category-hierarchy__group">
+      <header class="category-hierarchy__group-header">
+        <h2 class="archive__subtitle category-hierarchy__group-title">{{ group.main_title }}</h2>
+        {% if group.sub_title %}
+          <p class="category-hierarchy__group-subtitle">{{ group.sub_title }}</p>
+        {% endif %}
+      </header>
+
+      {% for category_name in group.categories %}
+        {% assign category_posts = site.categories[category_name] %}
+        {% if category_posts %}
+          <section id="{{ category_name | slugify | downcase }}" class="category-hierarchy__category">
+            <h3 class="category-hierarchy__category-title">
+              {{ category_name }} <span class="taxonomy__count">{{ category_posts.size }}</span>
+            </h3>
+            <div class="entries-{{ entries_layout }}">
+              {% for post in category_posts %}
+                {% include archive-single.html type=entries_layout %}
+              {% endfor %}
+            </div>
+          </section>
+        {% endif %}
+      {% endfor %}
+
+      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    </section>
+  {% endif %}
 {% endfor %}
+
+{% if unmapped_total > 0 %}
+  <section id="category-group-unmapped" class="taxonomy__section category-hierarchy__group">
+    <header class="category-hierarchy__group-header">
+      <h2 class="archive__subtitle category-hierarchy__group-title">Unmapped</h2>
+      <p class="category-hierarchy__group-subtitle">Not listed in category_hierarchy.yml</p>
+    </header>
+
+    {% for category in site.categories %}
+      {% assign category_marker = category[0] | prepend: "|" | append: "|" %}
+      {% unless mapped_categories contains category_marker %}
+        <section id="{{ category[0] | slugify | downcase }}" class="category-hierarchy__category">
+          <h3 class="category-hierarchy__category-title">
+            {{ category[0] }} <span class="taxonomy__count">{{ category[1].size }}</span>
+          </h3>
+          <div class="entries-{{ entries_layout }}">
+            {% for post in category[1] %}
+              {% include archive-single.html type=entries_layout %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endunless %}
+    {% endfor %}
+
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endif %}
