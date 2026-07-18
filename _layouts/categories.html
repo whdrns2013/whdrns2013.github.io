@@ -11,7 +11,8 @@ layout: archive
 {% assign category_groups = site.data.category_hierarchy %}
 {% assign mapped_categories = "" %}
 {% for group in category_groups %}
-  {% for category_name in group.categories %}
+  {% for category_item in group.categories %}
+    {% assign category_name = category_item.name | default: category_item %}
     {% assign category_marker = category_name | prepend: "|" | append: "|" %}
     {% assign mapped_categories = mapped_categories | append: category_marker %}
   {% endfor %}
@@ -28,7 +29,8 @@ layout: archive
 <div class="category-hierarchy__index">
   {% for group in category_groups %}
     {% assign group_total = 0 %}
-    {% for category_name in group.categories %}
+    {% for category_item in group.categories %}
+      {% assign category_name = category_item.name | default: category_item %}
       {% assign category_posts = site.categories[category_name] %}
       {% if category_posts %}
         {% assign group_total = group_total | plus: category_posts.size %}
@@ -47,11 +49,19 @@ layout: archive
           <span class="taxonomy__count">{{ group_total }}</span>
         </a>
         <div class="category-hierarchy__index-children">
-          {% for category_name in group.categories %}
+          {% for category_item in group.categories %}
+            {% assign category_name = category_item.name | default: category_item %}
+            {% assign category_sub_title = category_item.sub_title %}
             {% assign category_posts = site.categories[category_name] %}
             {% if category_posts %}
               <a href="#{{ category_name | slugify | downcase }}">
-                {{ category_name }} <span class="taxonomy__count">{{ category_posts.size }}</span>
+                <span class="category-hierarchy__index-child-text">
+                  <span class="category-hierarchy__index-child-name">{{ category_name }}</span>
+                  {% if category_sub_title %}
+                    <small>{{ category_sub_title }}</small>
+                  {% endif %}
+                </span>
+                <span class="taxonomy__count">{{ category_posts.size }}</span>
               </a>
             {% endif %}
           {% endfor %}
@@ -76,7 +86,8 @@ layout: archive
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% for group in category_groups %}
   {% assign group_total = 0 %}
-  {% for category_name in group.categories %}
+  {% for category_item in group.categories %}
+    {% assign category_name = category_item.name | default: category_item %}
     {% assign category_posts = site.categories[category_name] %}
     {% if category_posts %}
       {% assign group_total = group_total | plus: category_posts.size %}
@@ -92,7 +103,8 @@ layout: archive
         {% endif %}
       </header>
 
-      {% for category_name in group.categories %}
+      {% for category_item in group.categories %}
+        {% assign category_name = category_item.name | default: category_item %}
         {% assign category_posts = site.categories[category_name] %}
         {% if category_posts %}
           <section id="{{ category_name | slugify | downcase }}" class="category-hierarchy__category">

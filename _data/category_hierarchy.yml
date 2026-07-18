@@ -3,13 +3,20 @@
   sub_title: 개발 언어와 프레임워크
   categories:
     - Language
-    - Python
-    - Java
-    - clang
-    - Rust
-    - golang
-    - dart_and_flutter
-    - Spring
+    - name: Python
+      sub_title: 파이썬
+    - name: Java
+      sub_title: 자바
+    - name: clang
+      sub_title: C언어
+    - name: Rust
+      sub_title: 러스트
+    - name: golang
+      sub_title: Go
+    - name: dart_and_flutter
+      sub_title: Dart와 Flutter
+    - name: Spring
+      sub_title: 스프링 프레임워크
 
 - key: ai_data
   main_title: AI & Data

@@ -59,7 +59,7 @@
 .category-hierarchy__index-heading {
   display: flex;
   gap: 0.55rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0.58rem 0.72rem 0.58rem 0.92rem;
   color: #fff;
@@ -67,7 +67,7 @@
   background: linear-gradient(135deg, var(--category-index-accent), mix(#000, $background-color, 42%));
 
   @include breakpoint($medium) {
-    align-items: stretch;
+    align-items: flex-start;
     border-right: 1px solid rgba(#fff, 0.18);
   }
 
@@ -92,7 +92,7 @@
   }
 
   > .taxonomy__count {
-    align-self: center;
+    align-self: flex-start;
     min-width: 2rem;
     padding: 0.08rem 0.36rem;
     border: 1px solid rgba(#fff, 0.34);
@@ -147,6 +147,24 @@
       text-align: center;
     }
   }
+}
+
+.category-hierarchy__index-child-text {
+  display: block;
+  min-width: 0;
+}
+
+.category-hierarchy__index-child-name {
+  display: block;
+}
+
+.category-hierarchy__index-child-text small {
+  display: block;
+  margin-top: 0.12rem;
+  color: $muted-text-color;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 .category-hierarchy__group-header {

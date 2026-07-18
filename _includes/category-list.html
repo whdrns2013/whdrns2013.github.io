@@ -14,9 +14,12 @@
     {% for category_word in categories_sorted %}
       {% assign parent_main_title = nil %}
       {% for group in site.data.category_hierarchy %}
-        {% if group.categories contains category_word %}
-          {% assign parent_main_title = group.main_title %}
-        {% endif %}
+        {% for category_item in group.categories %}
+          {% assign mapped_category_name = category_item.name | default: category_item %}
+          {% if mapped_category_name == category_word %}
+            {% assign parent_main_title = group.main_title %}
+          {% endif %}
+        {% endfor %}
       {% endfor %}
       <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">
         {% if parent_main_title and parent_main_title != category_word %}
