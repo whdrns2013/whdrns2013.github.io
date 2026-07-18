@@ -2,9 +2,9 @@
 title: 이산수학의 개요 # 제목 (필수)
 excerpt: 이산적인 수학구조에 대해 연구하는 학문  # 서브 타이틀이자 meta description (필수)
 date: 2024-12-09 13:09:00 +0900      # 작성일 (필수)
-lastmod: 2024-12-09 13:09:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2024-12-09 13:09:00 +0900   # 최종 수정일 (필수)
-categories: discrete_mathematics       # 다수 카테고리에 포함 가능 (필수)
+lastmod: 2026-07-18 13:09:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-07-18 13:09:00 +0900   # 최종 수정일 (필수)
+categories: mathematics       # 다수 카테고리에 포함 가능 (필수)
 tags: 이산수학 이산적 연속적 discrete mathematics                 # 태그 복수개 가능 (필수)
 classes:        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부

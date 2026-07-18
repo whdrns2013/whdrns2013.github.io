@@ -109,7 +109,7 @@ docs:
       - title: "└─ • Rust"
         url: /rust/20250524_001_rust_intro/
       - title: "└─ • Dart와 Flutter"
-        url: /flutter/20240113_005_flutter/
+        url: /dart_and_flutter/20240113_005_flutter/
       - title: "└─ • Go"
         url: /golang/20260412_001_go_dev_environment/
   - title: ⏵ AI  
@@ -278,35 +278,35 @@ docs_dart_and_flutter:
   - title: "Intro"
     children:
     - title: "Flutter란?"
-      url: /flutter/20240113_005_flutter/
+      url: /dart_and_flutter/20240113_005_flutter/
   - title: dart
     children:
     - title: "Dart 소개"
-      url: /dart/20240120_001_dart/
+      url: /dart_and_flutter/20240120_001_dart/
     - title: "Dart 설치하기"
-      url: /dart/20240121_001_dart_installation/
+      url: /dart_and_flutter/20240121_001_dart_installation/
     - title: "Dart 개발 환경 준비"
-      url: /dart/20240121_002_dart_first_step/
+      url: /dart_and_flutter/20240121_002_dart_first_step/
     - title: "Main Function"
-      url: /dart/20240121_003_dart_main_function/
+      url: /dart_and_flutter/20240121_003_dart_main_function/
     - title: "변수의 선언"
-      url: /dart/20240121_004_dart_variables/
+      url: /dart_and_flutter/20240121_004_dart_variables/
     - title: "자료형 (data type)"
-      url: /dart/20240121_005_dart_datatype/
+      url: /dart_and_flutter/20240121_005_dart_datatype/
     - title: "MAP 자료형"
-      url: /dart/20240209_002_dart_dictionary/
+      url: /dart_and_flutter/20240209_002_dart_dictionary/
     - title: "함수의 선언"
-      url: /dart/20240121_006_dart_function/
+      url: /dart_and_flutter/20240121_006_dart_function/
     - title: "클래스"
-      url: /dart/20240122_001_dart_class/
+      url: /dart_and_flutter/20240122_001_dart_class/
   - title: flutter
     children:
     - title: "Flutter 소개"
-      url: /flutter/20240128_001_flutter_intro/
+      url: /dart_and_flutter/20240128_001_flutter_intro/
     - title: "Flutter 설치하기"
-      url: /flutter/20240128_002_flutter_installation/
+      url: /dart_and_flutter/20240128_002_flutter_installation/
     - title: "프로젝트 만들기"
-      url: /flutter/20240128_003_make_flutter_project/
+      url: /dart_and_flutter/20240128_003_make_flutter_project/
     - title: "Hello World"
     - title: "Flutter 의 구성 요소 (App, Widget, ...)"
     - title: "개발 전에 알아두면 좋을 것 (Inspector, guideline, codeaction)"
