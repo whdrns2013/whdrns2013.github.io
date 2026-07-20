@@ -7,7 +7,7 @@
     - name: Python
       sub_title: 파이썬
     - name: Java
-      sub_title: 자바
+      sub_title: 자바 
     - name: clang
       sub_title: C언어
     - name: Rust
