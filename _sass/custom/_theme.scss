@@ -22,6 +22,7 @@
 
   --color-accent: #1a7f37;
   --color-accent-2: #0969da;
+  --color-prose-strong: #b42318;
   --color-accent-soft: rgba(26, 127, 55, 0.1);
   --color-accent-2-soft: rgba(9, 105, 218, 0.1);
 
@@ -59,6 +60,7 @@
 
   --color-accent: #7ee787;
   --color-accent-2: #79c0ff;
+  --color-prose-strong: #d97575;
   --color-accent-soft: rgba(126, 231, 135, 0.12);
   --color-accent-2-soft: rgba(121, 192, 255, 0.12);
 }
@@ -344,8 +346,19 @@ h1, h2, h3, h4, h5, h6 {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
+  clear: both;
   float: none !important;
+  max-width: 920px;
   width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  .pagination--pager {
+    float: none !important;
+    width: 100% !important;
+    min-width: 0;
+    margin: 0 !important;
+  }
 
   a.pagination--pager {
     display: flex !important;
@@ -374,6 +387,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   span.pagination--pager.disabled {
+    display: block !important;
     border: 1px dashed var(--color-border-subtle);
     border-radius: var(--radius-card);
   }
@@ -391,6 +405,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--color-text) !important;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 }
 

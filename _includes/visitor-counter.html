@@ -1,16 +1,27 @@
 <div class="visitor-chip">
   <span class="visitor-chip__label">visitors</span>
-  <span class="visitor-chip__count" id="blog_visitor">…</span>
+  <span class="visitor-chip__stats" id="blog_visitor">
+    <span class="visitor-chip__metric">
+      <span class="visitor-chip__metric-label">yesterday</span>
+      <strong id="blog_visitor_yesterday">…</strong>
+    </span>
+    <span class="visitor-chip__metric">
+      <span class="visitor-chip__metric-label">total</span>
+      <strong id="blog_visitor_total">…</strong>
+    </span>
+  </span>
 </div>
 <script>
   fetch('https://getanalyticsstats-5ubwd3taqq-du.a.run.app/')
     .then(function (response) { return response.json(); })
     .then(function (data) {
-      var el = document.getElementById('blog_visitor');
-      if (el) { el.textContent = data.total; el.title = 'Yesterday: ' + data.yesterday; }
+      var yesterdayEl = document.getElementById('blog_visitor_yesterday');
+      var totalEl = document.getElementById('blog_visitor_total');
+      if (yesterdayEl) { yesterdayEl.textContent = data.yesterday + ' visits'; }
+      if (totalEl) { totalEl.textContent = data.total; }
     })
     .catch(function () {
       var el = document.getElementById('blog_visitor');
-      if (el) { el.textContent = '—'; }
+      if (el) { el.textContent = 'Visitor data unavailable'; }
     });
 </script>

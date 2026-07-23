@@ -152,9 +152,18 @@
       border-top-color: var(--color-border);
     }
 
-    strong {
-      color: var(--color-accent);
-      font-weight: 700;
+    > p,
+    > ul,
+    > ol,
+    > dl,
+    > blockquote,
+    > table,
+    > figure,
+    > div:not([class]) {
+      strong {
+        color: var(--color-prose-strong);
+        font-weight: 700;
+      }
     }
 
     a:not(.btn) {
@@ -276,6 +285,8 @@
     }
 
     table {
+      display: table;
+      width: 100%;
       margin: 1.45rem 0;
       border: 1px solid var(--color-border);
       border-collapse: separate;

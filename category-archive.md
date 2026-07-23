@@ -5,4 +5,4 @@ permalink: /categories/
 author_profile: true
 ---
 
-대분류 안에 세부 주제가 묶여 있는 2계층 구조입니다.
+카테고리별로 컨텐츠를 탐색해보세요.
