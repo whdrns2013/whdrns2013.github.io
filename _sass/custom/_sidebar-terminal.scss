@@ -262,7 +262,7 @@
 
 .visitor-chip {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
   margin-top: var(--space-3);
@@ -277,24 +277,8 @@
     text-transform: lowercase;
   }
 
-  &__stats {
-    display: grid;
-    gap: 2px;
-    text-align: right;
-  }
-
-  &__metric {
-    display: flex;
-    justify-content: flex-end;
-    gap: 6px;
+  &__count {
     white-space: nowrap;
-  }
-
-  &__metric-label {
-    color: var(--color-text-faint);
-  }
-
-  strong {
     color: var(--color-accent);
     font-weight: 700;
   }

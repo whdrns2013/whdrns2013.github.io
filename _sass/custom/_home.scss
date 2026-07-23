@@ -136,16 +136,26 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: stretch;
-  row-gap: var(--space-1);
+  row-gap: var(--space-3);
   column-gap: var(--space-3);
 
   @include breakpoint($medium) {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .grid__item {
+    float: none !important;
+    clear: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    min-width: 0;
+  }
+
   .post-card--grid {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
   .post-card__title {
