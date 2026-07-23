@@ -24,6 +24,21 @@
           {%- endfor -%}
         </ul>
 
+        <div class="masthead__mobile-nav">
+          <label class="visually-hidden" for="masthead-mobile-nav">Navigate</label>
+          <select id="masthead-mobile-nav" aria-label="Navigate" onchange="if (this.value) window.location.href = this.value;">
+            {%- for link in site.data.navigation.main -%}
+              {%- assign is_active = false -%}
+              {%- if link.url == "/" -%}
+                {%- if page.url == "/" -%}{%- assign is_active = true -%}{%- endif -%}
+              {%- elsif page.url contains link.url -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              <option value="{{ link.url | relative_url }}"{% if is_active %} selected{% endif %}>{{ link.title }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+
         <div class="masthead__controls">
           {% if site.search == true %}
           <button class="search__toggle" type="button">
