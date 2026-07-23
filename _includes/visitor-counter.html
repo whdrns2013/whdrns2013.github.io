@@ -1,0 +1,16 @@
+<div class="visitor-chip">
+  <span class="visitor-chip__label">visitors</span>
+  <span class="visitor-chip__count" id="blog_visitor">…</span>
+</div>
+<script>
+  fetch('https://getanalyticsstats-5ubwd3taqq-du.a.run.app/')
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+      var el = document.getElementById('blog_visitor');
+      if (el) { el.textContent = data.total; el.title = 'Yesterday: ' + data.yesterday; }
+    })
+    .catch(function () {
+      var el = document.getElementById('blog_visitor');
+      if (el) { el.textContent = '—'; }
+    });
+</script>

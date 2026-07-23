@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Terminal sidebar (left profile column)
+   Decouples the left profile-sidebar width from minimal-mistakes' shared
+   $right-sidebar-width variable (also used by the right TOC rail) so the
+   two can differ: 284px profile sidebar / 260px TOC rail, collapsing the
+   profile sidebar to 64px.
+   ========================================================================== */
+
+@include breakpoint($x-large) {
+  /* Core caps the whole 3-column layout at $max-width (1280px), which on
+     wider viewports just leaves unused margin outside #main. Reclaim that
+     margin (and then some) so both the TOC rail and the article body have
+     more room without narrowing the profile sidebar. */
+  #main {
+    max-width: 1440px;
+  }
+}
+
+@include breakpoint($medium-wide) {
+  .sidebar {
+    float: left;
+    width: 284px;
+    opacity: 1;
+    transition: width 0.2s ease;
+
+    &:hover { opacity: 1; }
+  }
+
+  .archive,
+  .page {
+    float: right;
+    width: calc(100% - 284px - 56px);
+    /* core minimal-mistakes independently sets its own padding-right on
+       both of these (200/300px at $large/$x-large) to reserve room for its
+       right rail — reset that, then only re-add it where a TOC actually
+       renders (below), so pages without a TOC use the full width. */
+    padding-right: 0;
+  }
+
+  /* Only pages that actually render the right-rail TOC (page.toc: true)
+     reserve room for it — otherwise Home/Categories/Archive/Docs/Series/
+     Diary (and toc:false single pages, like Docs) end up needlessly
+     narrower than they need to be. */
+  .page--with-toc {
+    padding-right: 260px;
+  }
+
+  .sidebar__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    margin-right: -260px;
+    padding-left: 2.25em;
+    z-index: 10;
+
+    /* leave real breathing room below the sticky masthead instead of
+       sitting flush against it once the page scrolls */
+    &.sticky {
+      top: 96px;
+    }
+  }
+
+  .sidebar.is-collapsed {
+    width: 64px;
+  }
+
+  .sidebar.is-collapsed ~ .archive,
+  .sidebar.is-collapsed ~ .page {
+    width: calc(100% - 64px - 56px);
+  }
+
+  /* `classes: wide` posts (majority of posts) otherwise lose the right TOC
+     rail entirely — minimal-mistakes' own `.wide .sidebar__right` /
+     `.wide .page` rules reset position/padding back to none. The design
+     wants the "ON THIS PAGE" rail on every post regardless of wide. */
+  .wide {
+    .page--with-toc {
+      padding-right: 260px;
+    }
+
+    .sidebar__right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 260px;
+      margin-right: -260px;
+      padding-left: 2.25em;
+      z-index: 10;
+
+      &.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 96px;
+        float: right;
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: relative;
+  /* extra right padding keeps content clear of the scrollbar that appears
+     when a long Docs tree makes this column taller than the viewport */
+  padding: var(--space-4) 32px var(--space-4) var(--space-3);
+  background-color: transparent;
+  font-family: var(--font-mono);
+
+  h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+  }
+
+  p, li {
+    font-family: var(--font-mono);
+  }
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+  }
+}
+
+.sidebar.is-collapsed .sidebar-toggle i {
+  transform: rotate(180deg);
+}
+
+/* author profile ---------------------------------------------------------- */
+
+.author__avatar {
+  margin-bottom: var(--space-2);
+
+  img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border: 1px solid var(--color-border) !important;
+  }
+}
+
+.author__content {
+  padding: 0 !important;
+}
+
+.author__name {
+  font-family: var(--font-sans) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  color: var(--color-text);
+
+  a { color: inherit !important; }
+}
+
+.author__bio,
+.author__role {
+  margin: 2px 0 0 !important;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.author__location {
+  margin: 6px 0 0 !important;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-faint);
+}
+
+.author__urls-wrapper {
+  display: block !important;
+  margin-top: var(--space-3);
+}
+
+.author__urls {
+  display: block !important;
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  &:before,
+  &:after {
+    display: none !important;
+  }
+
+  li {
+    white-space: normal;
+    margin-bottom: 6px;
+  }
+
+  i {
+    display: none;
+  }
+
+  a {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--color-text-muted) !important;
+
+    &:hover {
+      color: var(--color-text) !important;
+      text-decoration: none;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-accent-2);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* divider / stats / visitor chip ------------------------------------------ */
+
+.sidebar-divider {
+  height: 1px;
+  margin: var(--space-3) 0;
+  background-color: var(--color-border-subtle);
+}
+
+.sidebar-stats {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+    color: var(--color-text-muted);
+
+    strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+  }
+}
+
+.visitor-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-chip);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+
+  &__label {
+    color: var(--color-text-faint);
+    text-transform: lowercase;
+  }
+
+  &__count {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+}
+
+/* docs tree (post pages only) ---------------------------------------------- */
+
+.sidebar-docs-tree {
+  &__title {
+    margin: 0 0 6px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  /* Core minimal-mistakes sizes nav__items/nav__sub-title with cascading
+     `em` values that compound through each nested <ul> level (measured:
+     rendered as low as 7px) — pin every level to an explicit, non-relative
+     size so it can't shrink further no matter how deep the tree nests. */
+  .nav__items,
+  .nav__items li,
+  .nav__items a,
+  .nav__sub-title {
+    font-size: 0.8125rem !important;
+    line-height: 1.5 !important;
+    font-family: var(--font-mono);
+  }
+
+  .nav__title {
+    display: none;
+  }
+
+  .nav__sub-title {
+    display: block;
+    margin: 10px 0 2px !important;
+    padding: 0 !important;
+    border-bottom: 0 !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    color: var(--color-text-muted) !important;
+  }
+
+  .nav__items {
+    a {
+      display: block;
+      padding: 3px 0;
+      color: var(--color-text-muted) !important;
+      text-decoration: none;
+
+      &.active {
+        color: var(--color-accent) !important;
+        font-weight: 600;
+      }
+
+      &:hover {
+        color: var(--color-text) !important;
+      }
+    }
+
+    ul {
+      margin-left: 10px;
+      border-left: 1px solid var(--color-border-subtle);
+      padding-left: 8px;
+    }
+  }
+}
+
+/* collapsed state ----------------------------------------------------------- */
+
+.sidebar.is-collapsed {
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+  overflow: hidden;
+
+  .author__avatar img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .author__content,
+  .author__urls-wrapper,
+  .sidebar-divider,
+  .sidebar-stats,
+  .visitor-chip,
+  .sidebar-docs-tree {
+    display: none !important;
+  }
+}

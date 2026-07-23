@@ -4,94 +4,117 @@ meta:
     title: "C 언어 기초"
     description: "컴퓨터 구조의 이해와 C 언어의 기초부터 포인터, 메모리 관리까지"
     cover: "/assets/images/docs/docs_clang.jpg"
+    group: language
   docs_python:
     title: "Python"
     description: "파이썬 언어의 문법, 객체 지향 프로그래밍, 그리고 다양한 라이브러리 활용"
     cover: "/assets/images/docs/docs_python.jpg"
+    group: language
   docs_rust:
-    title: "Rust" 
+    title: "Rust"
     description: "메모리 안전성과 성능을 모두 잡는 현대적인 언어 Rust 입문"
     cover: "/assets/images/docs/docs_rust.jpg"
+    group: language
   docs_dart_and_flutter:
     title: "Dart와 Flutter"
     description: "모바일 및 크로스 플랫폼 개발을 위한 Dart 언어와 Flutter 프레임워크"
     cover: "/assets/images/docs/docs_flutter.jpg"
+    group: language
   docs_golang:
     title: "Go"
     description: "심플하고 강력한 병렬 처리를 지원하는 Go 언어 학습"
     cover: "/assets/images/docs/docs_golang.jpg"
+    group: language
   docs_statistics:
     title: "통계학"
     description: "데이터를 읽는 눈, 기초 통계부터 확률, 가설 검정 및 인과관계 분석"
     cover: "/assets/images/docs/docs_statistics.jpg"
+    group: ai_data
   docs_nlp:
     title: "자연언어처리 (NLP)"
     description: "텍스트 데이터의 수치화부터 임베딩, 최신 LLM 기술의 이해"
     cover: "/assets/images/docs/docs_nlp.jpg"
+    group: ai_data
   docs_llm:
     title: "LLM & AI Application"
     description: "RAG, LangChain, LangGraph 등을 이용한 실전 AI 서비스 개발"
     cover: "/assets/images/docs/docs_llm.jpg"
+    group: ai_data
   docs_recommendation:
     title: "추천 시스템"
     description: "협업 필터링부터 컨텐츠 기반 필터링, 추천 성능 평가 지표"
     cover: "/assets/images/docs/docs_recommendation.jpg"
+    group: ai_data
   docs_ai_coding:
     title: "AI-CODING"
     description: "AI Coding 시대에서 엔지니어의 역할과 개발 방법"
     cover:
+    group: software_engineering
   docs_pattern:
     title: "디자인 및 아키텍처 패턴"
     description: "유연하고 확장 가능한 소프트웨어 설계를 위한 다양한 패턴들"
     cover: "/assets/images/docs/docs_pattern.jpg"
+    group: software_engineering
   docs_rdb:
     title: "RDB"
     description: "전통적인 데이터 저장 체계"
     cover: "/assets/images/docs/docs_rdb.jpg"
+    group: database
   docs_vector_db:
     title: "Vector DB"
     description: "고차원 벡터 검색을 위한 Milvus, Chroma 등 벡터 데이터베이스"
     cover: "/assets/images/docs/docs_vector_db.jpg"
+    group: database
   docs_database_modeling:
     title: "데이터베이스 모델링"
     description: "현실 세계의 데이터를 효율적인 구조로 설계하는 방법"
     cover: "/assets/images/docs/docs_database_modeling.jpg"
+    group: database
   docs_algorithm:
     title: "알고리즘"
     description: "효율적인 문제 해결을 위한 핵심 알고리즘 및 문제 풀이"
     cover: "/assets/images/docs/docs_algorithm.jpg"
+    group: computer_science
   docs_docker:
     title: "Docker"
     description: "컨테이너 가상화의 표준, 도커의 기초부터 활용까지"
     cover: "/assets/images/docs/docs_docker.jpg"
+    group: infra_ops
   docs_grafana_and_prometheus:
     title: "Monitoring"
     description: "Prometheus와 Grafana를 이용한 시스템 메트릭 수집 및 시각화"
     cover: "/assets/images/docs/docs_monitoring.jpg"
+    group: infra_ops
   docs_airflow:
     title: "Airflow"
     description: "데이터 파이프라인 워크플로우 관리 도구 Airflow 활용"
     cover: "/assets/images/docs/docs_airflow.jpg"
+    group: infra_ops
   docs_mlflow:
     title: "MLflow"
     description: "머신러닝 실험 관리 및 모델 배포를 위한 MLOps 플랫폼"
     cover: "/assets/images/docs/docs_mlflow.jpg"
+    group: infra_ops
   docs_cicd:
     title: "CI/CD"
     description: "코드 통합부터 지속적 배포까지, 중단 없는 서비스 구축을 위한 CI/CD"
     cover: "/assets/images/docs/docs_cicd.jpg"
+    group: infra_ops
   docs_server_infra:
     title: "서버 인프라"
     description: "서버 인프라 및 운영체제와 관련된 지식"
     cover: "/assets/images/docs/docs_server_infra.jpg"
+    group: infra_ops
   docs_pandas:
     title: "Pandas"
     description: "파이썬 데이터 분석의 필수 라이브러리 Pandas 활용 팁"
     cover: "/assets/images/docs/docs_pandas.jpg"
+    group: ai_data
   docs_vcs:
-    titls: "Version Control System"
+    title: "Version Control System"
     description: "안전하게 협업할 수 있도록 돕는 소스 교통정리 시스템"
-    covert: "/assets/images/docs/docs_version_control_system.jpg"
+    cover: "/assets/images/docs/docs_version_control_system.jpg"
+    group: infra_ops
 
   
  

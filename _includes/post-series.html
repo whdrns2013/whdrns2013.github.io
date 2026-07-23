@@ -1,17 +1,16 @@
 {% if page.series %}
   {% assign series_id = page.series %}
   {% assign series_info = site.data.series[series_id] %}
-  
+
   {% if series_info %}
     {% assign series_title = series_info.title %}
-    {% assign series_description = series_info.description %}
   {% else %}
     {% assign series_title = series_id %}
   {% endif %}
 
   {% assign series_posts = site.posts | where: "series", series_id %}
-  
-  {% comment %} 
+
+  {% comment %}
     series_index가 있으면 이를 기준으로 정렬하고, 없으면 날짜 오름차순으로 정렬합니다.
   {% endcomment %}
   {% assign has_index = false %}
@@ -28,29 +27,33 @@
     {% assign sorted_series_posts = series_posts | sort: "date" %}
   {% endif %}
 
+  {% assign current_position = 0 %}
+  {% for post in sorted_series_posts %}
+    {% if post.url == page.url %}{% assign current_position = forloop.index %}{% endif %}
+  {% endfor %}
+
   <div class="post-series">
-    <details open>
+    <details>
       <summary class="post-series__header">
-        <h4 class="post-series__title">
-          <i class="fas fa-list-ol"></i> [시리즈] <span>{{ series_title }}</span>
-          <i class="fas fa-chevron-down toggle-icon"></i>
-        </h4>
-        {% if series_description %}
-          <div class="post-series__description">{{ series_description }}</div>
-        {% endif %}
+        <span class="post-series__label">SERIES</span>
+        <span class="post-series__title">{{ series_title }}</span>
+        <span class="post-series__position">{{ current_position }} / {{ sorted_series_posts.size }}</span>
+        <i class="fas fa-chevron-right toggle-icon" aria-hidden="true"></i>
       </summary>
       <ul class="post-series__list">
         {% for post in sorted_series_posts %}
           <li class="post-series__item{% if post.url == page.url %} is-current{% endif %}">
+            <span class="post-series__number">{% if post.url == page.url %}&#9654;{% else %}{{ forloop.index }}{% endif %}</span>
             {% if post.url == page.url %}
-              <span class="post-series__current-marker">▶</span>
               <span class="post-series__title-text">{{ post.title }}</span>
             {% else %}
               <a href="{{ post.url | relative_url }}" class="post-series__link">{{ post.title }}</a>
             {% endif %}
+            <time class="post-series__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
           </li>
         {% endfor %}
       </ul>
+      <a href="{{ '/series/' | relative_url }}" class="post-series__view-all">시리즈 전체 보기 →</a>
     </details>
   </div>
 {% endif %}

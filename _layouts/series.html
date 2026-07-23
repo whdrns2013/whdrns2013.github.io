@@ -4,38 +4,36 @@ layout: archive
 
 {{ content }}
 
-<div class="series-grid">
+<div class="series-accordion">
   {% for series in site.data.series %}
     {% assign series_id = series[0] %}
     {% assign series_info = series[1] %}
     {% assign series_posts = site.posts | where: "series", series_id %}
-    
+
     {% if series_posts.size > 0 %}
       {% assign sorted_posts = series_posts | sort: "series_index" %}
-      {% assign first_post = sorted_posts | first %}
-      {% assign last_post = sorted_posts | last %}
-      
-      <a href="{{ first_post.url | relative_url }}" class="series-card">
-        <div class="series-card__image-wrapper">
-          {% if series_info.cover %}
-            <img src="{{ series_info.cover | relative_url }}" alt="{{ series_info.title }}">
-          {% else %}
-            <div class="no-image">
-              <i class="fas fa-layer-group"></i>
-            </div>
-          {% endif %}
+
+      <details class="series-accordion__item">
+        <summary class="series-accordion__header">
+          <span class="series-accordion__title">
+            <span class="series-accordion__name">{{ series_info.title }}</span>
+            {% if series_info.description %}<span class="series-accordion__desc-inline">{{ series_info.description }}</span>{% endif %}
+          </span>
+          <span class="series-accordion__count">{{ series_posts.size }} episodes</span>
+          <i class="fas fa-chevron-right series-accordion__arrow" aria-hidden="true"></i>
+        </summary>
+        <div class="series-accordion__body">
+          <ol class="series-accordion__episodes">
+            {% for post in sorted_posts %}
+              <li class="series-accordion__episode">
+                <span class="series-accordion__episode-number">{{ forloop.index }}</span>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+              </li>
+            {% endfor %}
+          </ol>
         </div>
-        <div class="series-card__content">
-          <h2 class="series-card__title">{{ series_info.title }}</h2>
-          {% if series_info.description %}
-            <p class="series-card__description">{{ series_info.description }}</p>
-          {% endif %}
-          <div class="series-card__footer">
-            <span class="post-count"><b>{{ series_posts.size }}</b>개의 포스트</span>
-            <span class="last-updated">마지막 업데이트: {{ last_post.date | date: "%Y년 %m월 %d일" }}</span>
-          </div>
-        </div>
-      </a>
+      </details>
     {% endif %}
   {% endfor %}
 </div>

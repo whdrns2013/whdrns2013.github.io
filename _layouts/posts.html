@@ -4,27 +4,31 @@ layout: archive
 
 {{ content }}
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+
+<nav class="archive-year-nav" aria-label="연도별 바로가기">
+  {% for year in postsByYear %}
+    <a href="#{{ year.name }}" class="archive-year-nav__item">
+      <span class="archive-year-nav__year">{{ year.name }}</span>
+      <span class="archive-year-nav__count">{{ year.items.size }}</span>
+    </a>
+  {% endfor %}
+</nav>
+
+<div class="archive-active-filter" id="archive-active-filter" hidden>
+  <span class="archive-active-filter__label">카테고리:</span>
+  <span class="archive-active-filter__name" id="archive-active-filter-name"></span>
+  <a href="{{ '/year-archive/' | relative_url }}" class="archive-active-filter__clear">전체보기 &times;</a>
+</div>
+
 {% for year in postsByYear %}
-  <section id="{{ year.name }}" class="taxonomy__section">
+  <section id="{{ year.name }}" class="taxonomy__section archive-year">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items %}
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}

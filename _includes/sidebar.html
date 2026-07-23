@@ -1,19 +1,33 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src="{{ s.image | relative_url }}"
-             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+  <div class="sidebar sticky" id="site-sidebar">
+    <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+    </button>
+
+    {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+
+    <div class="sidebar-divider" role="separator"></div>
+    {% include sidebar-stats.html %}
+
+    {% if site.author.visitor %}{% include visitor-counter.html %}{% endif %}
+
+    {% if page.sidebar %}
+      {% for s in page.sidebar %}
+        {% if s.image %}
+          <img src="{{ s.image | relative_url }}"
+               alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+        {% endif %}
+        {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+        {% if s.text %}{{ s.text | markdownify }}{% endif %}
+        {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
+      {% endfor %}
+      {% if page.sidebar.nav %}
+        <div class="sidebar-divider" role="separator"></div>
+        <nav class="sidebar-docs-tree">
+          <h4 class="sidebar-docs-tree__title">Docs</h4>
+          {% include nav_list nav=page.sidebar.nav %}
+        </nav>
       {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
-  {% endif %}
   </div>
 {% endif %}

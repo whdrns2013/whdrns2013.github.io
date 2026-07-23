@@ -9,9 +9,13 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// dark mode toggle
+@import "custom/theme";
 @import "custom/customImport.scss";
 @import "custom/customOverride.scss";
+@import "custom/masthead-terminal";
+@import "custom/sidebar-terminal";
+@import "custom/accordion";
+@import "custom/search-overlay";
 @import "custom/category-hierarchy";
 @import "custom/series";
 @import "custom/toc-toggle";

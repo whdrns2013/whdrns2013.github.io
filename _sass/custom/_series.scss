@@ -1,246 +1,148 @@
 /* ==========================================================================
-   Series Archive (Velog Style) - Final Polish
+   Post-page series banner
    ========================================================================== */
 
-.series-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin: 2em 0;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem; /* Slightly reduced gap between cards */
-  }
-}
-
-.series-card {
-  display: flex;
-  flex-direction: column;
-  background: $background-color;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border: 1px solid $border-color;
-  text-decoration: none !important;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.08);
-  }
-
-  &__image-wrapper {
-    width: 100%;
-    padding-top: 45%;
-    position: relative;
-    background-color: rgba($primary-color, 0.1);
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .no-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: rgba($primary-color, 0.2);
-    }
-  }
-
-  &:hover &__image-wrapper img {
-    transform: scale(1.05);
-  }
-
-  &__content {
-    padding: 1.25rem 1rem; /* Reduced horizontal padding to 1rem */
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-
-  &__title {
-    margin: 0 0 0.4rem 0;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: $text-color;
-    line-height: 1.4;
-    
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  &__description {
-    margin: 0;
-    font-size: 0.85rem;
-    color: mix($text-color, $background-color, 65%);
-    line-height: 1.5;
-    flex: 1;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  &__footer {
-    margin-top: 1rem;
-    padding-top: 0.6rem;
-    border-top: 1px solid $border-color;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.2rem; /* Tighter gap */
-    font-size: 0.7rem;
-    color: mix($text-color, $background-color, 50%);
-    
-    span {
-      white-space: nowrap; /* Prevent text from wrapping */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 100%;
-    }
-
-    .post-count {
-      b {
-        color: $primary-color;
-      }
-    }
-  }
-}
-
-/* Post Page Series Box */
 .post-series {
-  margin: 2em 0;
-  padding: 0; /* Changed padding to 0 because header now has padding */
-  border: 1px solid $border-color;
-  border-radius: 12px;
-  background-color: mix($background-color, $primary-color, 97%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  margin: 0 0 32px;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-elevated);
   overflow: hidden;
 
-  details {
-    summary {
-      list-style: none; /* Remove default arrow */
-      outline: none;
-      cursor: pointer;
-      padding: 1.5em;
+  details summary {
+    list-style: none;
+    outline: none;
+    cursor: pointer;
 
-      &::-webkit-details-marker {
-        display: none; /* Remove default arrow for Safari */
-      }
+    &::-webkit-details-marker {
+      display: none;
     }
-    
-    &[open] {
-      .toggle-icon {
-        transform: rotate(180deg);
-      }
-    }
+  }
+
+  details[open] .toggle-icon {
+    transform: rotate(90deg);
   }
 
   &__header {
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
 
-    details[open] & {
-      border-bottom-color: $border-color;
-      padding-bottom: 0.8em;
-    }
+  &__label {
+    flex: 0 0 auto;
+    padding: 2px 8px;
+    border-radius: var(--radius-chip);
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
   }
 
   &__title {
-    margin: 0;
-    font-size: 1.15rem;
-    color: $text-color;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    i:first-child {
-      margin-right: 0.6em;
-      color: $primary-color;
-    }
-
-    span {
-      color: $primary-color;
-      font-weight: bold;
-      flex: 1;
-    }
-
-    .toggle-icon {
-      font-size: 0.9rem;
-      color: mix($text-color, $background-color, 40%);
-      transition: transform 0.3s ease;
-    }
+    flex: 1 1 auto;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--color-text);
   }
 
-  &__description {
-    margin: 0.5em 0 0.2em !important;
-    font-size: 0.9rem;
-    color: mix($text-color, $background-color, 65%);
-    line-height: 1.6;
+  &__position {
+    flex: 0 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-faint);
+  }
+
+  .toggle-icon {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+    transition: transform 0.2s ease;
   }
 
   &__list {
     margin: 0;
-    padding: 0.5em 1.5em 1.5em; /* Added side/bottom padding */
+    padding: var(--space-1) var(--space-2) var(--space-2);
+    border-top: 1px solid var(--color-border-subtle);
     list-style: none;
-    counter-reset: series-counter;
   }
 
   &__item {
-    margin-bottom: 0.2em;
-    padding: 0.4em 0.8em;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: 2px;
+    padding: 9px 6px;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.4;
-    transition: background-color 0.2s;
 
     &:hover:not(.is-current) {
-      background-color: rgba($primary-color, 0.05);
-    }
-
-    &::before {
-      counter-increment: series-counter;
-      content: counter(series-counter) ". ";
-      margin-right: 0.5em;
-      color: mix($text-color, $background-color, 40%);
-      font-size: 0.85em;
+      background-color: var(--color-bg-side);
     }
 
     &.is-current {
-      background-color: rgba($primary-color, 0.1);
-      font-weight: bold;
-      color: $primary-color;
+      background-color: var(--color-accent-soft);
 
-      &::before {
-        content: "▶";
-        color: $primary-color;
+      .post-series__number {
+        color: var(--color-accent) !important;
+      }
+
+      .post-series__title-text {
+        color: var(--color-text) !important;
+        font-weight: 700;
       }
     }
   }
 
+  /* !important throughout: .post-series sits inside .page__content, whose
+     prose-link rule (.page__content a:not(.btn) { color: accent-2 }) is
+     more specific than a bare class selector and would otherwise repaint
+     these as ordinary blue hyperlinks. */
+  &__number {
+    flex: 0 0 auto;
+    width: 1.5em;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-text-faint) !important;
+  }
+
+  &__title-text {
+    flex: 1 1 auto;
+    color: var(--color-text-muted) !important;
+  }
+
   &__link {
-    text-decoration: none;
-    color: inherit;
+    flex: 1 1 auto;
+    text-decoration: none !important;
+    color: var(--color-text-muted) !important;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--color-accent-2) !important;
+    }
+  }
+
+  &__date {
+    flex: 0 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-faint);
+  }
+
+  &__view-all {
+    display: block;
+    padding: var(--space-2) var(--space-3) var(--space-3);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent-2) !important;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: underline !important;
     }
   }
 }

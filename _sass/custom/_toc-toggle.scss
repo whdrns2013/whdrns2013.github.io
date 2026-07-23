@@ -27,3 +27,108 @@
     }
   }
 }
+
+/* Replace the stock minimal-mistakes boxed/card TOC (background, border,
+   box-shadow, colored header bar) with the design's plain "ON THIS PAGE"
+   rail: a faint label above a flat list of links, each with a left border
+   that only lights up (accent color) on the currently active section. */
+.toc {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+
+  .nav__title {
+    padding: 0;
+    margin-bottom: var(--space-2);
+    background: transparent;
+    color: var(--color-text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+
+    i {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  .active a {
+    background: none;
+    color: var(--color-text) !important;
+    border-left-color: var(--color-accent);
+  }
+}
+
+.toc__menu {
+  width: 100%;
+  font-size: 0.8rem;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li + li {
+    margin-top: 1px;
+  }
+
+  /* !important throughout: the TOC lives inside .page__content, whose
+     prose-link rule (.page__content a:not(.btn) { color: accent-2 }) has
+     higher specificity than a bare element/class selector and would
+     otherwise repaint every entry as an ordinary blue hyperlink. */
+  a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 8px 4px 12px;
+    border-radius: 5px;
+    color: var(--color-text-muted) !important;
+    font-weight: 400;
+    line-height: 1.45;
+    border-bottom: 0;
+    border-left: 2px solid transparent;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--color-text) !important;
+    }
+
+    &.is-active {
+      color: var(--color-text) !important;
+      border-left-color: var(--color-accent);
+    }
+  }
+
+  li ul {
+    margin-top: 1px;
+  }
+
+  li ul > li a {
+    padding-left: 24px;
+    font-size: 0.76rem;
+    color: var(--color-text-faint) !important;
+
+    &:hover {
+      color: var(--color-text-muted) !important;
+    }
+
+    &.is-active {
+      color: var(--color-text-muted) !important;
+    }
+  }
+
+  li ul li ul > li a {
+    padding-left: 36px;
+  }
+}

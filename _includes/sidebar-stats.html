@@ -1,0 +1,15 @@
+{% assign latest_post = site.posts | first %}
+<div class="sidebar-stats">
+  <div class="sidebar-stats__row">
+    <span>Posts</span>
+    <strong>{{ site.posts | size }}</strong>
+  </div>
+  <div class="sidebar-stats__row">
+    <span>Tags</span>
+    <strong>{{ site.tags | size }}</strong>
+  </div>
+  <div class="sidebar-stats__row">
+    <span>Latest</span>
+    <strong>{% if latest_post %}{{ latest_post.date | date: "%Y-%m-%d" }}{% else %}-{% endif %}</strong>
+  </div>
+</div>

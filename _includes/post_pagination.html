@@ -1,14 +1,20 @@
 {% if page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="pagination post-pagination">
     {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager">
+        <span class="pagination--pager__label">&larr; {{ site.data.ui-text[site.locale].pagination_previous | default: "PREV" }}</span>
+        <span class="pagination--pager__title">{{ page.previous.title | markdownify | strip_html }}</span>
+      </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <span class="pagination--pager disabled"></span>
     {% endif %}
     {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <a href="{{ page.next.url | relative_url }}" class="pagination--pager pagination--pager--next">
+        <span class="pagination--pager__label">{{ site.data.ui-text[site.locale].pagination_next | default: "NEXT" }} &rarr;</span>
+        <span class="pagination--pager__title">{{ page.next.title | markdownify | strip_html }}</span>
+      </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <span class="pagination--pager disabled"></span>
     {% endif %}
   </nav>
 {% endif %}

@@ -6,7 +6,9 @@
     <label class="sr-only" for="search">
       {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your search term...' }}
     </label>
+    <span class="search-content__prompt" aria-hidden="true">$</span>
     <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    <span class="search-content__esc">ESC</span>
   </form>
   <div id="results" class="results"></div>
   {%- when "google" -%}

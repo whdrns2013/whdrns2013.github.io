@@ -1,0 +1,14 @@
+{% assign doc_id = page.sidebar.nav %}
+{% assign doc_info = site.data.docs.meta[doc_id] %}
+{% assign group_title = doc_info.group %}
+{% for group in site.data.category_hierarchy %}
+  {% if group.key == doc_info.group %}{% assign group_title = group.main_title %}{% endif %}
+{% endfor %}
+
+<nav class="post-breadcrumb" aria-label="breadcrumb">
+  <a href="{{ '/' | relative_url }}">home</a>
+  <span class="post-breadcrumb__sep">/</span>
+  <a href="{{ '/docs/intro/' | relative_url }}#doc-{{ doc_id }}">docs &middot; {{ group_title }}</a>
+  <span class="post-breadcrumb__sep">/</span>
+  <span class="post-breadcrumb__current">{{ page.title | markdownify | strip_html | truncate: 60 }}</span>
+</nav>

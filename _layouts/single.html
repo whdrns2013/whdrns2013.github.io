@@ -2,40 +2,35 @@
 layout: default
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
+{% if page.header.video.id and page.header.video.provider %}
   {% include page__hero_video.html %}
-{% endif %}
-
-{% assign breadcrumbs_enabled = site.breadcrumbs %}
-{% if page.breadcrumbs != null %}
-  {% assign breadcrumbs_enabled = page.breadcrumbs %}
-{% endif %}
-{% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
 {% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry{% if page.toc %} page--with-toc{% endif %}" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-          </h1>{% endif %}
+      {% if page.sidebar.nav %}
+        {% include post-breadcrumb.html %}
+      {% endif %}
+      <header>
+        {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+        </h1>{% endif %}
+        <div class="page__meta-row">
+          {% assign page_category = page.categories | first %}
+          {% if page_category %}
+            <a href="{{ '/year-archive/' | relative_url }}?category={{ page_category | slugify }}" class="post-card__chip page__category-chip">{{ page_category }}</a>
+          {% endif %}
           {% include page__meta.html %}
-        </header>
-      {% endunless %}
+        </div>
+      </header>
 
       <section class="page__content e-content" itemprop="text">
         {% if page.series %}
@@ -53,16 +48,13 @@ layout: default
                 </h4>
               </header>
               <div class="toc__menu-container">
-                {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+                {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" skip_no_ids=true %}
               </div>
             </nav>
           </aside>
         {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-        {% if page.series %}
-          {% include post-series.html %}
-        {% endif %}
       </section>
 
       <footer class="page__meta">

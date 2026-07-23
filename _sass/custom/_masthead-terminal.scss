@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Terminal masthead (top bar)
+   ========================================================================== */
+
+@keyframes terminal-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  background-color: color-mix(in srgb, var(--color-bg-side) 85%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 20;
+
+  &__inner-wrap {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 32px;
+    font-family: var(--font-mono);
+  }
+}
+
+.greedy-nav__toggle,
+.hidden-links {
+  display: none !important;
+}
+
+.terminal-prompt {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin: 0 !important;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text) !important;
+
+  &__user {
+    font-weight: 700;
+  }
+
+  &__at {
+    font-weight: 400;
+    color: var(--color-text-faint);
+    margin-left: 1px;
+  }
+
+  &__cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.05em;
+    margin-left: 4px;
+    background-color: var(--color-accent);
+    animation: terminal-blink 1s step-end infinite;
+  }
+}
+
+.masthead__menu {
+  .visible-links {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: visible;
+    gap: 20px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .masthead__menu-item {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+
+    a {
+      margin: 0 !important;
+      color: var(--color-text-muted) !important;
+      text-decoration: none;
+    }
+
+    &:hover a {
+      color: var(--color-text) !important;
+    }
+
+    &.is-active {
+      border-bottom-color: var(--color-accent);
+
+      a {
+        color: var(--color-text) !important;
+      }
+    }
+  }
+}
+
+.masthead__controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.search__toggle {
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.theme-toggle__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-faint);
+}
+
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 27px;
+  padding: 3px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &__knob {
+    display: block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+  }
+
+  &[aria-checked="true"] &__knob {
+    transform: translateX(23px);
+  }
+}
+
+/* Design centers the nav links between the logo and the controls: the row
+   is one flex container with exactly those 3 groups, evenly distributed via
+   justify-content: space-between (rather than nav-links flush after the
+   logo and controls pinned right via margin-left: auto). */
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  nav#site-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* core .greedy-nav ships a hardcoded (light-only) $background-color fill —
+   left in place it paints an opaque white bar over the masthead's own
+   translucent/blurred background, so it never picks up dark mode. */
+.greedy-nav {
+  background: transparent;
+}

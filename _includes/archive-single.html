@@ -10,21 +10,49 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign post_category = post.categories | first %}
+
 <div class="{{ include.type | default: 'list' }}__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="archive__item post-card post-card--{{ include.type | default: 'list' }}" itemscope itemtype="https://schema.org/CreativeWork"{% if post_category %} data-category="{{ post_category | slugify }}"{% endif %}>
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+
+    {% if include.type == "list" %}
+      <div class="post-card__date">
+        {% if post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>{% endif %}
+      </div>
+    {% endif %}
+
+    <div class="post-card__body">
+      {% if include.type == "grid" and post_category %}
+        <a href="{{ '/year-archive/' | relative_url }}?category={{ post_category | slugify }}" class="post-card__chip">{{ post_category }}</a>
       {% endif %}
-    </h2>
-    {% include page__meta.html type=include.type %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+
+      <h2 class="archive__item-title no_toc post-card__title" itemprop="headline">
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
+      </h2>
+
+      {% if post.excerpt %}<p class="archive__item-excerpt post-card__excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+
+      {% if include.type == "grid" %}
+        {% include page__meta.html type=include.type %}
+      {% endif %}
+    </div>
+
+    {% if include.type == "list" %}
+      <div class="post-card__aside">
+        {% if post_category %}
+          <a href="{{ '/year-archive/' | relative_url }}?category={{ post_category | slugify }}" class="post-card__chip">{{ post_category }}</a>
+        {% endif %}
+        {% include page__meta.html type=include.type hide_date=true %}
+      </div>
+    {% endif %}
   </article>
 </div>

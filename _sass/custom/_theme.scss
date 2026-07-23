@@ -1,0 +1,508 @@
+/* ==========================================================================
+   Terminal / code-editor design tokens
+   Colors are expressed with oklch() so light/dark are literal, high-fidelity
+   translations of the design spec. Everything downstream should read these
+   custom properties (var(--...)) rather than Sass color variables so the
+   theme can flip instantly via the [data-theme] attribute on <html>.
+   ========================================================================== */
+
+:root {
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, Menlo, monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* light (default) */
+  --color-bg: oklch(98% 0.004 250);
+  --color-bg-side: oklch(96% 0.006 250);
+  --color-bg-elevated: oklch(100% 0 0);
+  --color-border: oklch(88% 0.01 250);
+  --color-border-subtle: oklch(92% 0.008 250);
+  --color-text: oklch(22% 0.012 250);
+  --color-text-muted: oklch(42% 0.012 250);
+  --color-text-faint: oklch(58% 0.01 250);
+
+  --color-accent: #1a7f37;
+  --color-accent-2: #0969da;
+  --color-accent-soft: rgba(26, 127, 55, 0.1);
+  --color-accent-2-soft: rgba(9, 105, 218, 0.1);
+
+  --color-scrim: rgba(0, 0, 0, 0.6);
+
+  /* code block colors are fixed (GitHub Dark) in both themes */
+  --code-bg: #0d1117;
+  --code-header-bg: #161b22;
+  --code-border: #30363d;
+  --code-comment: #8b949e;
+  --code-keyword: #ff7b72;
+  --code-function: #79c0ff;
+  --code-text: #c9d1d9;
+  --code-linenum: #484f58;
+
+  --radius-card: 8px;
+  --radius-chip: 5px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 28px;
+  --space-6: 40px;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: oklch(16% 0.015 250);
+  --color-bg-side: oklch(19% 0.015 250);
+  --color-bg-elevated: oklch(22% 0.016 250);
+  --color-border: oklch(32% 0.02 250);
+  --color-border-subtle: oklch(27% 0.018 250);
+  --color-text: oklch(92% 0.01 250);
+  --color-text-muted: oklch(70% 0.012 250);
+  --color-text-faint: oklch(52% 0.01 250);
+
+  --color-accent: #7ee787;
+  --color-accent-2: #79c0ff;
+  --color-accent-soft: rgba(126, 231, 135, 0.12);
+  --color-accent-2-soft: rgba(121, 192, 255, 0.12);
+}
+
+/* ==========================================================================
+   Global resets on top of minimal-mistakes core — point the highest-impact
+   surfaces at the new tokens so every page inherits the terminal look even
+   before page-specific components are restyled.
+   ========================================================================== */
+
+script {
+  display: none !important;
+}
+
+/* minimal-mistakes' stock grid view floats + fractional widths .grid__item;
+   our grid components use real CSS grid containers instead, so neutralize
+   the float-grid math and let items fill their grid cell. */
+.grid__item {
+  float: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Core minimal-mistakes bumps the html root font-size at wider breakpoints
+   (16 -> 18 -> 20 -> 22px). Every custom component in this redesign is sized
+   in rem tuned against a 16px root to match the design's literal px values,
+   so left uncorrected, everything renders ~1.1-1.4x too large on desktop. */
+html {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 16px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 16px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 16px;
+  }
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--color-accent-2);
+}
+
+::selection {
+  background: var(--color-accent-soft);
+}
+
+hr {
+  border-top-color: var(--color-border);
+}
+
+blockquote {
+  color: var(--color-text-muted);
+  border-left-color: var(--color-border);
+}
+
+table {
+  color: var(--color-text);
+
+  th,
+  td {
+    border-color: var(--color-border);
+  }
+
+  tr {
+    background-color: var(--color-bg-elevated);
+    border-top-color: var(--color-border);
+  }
+
+  th {
+    background-color: var(--color-bg-side);
+  }
+}
+
+.page__title,
+.archive__item-title,
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+}
+
+.page__content,
+.page__meta,
+.author__bio,
+.archive__item-excerpt {
+  color: var(--color-text);
+}
+
+.page__meta {
+  color: var(--color-text-faint);
+  font-family: var(--font-mono);
+}
+
+.page__meta-sep::before {
+  content: "\00B7";
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+/* Tags/categories list at the bottom of a post — core theme borders this
+   with a fixed (light-only) Sass color and inherits body text color, both
+   of which wash out against the dark background. */
+.page__taxonomy {
+  strong {
+    color: var(--color-text-muted);
+  }
+}
+
+.page__taxonomy-item {
+  border-color: var(--color-border) !important;
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+
+  &:hover {
+    border-color: var(--color-accent-2) !important;
+    color: var(--color-accent-2) !important;
+  }
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.notice,
+.notice--primary,
+.notice--info,
+.notice--warning,
+.notice--success,
+.notice--danger {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text);
+  border-radius: var(--radius-card);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--color-text-faint);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+/* Diary timeline ----------------------------------------------------------- */
+
+.diary-timeline {
+  margin-top: var(--space-4);
+}
+
+.diary-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  text-decoration: none !important;
+  color: inherit !important;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.diary-entry__dot {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background-color: var(--color-accent-2);
+}
+
+.diary-entry__date {
+  flex: 0 0 auto;
+  width: 6.5em;
+  margin-top: 1px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-faint);
+}
+
+.diary-entry__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diary-entry__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.diary-entry__text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Post breadcrumb ----------------------------------------------------------- */
+
+.post-breadcrumb {
+  margin-top: 24px;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-faint);
+
+  a {
+    color: var(--color-text-faint) !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--color-accent-2) !important;
+    }
+  }
+
+  &__sep {
+    margin: 0 6px;
+  }
+
+  &__current {
+    color: var(--color-text-muted);
+  }
+}
+
+/* Prev / next post navigation ----------------------------------------------- */
+
+.pagination li a {
+  border-color: var(--color-border) !important;
+  background: transparent !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+
+  &:hover {
+    color: var(--color-accent-2) !important;
+  }
+
+  &.current {
+    background: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    color: var(--color-bg) !important;
+  }
+
+  &.disabled {
+    color: var(--color-text-faint) !important;
+  }
+}
+
+.post-pagination {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  float: none !important;
+  width: 100% !important;
+
+  a.pagination--pager {
+    display: flex !important;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--space-3) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-card) !important;
+    background: var(--color-bg-elevated);
+    text-align: left !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+
+    &--next {
+      align-items: flex-end;
+      text-align: right !important;
+    }
+
+    &:hover {
+      border-color: var(--color-accent) !important;
+
+      .pagination--pager__title {
+        color: var(--color-accent) !important;
+      }
+    }
+  }
+
+  span.pagination--pager.disabled {
+    border: 1px dashed var(--color-border-subtle);
+    border-radius: var(--radius-card);
+  }
+
+  .pagination--pager__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--color-text-faint);
+  }
+
+  .pagination--pager__title {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text) !important;
+  }
+}
+
+/* Related posts ("You may also enjoy") — a compact horizontal row of
+   narrower cards instead of the core theme's float-grid (which our own
+   .grid__item{float:none} reset had collapsed into one full-width column). */
+.page__related {
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    margin-right: 0 !important;
+
+    @include breakpoint($medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .post-card--grid {
+    padding: var(--space-2);
+  }
+
+  .post-card__title {
+    font-size: 0.9rem !important;
+  }
+
+  .post-card__excerpt {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Share buttons -------------------------------------------------------------- */
+/* Core theme renders these with solid brand-color fills (Twitter blue,
+   Facebook navy, LinkedIn blue) which clash with the site's minimal,
+   borders-only aesthetic — restyle to match .home-hero__cta / other chips. */
+
+.page__share {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.page__share-title {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.page__share .btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  margin: 0 8px 0 0 !important;
+  padding: 7px 14px !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-card) !important;
+  background: transparent !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  box-shadow: none !important;
+
+  i {
+    color: inherit !important;
+  }
+
+  &:hover,
+  &:visited:hover {
+    border-color: var(--color-accent-2) !important;
+    color: var(--color-accent-2) !important;
+    background: transparent !important;
+  }
+
+  &:visited {
+    color: var(--color-text-muted) !important;
+    background: transparent !important;
+  }
+}
+
+/* Footer -------------------------------------------------------------------- */
+
+.page__footer {
+  background-color: var(--color-bg-side);
+  color: var(--color-text-faint);
+  border-top: 1px solid var(--color-border-subtle);
+
+  .fas, .fab, .far, .fal {
+    color: var(--color-text-faint);
+  }
+
+  a {
+    color: var(--color-text-muted);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.page__footer-follow li {
+  font-family: var(--font-mono);
+  text-transform: none;
+}
+
+.page__footer-copyright {
+  font-family: var(--font-mono);
+}

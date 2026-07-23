@@ -88,30 +88,7 @@ body {
 }
 
 .page__content {
-  h2 {
-    padding-bottom: 0.5em;
-    // border-bottom: 1px solid $border-color;
-    background: $h2-background-color;
-    color: $h2-foreground-color;
-    box-shadow: 0 0px 5px $h2-box-shadow-color;
-  }
-
-  // ----- h2 custom :: start ----- //
   h2 { position: relative; }
-  h2 {
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    font-weight: 800;
-    }
-  h2:before {
-      content: "⁍";
-      margin-right: 0.5em;
-  }
-
-  h2 span:before{
-    background-color: #FFE400 50%;
-  }
-  // ----- h2 custom :: end ----- //
 
 	h1, h2, h3, h4, h5, h6 {
 		.header-link {
@@ -136,32 +113,10 @@ body {
    }
   }
 
-  // ----- h3 custom :: start ----- //
-  h3{ font-size: 1.08em;
-      font-weight: 700;
-      // text-decoration: underline;
-      // text-underline-offset: 0.4em;
-      // text-decoration-style: wavy;
-      // text-decoration-color: #a9a9a9;
-    }
-  h3:before{
-    content: "📍 ";
-    // color: black;
-    font-size: 1.12em;
+  h3 {
+    font-size: 1.08em;
+    font-weight: 700;
   }
-  // ----- h3 custom :: end -----//
-
-  // ----- h4 custom :: start ----- //
-  h4{ font-size: 1.0em;
-      font-style: italic;
-      color: #03abb4;
-      font-weight: 700;
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: 0.4em;
-      margin-bottom: 1.1em;
-    }  
-  // ----- h4 custom :: end -----//
 
   li{
     // font-size: 1.0em;

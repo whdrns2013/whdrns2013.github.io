@@ -108,6 +108,7 @@ author:
   name             : "Jongya"
   avatar           : "/assets/images/profiles/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Jonghyuk Park"
+  job_title        : "MLOps / AI Engineer"
   location         : "Seoul, Korea"
   email            : whdrns2013@naver.com
   visitor          : visitor
@@ -304,6 +305,12 @@ defaults:
 # dark mode toggle
 dark_theme_toggle        : true # 다크 모드 토글 기능 추가
 after_footer_scripts:
-  - /assets/js/custom/dark-theme.js
+  - /assets/js/custom/theme-toggle.js
   - /assets/js/custom/copy-code.js
   - /assets/js/custom/toc-toggle.js
+  - /assets/js/custom/sidebar-toggle.js
+  - /assets/js/custom/archive-filter.js
+  - /assets/js/custom/docs-deeplink.js
+  - /assets/js/custom/doc-chip-color.js
+  - /assets/js/custom/toc-scrollspy.js
+  - /assets/js/custom/search-overlay.js

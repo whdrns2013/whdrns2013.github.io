@@ -1,58 +1,58 @@
 /* ==========================================================================
-   Post readability
+   Post readability — body typography, code blocks, TOC, tables
    ========================================================================== */
 
-$readability-accent-color: #23836f !default;
-$readability-strong-color: mix($danger-color, $text-color, 72%) !default;
-$readability-single-code-color: mix(#5bc64a, $text-color, 72%) !default;
-$readability-muted-color: mix($text-color, $background-color, 64%) !default;
-$readability-soft-border: mix($border-color, $background-color, 72%) !default;
-$readability-soft-background: mix($background-color, $text-color, 96%) !default;
-$readability-code-background: mix($background-color, $text-color, 92%) !default;
-$readability-code-block-background: mix($background-color, #111827, 12%) !default;
-$readability-code-block-border: mix($readability-code-block-background, #ffffff, 82%) !default;
-$readability-heading-background: mix($background-color, $readability-accent-color, 94%) !default;
-
 .layout--single {
-  .page__hero--overlay {
-    .page__title,
-    .page__title a,
-    .page__lead,
-    .page__meta {
-      color: #fff;
-      text-shadow: 0 2px 14px rgba(#000, 0.72), 0 1px 2px rgba(#000, 0.88);
-    }
-
-    .page__title {
-      font-weight: 800;
-    }
-  }
-
   .page__inner-wrap {
     header {
-      max-width: 820px;
+      max-width: 920px;
     }
   }
 
   .page__title {
-    margin-bottom: 0.55rem;
-    color: $text-color;
+    margin-bottom: 14px;
+    color: var(--color-text);
+    font-family: var(--font-sans);
     font-size: clamp(1.85rem, 3vw, 2.45rem);
     font-weight: 750;
     line-height: 1.25;
-    letter-spacing: 0;
 
     a {
       color: inherit;
     }
   }
 
+  .page__meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+
+  .page__category-chip {
+    margin-bottom: 0;
+    border-color: transparent;
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent) !important;
+
+    &:hover {
+      border-color: transparent;
+      color: var(--color-accent) !important;
+    }
+  }
+
+  .page__meta-row .page__meta {
+    margin: 0;
+  }
+
   .page__content {
-    max-width: 820px;
-    color: mix($text-color, $background-color, 92%);
-    font-size: 0.86rem;
-    line-height: 1.62;
-    letter-spacing: 0;
+    max-width: 920px;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.85;
     word-break: keep-all;
     overflow-wrap: break-word;
 
@@ -70,23 +70,17 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
     > div.highlighter-rouge,
     > figure.highlight {
       margin-top: 0;
-      margin-bottom: 1.38rem;
+      margin-bottom: 1.4rem;
     }
 
     p,
     li {
-      font-size: 0.9em;
-      line-height: 1.62;
-    }
-
-    p {
-      font-size: 0.9em;
-      margin-bottom: 1.38rem;
+      font-size: 15px;
+      line-height: 1.85;
     }
 
     li {
-      margin-bottom: 0.28rem;
-      padding-left: 0.05rem;
+      margin-bottom: 0.3rem;
     }
 
     li > ul,
@@ -105,20 +99,13 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       margin: 2.6rem 0 0.95rem;
       padding: 0;
       background: transparent;
-      color: $text-color;
-      box-shadow: none;
-      font-style: normal;
+      color: var(--color-text);
+      font-family: var(--font-sans);
       font-weight: 700;
       line-height: 1.32;
-      letter-spacing: 0;
-      text-decoration: none;
-
-      &::before {
-        content: none;
-      }
 
       .header-link {
-        color: $readability-muted-color !important;
+        color: var(--color-text-faint) !important;
         font-size: 0.75em;
       }
     }
@@ -126,60 +113,52 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
     > h1 {
       margin-top: 3rem;
       padding-bottom: 0.45rem;
-      border-bottom: 1px solid mix($readability-accent-color, $readability-soft-border, 24%);
+      border-bottom: 1px solid var(--color-border);
       font-size: 1.72em;
     }
 
     > h2 {
       margin-top: 3rem;
-      padding: 0.42rem 0 0.48rem 0.75rem;
-      border-bottom: 1px solid mix($readability-accent-color, $readability-soft-border, 28%);
-      border-left: 4px solid $readability-accent-color;
-      background: linear-gradient(90deg, $readability-heading-background 0%, rgba($readability-heading-background, 0) 72%);
-      // font-size: 1.46em;
       font-size: 1.55em;
     }
 
     > h3 {
       margin-top: 2.25rem;
       padding-bottom: 0.28rem;
-      border-bottom: 1px solid $readability-soft-border;
-      // font-size: 1.22em;
+      border-bottom: 1px solid var(--color-border-subtle);
       font-size: 1.35em;
     }
 
     > h4 {
       margin-top: 1.75rem;
-      // color: mix($text-color, $readability-accent-color, 76%);
-      color: mix($text-color, #0d5e00, 76%);
+      color: var(--color-accent);
       font-size: 1.08em;
     }
 
     > h5 {
       margin-top: 1.5rem;
-      color: $readability-muted-color;
+      color: var(--color-text-muted);
       font-size: 1em;
     }
 
     > h6 {
       margin-top: 1.35rem;
-      color: $readability-muted-color;
+      color: var(--color-text-muted);
       font-size: 0.92em;
-      text-transform: none;
     }
 
     hr {
       margin: 2rem 0;
-      border-top-color: $readability-soft-border;
+      border-top-color: var(--color-border);
     }
 
     strong {
-      color: $readability-strong-color;
+      color: var(--color-accent);
       font-weight: 700;
     }
 
     a:not(.btn) {
-      color: mix($link-color, $text-color, 78%);
+      color: var(--color-accent-2);
       text-decoration-thickness: 1px;
       text-underline-offset: 0.18em;
     }
@@ -187,45 +166,61 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
     blockquote {
       margin-left: 0;
       margin-bottom: 1.55rem;
-      padding: 0.15rem 1rem;
-      border-left: 3px solid mix($readability-accent-color, $border-color, 70%);
-      background: $readability-soft-background;
-      color: mix($text-color, $background-color, 82%);
+      padding: 0.6rem 1rem;
+      border-left: 3px solid var(--color-accent-2);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      background: var(--color-bg-elevated);
+      color: var(--color-text-muted);
       font-style: normal;
+
+      &.notice--tip,
+      &.notice--primary {
+        position: relative;
+        padding-top: 1.8rem;
+
+        &::before {
+          content: "TIP";
+          position: absolute;
+          top: 0.6rem;
+          left: 1rem;
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          color: var(--color-accent-2);
+        }
+      }
     }
 
     :not(pre) > code {
       padding: 0.14rem 0.34rem;
-      border: 1px solid mix($border-color, $background-color, 60%);
+      border: 1px solid var(--color-border);
       border-radius: 4px;
-      background: $readability-code-background;
-      color: $readability-single-code-color;
+      background: var(--color-bg-side);
+      color: var(--color-accent);
       font-size: 0.88em;
       font-weight: 500;
-
-      &::before,
-      &::after {
-        content: none;
-      }
     }
 
     div.highlighter-rouge,
     figure.highlight {
       margin-top: 1.2rem;
       margin-bottom: 1.45rem;
-      border: 1px solid $readability-code-block-border;
-      border-radius: 8px;
-      background: $readability-code-block-background;
-      box-shadow: none;
+      border: 1px solid var(--code-border);
+      border-radius: var(--radius-card);
+      background: var(--code-bg);
+      font-family: var(--font-mono);
       font-size: 0.82em;
       line-height: 1.72;
-      overflow-x: auto;
+      overflow: hidden;
 
       > pre,
       pre.highlight {
+        margin: 0;
         padding: 1.05rem 1.15rem;
         overflow-x: auto;
         white-space: pre;
+        color: var(--code-text);
       }
 
       pre,
@@ -235,11 +230,7 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       th {
         overflow-wrap: normal;
         word-break: normal;
-      }
-
-      pre code,
-      .rouge-code pre {
-        white-space: pre;
+        color: var(--code-text);
       }
 
       table {
@@ -249,59 +240,71 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
         margin: 0;
         border: 0;
         border-collapse: collapse;
-        border-radius: 0;
         background: transparent;
-        box-shadow: none;
         font-family: inherit;
         font-size: 1em;
         line-height: inherit;
-        overflow: visible;
       }
 
+      tr,
       th,
       td {
         border: 0;
-        background: transparent;
+        background: transparent !important;
         color: inherit;
       }
 
       .rouge-gutter,
       .gutter {
         width: 1em;
-        padding-right: 1em;
-        border-right: 1px dashed $base03;
+        padding: 0 1em;
+        border-right: 1px solid var(--code-border);
+        color: var(--code-linenum);
+        text-align: right;
+        user-select: none;
       }
 
       .rouge-code,
       .code {
         padding-left: 1em;
+        width: 100%;
       }
+
+      .c, .c1, .cm { color: var(--code-comment); }
+      .k, .kd, .kn, .kr, .kt { color: var(--code-keyword); }
+      .nf, .nx, .no { color: var(--code-function); }
     }
 
     table {
       margin: 1.45rem 0;
-      // border: 1px solid mix($border-color, $text-color, 82%);
+      border: 1px solid var(--color-border);
       border-collapse: separate;
       border-spacing: 0;
-      border-radius: 8px;
-      // box-shadow: 0 4px 14px rgba(#000, 0.04);
-      font-size: 0.82rem;
-      line-height: 1.52;
+      border-radius: var(--radius-card);
+      background: var(--color-bg-elevated);
+      font-size: 0.86rem;
+      line-height: 1.6;
       overflow: hidden;
 
       th {
-        background: mix($background-color, $readability-accent-color, 90%);
-        color: mix($text-color, $readability-accent-color, 86%);
+        background: var(--color-bg-side);
+        color: var(--color-text);
         font-weight: 700;
+      }
+
+      td {
+        background: var(--color-bg-elevated);
+      }
+
+      tr:nth-child(even) td {
+        background: var(--color-bg-side);
       }
 
       th,
       td {
         padding: 0.55rem 0.65rem;
-        border-right: 1px solid mix($border-color, $text-color, 88%);
-        border-bottom: 1px solid mix($border-color, $text-color, 88%);
-        border-top: 0;
-        border-left: 0;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
         vertical-align: top;
       }
 
@@ -313,94 +316,17 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
       td:last-child {
         border-right: 0;
       }
-
-      tbody tr:nth-child(even) {
-        background: mix($background-color, $text-color, 97%);
-      }
     }
 
     img {
-      border-radius: 6px;
+      max-width: 100%;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
     }
 
-    .toc {
-      border: 1px solid mix($border-color, $background-color, 70%);
-      border-radius: 8px;
-      background: mix($background-color, $text-color, 98%);
-      box-shadow: 0 8px 22px rgba(#000, 0.06);
-      color: $readability-muted-color;
-      overflow: hidden;
-
-      .nav__title {
-        padding: 0.62rem 0.8rem;
-        border-bottom: 1px solid mix($border-color, $background-color, 78%);
-        border-radius: 0;
-        background: mix($background-color, $readability-accent-color, 88%);
-        color: mix($text-color, $readability-accent-color, 82%);
-        font-size: 0.78rem;
-        font-weight: 700;
-        line-height: 1.2;
-        text-transform: none;
-      }
-
-      .toc__toggle {
-        border-radius: 4px;
-        color: inherit;
-      }
-
-      .toc__menu {
-        font-size: 0.68rem;
-
-        a {
-          padding: 0.24rem 0.68rem;
-          border-bottom: 1px solid mix($border-color, $background-color, 82%);
-          border-left: 3px solid transparent;
-          color: mix($text-color, $background-color, 76%);
-          font-weight: 700;
-          line-height: 1.28;
-
-          &:hover {
-            background: mix($background-color, $readability-accent-color, 92%);
-            color: $text-color;
-            text-decoration: none;
-          }
-        }
-
-        > li > a {
-          border-left-color: mix($readability-accent-color, $background-color, 48%);
-          background: mix($background-color, $text-color, 99%);
-          color: mix($text-color, $readability-accent-color, 82%);
-          font-size: 0.71rem;
-        }
-
-        li ul > li a {
-          padding: 0.22rem 0.68rem 0.22rem 1.25rem;
-          border-left-color: mix($readability-accent-color, $background-color, 28%);
-          color: $readability-muted-color;
-          font-size: 0.66rem;
-          font-weight: 600;
-        }
-
-        li ul li ul > li a {
-          padding: 0.2rem 0.68rem 0.2rem 1.75rem;
-          border-left-color: transparent;
-          color: mix($text-color, $background-color, 58%);
-          font-size: 0.63rem;
-          font-weight: 500;
-        }
-
-        li ul li ul li ul > li a {
-          padding-left: 2.1rem;
-          color: mix($text-color, $background-color, 50%);
-          font-size: 0.61rem;
-        }
-
-        .active a {
-          background: mix($background-color, $readability-accent-color, 86%);
-          color: mix($text-color, $readability-accent-color, 80%);
-        }
-      }
-    }
+    /* .toc styling lives entirely in _toc-toggle.scss now — this used to
+       have a duplicate (and conflicting, boxed-card) copy here from before
+       the TOC redesign. */
   }
 }
 
@@ -408,41 +334,6 @@ $readability-heading-background: mix($background-color, $readability-accent-colo
   .layout--single {
     .page__title {
       font-size: 1.65rem;
-    }
-
-    .page__content {
-      font-size: 0.92rem;
-
-      p,
-      li {
-        font-size: 1em;
-      }
-
-      > h1 {
-        font-size: 1.55em;
-      }
-
-      > h2 {
-        font-size: 1.35em;
-      }
-
-      > h3 {
-        font-size: 1.16em;
-      }
-
-      > table {
-        display: block;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      > table th,
-      > table td {
-        white-space: nowrap;
-      }
     }
   }
 }

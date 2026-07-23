@@ -4,69 +4,52 @@ layout: archive
 
 {{ content }}
 
-<div class="home-intro">
-  <p class="home-intro__eyebrow">Developer Notes</p>
-  <h3 class="home-intro__title">기술 기록 개발자 노트</h3>
-  <p class="home-intro__desc">
-    실무에서 필요한 기술에 대한 개념, 사용법, 문제 해결을 중심으로, 그리고 따라해볼 수 있는 실습 과정을 기록합니다.
-    <br>
-    아래에서 최신 글과 주요 카테고리를 탐색해보세요.
-  </p>
-
-  <div class="home-intro__stats">
-    <div class="home-intro__stat">
-      <strong>{{ site.posts | size }}</strong>
-      <span>Posts</span>
-    </div>
-    <div class="home-intro__stat">
-      {% assign latest_post = site.posts | first %}
-      {% if latest_post and latest_post.date %}
-        <strong>{{ latest_post.date | date: "%Y-%m-%d" }}</strong>
-      {% else %}
-        <strong>-</strong>
-      {% endif %}
-      <span>Latest Update</span>
-    </div>
-    <div class="home-intro__stat">
-      <strong>{{ site.tags | size }}</strong>
-      <span>Tags</span>
+<section class="home-hero">
+  <div class="home-hero__intro">
+    <p class="home-hero__eyebrow">// developer notes</p>
+    <h1 class="home-hero__title">MLOps, AI, Infra를<br>실무 관점에서 기록합니다</h1>
+    <p class="home-hero__desc">
+      실무에서 필요한 기술에 대한 개념, 사용법, 문제 해결을 중심으로, 따라해볼 수 있는 실습 과정을 기록합니다.
+      최신 글과 주요 카테고리를 아래에서 탐색해보세요.
+    </p>
+    <div class="home-hero__ctas">
+      <a class="home-hero__cta" href="{{ '/categories/' | relative_url }}">$ cd categories</a>
+      <a class="home-hero__cta" href="{{ '/year-archive/' | relative_url }}">$ cd archive</a>
     </div>
   </div>
-</div>
 
-<div class="home-quick-links" aria-label="Quick Navigation">
-  <a class="home-quick-card" href="{{ '/docs/intro/' | relative_url }}">
-    <!-- <span class="home-quick-card__icon" aria-hidden="true">📘</span> -->
-    <span class="home-quick-card__top">
-      <span class="home-quick-card__title">DOC</span>
-      <span class="home-quick-card__cta">바로가기</span>
-    </span>
-    <span class="home-quick-card__desc">여러 포스팅을 큰 주제별 엮어 만든 체계화된 지식 공간입니다.</span>
-  </a>
-  <a class="home-quick-card" href="{{ '/series/' | relative_url }}">
-    <!-- <span class="home-quick-card__icon" aria-hidden="true">🧩</span> -->
-    <span class="home-quick-card__top">
-      <span class="home-quick-card__title">Series</span>
-      <span class="home-quick-card__cta">바로가기</span>
-    </span>
-    <span class="home-quick-card__desc">하나의 작은 주제를 연속 포스팅으로 깊게 다룬 시리즈 모음입니다.</span>
-  </a>
-</div>
+  <div class="home-hero__terminal">
+    <div class="home-terminal__header">
+      <span class="home-terminal__dot home-terminal__dot--red"></span>
+      <span class="home-terminal__dot home-terminal__dot--yellow"></span>
+      <span class="home-terminal__dot home-terminal__dot--green"></span>
+      <span class="home-terminal__filename">whoami.sh</span>
+    </div>
+    <div class="home-terminal__body">
+      <p><span class="home-terminal__prompt">$</span> whoami</p>
+      <p class="home-terminal__out">Jonghyuk Park — MLOps / AI Engineer</p>
+      <p><span class="home-terminal__prompt">$</span> cat focus.txt</p>
+      <p class="home-terminal__out">MLOps · LLM Infra · Recommendation Systems</p>
+      <p><span class="home-terminal__prompt">$</span> uptime</p>
+      <p class="home-terminal__out">{{ site.posts | size }} posts · powered by curiosity</p>
+      <p><span class="home-terminal__prompt">$</span> <span class="terminal-prompt__cursor" aria-hidden="true"></span></p>
+    </div>
+  </div>
+</section>
 
 {% if paginator.page == 1 or paginator == nil %}
   {% assign pinned_posts = site.posts | where: "pinned", true %}
   {% if pinned_posts.size > 0 %}
-    <h2 class="archive__subtitle home-subtitle">Pinned Posts</h2>
-    {% assign entries_layout = page.entries_layout | default: 'list' %}
-    <div class="entries-{{ entries_layout }}">
+    <p class="home-section-label">// pinned</p>
+    <div class="home-pinned-grid">
       {% for post in pinned_posts %}
-        {% include archive-single.html type=entries_layout %}
+        {% include archive-single.html type="grid" %}
       {% endfor %}
     </div>
   {% endif %}
 {% endif %}
 
-<h2 class="archive__subtitle home-subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h2>
+<p class="home-section-label">// recent</p>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -74,15 +57,10 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
+<div class="home-recent-list">
   {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+    {% include archive-single.html type="list" %}
   {% endfor %}
 </div>
 
 {% include paginator.html %}
-
-<div class="home-activity-chart">
-  <img src="https://ghchart.rshah.org/whdrns2013" alt="whdrns2013's Github chart">
-</div>
