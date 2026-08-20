@@ -3,7 +3,7 @@ title: 애플 앱스토어 앱 리뷰 스크래퍼 # 제목
 excerpt: 앱 리뷰(최근 500개)를 스크래핑하는 python 코드입니다. Beautifulsoup, urllib, pandas를 이용했습니다. # 서브 타이틀
 date: 2023-01-29 23:30:00 +0900      # 작성일
 lastmod: 2023-01-29 23:30:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
-categories: Lab         # 다수 카테고리에 포함 가능
+categories: etc         # 다수 카테고리에 포함 가능
 tags: apple app review scrapper 애플 앱 리뷰 스크래퍼 스크랩 크롤링              # 태그 복수개 가능
 classes: wide         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부

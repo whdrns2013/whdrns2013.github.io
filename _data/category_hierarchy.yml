@@ -112,13 +112,7 @@
   categories:
     - name: etc
       sub_title: 기타
-    - name: Lab
-      sub_title: 실험실
-    - name: project
-      sub_title: 프로젝트
     - name: Trend_and_Thesis
       sub_title: 트렌드와 논문
-    - name: book
-      sub_title: 책
     - name: diary
       sub_title: 일기

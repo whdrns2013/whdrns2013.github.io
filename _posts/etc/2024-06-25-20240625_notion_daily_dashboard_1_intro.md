@@ -4,7 +4,7 @@ excerpt: 노션에 기록한 내용, 아이폰 홈 화면에서 볼 수는 없�
 date: 2024-06-25 14:32:00 +0900
 lastmod: 2024-06-25 14:32:00 +0900
 last_modified_at: 2024-06-25 14:32:00 +0900
-categories: project
+categories: etc
 tags: 아이폰 홈화면 노션 일정 보기 iPhone home screen Notion schedule scriptable notionapi api
 classes: 
 toc: true
