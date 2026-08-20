@@ -9,37 +9,42 @@
 /* Toolbar Container */
 .code-toolbar {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.5rem;
+  right: 0.55rem;
   z-index: 2;
   display: flex;
-  align-items: stretch; /* Make items same height */
+  align-items: center; /* Make items same height */
+  gap: 0.35rem;
 }
 
 /* Copy Button */
 .copy-code-button {
-  border: 1px solid #555;
-  border-right: none; /* Remove double border if adjacent to badge */
-  border-top: none;
-  border-radius: 0 0 0 4px;
-  background-color: #333;
-  color: #fff;
-  font-size: 0.8em;
-  padding: 0.25em 0.5em;
+  border: 1px solid var(--code-border);
+  border-radius: 4px;
+  background-color: var(--code-header-bg);
+  color: var(--code-text);
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.1s;
+  opacity: 0.72;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease, opacity 0.12s ease;
 }
 
 /* Language Badge */
 .code-lang-badge {
-  background-color: #666;
-  color: #fff;
+  border: 1px solid var(--code-lang-border);
+  border-radius: 4px;
+  background-color: var(--code-lang-bg);
+  color: var(--code-lang-text);
+  font-family: var(--font-mono);
   font-size: 0.7em;
-  font-weight: bold;
+  font-weight: 800;
+  line-height: 1;
   text-transform: uppercase;
-  padding: 0.2em 0.5em;
-  border-bottom-left-radius: 5px;
+  padding: 0.35rem 0.5rem;
   display: flex;
   align-items: center;
   pointer-events: none;
@@ -52,17 +57,18 @@
 }
 
 .copy-code-button:hover {
-  background-color: #555;
+  background-color: var(--code-border);
+  color: #fff;
 }
 
 .copy-code-button.copied {
   background-color: #28a745;
   border-color: #28a745;
+  color: #fff;
 }
 
 /* If no badge, fix border radius of button */
 .code-toolbar .copy-code-button:last-child {
-  border-right: 1px solid #555;
-  border-radius: 0 0 0 4px; /* Adjust as needed */
-  border-bottom-left-radius: 5px;
+  border-right: 1px solid var(--code-border);
+  border-radius: 4px; /* Adjust as needed */
 }

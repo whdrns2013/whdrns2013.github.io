@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.highlight');
 
   codeBlocks.forEach(function(codeBlock) {
+    if (codeBlock.classList.contains('highlight') && codeBlock.closest('.highlighter-rouge')) {
+      return;
+    }
+
     // Check if toolbar already exists
     if (codeBlock.querySelector('.code-toolbar')) {
       return;

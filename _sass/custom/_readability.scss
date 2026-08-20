@@ -218,14 +218,14 @@
       border-radius: var(--radius-card);
       background: var(--code-bg);
       font-family: var(--font-mono);
-      font-size: 0.82em;
-      line-height: 1.72;
+      font-size: 0.84em;
+      line-height: 1.45rem;
       overflow: hidden;
 
       > pre,
       pre.highlight {
         margin: 0;
-        padding: 1.05rem 1.15rem;
+        padding: 2.2rem 1.15rem 1.05rem;
         overflow-x: auto;
         white-space: pre;
         color: var(--code-text);
@@ -233,12 +233,15 @@
 
       pre,
       pre code,
+      pre code span,
       table,
       td,
       th {
         overflow-wrap: normal;
         word-break: normal;
         color: var(--code-text);
+        font-size: inherit;
+        line-height: inherit;
       }
 
       table {
@@ -260,6 +263,8 @@
         border: 0;
         background: transparent !important;
         color: inherit;
+        line-height: inherit;
+        vertical-align: top;
       }
 
       .rouge-gutter,
@@ -276,6 +281,38 @@
       .code {
         padding-left: 1em;
         width: 100%;
+      }
+
+      .rouge-gutter pre,
+      .gutter pre,
+      .rouge-code pre,
+      .code pre {
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font: inherit;
+        line-height: inherit;
+      }
+
+      .rouge-gutter pre,
+      .gutter pre {
+        display: block;
+        min-width: 2ch;
+      }
+
+      .rouge-code pre,
+      .code pre,
+      .rouge-code code,
+      .code code,
+      .rouge-code span,
+      .code span {
+        font: inherit;
+        line-height: inherit;
+      }
+
+      ::selection {
+        background: var(--code-selection-bg);
+        color: var(--code-selection-text);
       }
 
       .c, .c1, .cm { color: var(--code-comment); }

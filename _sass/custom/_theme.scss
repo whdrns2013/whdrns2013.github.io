@@ -25,6 +25,8 @@
   --color-prose-strong: #b42318;
   --color-accent-soft: rgba(26, 127, 55, 0.1);
   --color-accent-2-soft: rgba(9, 105, 218, 0.1);
+  --color-selection-bg: rgba(9, 105, 218, 0.2);
+  --color-selection-text: var(--color-text);
 
   --color-scrim: rgba(0, 0, 0, 0.6);
 
@@ -37,6 +39,11 @@
   --code-function: #79c0ff;
   --code-text: #c9d1d9;
   --code-linenum: #484f58;
+  --code-selection-bg: rgba(121, 192, 255, 0.35);
+  --code-selection-text: #f0f6fc;
+  --code-lang-bg: rgba(121, 192, 255, 0.14);
+  --code-lang-border: rgba(121, 192, 255, 0.45);
+  --code-lang-text: #79c0ff;
 
   --radius-card: 8px;
   --radius-chip: 5px;
@@ -63,6 +70,8 @@
   --color-prose-strong: #d97575;
   --color-accent-soft: rgba(126, 231, 135, 0.12);
   --color-accent-2-soft: rgba(121, 192, 255, 0.12);
+  --color-selection-bg: rgba(121, 192, 255, 0.55);
+  --color-selection-text: #0d1117;
 }
 
 /* ==========================================================================
@@ -120,7 +129,8 @@ a {
 }
 
 ::selection {
-  background: var(--color-accent-soft);
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
 }
 
 hr {
