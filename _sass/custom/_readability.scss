@@ -124,8 +124,6 @@
 
     > h3 {
       margin-top: 2.25rem;
-      padding-bottom: 0.28rem;
-      border-bottom: 1px solid var(--color-border-subtle);
       font-size: 1.35em;
     }
 
@@ -297,18 +295,23 @@
       line-height: 1.6;
       overflow: hidden;
 
-      th {
+      thead {
         background: var(--color-bg-side);
+      }
+
+      thead th {
+        border-bottom: 2px solid var(--color-border);
         color: var(--color-text);
         font-weight: 700;
       }
 
+      tbody th,
       td {
         background: var(--color-bg-elevated);
       }
 
-      tr:nth-child(even) td {
-        background: var(--color-bg-side);
+      tbody tr {
+        background: var(--color-bg-elevated);
       }
 
       th,
