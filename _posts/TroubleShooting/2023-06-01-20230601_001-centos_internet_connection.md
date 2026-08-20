@@ -3,7 +3,7 @@ title: Virtualbox 가상 cent OS 인터넷 연결 실패 해결하기 # 제목
 excerpt: 왜 실패하는데..!? # 서브 타이틀
 date: 2023-06-01 20:22:00 +0900      # 작성일
 lastmod: 2023-06-01 20:22:00 +0900   # 최종 수정일 : 구글 사이트등록 관련 필요
-categories: Linux TroubleShooting         # 다수 카테고리에 포함 가능
+categories: TroubleShooting         # 다수 카테고리에 포함 가능
 tags: Linux Cent OS 인터넷 연결 실패 internet fail                     # 태그 복수개 가능
 classes:         # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부

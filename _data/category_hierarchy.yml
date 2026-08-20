@@ -21,22 +21,29 @@
   categories:
     - name: AI
       sub_title: 인공지능
-    - name: machine_learning
-      sub_title: 머신러닝
     - name: NLP
       sub_title: 자연어 처리
     - name: recommend_system
       sub_title: 추천 시스템
-    - name: vector_db
-      sub_title: 벡터 데이터베이스
-    - name: data_analysis
-      sub_title: 데이터 분석
-    - name: data_engineering
-      sub_title: 데이터 엔지니어링
-    - name: KnowledgeGraph
-      sub_title: 지식 그래프
+    - name: feature_engineering
+      sub_title: 피처 엔지니어링
     - name: statistics
       sub_title: 통계
+
+- key: database
+  main_title: Database System
+  sub_title: 데이터베이스 시스템
+  categories:
+    - name: vector_db
+      sub_title: 벡터 데이터베이스
+    - name: SQL
+      sub_title: SQL
+    - name: database_system
+      sub_title: 데이터베이스 시스템
+    - name: KnowledgeGraph
+      sub_title: 지식 그래프
+    - name: event_streaming
+      sub_title: 이벤트 스트리밍
 
 - key: computer_science
   main_title: Computer Science
@@ -74,15 +81,6 @@
     - name: VCS
       sub_title: 버전 관리
 
-- key: database
-  main_title: Database System
-  sub_title: 데이터베이스 시스템
-  categories:
-    - name: SQL
-      sub_title: SQL
-    - name: database_system
-      sub_title: 데이터베이스 시스템
-
 - key: software_engineering
   main_title: Software Engineering
   sub_title: 설계, 수행, 프랙티스
@@ -97,10 +95,6 @@
       sub_title: 프로젝트 관리
     - name: TroubleShooting
       sub_title: 트러블슈팅
-    - name: Linux TroubleShooting
-      sub_title: 리눅스 문제 해결
-    - name: network TroubleShooting
-      sub_title: 네트워크 문제 해결
 
 - key: misc
   main_title: Misc
