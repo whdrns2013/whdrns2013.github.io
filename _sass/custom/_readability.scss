@@ -257,6 +257,10 @@
         line-height: inherit;
       }
 
+      .highlight table {
+        table-layout: auto;
+      }
+
       tr,
       th,
       td {
@@ -265,6 +269,11 @@
         color: inherit;
         line-height: inherit;
         vertical-align: top;
+      }
+
+      td {
+        padding-top: 0;
+        padding-bottom: 0;
       }
 
       .rouge-gutter,
@@ -290,8 +299,12 @@
         margin: 0;
         padding: 0;
         color: inherit;
-        font: inherit;
-        line-height: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: normal;
+        font-weight: inherit;
+        line-height: 1.45rem;
+        tab-size: 2;
       }
 
       .rouge-gutter pre,
@@ -306,8 +319,9 @@
       .code code,
       .rouge-code span,
       .code span {
-        font: inherit;
-        line-height: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: 1.45rem;
       }
 
       ::selection {
