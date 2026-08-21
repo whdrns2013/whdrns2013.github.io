@@ -292,13 +292,14 @@
       var scoreSpace = {
         inner: maxRadius * 0.28,
         outer: maxRadius,
-        maxScore: Math.max(maxScore, 28)
+        maxScore: Math.max(maxScore, 40)
       };
 
       layoutNodes(nodes, center, scoreSpace, phase);
 
       ctx.clearRect(0, 0, width, height);
       drawBackground(ctx, center, scoreSpace);
+      drawSpaceObjects(ctx, center, maxRadius, phase);
       drawLinks(ctx, nodes, center, activeId());
       drawNodes(ctx, nodes, activeId());
       drawLabels(ctx, nodes, activeId(), width);
@@ -368,12 +369,7 @@
   }
 
   function drawBackground(ctx, center, scoreSpace) {
-    var thresholds = [24, 16, 8, 1].filter(function (score, index, list) {
-      return score <= scoreSpace.maxScore && list.indexOf(score) === index;
-    });
-    if (thresholds.indexOf(1) === -1) thresholds.push(1);
-
-    thresholds.forEach(function (score) {
+    [30, 20, 10].forEach(function (score) {
       var radius = scoreToRadius(score, scoreSpace);
       ctx.beginPath();
       ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
@@ -382,9 +378,6 @@
       ctx.setLineDash([4, 8]);
       ctx.stroke();
       ctx.setLineDash([]);
-      ctx.font = '700 10px JetBrains Mono, monospace';
-      ctx.fillStyle = 'rgba(240, 246, 252, 0.72)';
-      ctx.fillText('score ' + score + '+', center.x + radius + 8, center.y - 6);
     });
   }
 
@@ -399,6 +392,100 @@
       ctx.lineWidth = active ? 1.8 : 0.9;
       ctx.stroke();
     });
+  }
+
+  function drawSpaceObjects(ctx, center, maxRadius, phase) {
+    var objects = [
+      { kind: 'satellite', radius: maxRadius * 0.62, angle: phase * 0.8 + 0.4, scale: 0.9 },
+      { kind: 'ship', radius: maxRadius * 0.9, angle: phase * 0.48 + 2.4, scale: 0.85 },
+      { kind: 'astronaut', radius: maxRadius * 0.48, angle: -phase * 0.62 + 4.5, scale: 0.8 }
+    ];
+
+    objects.forEach(function (object) {
+      var x = center.x + Math.cos(object.angle) * object.radius;
+      var y = center.y + Math.sin(object.angle) * object.radius;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(object.angle + Math.PI / 2);
+      ctx.scale(object.scale, object.scale);
+      ctx.globalAlpha = 0.62;
+      if (object.kind === 'satellite') drawSatellite(ctx);
+      if (object.kind === 'ship') drawShip(ctx);
+      if (object.kind === 'astronaut') drawAstronaut(ctx);
+      ctx.restore();
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function drawSatellite(ctx) {
+    ctx.strokeStyle = 'rgba(240, 246, 252, 0.72)';
+    ctx.fillStyle = 'rgba(121, 192, 255, 0.34)';
+    ctx.lineWidth = 1.2;
+    ctx.fillRect(-8, -5, 16, 10);
+    ctx.strokeRect(-8, -5, 16, 10);
+    ctx.fillStyle = 'rgba(210, 168, 255, 0.28)';
+    ctx.fillRect(-27, -8, 14, 16);
+    ctx.fillRect(13, -8, 14, 16);
+    ctx.strokeRect(-27, -8, 14, 16);
+    ctx.strokeRect(13, -8, 14, 16);
+    ctx.beginPath();
+    ctx.moveTo(-13, 0);
+    ctx.lineTo(-8, 0);
+    ctx.moveTo(8, 0);
+    ctx.lineTo(13, 0);
+    ctx.stroke();
+  }
+
+  function drawShip(ctx) {
+    ctx.fillStyle = 'rgba(126, 231, 135, 0.34)';
+    ctx.strokeStyle = 'rgba(240, 246, 252, 0.76)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(0, -14);
+    ctx.lineTo(10, 10);
+    ctx.quadraticCurveTo(0, 16, -10, 10);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(121, 192, 255, 0.42)';
+    ctx.beginPath();
+    ctx.arc(0, -4, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(242, 204, 96, 0.72)';
+    ctx.beginPath();
+    ctx.moveTo(-4, 12);
+    ctx.lineTo(0, 20);
+    ctx.lineTo(4, 12);
+    ctx.stroke();
+  }
+
+  function drawAstronaut(ctx) {
+    ctx.strokeStyle = 'rgba(240, 246, 252, 0.75)';
+    ctx.fillStyle = 'rgba(240, 246, 252, 0.24)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(0, -9, 7, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(121, 192, 255, 0.28)';
+    ctx.beginPath();
+    ctx.arc(0, -9, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(240, 246, 252, 0.22)';
+    ctx.fillRect(-5, -1, 10, 15);
+    ctx.strokeRect(-5, -1, 10, 15);
+    ctx.beginPath();
+    ctx.moveTo(-5, 3);
+    ctx.lineTo(-13, 9);
+    ctx.moveTo(5, 3);
+    ctx.lineTo(13, 9);
+    ctx.moveTo(-3, 14);
+    ctx.lineTo(-8, 23);
+    ctx.moveTo(3, 14);
+    ctx.lineTo(8, 23);
+    ctx.stroke();
   }
 
   function drawNodes(ctx, nodes, activeId) {
