@@ -60,6 +60,8 @@
 }
 
 .knowledge-map__toolbar {
+  --knowledge-map-control-height: 40px;
+
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2);
@@ -67,20 +69,33 @@
 
   @include breakpoint($medium) {
     grid-template-columns: auto minmax(180px, 0.8fr) minmax(220px, 1fr) auto;
-    align-items: end;
+    align-items: start;
   }
+}
+
+.knowledge-map__control,
+.knowledge-map__field,
+.knowledge-map__range,
+.knowledge-map__toggle {
+  display: grid;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--color-text-faint);
 }
 
 .knowledge-map__mode {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  height: var(--knowledge-map-control-height);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-bg-elevated);
 
   button {
-    min-height: 38px;
+    height: var(--knowledge-map-control-height);
     padding: 0 12px;
     border: 0;
     border-right: 1px solid var(--color-border);
@@ -88,6 +103,7 @@
     color: var(--color-text-muted);
     font-family: var(--font-mono);
     font-size: 0.78rem;
+    line-height: 1;
     cursor: pointer;
 
     &:last-child {
@@ -102,20 +118,11 @@
   }
 }
 
-.knowledge-map__field,
-.knowledge-map__range,
-.knowledge-map__toggle {
-  display: grid;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--color-text-faint);
-}
-
 .knowledge-map__field input,
 .knowledge-map__field select {
   width: 100%;
-  min-height: 38px;
+  height: var(--knowledge-map-control-height);
+  box-sizing: border-box;
   padding: 0 10px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
@@ -129,8 +136,9 @@
 }
 
 .knowledge-map__reset {
-  align-self: end;
-  min-height: 38px;
+  align-self: start;
+  height: var(--knowledge-map-control-height);
+  box-sizing: border-box;
   padding: 0 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
@@ -138,7 +146,12 @@
   color: var(--color-text-muted);
   font-family: var(--font-mono);
   font-size: 0.76rem;
+  line-height: 1;
   cursor: pointer;
+
+  @include breakpoint($medium) {
+    margin-top: calc(0.72rem * 1.35 + 6px);
+  }
 
   &:hover,
   &:focus {

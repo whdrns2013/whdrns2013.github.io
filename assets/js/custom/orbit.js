@@ -185,9 +185,15 @@
   function updateCenterOptions() {
     var query = state.query.trim().toLowerCase();
     var options = indexes.options[state.centerType] || [];
-    var filtered = options.filter(function (option) {
+    var allMatches = options.filter(function (option) {
       return !query || option.searchText.indexOf(query) !== -1;
-    }).slice(0, state.centerType === 'post' ? 140 : 90);
+    });
+    var filtered = allMatches.slice(0, state.centerType === 'post' ? 140 : 90);
+    var selectedOption = getOption(state.centerType, state.centerId);
+
+    if (selectedOption && allMatches.indexOf(selectedOption) !== -1 && filtered.indexOf(selectedOption) === -1) {
+      filtered.unshift(selectedOption);
+    }
 
     if (!filtered.length) {
       centerSelect.innerHTML = '<option value="">No matches</option>';
@@ -837,6 +843,8 @@
     draw();
     if (!node.current && getOption(node.type, node.rawId)) {
       window.setTimeout(function () {
+        state.query = '';
+        searchInput.value = '';
         setCenter(node.type, node.rawId);
       }, 180);
     }

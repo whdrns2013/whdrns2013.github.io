@@ -1,16 +1,16 @@
 ---
-title: "Knowledge Map"
+title: "Orbit"
 layout: single
-permalink: /knowledge-map/
+permalink: /orbit/
 classes: wide
 author_profile: false
-excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는지 한 화면에서 탐색합니다."
+excerpt: "카테고리, 시리즈, 태그, 포스트를 중심 궤도로 탐색합니다."
 ---
 
 <section class="knowledge-map" data-knowledge-map>
   <header class="knowledge-map__header">
     <p class="knowledge-map__eyebrow">// orbit explorer</p>
-    <h1 class="knowledge-map__title">Knowledge Map</h1>
+    <h1 class="knowledge-map__title">Orbit</h1>
     <p class="knowledge-map__desc">
       하나의 주제를 중심에 놓고 가까운 카테고리, 시리즈, 태그, 포스트를 궤도처럼 탐색합니다.
     </p>
@@ -24,11 +24,14 @@ excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는�
   </div>
 
   <div class="knowledge-map__toolbar" aria-label="Knowledge map controls">
-    <div class="knowledge-map__mode" role="group" aria-label="Center type">
-      <button type="button" class="is-active" data-center-type="category">Category</button>
-      <button type="button" data-center-type="series">Series</button>
-      <button type="button" data-center-type="tag">Tag</button>
-      <button type="button" data-center-type="post">Post</button>
+    <div class="knowledge-map__control">
+      <span>Type</span>
+      <div class="knowledge-map__mode" role="group" aria-label="Center type">
+        <button type="button" class="is-active" data-center-type="category">Category</button>
+        <button type="button" data-center-type="series">Series</button>
+        <button type="button" data-center-type="tag">Tag</button>
+        <button type="button" data-center-type="post">Post</button>
+      </div>
     </div>
 
     <label class="knowledge-map__field">
@@ -118,4 +121,4 @@ excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는�
   ]
 }
 </script>
-<script src="{{ '/assets/js/custom/knowledge-map.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/custom/orbit.js' | relative_url }}" defer></script>
