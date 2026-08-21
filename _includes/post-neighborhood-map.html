@@ -1,0 +1,44 @@
+{% if page.id %}
+  {% assign current_series_info = site.data.series[page.series] %}
+  <section class="post-neighborhood" data-post-neighborhood data-post-index-url="{{ '/assets/data/post-index.json' | relative_url }}">
+    <header class="post-neighborhood__header">
+      <p class="post-neighborhood__eyebrow">// reading compass</p>
+      <h2 class="post-neighborhood__title">이 글과 이어지는 경로</h2>
+      <p class="post-neighborhood__desc">현재 글을 중심으로 시리즈, 카테고리, 태그 궤도에 다음 읽을거리를 배치합니다.</p>
+    </header>
+
+    <div class="post-neighborhood__body">
+      <div class="post-neighborhood__graph">
+        <canvas data-post-neighborhood-canvas aria-label="Related post graph"></canvas>
+        <div class="post-neighborhood__graph-hint">hover nodes or cards · click a node to pin</div>
+      </div>
+
+      <div class="post-neighborhood__recommendations">
+        <div class="post-neighborhood__recommendations-head">
+          <span>Next reads</span>
+          <strong data-post-neighborhood-count>0</strong>
+        </div>
+        <ol data-post-neighborhood-list></ol>
+      </div>
+    </div>
+
+    <script type="application/json" data-post-neighborhood-data>
+      {
+        "current": {
+          "id": {{ page.id | jsonify }},
+          "title": {{ page.title | strip_html | jsonify }},
+          "url": {{ page.url | relative_url | jsonify }},
+          "date": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+          "categories": {{ page.categories | jsonify }},
+          "tags": {{ page.tags | jsonify }},
+          "series": {% if page.series %}{{ page.series | jsonify }}{% else %}null{% endif %},
+          "series_title": {% if current_series_info %}{{ current_series_info.title | jsonify }}{% elsif page.series %}{{ page.series | jsonify }}{% else %}null{% endif %},
+          "series_index": {% if page.series_index %}{{ page.series_index | jsonify }}{% else %}null{% endif %},
+          "previous_id": {% if page.previous %}{{ page.previous.id | jsonify }}{% else %}null{% endif %},
+          "next_id": {% if page.next %}{{ page.next.id | jsonify }}{% else %}null{% endif %}
+        }
+      }
+    </script>
+  </section>
+  <script src="{{ '/assets/js/custom/post-neighborhood-map.js' | relative_url }}" defer></script>
+{% endif %}

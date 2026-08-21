@@ -12,6 +12,8 @@ main:
     url: /docs/intro/
   - title: "Series"
     url: /series/
+  - title: "Knowledge Map"
+    url: /knowledge-map/
   # - title: "Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

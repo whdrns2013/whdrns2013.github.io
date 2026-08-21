@@ -1,0 +1,18 @@
+---
+---
+{
+  "posts": [
+    {% for post in site.posts %}
+      {
+        "id": {{ post.id | jsonify }},
+        "title": {{ post.title | strip_html | jsonify }},
+        "url": {{ post.url | relative_url | jsonify }},
+        "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+        "categories": {{ post.categories | jsonify }},
+        "tags": {{ post.tags | jsonify }},
+        "series": {% if post.series %}{{ post.series | jsonify }}{% else %}null{% endif %},
+        "series_index": {% if post.series_index %}{{ post.series_index | jsonify }}{% else %}null{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
