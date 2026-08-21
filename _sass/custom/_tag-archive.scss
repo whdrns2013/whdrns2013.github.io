@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Tags archive
+   ========================================================================== */
+
+.tag-browser {
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.tag-browser__search {
+  display: grid;
+  gap: 6px;
+  max-width: 420px;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-faint);
+
+  input {
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-bg-elevated);
+    color: var(--color-text);
+    font: inherit;
+  }
+}
+
+.tag-browser__index {
+  max-height: 260px;
+  overflow: auto;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-elevated);
+
+  a.is-active {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+  }
+}
+
+.tag-results {
+  margin-top: var(--space-4);
+}
+
+.tag-results__empty {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+
+  &[hidden] {
+    display: none;
+  }
+}

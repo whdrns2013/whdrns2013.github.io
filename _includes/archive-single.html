@@ -11,9 +11,10 @@
 {% endif %}
 
 {% assign post_category = post.categories | first %}
+{% capture post_tags_slug %}{% for tag in post.tags %}|{{ tag | slugify }}{% endfor %}{% if post.tags %}|{% endif %}{% endcapture %}
 
 <div class="{{ include.type | default: 'list' }}__item">
-  <article class="archive__item post-card post-card--{{ include.type | default: 'list' }}" itemscope itemtype="https://schema.org/CreativeWork"{% if post_category %} data-category="{{ post_category | slugify }}"{% endif %}>
+  <article class="archive__item post-card post-card--{{ include.type | default: 'list' }}" itemscope itemtype="https://schema.org/CreativeWork"{% if post_category %} data-category="{{ post_category | slugify }}"{% endif %}{% if post.tags %} data-tags="{{ post_tags_slug | strip }}"{% endif %}>
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">

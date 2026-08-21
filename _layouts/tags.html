@@ -11,33 +11,45 @@ layout: archive
   {% endif %}
 {% endfor %}
 
-<ul class="taxonomy__index">
-  {% for i in (1..tags_max) reversed %}
-    {% for tag in site.tags %}
-      {% if tag[1].size == i %}
-        <li>
-          <a href="#{{ tag[0] | slugify }}">
-            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
-      {% endif %}
+<div class="tag-browser" data-tag-browser>
+  <label class="tag-browser__search">
+    <span>Find tag</span>
+    <input type="search" data-tag-search placeholder="tag name">
+  </label>
+
+  <ul class="taxonomy__index tag-browser__index">
+    {% for i in (1..tags_max) reversed %}
+      {% for tag in site.tags %}
+        {% if tag[1].size == i %}
+          {% assign tag_slug = tag[0] | slugify %}
+          <li>
+            <a href="{{ '/tags/' | relative_url }}?tag={{ tag_slug }}" data-tag-chip data-tag="{{ tag_slug }}" data-tag-label="{{ tag[0] | escape }}">
+              <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-</ul>
+  </ul>
+</div>
+
+<div class="archive-active-filter" id="tag-active-filter" hidden>
+  <span class="archive-active-filter__label">태그:</span>
+  <span class="archive-active-filter__name" id="tag-active-filter-name"></span>
+  <a href="{{ '/tags/' | relative_url }}" class="archive-active-filter__clear">전체보기 &times;</a>
+</div>
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..tags_max) reversed %}
-  {% for tag in site.tags %}
-    {% if tag[1].size == i %}
-      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
-        </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-      </section>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+<section class="taxonomy__section tag-results">
+  <h2 class="archive__subtitle" data-tag-results-title>전체 포스트</h2>
+  <p class="tag-results__empty" data-tag-empty hidden>이 태그에 해당하는 포스트가 없습니다.</p>
+  <div class="entries-{{ entries_layout }}">
+    {% for post in site.posts %}
+      {% unless post.hidden %}
+        {% include archive-single.html type=entries_layout %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>
+
+<script src="{{ '/assets/js/custom/tag-filter.js' | relative_url }}" defer></script>
