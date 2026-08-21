@@ -66,14 +66,14 @@
   margin-bottom: var(--space-3);
 
   @include breakpoint($medium) {
-    grid-template-columns: auto minmax(180px, 1fr) minmax(170px, 0.8fr) auto minmax(180px, 0.7fr);
+    grid-template-columns: auto minmax(180px, 0.8fr) minmax(220px, 1fr) auto;
     align-items: end;
   }
 }
 
 .knowledge-map__mode {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -122,6 +122,29 @@
   background: var(--color-bg-elevated);
   color: var(--color-text);
   font: inherit;
+}
+
+.knowledge-map__field--center select {
+  min-width: 0;
+}
+
+.knowledge-map__reset {
+  align-self: end;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
 }
 
 .knowledge-map__toggle {
@@ -278,6 +301,10 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
+}
+
+.knowledge-map__swatch--current {
+  background: #7ee787;
 }
 
 .knowledge-map__swatch--group {

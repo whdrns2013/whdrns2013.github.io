@@ -9,10 +9,10 @@ excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는�
 
 <section class="knowledge-map" data-knowledge-map>
   <header class="knowledge-map__header">
-    <p class="knowledge-map__eyebrow">// graph view</p>
+    <p class="knowledge-map__eyebrow">// orbit explorer</p>
     <h1 class="knowledge-map__title">Knowledge Map</h1>
     <p class="knowledge-map__desc">
-      블로그의 큰 주제, 카테고리, 시리즈, 포스트, 주요 태그를 노드로 묶어 탐색합니다.
+      하나의 주제를 중심에 놓고 가까운 카테고리, 시리즈, 태그, 포스트를 궤도처럼 탐색합니다.
     </p>
   </header>
 
@@ -24,50 +24,37 @@ excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는�
   </div>
 
   <div class="knowledge-map__toolbar" aria-label="Knowledge map controls">
-    <div class="knowledge-map__mode" role="group" aria-label="Graph mode">
-      <button type="button" class="is-active" data-map-mode="topics">Topics</button>
-      <button type="button" data-map-mode="series">Series</button>
-      <button type="button" data-map-mode="tags">Tags</button>
+    <div class="knowledge-map__mode" role="group" aria-label="Center type">
+      <button type="button" class="is-active" data-center-type="category">Category</button>
+      <button type="button" data-center-type="series">Series</button>
+      <button type="button" data-center-type="tag">Tag</button>
+      <button type="button" data-center-type="post">Post</button>
     </div>
 
     <label class="knowledge-map__field">
-      <span>Filter</span>
-      <input type="search" data-map-search placeholder="post, tag, category">
+      <span>Find center</span>
+      <input type="search" data-map-search placeholder="category, series, tag, post">
     </label>
 
-    <label class="knowledge-map__field">
-      <span>Group</span>
-      <select data-map-group>
-        <option value="all">All groups</option>
-        {% for group in site.data.category_hierarchy %}
-          <option value="{{ group.key }}">{{ group.main_title }}</option>
-        {% endfor %}
-      </select>
+    <label class="knowledge-map__field knowledge-map__field--center">
+      <span>Center</span>
+      <select data-map-center></select>
     </label>
 
-    <label class="knowledge-map__toggle">
-      <input type="checkbox" data-map-tags>
-      <span>show tags</span>
-    </label>
-
-    <label class="knowledge-map__range">
-      <span>Nodes</span>
-      <input type="range" data-map-limit min="80" max="520" step="20" value="260">
-      <output data-map-limit-value>260</output>
-    </label>
+    <button type="button" class="knowledge-map__reset" data-map-reset>Reset</button>
   </div>
 
   <div class="knowledge-map__workspace">
     <div class="knowledge-map__canvas-wrap">
       <canvas class="knowledge-map__canvas" data-map-canvas aria-label="Knowledge graph canvas"></canvas>
-      <div class="knowledge-map__hint" data-map-hint>drag to pan · wheel to zoom · click a node</div>
+      <div class="knowledge-map__hint" data-map-hint>click a node to recenter · hover to inspect</div>
     </div>
 
     <aside class="knowledge-map__panel" data-map-panel>
-      <p class="knowledge-map__panel-kicker">Selected</p>
-      <h2 data-map-panel-title>블로그 지식 지도</h2>
+      <p class="knowledge-map__panel-kicker">Center</p>
+      <h2 data-map-panel-title>Knowledge Orbit</h2>
       <p data-map-panel-body>
-        노드를 선택하면 연결된 포스트와 주제 정보를 볼 수 있습니다.
+        중심을 고르면 점수가 높은 항목일수록 가까운 궤도에 배치됩니다.
       </p>
       <div class="knowledge-map__panel-meta" data-map-panel-meta></div>
       <a class="knowledge-map__panel-link" data-map-panel-link href="#" hidden>Open post</a>
@@ -75,7 +62,7 @@ excerpt: "카테고리, 시리즈, 태그, 포스트가 어떻게 연결되는�
   </div>
 
   <div class="knowledge-map__legend" aria-label="Node legend">
-    <span><i class="knowledge-map__swatch knowledge-map__swatch--group"></i>topic group</span>
+    <span><i class="knowledge-map__swatch knowledge-map__swatch--current"></i>center</span>
     <span><i class="knowledge-map__swatch knowledge-map__swatch--category"></i>category</span>
     <span><i class="knowledge-map__swatch knowledge-map__swatch--series"></i>series</span>
     <span><i class="knowledge-map__swatch knowledge-map__swatch--tag"></i>tag</span>
