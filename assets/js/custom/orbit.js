@@ -68,7 +68,9 @@
     var categoryToGroup = {};
     var categorySubtitles = {};
     var categoryCounts = {};
+    var categoryUrls = {};
     var tagCounts = {};
+    var tagUrls = {};
     var seriesById = {};
     var postsById = {};
     var seriesPosts = {};
@@ -77,7 +79,12 @@
       group.categories.forEach(function (category) {
         categoryToGroup[category.name] = group.id;
         categorySubtitles[category.name] = category.subtitle || '';
+        categoryUrls[category.name] = category.url || null;
       });
+    });
+
+    (data.tags || []).forEach(function (tag) {
+      tagUrls[tag.name] = tag.url || null;
     });
 
     data.series.forEach(function (series) {
@@ -107,6 +114,7 @@
         type: 'category',
         label: category,
         subtitle: categorySubtitles[category],
+        url: categoryUrls[category] || null,
         count: categoryCounts[category] || 0,
         searchText: [category, categorySubtitles[category] || ''].join(' ').toLowerCase()
       };
@@ -122,6 +130,7 @@
         type: 'series',
         label: series.title || series.id,
         subtitle: series.description || '',
+        url: series.url || null,
         count: series.count || 0,
         searchText: [series.id, series.title || '', series.description || ''].join(' ').toLowerCase()
       };
@@ -136,6 +145,7 @@
         id: tag,
         type: 'tag',
         label: tag,
+        url: tagUrls[tag] || null,
         count: tagCounts[tag] || 0,
         searchText: tag.toLowerCase()
       };
@@ -158,7 +168,9 @@
       postsById: postsById,
       categoryToGroup: categoryToGroup,
       categorySubtitles: categorySubtitles,
+      categoryUrls: categoryUrls,
       categoryCounts: categoryCounts,
+      tagUrls: tagUrls,
       tagCounts: tagCounts,
       seriesById: seriesById,
       seriesPosts: seriesPosts,
@@ -449,6 +461,7 @@
   function addCategory(bucket, category, score, reason) {
     addCandidate(bucket, 'category', category, category, score, reason, {
       subtitle: indexes.categorySubtitles[category] || '',
+      url: indexes.categoryUrls[category] || null,
       count: indexes.categoryCounts[category] || 0
     });
   }
@@ -457,12 +470,14 @@
     var series = indexes.seriesById[seriesId] || { id: seriesId, title: seriesId, count: 0 };
     addCandidate(bucket, 'series', seriesId, series.title || seriesId, score, reason, {
       subtitle: series.description || '',
+      url: series.url || null,
       count: series.count || 0
     });
   }
 
   function addTag(bucket, tag, score, reason) {
     addCandidate(bucket, 'tag', tag, tag, score, reason, {
+      url: indexes.tagUrls[tag] || null,
       count: indexes.tagCounts[tag] || 0
     });
   }
@@ -750,6 +765,7 @@
     }).join('');
     if (node.url) {
       panelLink.href = node.url;
+      panelLink.textContent = 'Open ' + node.type;
       panelLink.hidden = false;
     } else {
       panelLink.hidden = true;

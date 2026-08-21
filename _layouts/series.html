@@ -13,7 +13,7 @@ layout: archive
     {% if series_posts.size > 0 %}
       {% assign sorted_posts = series_posts | sort: "series_index" %}
 
-      <details class="series-accordion__item">
+      <details class="series-accordion__item" id="series-{{ series_id | slugify }}" data-series-id="{{ series_id | slugify }}">
         <summary class="series-accordion__header">
           <span class="series-accordion__title">
             <span class="series-accordion__name">{{ series_info.title }}</span>
@@ -37,3 +37,16 @@ layout: archive
     {% endif %}
   {% endfor %}
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var targetId = window.location.hash.replace(/^#/, '');
+    if (!targetId) return;
+
+    var target = document.getElementById(targetId);
+    if (!target || !target.matches('.series-accordion__item')) return;
+
+    target.open = true;
+    target.scrollIntoView({ block: 'start' });
+  });
+</script>

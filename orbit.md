@@ -60,7 +60,7 @@ excerpt: "카테고리, 시리즈, 태그, 포스트를 중심 궤도로 탐색�
         중심을 고르면 점수가 높은 항목일수록 가까운 궤도에 배치됩니다.
       </p>
       <div class="knowledge-map__panel-meta" data-map-panel-meta></div>
-      <a class="knowledge-map__panel-link" data-map-panel-link href="#" hidden>Open post</a>
+      <a class="knowledge-map__panel-link" data-map-panel-link href="#" hidden>Open</a>
     </aside>
   </div>
 
@@ -83,9 +83,11 @@ excerpt: "카테고리, 시리즈, 태그, 포스트를 중심 궤도로 탐색�
         "subtitle": {{ group.sub_title | jsonify }},
         "categories": [
           {% for category in group.categories %}
+            {% capture category_url %}{{ '/year-archive/' | relative_url }}?category={{ category.name | slugify }}{% endcapture %}
             {
               "name": {{ category.name | jsonify }},
-              "subtitle": {{ category.sub_title | jsonify }}
+              "subtitle": {{ category.sub_title | jsonify }},
+              "url": {{ category_url | jsonify }}
             }{% unless forloop.last %},{% endunless %}
           {% endfor %}
         ]
@@ -97,11 +99,23 @@ excerpt: "카테고리, 시리즈, 태그, 포스트를 중심 궤도로 탐색�
       {% assign series_id = item[0] %}
       {% assign series_info = item[1] %}
       {% assign series_posts = site.posts | where: "series", series_id %}
+      {% capture series_url %}{{ '/series/' | relative_url }}#series-{{ series_id | slugify }}{% endcapture %}
       {
         "id": {{ series_id | jsonify }},
         "title": {{ series_info.title | jsonify }},
         "description": {{ series_info.description | jsonify }},
-        "count": {{ series_posts | size }}
+        "count": {{ series_posts | size }},
+        "url": {{ series_url | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "tags": [
+    {% for tag in site.tags %}
+      {% assign tag_name = tag[0] %}
+      {% capture tag_url %}{{ '/tags/' | relative_url }}?tag={{ tag_name | slugify }}{% endcapture %}
+      {
+        "name": {{ tag_name | jsonify }},
+        "url": {{ tag_url | jsonify }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
