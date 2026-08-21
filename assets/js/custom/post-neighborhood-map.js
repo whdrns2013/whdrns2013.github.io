@@ -24,19 +24,13 @@
     if (parsed.type === 'series') return '시리즈';
     if (parsed.type === 'category') return parsed.value;
     if (parsed.type === 'tag') return '#' + parsed.value;
-    if (parsed.type === 'prev') return '이전';
-    if (parsed.type === 'next') return '다음';
+    if (parsed.type === 'recent') return '최신';
     return parsed.value || reason;
   }
 
-  function orbitFor(post) {
-    if (post.reasons.some(function (reason) {
-      var type = parseReason(reason).type;
-      return type === 'prev' || type === 'next';
-    })) return 'sequence';
-    if (post.reasons.some(function (reason) { return parseReason(reason).type === 'series'; })) return 'series';
-    if (post.reasons.some(function (reason) { return parseReason(reason).type === 'category'; })) return 'category';
-    return 'tag';
+  function orbitLabel(orbit) {
+    if (orbit === 'tag') return 'tag-match';
+    return orbit;
   }
 
   function setup(root) {
@@ -65,54 +59,90 @@
   }
 
   function scoreCandidates(current, posts) {
-    return posts.map(function (post) {
-      post.categories = normalizeList(post.categories);
-      post.tags = normalizeList(post.tags);
-      post.reasons = [];
-      post.score = 0;
+    var prepared = posts.map(function (post) {
+      return Object.assign({}, post, {
+        categories: normalizeList(post.categories),
+        tags: normalizeList(post.tags)
+      });
+    }).filter(function (post) {
+      return post.id !== current.id;
+    });
+    var recencyRank = {};
+    prepared.slice().sort(function (a, b) {
+      return b.date.localeCompare(a.date);
+    }).forEach(function (post, index) {
+      recencyRank[post.id] = index + 1;
+    });
 
-      if (post.id === current.id) return null;
+    function sharedCategories(post) {
+      return current.categories.filter(function (category) {
+        return post.categories.indexOf(category) !== -1;
+      });
+    }
+
+    function sharedTags(post) {
+      return current.tags.filter(function (tag) {
+        return post.tags.indexOf(tag) !== -1;
+      });
+    }
+
+    function recencyScore(post) {
+      var rank = recencyRank[post.id] || 9999;
+      if (rank <= 10) return 4;
+      if (rank <= 30) return 2;
+      if (rank <= 60) return 1;
+      return 0;
+    }
+
+    return prepared.map(function (post) {
+      var categoryMatches = sharedCategories(post);
+      var tagMatches = sharedTags(post);
+      var reasons = [];
+      var score = 0;
+      var orbit = 'recent';
+      var recent = recencyScore(post);
 
       if (current.series && post.series === current.series) {
-        post.score += 10;
-        post.reasons.push('series:' + (current.series_title || current.series));
+        score += 12;
+        orbit = 'series';
+        reasons.push('series:' + (current.series_title || current.series));
       }
 
-      if (current.previous_id && post.id === current.previous_id) {
-        post.score += 7;
-        post.reasons.push('prev:이전 글');
+      if (categoryMatches.length) {
+        score += categoryMatches.length * 6;
+        if (orbit === 'recent') orbit = 'category';
+        categoryMatches.slice(0, 3).forEach(function (category) {
+          reasons.push('category:' + category);
+        });
       }
 
-      if (current.next_id && post.id === current.next_id) {
-        post.score += 9;
-        post.reasons.push('next:다음 글');
+      if (tagMatches.length) {
+        score += Math.min(tagMatches.length, 6) * 3;
+        if (orbit === 'recent') orbit = 'tag';
+        tagMatches.slice(0, 4).forEach(function (tag) {
+          reasons.push('tag:' + tag);
+        });
       }
 
-      current.categories.forEach(function (category) {
-        if (post.categories.indexOf(category) !== -1) {
-          post.score += 4;
-          post.reasons.push('category:' + category);
-        }
+      if (recent) {
+        score += recent;
+        reasons.push('recent:최신 ' + (recencyRank[post.id] || '') + '위');
+      }
+
+      if (score <= 0) return null;
+
+      return Object.assign({}, post, {
+        orbit: orbit,
+        score: score,
+        reasons: reasons,
+        shared_tag_count: tagMatches.length,
+        shared_category_count: categoryMatches.length,
+        recency_rank: recencyRank[post.id] || null
       });
-
-      var sharedTags = 0;
-      current.tags.forEach(function (tag) {
-        if (post.tags.indexOf(tag) !== -1) {
-          sharedTags += 1;
-          post.score += 1;
-          if (sharedTags <= 4) post.reasons.push('tag:' + tag);
-        }
-      });
-
-      if (post.score <= 0) return null;
-      post.orbit = orbitFor(post);
-      return post;
     }).filter(Boolean).sort(function (a, b) {
-      var rank = { sequence: 0, series: 1, category: 2, tag: 3 };
-      if (rank[a.orbit] !== rank[b.orbit]) return rank[a.orbit] - rank[b.orbit];
       if (b.score !== a.score) return b.score - a.score;
       return b.date.localeCompare(a.date);
-    }).slice(0, 20);
+    }).slice(0, 24);
   }
 
   function renderList(root, list, candidates) {
@@ -121,7 +151,7 @@
       return;
     }
 
-    list.innerHTML = candidates.slice(0, 10).map(function (post, index) {
+    list.innerHTML = candidates.map(function (post, index) {
       var reasons = post.reasons.slice(0, 4).map(function (reason) {
         return '<span>' + escapeHtml(friendlyReason(reason)) + '</span>';
       }).join('');
@@ -132,7 +162,7 @@
         '<a href="' + escapeHtml(post.url) + '">' + escapeHtml(post.title) + '</a>',
         '<div class="post-neighborhood__item-meta">',
         '<time datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.date) + '</time>',
-        '<span class="post-neighborhood__orbit post-neighborhood__orbit--' + escapeHtml(post.orbit) + '">' + escapeHtml(post.orbit) + '</span>',
+        '<span class="post-neighborhood__orbit post-neighborhood__orbit--' + escapeHtml(post.orbit) + '">' + escapeHtml(orbitLabel(post.orbit)) + '</span>',
         '<span class="post-neighborhood__score">' + post.score + '</span>',
         '</div>',
         '<div class="post-neighborhood__reasons">' + reasons + '</div>',
@@ -256,17 +286,19 @@
       var height = canvas.clientHeight;
       var center = { x: width * 0.5, y: height * 0.5 };
       var maxRadius = Math.min(width, height) * 0.42;
-      var orbitMap = {
-        sequence: maxRadius * 0.34,
-        series: maxRadius * 0.54,
-        category: maxRadius * 0.74,
-        tag: maxRadius * 0.94
+      var maxScore = nodes.reduce(function (max, node) {
+        return node.type === 'post' ? Math.max(max, node.score) : max;
+      }, 1);
+      var scoreSpace = {
+        inner: maxRadius * 0.28,
+        outer: maxRadius,
+        maxScore: Math.max(maxScore, 28)
       };
 
-      layoutNodes(nodes, center, orbitMap, phase);
+      layoutNodes(nodes, center, scoreSpace, phase);
 
       ctx.clearRect(0, 0, width, height);
-      drawBackground(ctx, center, orbitMap);
+      drawBackground(ctx, center, scoreSpace);
       drawLinks(ctx, nodes, center, activeId());
       drawNodes(ctx, nodes, activeId());
       drawLabels(ctx, nodes, activeId(), width);
@@ -289,7 +321,7 @@
       score: 0
     }];
 
-    data.candidates.slice(0, 16).forEach(function (post, index) {
+    data.candidates.slice(0, 24).forEach(function (post, index) {
       nodes.push({
         id: 'post:' + post.id,
         type: 'post',
@@ -306,49 +338,53 @@
     return nodes;
   }
 
-  function layoutNodes(nodes, center, orbitMap, phase) {
-    var grouped = { sequence: [], series: [], category: [], tag: [] };
+  function scoreToRadius(score, scoreSpace) {
+    var normalized = Math.max(0, Math.min(1, score / Math.max(scoreSpace.maxScore, 1)));
+    return scoreSpace.outer - normalized * (scoreSpace.outer - scoreSpace.inner);
+  }
+
+  function layoutNodes(nodes, center, scoreSpace, phase) {
+    var posts = nodes.filter(function (node) {
+      return node.type === 'post';
+    }).sort(function (a, b) {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.index - b.index;
+    });
+
     nodes.forEach(function (node) {
       if (node.type === 'current') {
         node.x = center.x;
         node.y = center.y;
-        return;
       }
-      grouped[node.orbit].push(node);
     });
 
-    Object.keys(grouped).forEach(function (orbitName) {
-      var ringNodes = grouped[orbitName];
-      var radius = orbitMap[orbitName];
-      var speed = orbitName === 'sequence' ? 0.7 : orbitName === 'series' ? 0.45 : orbitName === 'category' ? 0.28 : 0.18;
-      ringNodes.forEach(function (node, index) {
-        var spread = (Math.PI * 2 * index) / Math.max(ringNodes.length, 1);
-        var angle = -Math.PI / 2 + spread + phase * speed + (node.score % 5) * 0.08;
-        node.x = center.x + Math.cos(angle) * radius;
-        node.y = center.y + Math.sin(angle) * radius;
-      });
+    posts.forEach(function (node, index) {
+      var normalized = Math.max(0, Math.min(1, node.score / Math.max(scoreSpace.maxScore, 1)));
+      var radius = scoreToRadius(node.score, scoreSpace);
+      var angle = -Math.PI / 2 + index * 2.399963229728653 + phase * (0.14 + (1 - normalized) * 0.28);
+      node.x = center.x + Math.cos(angle) * radius;
+      node.y = center.y + Math.sin(angle) * radius;
     });
   }
 
-  function drawBackground(ctx, center, orbitMap) {
-    var labels = [
-      ['sequence', orbitMap.sequence],
-      ['series', orbitMap.series],
-      ['category', orbitMap.category],
-      ['tag', orbitMap.tag]
-    ];
+  function drawBackground(ctx, center, scoreSpace) {
+    var thresholds = [24, 16, 8, 1].filter(function (score, index, list) {
+      return score <= scoreSpace.maxScore && list.indexOf(score) === index;
+    });
+    if (thresholds.indexOf(1) === -1) thresholds.push(1);
 
-    labels.forEach(function (item) {
+    thresholds.forEach(function (score) {
+      var radius = scoreToRadius(score, scoreSpace);
       ctx.beginPath();
-      ctx.arc(center.x, center.y, item[1], 0, Math.PI * 2);
-      ctx.strokeStyle = colorFor(item[0], 0.22);
+      ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(121, 192, 255, 0.2)';
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 8]);
       ctx.stroke();
       ctx.setLineDash([]);
       ctx.font = '700 10px JetBrains Mono, monospace';
-      ctx.fillStyle = colorFor(item[0], 0.86);
-      ctx.fillText(item[0], center.x + item[1] + 8, center.y - 6);
+      ctx.fillStyle = 'rgba(240, 246, 252, 0.72)';
+      ctx.fillText('score ' + score + '+', center.x + radius + 8, center.y - 6);
     });
   }
 
@@ -396,10 +432,11 @@
 
   function colorFor(type, alpha) {
     var colors = {
-      sequence: [126, 231, 135],
       series: [242, 204, 96],
       category: [121, 192, 255],
-      tag: [210, 168, 255]
+      tag: [210, 168, 255],
+      'tag-match': [210, 168, 255],
+      recent: [126, 231, 135]
     };
     var color = colors[type] || [240, 246, 252];
     return 'rgba(' + color[0] + ', ' + color[1] + ', ' + color[2] + ', ' + alpha + ')';

@@ -39,10 +39,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
-
-  @include breakpoint($medium) {
-    grid-template-columns: minmax(0, 1fr) 320px;
-  }
 }
 
 .post-neighborhood__graph {
@@ -61,7 +57,7 @@
 .post-neighborhood__graph canvas {
   display: block;
   width: 100%;
-  height: 360px;
+  height: 420px;
 }
 
 .post-neighborhood__graph-hint {
@@ -97,12 +93,16 @@
 }
 
 .post-neighborhood__recommendations ol {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 300px);
   gap: 8px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 8px;
   list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline proximity;
 }
 
 .post-neighborhood__recommendations li {
@@ -115,6 +115,7 @@
   border-radius: var(--radius-card);
   background: var(--color-bg);
   transition: border-color 0.16s ease, background-color 0.16s ease, transform 0.16s ease;
+  scroll-snap-align: start;
 
   &.is-active {
     border-color: var(--color-accent-2);
@@ -176,10 +177,6 @@
   color: var(--color-text-muted);
 }
 
-.post-neighborhood__orbit--sequence {
-  color: #7ee787;
-}
-
 .post-neighborhood__orbit--series {
   color: #f2cc60;
 }
@@ -190,6 +187,10 @@
 
 .post-neighborhood__orbit--tag {
   color: #d2a8ff;
+}
+
+.post-neighborhood__orbit--recent {
+  color: #7ee787;
 }
 
 .post-neighborhood__reasons {
@@ -222,5 +223,9 @@
   .post-neighborhood__graph canvas {
     min-height: 320px;
     height: 320px;
+  }
+
+  .post-neighborhood__recommendations ol {
+    grid-auto-columns: minmax(220px, 82vw);
   }
 }
