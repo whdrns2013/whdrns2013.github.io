@@ -23,6 +23,10 @@ layout: default
         {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
           <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
         </h1>{% endif %}
+        {% assign page_excerpt_text = page.excerpt | markdownify | strip_html | strip_newlines | strip %}
+        {% if page_excerpt_text != empty %}
+          <p class="page__subtitle">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% endif %}
         <div class="page__meta-row">
           {% assign page_category = page.categories | first %}
           {% if page_category %}
