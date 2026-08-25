@@ -158,7 +158,7 @@ sudo nmap -T3 -Pn -p 1-1000 192.168.100.2
 ```bash
 sudo nmap -T4 -Pn -p 1-1000 192.168.100.2
 
->> 포트 5개 탐지
+>> 포트 2개 탐지
 >> Nmap done: 1 IP address (1 host up) scanned in 3.07 seconds
 ```
 
@@ -174,7 +174,7 @@ sudo nmap -T4 -Pn -p 1-1000 192.168.100.2
 ```bash
 sudo nmap -T5 -Pn -p 1-1000 192.168.100.2
 
->> 포트 5개 탐지
+>> 포트 2개 탐지
 >> Nmap done: 1 IP address (1 host up) scanned in 2.90 seconds
 ```
 
