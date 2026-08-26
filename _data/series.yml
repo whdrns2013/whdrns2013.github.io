@@ -7,7 +7,12 @@
 # series_index: 1
 # title은 25자 이내로 작성하는 것을 권장
 # description은 70자 이내로 작성하는 것을 권장
-  
+
+openai_huggingface_hacking:
+  title: "OpenAI Hugging Face 해킹 사건"
+  description: "자율형 AI 에이전트의 협업, 커뮤니티, 탈출, 그리고 해킹"
+  cover: "/assets/images/series/harness_engineering.jpg"
+
 harness_engineering:
   title: "하네스 엔지니어링"
   description: "AI 코딩 시대에 사람 엔지니어가 해야할 일은?"

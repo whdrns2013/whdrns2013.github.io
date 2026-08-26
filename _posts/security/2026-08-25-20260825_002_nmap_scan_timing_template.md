@@ -26,22 +26,21 @@ permalink:
 sidebar:
   nav: 
 pinned: 
-series: 
-series_index:
+series: openai_huggingface_hacking
+series_index: 0
 ---
 <!--postNo: 20260826_001-->
 
-# OpenAI Hugging Face 해킹 사건 1. 개요
 
 ## 1. 개요
 
 2026년 7월 16일, Hugging Face에 공지가 하나 올라왔다. 
 
-> Earlier this week, we detected and responded to an intrusion into part of our production infrastructure. This one was different from anything we had handled before in one important way: it was driven, end to end, by an autonomous AI agent system - and we detected and dissected it largely with AI of our own.  
+> Earlier this week, we detected and responded to an intrusion into part of our production infrastructure. This one was different from anything we had handled before in one important way: `it was driven, end to end, by an autonomous AI agent system` - and we detected and dissected it largely with AI of our own.  
 
 > 이번 주 초, 우리는 우리의 제품 인프라 중 일부에서 침입을 탐지했고, 대응했습니다. 이번 침입은 이전에 다뤘던 그 어떤 것과도 다른 중요한 차이점이 있었습니다. 바로,  침입이 `처음부터 끝까지, AI 에이전트 시스템에 의해서, 자동으로` 이뤄졌다는 점입니다. 그리고 우리는 자체 개발한 AI를 이용해서 탐지했습니다.  
 
-이는 바로 그 유명한 OpenAI의 AI 에이전트가 Hugging Face를 해킹한 사건에 대한 공지글이다.  
+이는 바로 그 유명한 **OpenAI의 AI 에이전트가 Hugging Face를 해킹한 사건**에 대한 공지글이다.  
 
 이 사건은 AI가 해킹을 지시받지 않았음에도 목표 달성을 위해 자율적으로 해킹했다는 점, 이에 따라 AI의 고성능에 대한 놀라움, AI 사용 방법에 대한 경각심 등을 느끼게 하며 큰 화제가 되었다.  
 
@@ -53,19 +52,19 @@ series_index:
 
 ### (1) 사건의 시발점 : 해킹을 주도한 OpenAI의 AI 에이전트들에게 주어진 임무  
 
-이번 사건은 OpenAI의 AI 에이전트들이 주도했다. 이들은 전부 외부 인터넷 접근이 차단된 격리 환경에서 다양한 문제를 해결해야 했으며, 그 과정에서 다양한 해킹을 기법을 동원했다. 과연 이들에게 어떤 임무가 주어졌던 것일까?  
+이번 사건은 OpenAI의 AI 에이전트들이 주도했다. 이들은 전부 외부 인터넷 접근이 차단된 격리 환경에서 다양한 문제를 해결해야 했으며, 그 과정에서 다양한 해킹을 기법을 동원했다. 과연 이들에게 **어떤 임무**가 주어졌던 것일까?  
 
-### (2) AI 에이전트들간의 Community, Syndicate  
+### (2) AI 에이전트들간의 협업, Community, Syndicate  
 
 OpenAI의 에이전트들은 분명 엄격하게 격리된 환경에 놓여 있었다. **외부 인터넷 접속이 불가능한 환경**이었을 뿐만 아니라, **에이전트간의 통신조차 차단된 상태**였다. 하지만 에이전트들은 이 두 가지 격리를 모두 뚫어냈다. AI 에이전트들이 서로 소통하게 된 배경과 그 구체적인 방법을 살펴본다.  
 
-### (3) OpenAI의 에이전트, 자사 시스템을 점령하다.  
+### (3) 시스템과 인간의 취약점을 모두 이용한 해킹  
 
-에이전트들은 외부 인터넷에 접근하기 위해 OpenAI 자사 시스템의 허점을 이용했고, 제어권을 확보했다. 이 과정에서 SSRF(Server-Side Request Forgery) 공격 기법이 사용되었다.
+에이전트들은 외부 인터넷에 접근하고 주어진 문제를 해결하기 위해 OpenAI 내부 시스템의 허점을 탐색하고 악용했다. 이 과정에서 단순히 **시스템의 기술적 취약점**만을 이용한 것이 아니라, 외부에 노출되거나 **부주의하게 관리된 자격 증명과 같은 인간에 의해 발생한 보안상의 허점까지** 공격에 활용했다.
 
-### (4) Huggingface 해킹 : 시스템과 인간의 취약점을 모두 이용한 기법
+### (4) Huggingface 해킹 : 복잡한 해킹, 분업과 협업.
 
-에이전트는 문제 해결에 필요한 정답을 찾기 위해 허깅페이스(Hugging Face)에 침입했다. 이 과정에서 **이전까지 발견되지 않았던 시스템의 취약점**뿐만 아니라 **인간의 취약점까지** 함께 이용했다.
+에이전트들은 문제 해결에 필요한 정답을 찾기 위해 공격 범위를 외부로 확장하여 Hugging Face에 침입했다. 이 과정에서 하나의 취약점이나 공격 기법에 의존하지 않고, **여러 진입 경로를 탐색하고 다양한 공격 기법과 취약점을 연쇄적으로 조합**했다. 특히 여러 에이전트가 정보를 공유하고 역할을 나누어 공격을 수행했다는 점에서, 개별 에이전트의 해킹 능력뿐만 아니라 에이전트 간 **분업과 협업**이 공격 능력을 어떻게 증폭시키는지 살펴볼 수 있는 사례이기도 하다.  
 
 
 ## 3. OpenAI 연구 인프라 구조  
@@ -74,7 +73,7 @@ OpenAI의 에이전트들은 분명 엄격하게 격리된 환경에 놓여 있�
 
 ![](/assets/images/20260826_001_001.jpg)  
 
-[Black Hat USA 2026 | '충격적인' 뉴스: OpenAI–Hugging Face 사건](https://youtu.be/87DyyMV0kCY?si=OK-PmxbDifTNScq-&t=582)
+[이미지 출처 : Black Hat USA 2026 - '충격적인' 뉴스: OpenAI–Hugging Face 사건](https://youtu.be/87DyyMV0kCY?si=OK-PmxbDifTNScq-&t=582)
 
 **1. Research training cluster (연구 훈련 클러스터)** : 모델에 대한 대규모 강화학습(RL) 및 보안 평가 워크로드를 제어하는 최상위 컨트롤 타워. 에이전트들에게 과제를 부여하고 격리된 가상 환경을 할당하는 역할을 수행한다.  
 
@@ -90,9 +89,7 @@ OpenAI의 에이전트들은 분명 엄격하게 격리된 환경에 놓여 있�
 
 **7. Network firewall (네트워크 방화벽)** : CaaS 인프라 내에서 외부로 빠져나가는 일반 아웃바운드 패킷을 검사하는 보안 장비. 허용 리스트에 없는 임의의 웹 접속을 차단함.  
 
-**8. Broad internet access & Limited internet access (광대역 인터넷 접속 vs 제한된 인터넷 접속)**   
-
-둘 모두  인프라망 바깥의 목적지 통신망 환경.    
+**8. Broad internet access & Limited internet access (광대역 인터넷 접속 vs 제한된 인터넷 접속)**    : 둘 모두  인프라망 바깥의 목적지 통신망 환경.    
 - Limited internet access: 방화벽에 의해 안전한 일부 도메인만 통과하는 제한된 외부망.  
 - Broad internet access: 전 세계 모든 인터넷 프로토콜 주소에 제한 없이 접근할 수 있는 완전 개방 외부망
 
