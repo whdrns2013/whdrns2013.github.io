@@ -1,5 +1,5 @@
 ---
-title: "OpenAI Hugging Face 해킹 사건 - 1.개요" # 제목 (필수)
+title: "OpenAI HuggingFace 해킹 사건 - 1.개요" # 제목 (필수)
 excerpt: "자율형 AI 에이전트의 협업, 커뮤니티, 탈출, 그리고 해킹. OpenAI HuggingFace 해킹 사건의 타임라인." # 서브 타이틀이자 meta description (필수)
 date: 2026-08-26 23:43:00 +0900      # 작성일 (필수)
 lastmod: 2026-08-26 23:43:00 +0900   # 최종 수정일 (필수)
