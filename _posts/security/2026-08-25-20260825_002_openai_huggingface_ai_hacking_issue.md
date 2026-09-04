@@ -1,9 +1,9 @@
 ---
 title: "OpenAI HuggingFace 해킹 사건 - 1.개요" # 제목 (필수)
 excerpt: "자율형 AI 에이전트의 협업, 커뮤니티, 탈출, 그리고 해킹. OpenAI HuggingFace 해킹 사건의 타임라인." # 서브 타이틀이자 meta description (필수)
-date: 2026-09-03 23:43:00 +0900      # 작성일 (필수)
-lastmod: 2026-09-03 23:43:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-09-03 23:43:00 +0900  # 최종 수정일 (필수)
+date: 2026-09-04 23:43:00 +0900      # 작성일 (필수)
+lastmod: 2026-09-04 23:43:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-09-04 23:43:00 +0900  # 최종 수정일 (필수)
 categories: security       # 다수 카테고리에 포함 가능 (필수)
 tags: OpenAI 허깅페이스 Hugging Face HuggingFace AI 에이전트 agent 자율형 해킹 hacking 제로데이 취약점 zeroday Autonomous Security SSRF RCE Zero-day            # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
