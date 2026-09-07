@@ -1,0 +1,22 @@
+{% assign message_text = include.text | default: include.content | default: '' %}
+{% assign message_label = include.label | default: 'OUTPUT' %}
+{% assign message_kind = include.kind | default: 'NOTE' %}
+{% assign message_speed = include.speed | default: 38 %}
+{% assign message_repeat = include.repeat | default: false %}
+{% assign message_repeat_delay = include.repeat_delay | default: 3 %}
+
+<aside class="message-box" data-message-box data-speed="{{ message_speed }}" data-text="{{ message_text | strip_html | strip_newlines | escape }}" data-repeat="{{ message_repeat }}" data-repeat-delay="{{ message_repeat_delay }}">
+  <div class="message-box__header">
+    <span class="message-box__status" aria-hidden="true"></span>
+    <span class="message-box__label">{{ message_label }}</span>
+    <span>{{ message_kind }}</span>
+    <span class="message-box__processing" aria-label="처리 중" role="status">
+      <span></span><span></span><span></span>
+    </span>
+  </div>
+  <div class="message-box__body">
+    <span class="message-box__prompt" aria-hidden="true">›</span>
+    <span class="message-box__text">{{ message_text | escape }}</span>
+    <span class="message-box__cursor" aria-hidden="true"></span>
+  </div>
+</aside>

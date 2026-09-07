@@ -313,4 +313,5 @@ after_footer_scripts:
   - /assets/js/custom/docs-deeplink.js
   - /assets/js/custom/doc-chip-color.js
   - /assets/js/custom/toc-scrollspy.js
+  - /assets/js/custom/message-components.js
   - /assets/js/custom/search-overlay.js
