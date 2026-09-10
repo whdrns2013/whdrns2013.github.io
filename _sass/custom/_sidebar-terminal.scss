@@ -100,11 +100,16 @@
 
 .sidebar {
   position: relative;
-  /* extra right padding keeps content clear of the scrollbar that appears
-     when a long Docs tree makes this column taller than the viewport */
   padding: var(--space-4) 32px var(--space-4) var(--space-3);
   background-color: transparent;
   font-family: var(--font-mono);
+
+  /* Let the Docs tree grow with the page instead of clipping it inside the
+     viewport-height sticky sidebar from the base theme. */
+  &.sticky {
+    overflow: visible;
+    max-height: none;
+  }
 
   h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
