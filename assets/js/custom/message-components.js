@@ -17,9 +17,16 @@
     next();
   }
 
+  function itemText(item) {
+    var html = item.innerHTML.replace(/<br\s*\/?>/gi, '\n');
+    var holder = document.createElement('div');
+    holder.innerHTML = html;
+    return holder.textContent.trim();
+  }
+
   function buildConversation(list, reduced) {
     var items = Array.prototype.slice.call(list.children).map(function (item) {
-      return item.textContent.trim();
+      return itemText(item);
     }).filter(Boolean);
     var title = list.getAttribute('data-title') || 'CONVERSATION';
     var channel = list.getAttribute('data-channel') || '';
@@ -40,9 +47,9 @@
       body.innerHTML = '';
       var entries = [];
       items.forEach(function (item) {
-        var parts = item.split(' ');
-        var descriptor = parts.shift().replace(/`/g, '');
-        var text = parts.join(' ');
+        var match = item.match(/^(\S+)[ \t]+([\s\S]*)$/);
+        var descriptor = match ? match[1].replace(/`/g, '') : item.replace(/`/g, '');
+        var text = match ? match[2] : '';
         if (descriptor === 'system') {
           var system = document.createElement('div');
           system.className = 'conversation-system';

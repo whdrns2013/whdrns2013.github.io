@@ -28,7 +28,10 @@
 .message-box__processing span:nth-child(3), .conversation-typing__dots span:nth-child(3) { animation-delay: 0.4s; }
 .message-box__body { position: relative; min-height: 28px; padding: 20px 22px 22px 28px; font-size: 0.875rem; line-height: 1.85; color: #d5dfdc; }
 .message-box__prompt { position: absolute; left: 13px; top: 20px; color: #4de3ad; font-weight: bold; }
-.message-box__text, .conversation-message__text, .conversation-message__reserve { white-space: pre-wrap; word-break: keep-all; }
+.message-box__text, .message-box__reserve, .conversation-message__text, .conversation-message__reserve { white-space: pre-wrap; word-break: keep-all; }
+.message-box__reserve { visibility: hidden; display: block; }
+.message-box__text { position: absolute; inset: 20px 22px 22px 28px; }
+.message-box__cursor { position: absolute; top: 20px; right: 22px; }
 .conversation-message__bubble { min-width: 3em; }
 .conversation-message__reserve { visibility: hidden; display: block; }
 .conversation-message__text { position: absolute; inset: 12px 14px; }

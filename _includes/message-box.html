@@ -5,7 +5,7 @@
 {% assign message_repeat = include.repeat | default: false %}
 {% assign message_repeat_delay = include.repeat_delay | default: 3 %}
 
-<aside class="message-box" data-message-box data-speed="{{ message_speed }}" data-text="{{ message_text | strip_html | strip_newlines | escape }}" data-repeat="{{ message_repeat }}" data-repeat-delay="{{ message_repeat_delay }}">
+<aside class="message-box" data-message-box data-speed="{{ message_speed }}" data-text="{{ message_text | strip_html | escape }}" data-repeat="{{ message_repeat }}" data-repeat-delay="{{ message_repeat_delay }}">
   <div class="message-box__header">
     <span class="message-box__status" aria-hidden="true"></span>
     <span class="message-box__label">{{ message_label }}</span>
@@ -16,6 +16,7 @@
   </div>
   <div class="message-box__body">
     <span class="message-box__prompt" aria-hidden="true">›</span>
+    <span class="message-box__reserve" aria-hidden="true">{{ message_text | escape }}</span>
     <span class="message-box__text">{{ message_text | escape }}</span>
     <span class="message-box__cursor" aria-hidden="true"></span>
   </div>
