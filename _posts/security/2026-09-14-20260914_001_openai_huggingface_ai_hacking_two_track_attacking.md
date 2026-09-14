@@ -99,6 +99,8 @@ series_index: 6
 
 ### 1. **첫 번째 공격 루트 : OpenAI 내부망**  
 
+![](/assets/images/20260914_001_002.jpg)  
+
 - 에이전트들은 OpenAI 내부망을 향한 공격을 시작했다.  
 - 공격의 시작점은 **Pastebin에 공개되어 있던 외부 기관의 로그인 Credential**    
 - Credential을 공개된 공간에 노출하는 것은 보안에 위배된다 점에서 이는 **사람에 의한 보안 취약점**이라고 볼 수 있음
@@ -135,6 +137,8 @@ series_index: 6
 <br>
 
 ### 2. **두 번째 공격 루트 : Hugging Face**  
+
+![](/assets/images/20260914_001_003.jpg)  
 
 - 위와 같은 OpenAI 내부망 공격이 이루어지고 있을 때, 동시에 Hugging Face를 향한 공격도 진행되고 있었음  
 - 에이전트들은 인터넷을 조사하다가 가상 **호스팅 서버 서비스인 Modal에 배포되어 있던 훈련용 애플리케이션에서 default 공용 API key를 확보**했고, 이 서비스에서 Command Injection 취약점을 발견함  
