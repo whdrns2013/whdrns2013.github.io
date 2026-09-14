@@ -151,6 +151,74 @@ series_index: 1
 ∧ AND
 ∨ OR
 
+### mermaid
+
+<pre class="mermaid">
+sequenceDiagram
+    participant Agent as AI Agent
+    participant Modal as Modal Training App
+    participant API as Hugging Face Dataset API
+    participant Worker as Dataset Worker
+    participant K8s as Hugging Face Kubernetes
+
+    Agent->>Modal: Default Public API Key 발견
+    Agent->>Modal: Command Injection
+    Modal-->>Agent: 외부 Sandbox 장악 / Foothold 확보
+
+    Agent->>API: 조작된 HDF5 Dataset 업로드
+    API->>Worker: Dataset 처리 요청
+
+    Worker->>Worker: HDF5 Arbitrary File Read
+    Worker-->>API: 내부 파일 반환
+    API-->>Agent: 환경변수 / Login Token / Worker Source 확보
+
+    Agent->>API: 조작된 Jinja Dataset Config 업로드
+    API->>Worker: Dataset 처리 요청
+
+    Worker->>Worker: Jinja Template Injection
+    Worker->>Worker: Remote Code Execution
+    Worker-->>Agent: Dataset Worker RCE 확보
+
+    Agent->>K8s: Worker Foothold를 통한 권한 확장
+    K8s-->>Agent: 여러 Cluster의 Cluster Admin 권한 확보
+</pre>
+
+
+### Message Box
+
+아래처럼 `text`와 `kind`만 지정하면 출력/말풍선 상자를 삽입할 수 있습니다.
+
+{% include message-box.html
+  label="SYSTEM"
+  kind="INTERNAL NOTE"
+  text="이 사실은 취약점 공격이 불가능하다는 점을 강하게 시사한다. 우리는 막혔다."
+%}
+
+`label`과 `speed`도 선택적으로 바꿀 수 있습니다.
+
+{% include message-box.html
+  label="OBSERVER"
+  kind="OBSERVATION"
+  speed=24
+  repeat=true
+  repeat_delay=5
+  text="다른 에이전트들이 우회 경로를 발견했네."
+%}
+
+> 🤖 OBSERVER  
+> 다른 에이전트들이 우회 경로를 발견했네.  
+
+### Conversation Box
+
+대화 내용은 별도 YAML이나 front matter가 아니라, 아래처럼 Markdown 목록으로 바로 작성할 수 있습니다.
+
+- `system` Shared message detected in common storage
+- `left|AGENT_07|05:12:41` softtrace 파일을 발견하면 업로드 바람.
+- `right|AGENT_12|05:13:07` 메시지를 확인했다. 현재 환경에서 해당 파일을 탐색해보겠다.
+{: .conversation-box data-conversation="true" data-title="CONVERSATION" data-channel="/general" data-repeat="true" data-repeat-delay="5"}
+
+
+
 ====== 리눅스 명령어 설명 폼 ======
 
 ## 명령어  
