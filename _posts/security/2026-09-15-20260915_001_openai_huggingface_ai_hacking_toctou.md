@@ -269,6 +269,22 @@ flowchart LR
 
 전형적인 TOCTOU와 다르기는 하나, **프로그램이 어떤 대상을 검증한 시점과 실제로 사용하는 시점의 원자성이 보장되지 않았다**는 점에서는 공통점이 있다.  
 
+
+### 방지 방법  
+
+가장 효가적인 방법은 **Check와 Use를 가능한 한 분리하지 않는 것**이다. DB에서 자주 볼 수 있는 용어를 가져와 표현해 보면 **Check와 Use를 하나의 트랜잭션으로 묶어 원자성을 보장**하는 것이다. 예를 들어 파일의 존재 여부를 먼저 확인한 뒤 다시 생성하는 대신, 파일 생성 자체를 원자적인 연산으로 처리할 수 있다.  
+
+```python
+with open("result.txt", "x") as f:
+    f.write("data")
+```
+
+`"x"` 모드는 파일이 이미 존재하면 실패하고, 존재하지 않으면 생성한다. 즉, 상태 확인과 사용을 별도로 수행하지 않는다.
+
+결국 TOCTOU를 방지하는 핵심은 단순하다.
+
+> **확인한 뒤 사용하는 것이 아니라, 가능하면 확인과 사용을 하나의 원자적인 작업으로 처리해야 한다.**
+
 ## TOCTOU 실습
 
 이번에는 간단한 Python 코드로 **Check와 Use 사이에 상태가 변경되는 상황**을 직접 만들어보도록 하겠다. 실제 공격 상황을 구현하기에는.. 아이디어가 없어서, 우선 멀티스레딩 환경에서 TOCTOU가 어떤 구조로 발생하는지 확인해보도록 한다.  
@@ -336,20 +352,81 @@ t2.join()
 
 > threading.Event()는 TOCTOU 시점을 일부러 맞추기 위해 사용함. **실제 환경에서는** 이렇게 인위적인 이유 때문이 아니라, **파일 I/O, 네트워크 상황, DB 작업 동시 요청 등으로 인해 자연스럽게 Race Window가 만들어진다**.  
 
-### 방지 방법  
+<pre class="mermaid">
+sequenceDiagram
+  participant p as program
+  participant a as another_process
+  participant t as target.txt
 
-가장 효가적인 방법은 **Check와 Use를 가능한 한 분리하지 않는 것**이다. DB에서 자주 볼 수 있는 용어를 가져와 표현해 보면 **Check와 Use를 하나의 트랜잭션으로 묶어 원자성을 보장**하는 것이다. 예를 들어 파일의 존재 여부를 먼저 확인한 뒤 다시 생성하는 대신, 파일 생성 자체를 원자적인 연산으로 처리할 수 있다.  
+  p ->> t: Check("SAFE")
+  t -->> p: SAFE
+  a ->> t: change("악성코드")
+  p ->> t: Use
+  t -->> p: 악성코드
+</pre>
+
+## 참고 - 코드해설  
+
+이 코드에서 threading은 두 작업을 동시에 실행하고, Event로 실행 순서를 맞추기 위해 사용하고 있다.  
+
+1. Thread 생성
 
 ```python
-with open("result.txt", "x") as f:
-    f.write("data")
+t1 = threading.Thread(target=program)
+t2 = threading.Thread(target=another_process)
 ```
 
-`"x"` 모드는 파일이 이미 존재하면 실패하고, 존재하지 않으면 생성한다. 즉, 상태 확인과 사용을 별도로 수행하지 않는다.
+여기서는 t1, t2라는 스레드를 만들고 있다. 각각은 program, another_process 함수 자체를 가지고 있다가, 스레드의 target이 이 함수를 가리키면 실행시킨다.  
 
-결국 TOCTOU를 방지하는 핵심은 단순하다.
+2. start() 스레드 실행
 
-> **확인한 뒤 사용하는 것이 아니라, 가능하면 확인과 사용을 하나의 원자적인 작업으로 처리해야 한다.**
+```python
+t1.start()
+t2.start()
+```
+
+start()를 호출하면 각각의 스레드가 실행되면서 내부적으로 다음 함수가 호출된다. 여기서 중요한 게 하나 있는데, **두 함수가 독립적으로 실행되기 때문에 어느 쪽이 먼저 진행될지는 기본적으로 보장되지 않는다**. 그래서 이 코드에서는 **Event를 사용해 순서를 강제로 맞춘다**.  
+
+3. Event - 스레드 간 신호 전달
+
+```python
+checked = threading.Event()
+changed = threading.Event()
+```
+
+Event는 간단히 말하면 스레드끼리 사용하는 신호등이다. 초기 상태는 False이고, `wait()`, `set()` 메서드에 따라 상태를 False, True로 바꾼다.  
+
+| 메서드            | 의미                                |
+| -------------- | --------------------------------- |
+| `event.wait()` | Event가 `True`가 될 때까지 대기           |
+| `event.set()`  | Event를 `True`로 변경하고 대기 중인 스레드를 깨움 |
+
+4. 흐름도
+
+위 코드로 보장되는 프로세스의 흐름도를 그려보자면 아래와 같다.  
+
+<pre class="mermaid">
+sequenceDiagram
+  participant t1 as Thread1(program)
+  participant t2 as Thread2(another_process)
+  participant e1 as Event1(checked)
+  participant e2 as Event2(changed)
+  participant t as target.txt
+
+  t2 ->> e1: wait()
+  
+  t1 ->> t: Check("SAFE")
+  t1 ->> e1: set()
+  e1 -->> t2: wait 해제
+  t1 ->> e2: wait()
+
+  t2 ->> t: Change("악성코드")
+  t2 ->> e2: set()
+  e2 -->> t1: wait 해제
+
+  t1 ->> t: Use()
+  t -->> t1: 악성코드
+</pre>
 
 ## Reference
 
