@@ -1524,7 +1524,7 @@ docs_llm:
     - title: "원샷 프롬프팅과 퓨샷 프롬프팅"
       url: /ai/20260120_003_n_shot_prompting/
 
-
+ 
 # 알고리즘
 docs_algorithm:
   - title: "<-Doc으로 돌아가기"
