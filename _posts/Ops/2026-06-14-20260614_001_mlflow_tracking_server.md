@@ -2,8 +2,8 @@
 title: "[MLflow] Tracking Server" # 제목 (필수)
 excerpt: "MLOps 시스템의 중앙 관제 역할을 하는 서버" # 서브 타이틀이자 meta description (필수)
 date: 2026-06-14 18:54:00 +0900      # 작성일 (필수)
-lastmod: 2026-06-14 18:54:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-06-14 18:54:00 +0900   # 최종 수정일 (필수)
+lastmod: 2026-09-29 23:50:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-09-29 23:50:00 +0900   # 최종 수정일 (필수)
 categories: Ops         # 다수 카테고리에 포함 가능 (필수)
 tags: AI 인공지능 MLOps 머신러닝 ML machine learning mlflow 등록 아티팩트 모델 tracking server 트래킹 서버           # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -67,10 +67,43 @@ MLflow Tracking Server는 MLflow의 **중앙 관제 서버 역할**을 담당한
 
 #### (2) Tracking Server가 있는 경우
 
-- 클라이언트는  Trackig Server 와만 통신
-- Tracking Server 가 실험, 실행에 대한 메타 데이터와 모델을 저장하고 조회함
+- 클라이언트는 Trackig Server 와만 통신해도 됨 (선택사항)  
+- Tracking Server 가 실험, 실행에 대한 메타 데이터와 모델을 Backend Store와 Artifact Store에 저장하고 조회함
 - Backend Store, Artifact Store 에 대한 관리와 연결은 Tracking Server 에서 담당
 - 여러 사용자가 함께 협업하는 환경에서 Tracking Server가 중앙 관리 지점이 됨
+
+### 4. 구성과 요청 흐름
+
+클라이언트에서 Artifact Store에 접근하는 방식은 두 가지가 있다. 직접 저장소에 접근하는 것과, MLflow Tracking Server를 통해 접근하는 것. 아래 플로우차트는 그 두 가지 접근 방식을 나타낸다. (실험과 Run 메타데이터와 관련된 요청은 이 접근 방식에 관계없이  Tracking Server를 거친다.)  
+
+<pre class="mermaid">
+flowchart LR
+    C["학습 코드 / MLflow Client"] -->|"메타데이터 요청"| S["Tracking Server"]
+    B["브라우저"] -->|"UI"| S
+    S -->|"실험·Run·Metric·Tag"| D["Backend Store"]
+    C -->|"프록시 방식: 아티팩트"| S
+    S -->|"프록시 방식: 아티팩트"| A["Artifact Store"]
+    C -.->|"직접 접근 방식: 아티팩트"| A
+</pre>
+
+하지만 어떤 방식을 선택하든, (Artifact Store 접근을 제외한) 실험과 Run의 메타데이터 요청은 Tracking Server로 보내진다.  
+
+아래 시퀀스 다이어그램은 프록시 방식에서 Run을 생성하고 결과를 기록하는 흐름을 나타낸다.  
+
+<pre class="mermaid">
+sequenceDiagram
+    participant C as MLflow Client
+    participant S as Tracking Server
+    participant D as Backend Store
+    participant A as Artifact Store
+    C->>S: Run 생성 요청
+    S->>D: Run 메타데이터 저장
+    S-->>C: run_id, artifact_uri
+    C->>S: 파라미터·메트릭 기록
+    S->>D: 값 저장
+    C->>S: 아티팩트 업로드(프록시 모드)
+    S->>A: 파일 저장
+</pre>
 
 ## 설치와 실행
 
@@ -137,7 +170,7 @@ http://localhost:5000
 
 #### (2) docker compose 파일 예시
 
-아래는 PostgreSQL을 Backend Store로 사용하고, RustFS를 Artifact Store로 사용하는 예시다.
+아래는 Tracking Server만 기본 로컬 저장 설정으로 실행하는 예시다. PostgreSQL과 RustFS 연결은 다음 글에서 살펴본다.  
 
 ```yaml
 # docker-compose.mlflow-server.yml
@@ -171,7 +204,7 @@ Docker Compose 명령어를 통해 컨테이너, 서비스를 실행할 수 있�
 docker compose -f docker-compose.mlflow-server.yml up -d
 ```
 
-위 설정만으로도 MLflow Tracking Server를 실행할 수 있지만, 이 경우 컨테이너 내부에 데이터가 저장되므로, 컨테이너를 삭제하면 실험 이력과 아티팩트가 사라질 수 있다. 따라서 프로덕션 환경에서는 도커 볼륨 마운트 및 Backend-Stroe, Artifact Store와의 연결을 고려해야 한다.  
+위 설정만으로도 MLflow Tracking Server를 실행할 수 있지만, 이 경우 컨테이너 내부에 데이터가 저장되므로, 컨테이너를 삭제하면 실험 이력과 아티팩트가 사라질 수 있다. 따라서 프로덕션 환경에서는 도커 볼륨 마운트 및 Backend-Stroe, Artifact Store와의 연결을 고려해야 한다. 이점은 다음 글에서 살펴본다.  
 
 샌드박스 서버에서 컨테이너를 실행시킨 뒤 접속해본 화면은 아래와 같다.  
 
@@ -212,6 +245,8 @@ mlflow server \
 | `--backend-store-uri` | 실행, 실험, 파라미터, 메트릭 등의 메타데이터를 저장할 Backend Store URI  |
 | `--artifacts-destination` | 아티팩트를 저장할 Artifact Store URI |
 | `--serve-artifacts` | 클라이언트가 Artifact Store에 직접 접근하지 않고 Tracking Server를 통해 아티팩트를 주고받도록 설정 |
+| `--default-artifact-root` | 직접 접근 모드에서 새 실험에 부여할 아티팩트 위치 |
+
 
 ## Backend Store, Artifact Store와 연결
 
@@ -260,6 +295,22 @@ mlflow server \
   --serve-artifacts \
   ...
 ```
+
+#### Artifact Store 접근 방식 비교  
+
+Artifact Store 접근 방식은 (1) 서버가 파일 전송을 중계하는 방식과 (2) 클라이언트가 저장소에 직접 접근하는 방식으로 나뉜다.
+
+| 구분 | 서버가 중계하는 방식 | 클라이언트가 직접 접근하는 방식 |
+|---|---|---|
+| 주요 설정 | `--artifacts-destination s3://...` | `--no-serve-artifacts --default-artifact-root s3://...` |
+| 전송 경로 | Client → Tracking Server → Store | Client → Store |
+| 저장소 자격 증명 | Tracking Server에 필요 | 각 클라이언트에 필요 |
+| 새 실험의 아티팩트 URI | `mlflow-artifacts:/...` 계열 | `s3://...` 계열 |
+| 고려할 점 | 서버가 파일 전송 부하를 받음; 서버 접근 권한의 범위에 주의 | 클라이언트마다 네트워크·권한 설정이 필요 |
+
+이 시리즈 다음 글에서는 실제 Server Side 구성 요소들을 설치해볼 것이다. PostgreSQL + RustFS 구성으로 진행할 것인데, 이는 서버가 RustFS에 접근하는 프록시 방식으로 이해하면 된다.  
+
+실험을 만들 때 아티팩트 위치가 메타데이터로 저장되는데, 나중에 서버 설정을 직접 접근 방식에서 프록시 방식으로 바꾸어도 이전 실험의 아티팩트 URI가 자동으로 바뀌지 않는다. 따라서 새 방식으로 기록하려면 새 실험을 만들어야 하므로 주의.  
 
 ## Reference
 
