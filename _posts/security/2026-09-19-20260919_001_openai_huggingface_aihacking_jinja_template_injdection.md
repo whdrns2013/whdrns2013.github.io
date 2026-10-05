@@ -30,7 +30,7 @@ series: openai_huggingface_hacking
 series_index: 8
 ---
 
-<!--postNo: 20260919_001-->
+<!--postNo: 20260919_001--> 
 
 ## Jinja란 무엇인가
 
