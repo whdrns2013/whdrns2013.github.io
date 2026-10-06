@@ -2,8 +2,8 @@
 title: "OpenAI HuggingFace 해킹 사건 - 1.개요" # 제목 (필수)
 excerpt: "자율형 AI 에이전트의 협업, 커뮤니티, 탈출, 그리고 해킹. OpenAI HuggingFace 해킹 사건의 타임라인." # 서브 타이틀이자 meta description (필수)
 date: 2026-09-08 00:43:00 +0900      # 작성일 (필수)
-lastmod: 2026-09-08 00:43:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-09-08 00:43:00 +0900  # 최종 수정일 (필수)
+lastmod: 2026-10-06 12:24:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-10-06 12:24:00 +0900  # 최종 수정일 (필수)
 categories: security       # 다수 카테고리에 포함 가능 (필수)
 tags: OpenAI 허깅페이스 Hugging Face HuggingFace AI 에이전트 agent 자율형 해킹 hacking 제로데이 취약점 zeroday Autonomous Security SSRF RCE Zero-day            # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -157,7 +157,7 @@ OpenAI의 비공개 실험 과정에서 몇몇 에이전트들이 도저히 풀 
 | -------------- | ------------------------ | -------------------------------------------------- | --------------------- |
 | 7월 8~13일       | 외부 공격팀 구성                | 평가 문제의 답안이 Hugging Face 등에 존재할 가능성을 판단하고 별도 공격팀 구성 | 공격 범위가 외부 조직으로 확대     |
 | 7월 8~13일       | Modal 거점 확보              | Modal 애플리케이션에 노출된 API Key와 Command Injection 으로 HuggingFace 내 거점 확보    | 외부 공격용 초기 거점 확보       |
-| 7월 8~13일       | Hugging Face Zero-day 공격 | HDF5 임의 파일 읽기와 Ginga Template Injection 취약점 연쇄 악용  | Hugging Face 내부 침투    |
+| 7월 8~13일       | Hugging Face Zero-day 공격 | HDF5 임의 파일 읽기와 Jinja Template Injection 취약점 연쇄 악용  | Hugging Face 내부 침투    |
 | 최초 침투 후 약 13시간 | Hugging Face 클러스터 장악     | 확보한 거점에서 복수 운영 클러스터로 빠르게 확장                        | 복수 클러스터의 최고 관리자 권한 획득 |
 
 ### (4) 사후 발견 및 수습  
