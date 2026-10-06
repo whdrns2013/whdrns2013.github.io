@@ -2,8 +2,8 @@
 title:  Pydantic BaseSettings 를 이용해 파이썬 설정값 똑똑하게 관리하기 # 제목 (필수)
 excerpt: 요새는 ConfigParser 말고 이걸 많이 쓴다고 하네 # 서브 타이틀이자 meta description (필수)
 date: 2025-10-29 17:00:00 +0900      # 작성일 (필수)
-lastmod: 2025-10-29 17:00:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2025-10-29 17:00:00 +0900   # 최종 수정일 (필수)
+lastmod: 2026-10-06 20:05:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-10-06 20:05:00 +0900   # 최종 수정일 (필수)
 categories: Python         # 다수 카테고리에 포함 가능 (필수)
 tags: python 파이썬 pydantic 설정값 설정 config setting basesetting                      # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -31,7 +31,7 @@ author: # 주인 외 작성자 표기 필요시
 그런데 요즘에는 pydantic 의 base settings 를 사용한다고 한다. 이게 과연 무엇인지, 어떻게 사용하는지 알아보자.  
 
 > 설명을 보조하기 위해 github에 코드를 올려놨다.  
-> [https://github.com/whdrns2013/study/tree/main/04_python/11_pydantic/BaseSetting_study](https://github.com/whdrns2013/study/tree/main/04_python/11_pydantic/BaseSetting_study)  
+> [https://github.com/whdrns2013/labs/tree/main/20251029_python_pydantic_basesettings](https://github.com/whdrns2013/labs/tree/main/20251029_python_pydantic_basesettings)  
 
 
 ## BaseSettings  

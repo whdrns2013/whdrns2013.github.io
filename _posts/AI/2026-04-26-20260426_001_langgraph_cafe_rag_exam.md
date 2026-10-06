@@ -2,8 +2,8 @@
 title: "[LangGraph] 카페 질문 답변 RAG 챗봇 만들기 실습" # 제목 (필수)
 excerpt: "카페의 규정에 근거해서만 답변하는 챗봇" # 서브 타이틀이자 meta description (필수)
 date: 2026-04-26 08:12:00 +0900      # 작성일 (필수)
-lastmod: 2026-04-26 08:12:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2026-04-26 08:12:00 +0900   # 최종 수정일 (필수)
+lastmod: 2026-10-06 20:03:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-10-06 20:03:00 +0900   # 최종 수정일 (필수)
 categories: AI       # 다수 카테고리에 포함 가능 (필수)
 tags: ai llm langgraph 랭그래프 langchain 랭체인 graph 그래프 init 챗봇 실습 간단 코드                   # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
@@ -43,7 +43,7 @@ series: langgraph-cafe-rag
 - 채팅 화면은 별도로 없으며, 터미널을 통해 채팅을 수행한다.
 - 소스코드는 아래 링크를 참고
 
-[study/03_AI/04_LLM/00_LangChainLangGraph/04_cafe_rag at main · whdrns2013/study](https://github.com/whdrns2013/study/tree/main/03_AI/04_LLM/00_LangChainLangGraph/04_cafe_rag)
+[cafe_rag at main · whdrns2013/labs](https://github.com/whdrns2013/labs/tree/main/20260426_cafe_rag)
 
 ### 2. RAG
 
