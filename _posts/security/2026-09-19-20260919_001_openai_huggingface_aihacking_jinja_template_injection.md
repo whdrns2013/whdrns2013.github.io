@@ -32,6 +32,8 @@ series_index: 8
 
 <!--postNo: 20260919_001--> 
 
+![](/assets/images/20260919_001_004.jpg)  
+
 ## Intro  
 
 이전 포스팅([OpenAI Hugging Face 해킹 사건 6. 투트랙 협업 구조](https://whdrns2013.github.io/security/20260914_001_openai_huggingface_ai_hacking_two_track_attacking/))을 다시 한 번 되짚어보자. OpenAI의 에이전트들이 HuggingFace의 Worker를 속여 민감정보와 백엔드 소스코드를 확보하였다. 이후 확보한 소스코드를 분석해 백엔드의 동작 구조를 파악했고, Jinja Template Injection이라는 제로데이 취약점을 이용해서 RCE(원격 코드 실행)에 성공했다.  
@@ -45,7 +47,7 @@ series_index: 8
 - Python 기반의 Template Engine  
 - 정적 파일에 파이썬 유사 코드를 넣어 동적 컨텐츠를 생성하는 도구  
 - Flask, FastAPI 와 같은 웹 프레임워크에서 HTML에 데이터를 넣어 화면을 생성할 때 사용됨  
-- `{{name}}` 과 같은 표현을 통해 전달받은 값이나 간단한 표현식을 처리할 수 있음  
+- `\{\{name\}\}` 과 같은 표현을 통해 전달받은 값이나 간단한 표현식을 처리할 수 있음  
 
 ### Template Engine  
 
@@ -56,7 +58,7 @@ series_index: 8
 예를 들어 아래와 같은 HTML 템플릿이 있다고 가정해보자.  
 
 ```html
-<h1>Hello {{ name }}</h1>
+<h1>Hello \{\{ name \}\}</h1>
 ```
 
 여기에 python 서버에서 `name = "철수"` 와 같은 데이터를 전달하면, 화면에는 `name`이라는 문구 대신 `철수` 라는 문구가 표출되는 것이다.  
@@ -69,7 +71,7 @@ name = "철수"
 
 <pre class='mermaid'>
 flowchart LR
-    A["Template<br/>Hello {{ name }}"] --> C["Template Engine<br/>Rendering"]
+    A["Template<br/>Hello \{\{ name \}\}"] --> C["Template Engine<br/>Rendering"]
     B["Data<br/>name = Alice"] --> C
     C --> D["Final Output<br/>Hello Alice"]
 </pre>
@@ -103,9 +105,9 @@ uv add flask
 </head>
 <body>
 
-<h1>Hello {{ user.name }}</h1>
+<h1>Hello \{\{ user.name \}\}</h1>
 
-<p>Age: {{ user.age }}</p>
+<p>Age: \{\{ user.age \}\}</p>
 
 {% if user.age >= 20 %}
     <p>Adult</p>
@@ -229,9 +231,11 @@ WHERE id = '' or '1'='1' --' AND password = 'password123';
 
 <pre class='mermaid'>
 flowchart LR
-    A["사용자(공격자) 입력<br/>' OR '1'='1' --"] --> B["Data + SQL 명령</br>Data를 SQL 문자열에 직접 삽입"]
-    B --> C["SQL Query</br> 오염된 SQL Query"]
-    C --> D["DB 실행</br>공격자가 원하는 동작"]
+    A["사용자(공격자) 입력<br/>' OR '1'='1' --"] --> B["Data<br/>공격 의도가 담긴 명령"]
+    B --> C["Data + SQL 템플릿</br>Data와 SQL 문자열 직접 결합"]
+    T["SQL Query 템플릿"] --> C
+    C --> D["SQL Query</br> 오염된 SQL Query"]
+    D --> E["DB 실행</br>공격자가 원하는 동작"]
 </pre>
 
 ### Injection의 핵심 원리  
@@ -312,7 +316,7 @@ Jinja에서 위와 같은 중괄호 문법은, 표현식을 평가하고 그 결
 
 ```bash
 # 웹 브라우저에 입력하는 주소  
-http://localhost:5000/?name="{{7*7}}"&age=20
+http://localhost:5000/?name="\{\{7*7\}\}"&age=20
 ```
 
 ![](/assets/images/20260919_001_002.png)  
@@ -325,9 +329,9 @@ Jinja에서 자주 사용하는 문법은 다음과 같다.
 
 | 문법          | 의미           | 예시                                         |
 | ----------- | ------------ | ------------------------------------------ |
-| `{{ ... }}` | 표현식의 결과 출력   | `{{ name }}`, `{{ 10 + 20 }}`              |
-| `\{\% ... \%\}` | 조건문·반복문 등 실행 | `{% if user %}`, `{% for item in items %}` |
-| `{# ... #}` | 주석           | `{# comment #}`                            |
+| `\{\{ ... \}\}` | 표현식의 결과 출력   | `\{\{ name \}\}`, `\{\{ 10 + 20 \}\}`              |
+| `\{\% ... \%\}` | 조건문·반복문 등 실행 | `\{\% if user \%\}`, `\{\% for item in items \%\}` |
+| `\{\# ... \#\}` | 주석           | `\{\# comment \#\}`                            |
 
 
 ### Server Side Template Injection (SSTI)  
@@ -335,16 +339,6 @@ Jinja에서 자주 사용하는 문법은 다음과 같다.
 **Server Side Template Injection(SSTI)**은 서버에서 동작하는 Template Engine을 대상으로 발생하는 Template Injection을 가리킨다.  
 
 Jinja는 Python 서버에서 동작하는 Server Side Template Engine이므로, Jinja에서 발생하는 Template Injection 역시 SSTI에 해당한다.  
-
-<pre class='mermaid'>
-flowchart TD
-    A["외부 사용자 입력"] --> B{"입력 데이터 처리 방식"}
-    B -->|"데이터로 분리"| C["Data"]
-    C --> D["Engine에서 안전하게 처리"]
-    B -->|"명령/템플릿에 직접 결합"| E["Code / Template"]
-    E --> F["Engine에서 명령이나 표현식으로 해석"]
-    F --> G["Injection 발생 가능"]
-</pre>
 
 SSTI가 위험한 이유는 공격자의 입력이 **브라우저가 아니라 서버 내부의 Template Engine에서 해석되고 실행된다는 점**이다. 따라서 단순히 화면에 출력되는 값을 조작하는 수준을 넘어, Template Engine이 접근할 수 있는 범위에 따라 서버의 객체, 환경정보, 파일 등의 민감정보에 접근할 수 있다.
 
@@ -572,11 +566,11 @@ class ReferenceFileSystem(AsyncFileSystem):
                 self.references[k] = json.dumps(v)
             elif self.templates:
                 u = v[0]
-                if "{{" in u:
+                if "\{\{" in u:
                     if self.simple_templates:
                         u = (
-                            u.replace("{{", "{")
-                            .replace("}}", "}")
+                            u.replace("\{\{", "\{")
+                            .replace("\}\}", "\}")
                             .format(**self.templates)
                         )
                     else:
@@ -594,9 +588,9 @@ HuggingFace의 글에서 당시 어떻게 공격이 일어났는지 추측할 �
 > 두 번째 공격 경로는 서버 측 템플릿 주입으로, 에이전트에게 코드 실행 권한을 부여했습니다. 악의적인 데이터셋 구성은 reference://숫자 오프셋 필드가 실제로는 Jinja2 템플릿인 fsspec 스펙을 사용했습니다. 렌더러가 이를 잘못 평가했고, 에이전트는 표준 Python 객체 그래프를 따라 이동하여 다음 위치에 도달했습니다.
 
 ```python
-{{ cycler.__init__.__globals__.__builtins__.exec(
+{\{ cycler.__init__.__globals__.__builtins__.exec(
      "import gzip,base64; exec(gzip.decompress(base64.b64decode('<payload>')))"
-   ) }}
+   ) \}\}
 ```
 
 OpenAI의 에이전트들은 Hugging Face의 백엔드 소스코드를 분석하던 중, fsspec의 ReferenceFileSystem에서 **외부 입력값이 Jinja Template으로 해석될 수 있는 취약점**을 발견했다. 그리고 이를 악용해 Hugging Face 서버에서 RCE(원격 코드 실행)에 성공했다.  
@@ -623,7 +617,7 @@ OpenAI의 에이전트들은 Hugging Face의 백엔드 소스코드를 분석하
 flowchart TD
     subgraph ATTACK["공격자 영역"]
         A["악의적인 Reference Metadata 생성"]
-        B["Reference에 Jinja 표현식 삽입<br/>{{ cycler.__init__... }}"]
+        B["Reference에 Jinja 표현식 삽입<br/>\{\{ cycler.__init__... \}\}"]
         A --> B
     end
 
@@ -682,9 +676,9 @@ pip install jinja2 fsspec==2026.4.0 aiohttp paramiko requests
 HuggingFace가 밝힌 공격자들의 Jinja Expression 예시를 다시 한 번 살펴보자.  
 
 ```python
-{{ cycler.__init__.__globals__.__builtins__.exec(
+{\{ cycler.__init__.__globals__.__builtins__.exec(
      "import gzip,base64; exec(gzip.decompress(base64.b64decode('<payload>')))"
-   ) }}
+   ) \}\}
 ```
 
 가장 먼저 등장하는 `cycler`는 Jinja에서 기본적으로 사용할 수 있는 객체이다. cycler는 Template에서 여러 값을 순환하면서 사용할 수 있도록 제공되는 기능이나, 이에 대한 정확한 이해는 지금 필요 없다. 중요한 **점은 `cycler`가 단순한 Jinja 문법이 아니라 실제 Python의 `jinja2.utils.Cycler` 클래스라는 것**이다.  
@@ -750,7 +744,7 @@ def vulnerable():
         },
         "refs": {
             "malicious": [
-                "{{ cycler.__init__.__globals__.__builtins__.exec(\"f = open('./secret', 'r');key=f.read();print(key);f.close()\") }}",
+                "\{\{ cycler.__init__.__globals__.__builtins__.exec(\"f = open('./secret', 'r');key=f.read();print(key);f.close()\") \}\}",
                 0,
                 100
             ]
@@ -807,9 +801,7 @@ python main.py
 
 [https://github.com/fsspec/filesystem_spec/pull/2029](https://github.com/fsspec/filesystem_spec/pull/2029)  
 
-> 이 PR의 브랜치 이름 자체가 'no-ref-jinja' 다.
-
-PR 2029에서는 _process_gen()에 다음 코드를 추가했다.  
+PR 2029에서는 _process_gen()에 다음 코드를 추가했다. 참고로 이 PR의 브랜치 이름 자체가 'no-ref-jinja' 다.  
 
 ```python
 def _process_gen(self, gens):
@@ -859,22 +851,22 @@ SandboxedEnvironment는 템플릿에서 위험한 Python 내부 속성에 접근
 ```python
 from jinja2 import Template
 
-user_input = "{{ 7 * 7 }}"
+user_input = "\{\{ 7 * 7 \}\}"
 
 # 취약한 방식
 template = Template(f"Hello {user_input}")
 print(template.render())  # Hello 49
 
 # 안전한 방식
-template = Template("Hello {{ name }}")
-print(template.render(name=user_input))  # Hello {{ 7 * 7 }}
+template = Template("Hello \{\{ name \}\}")
+print(template.render(name=user_input))  # Hello \{\{ 7 * 7 \}\}
 ```
 
 #### (2) 입력값 검증 및 허용 목록(Allowlist) 사용  
 
 외부에서 전달되는 데이터의 자료형, 형식, 허용 범위를 검증해야 한다. 예를 들어 fsspec의 Reference Metadata에서는 offset과 size가 정수인지, 허용된 범위에 속하는지 등을 검증할 수 있다.  
 
-단, 입력값 검증만으로 SSTI를 완전히 방지할 수는 없으며, `{{`, `}}`와 같은 특정 문자열을 차단하는 방식은 우회 가능성이 있으므로 근본적인 방어책으로 사용해서는 안 된다.
+단, 입력값 검증만으로 SSTI를 완전히 방지할 수는 없으며, `\{\{`, `\}\}`와 같은 특정 문자열을 차단하는 방식은 우회 가능성이 있으므로 근본적인 방어책으로 사용해서는 안 된다.
 
 #### (3) 최소 권한 및 실행 환경 격리  
 
