@@ -1,11 +1,11 @@
 ---
-title: "OpenAI HuggingFace 해킹 사건 9. Refjinja와 Server Side Template Injection (SSTI)" # 제목 (필수)
-excerpt: "이번 해킹 사건에 활용된 Server Side Template Injection" # 서브 타이틀이자 meta description (필수)
+title: "OpenAI HuggingFace 해킹 사건 9. AI 에이전트가 SSTI 취약점으로 RCE에 성공한 방법" # 제목 (필수)
+excerpt: "Jinja2 SSTI 취약점과 RefJinja 공격 재현과 보안 대응" # 서브 타이틀이자 meta description (필수)
 date: 2026-09-19 12:41:00 +0900      # 작성일 (필수)
 lastmod: 2026-10-05 12:41:00 +0900   # 최종 수정일 (필수)
 last_modified_at: 2026-10-05 12:41:00 +0900  # 최종 수정일 (필수)
 categories: security       # 다수 카테고리에 포함 가능 (필수)
-tags: OpenAI 허깅페이스 Hugging Face HuggingFace AI 에이전트 agent 자율형 해킹 hacking SSTI jinja trmplate injection rce
+tags: OpenAI 허깅페이스 Hugging Face HuggingFace AI 에이전트 agent 자율형 해킹 hacking SSTI jinja trmplate injection rce server side refjinja ffspec rce 
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
 toc: true        # 목차 표시 여부
 toc_label:       # toc 제목
