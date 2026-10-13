@@ -1,5 +1,5 @@
 ---
-title: "OpenAI HuggingFace 해킹 사건 9. AI 에이전트가 SSTI 취약점으로 RCE에 성공한 방법" # 제목 (필수)
+title: "OpenAI HuggingFace 해킹 사건 8. AI 에이전트가 SSTI 취약점으로 RCE에 성공한 방법" # 제목 (필수)
 excerpt: "Jinja2 SSTI 취약점과 RefJinja 공격 재현과 보안 대응" # 서브 타이틀이자 meta description (필수)
 date: 2026-09-19 12:41:00 +0900      # 작성일 (필수)
 lastmod: 2026-10-05 12:41:00 +0900   # 최종 수정일 (필수)
