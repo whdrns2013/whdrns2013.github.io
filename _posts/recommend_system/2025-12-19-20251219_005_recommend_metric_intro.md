@@ -1,9 +1,9 @@
 ---
-title: "[추천시스템] 추천은 왜 하나의 정확도로 평가할 수 없을까" # 제목 (필수)
-excerpt: "여러 가지 지표를 써야 하는 이유" # 서브 타이틀이자 meta description (필수)
+title: "[추천시스템] 추천 서비스의 정량적 품질 평가지표 5가지 - Precision Recall RR AP NDCG" # 제목 (필수)
+excerpt: "추천은 왜 하나의 정확도로 평가할 수 없을까" # 서브 타이틀이자 meta description (필수)
 date: 2025-12-19 18:50:00 +0900      # 작성일 (필수)
-lastmod: 2025-12-19 18:50:00 +0900   # 최종 수정일 (필수)
-last_modified_at: 2025-12-19 18:50:00 +0900   # 최종 수정일 (필수)
+lastmod: 2026-10-15 18:50:00 +0900   # 최종 수정일 (필수)
+last_modified_at: 2026-10-15 18:50:00 +0900   # 최종 수정일 (필수)
 categories: recommend_system        # 다수 카테고리에 포함 가능 (필수)
 tags: 추천 시스템 평가 지표 평가지표 metric precision recall rr mrr map ap dcg ndcg                     # 태그 복수개 가능 (필수)
 classes: wide        # wide : 넓은 레이아웃 / 빈칸 : 기본 //// wide 시에는 sticky toc 불가
