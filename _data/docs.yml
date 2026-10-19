@@ -1311,16 +1311,16 @@ docs_nlp:
 docs_recommendation:
   - title: "<-Doc으로 돌아가기"
     url: /docs/intro
-  - title: "추천 기술"
-  - title: "추천 기술의 개요"
-  - title: "추천 기술의 발전"
-  - title: "협업 필터링과 컨텐츠 기반 필터링"
+  - title: "추천 기술(작성전)"
+  - title: "추천 기술의 개요(작성전)"
+  - title: "추천 기술의 발전(작성전)"
+  - title: "협업 필터링과 컨텐츠 기반 필터링(작성전)"
   - title: "추천 시스템의 해결 과제"
     children:
-      - title: "콜드스타트"
-      - title: "롱테일"
-      - title: "데이터 확장"
-  - title: "하드 필터링과 소프트 필터링"
+      - title: "콜드스타트(작성전)"
+      - title: "롱테일(작성전)"
+      - title: "데이터 확장(작성전)"
+  - title: "하드 필터링과 소프트 필터링(작성전)"
   - title: "추천 성능 평가"
     children:
       - title: "추천은 하나의 정확도로 평가할 수 없을까"
@@ -1339,7 +1339,7 @@ docs_recommendation:
         url: /recommend_system/20251221_004_reco_hitrate/
   - title: "DeepFM"
     children:
-      - title: "소개와 논문 리뷰"
+      - title: "소개와 논문 리뷰(작성전)"
       - title: "설치와 기본 사용"
         url: /recommend_system/20260624_001_deepfm_install_basic_use
       - title: "Negative Sampling"
