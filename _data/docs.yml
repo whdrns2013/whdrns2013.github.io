@@ -808,8 +808,10 @@ docs_mlflow:
       url: /ops/20260401_007_mlflow_test_model_registration/
   - title: "3. MLflow Client Side"
     children:
-      - title: "MLflow Client란"
-        url: /ops/20260520_001_mlflow_client_side/
+    - title: "MLflow Client란"
+      url: /ops/20260520_001_mlflow_client_side/
+    - title: "MLflow Client 설치와 Tracking Server 연결"
+      url: /ops/20260819_001_mlflow_client/
   - title: "4. MLflow 메인 컨셉"
     children:
       - title: ""
