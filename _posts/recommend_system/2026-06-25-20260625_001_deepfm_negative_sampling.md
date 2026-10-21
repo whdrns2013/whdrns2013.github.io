@@ -1,5 +1,5 @@
 ---
-title: "[DeepFM] DeepFM 성능 향상을 위한 Negative Sampling" # 제목 (필수)
+title: "[DeepFM] DeepFM 성능 향상을 위한 Negative Sampling" # 제목 (필수) 
 excerpt: "암묵적 피드백을 이용하는 추천에서 Negative Sample을 만들기" # 서브 타이틀이자 meta description (필수)
 date: 2026-06-25 00:01:00 +0900      # 작성일 (필수)
 lastmod: 2026-06-25 00:01:00 +0900   # 최종 수정일 (필수)
